@@ -1,0 +1,338 @@
+---
+title: "FP Pilot GPS"
+author: "Dani Cosme"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: tango
+    theme: united
+    toc: true
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+    df_print: paged
+---
+
+```{r setup, warning = F, echo = F, message = F, error = F, cache = F}
+knitr::opts_chunk$set(error = TRUE)
+```
+
+# Get and clean the data
+## Define variables and paths
+* `cred_file_location` = path to your Qualtrics credential file. You'll need to generate this via Qualtrics using the instructios above.
+* `id_column_name` = subject ID column name in Qualtrics survey; can be a regular expression
+
+```{r}
+cred_file_location = '~/credentials.yaml.DEFAULT'
+sid_column_name = '(SID|ExternalDataReference|qid)'
+survey_name_filter = 'Freshman Project T|CheckIn'
+sid_pattern = 'FP[0-9]{3}'
+exclude_sid = 'FP999' # subject IDs to exclude
+identifiableData = c('EmailAddress', 'IPAddress') # exclude when printing duplicates 'EmailAddress',
+output_file_dir = '~/Documents/code/score-qualtrics/'
+rubric_dir = '/Users/danicosme/Dropbox (PfeiBer Lab)/FreshmanProject/Qualtrics/Scoring_Rubrics'
+```
+
+## Packages
+```{r, warning = FALSE, message = FALSE}
+if (!require(tidyverse)) {
+  install.packages('tidyverse')
+}
+
+if (!require(knitr)) {
+  install.packages('knitr')
+}
+
+if (!require(devtools)) {
+  install.packages('devtools')
+}
+
+if (!require(scorequaltrics)) {
+  devtools::install_github('jflournoy/qualtrics')
+}
+
+if (!require(ggcorrplot)) {
+  install.packages('ggcorrplot')
+}
+```
+
+## Access qualtrics data
+Filter available surveys based on the filter specified above.
+
+```{r}
+# load credential file
+credentials = scorequaltrics::creds_from_file(cred_file_location)
+
+# filter
+surveysAvail = scorequaltrics::get_surveys(credentials)
+surveysFiltered = filter(surveysAvail, grepl(survey_name_filter, SurveyName))
+
+knitr::kable(arrange(select(surveysFiltered, SurveyName), SurveyName))
+```
+
+## Cleaning and scoring data
+### Get survey data
+The `get_survey_data` funcion pulls the data from the surveys specified in `surveysFiltered` and reshapes into the long format. Because the example data also includes some identifying information, we also want to filter those items out of our dataframe.
+
+```{r getsurveydata}
+# get data
+surveys_long = scorequaltrics::get_survey_data(surveysFiltered,
+                                               credentials, 
+                                               pid_col = sid_column_name) %>%
+               filter(!item %in% identifiableData) #filter out identifiable data
+
+# print first 10 rows
+head(surveys_long, 10)
+```
+
+### Cleaning
+* exclude non-sub responses
+* convert missing values to NA
+* duplicates
+
+First, exclude responses that are not subject responses. In this dataset, some subjects have their ID in the `ExternalDataReference` column only, so we'll need to add that to the `SID` column before filtering. There are also some test responses that match our SID pattern, so we'll want to exclude those using the `exclude_SID` pattern.
+```{r}
+missingSIDs = surveys_long %>%
+  mutate(SID = ifelse(is.na(SID), ExternalDataReference,
+               ifelse(grepl("SV", SID), ExternalDataReference, SID))) %>%
+  select(-ExternalDataReference) %>%
+  filter(SID == "" | grepl(sid_pattern, SID)) %>%
+  filter(!grepl(exclude_sid, SID)) %>%
+  arrange(value) %>%
+  filter(item == "Name") %>%
+  mutate(SID = ifelse(SID == "" & survey_name == "CheckIn_Fall", lead(SID), SID)) %>%
+  filter(!SID == "") %>%
+  select(-item, -value)
+
+t1 = surveys_long %>%
+  filter(survey_name == "Freshman Project T1 Survey")
+
+surveys_long_sub = surveys_long %>%
+  filter(!survey_name == "Freshman Project T1 Survey") %>%
+  select(-SID) %>%
+  left_join(., missingSIDs, by = c("qid", "survey_name")) %>%
+  bind_rows(t1) %>%
+  filter(grepl(sid_pattern, SID)) %>%
+  filter(!grepl(exclude_sid, SID)) %>%
+  filter(!item == "Name" &!is.na(SID)) %>%
+  select(-ExternalDataReference)
+
+# print unique SIDs
+unique(surveys_long_sub$SID)
+
+# print number of surveys per participant
+surveys_long_sub %>%
+  group_by(SID, survey_name) %>%
+  summarize(n = n()) %>%
+  spread(survey_name, n)
+```
+
+Convert missing values to NA.
+```{r}
+surveys_long_na = surveys_long_sub %>%
+  mutate(value = ifelse(value == "", NA, value))
+```
+
+Check for non-numeric items using the `get_uncoercibles()` function.
+```{r}
+# surveys_long_na %>%
+#   scorequaltrics::get_uncoercibles() %>%
+#   distinct(item, value) %>%
+#   arrange(item) %>%
+#   head(., 10)
+```
+
+Check for duplicate responses. There is a `clean_dupes` function that can do this, but since we have multiple waves with the same surveys, we're going to do this homebrew.
+```{r}
+surveys_long_na %>%
+  spread(item, value) %>%
+  group_by(survey_name, SID) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n)) %>%
+  filter(n > 1)
+```
+
+Since FP002 appears to have taken the T2 survey twice, we're simply going to randomly select based on the qid. We'll also select the completed fall check ins for FP010 and FP018.
+```{r}
+surveys_long_clean = surveys_long_na %>%
+  filter(!grepl("R_11YpEE2pH9Ozqvk|R_eCMNbhWMXaT1VaJ|R_2ypjM5npmQtcHqx", qid)) %>%
+  select(-qid)
+
+surveys_long_clean %>%
+  spread(item, value) %>%
+  group_by(survey_name, SID) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n)) %>%
+  filter(n > 1)
+```
+
+### Subset priorities questions and tidy
+```{r}
+priorities = surveys_long_clean %>% filter(grepl("PRIO", item)) %>%
+  extract(survey_name, "term", "CheckIn_(.*)") %>%
+  mutate(
+    item = ifelse(item == "PRIO_1", "Romantic relationships",
+                ifelse(item == "PRIO_2", "Family",
+                ifelse(item == "PRIO_3", "Exercise & athletics",
+                ifelse(item == "PRIO_4", "Well-being",
+                ifelse(item == "PRIO_5", "Physical appearance",
+                ifelse(item == "PRIO_6", "Health & safety",
+                ifelse(item == "PRIO_7", "Social exploration",
+                ifelse(item == "PRIO_8", "Maintaining friendships",
+                ifelse(item == "PRIO_9", "Community service",
+                ifelse(item == "PRIO_10", "Religion & spirituality",
+                ifelse(item == "PRIO_11", "Social awareness",
+                ifelse(item == "PRIO_12", "New experiences ",
+                ifelse(item == "PRIO_13", "Hobbies & entertainment",
+                ifelse(item == "PRIO_14", "Aesthetics",
+                ifelse(item == "PRIO_15", "Self discovery",
+                ifelse(item == "PRIO_16", "Academics",
+                ifelse(item == "PRIO_17", "Other",
+                ifelse(item == "PRIO_17_TEXT", "Other_text", NA)))))))))))))))))),
+   sort = as.numeric(value),
+   social = ifelse(grepl("Social|Romantic|friendship|family", item), 1, 0),
+   top3 = ifelse(value %in% 1:3, 1, 0),
+   top5 = ifelse(value %in% 1:5, 1, 0))
+```
+
+# Priorities
+## density plots
+```{r, warning=FALSE, message=FALSE}
+priorities %>%
+  filter(!grepl("Other", item)) %>%
+  group_by(item) %>%
+  do({
+    plot = ggplot(., aes(as.numeric(value), fill = term, color = term)) +
+      geom_density(alpha = .1) +
+      scale_color_manual(values = wesanderson::wes_palette("Darjeeling1", 3, "continuous")) +
+      scale_fill_manual(values = wesanderson::wes_palette("Darjeeling1", 3, "continuous")) +
+      labs(title = .$item[[1]], x = "priority rank") +
+      theme_minimal()
+    print(plot)
+  })
+```
+
+## histograms
+```{r, warning=FALSE, message=FALSE}
+priorities %>%
+  filter(!grepl("Other", item)) %>%
+  group_by(item) %>%
+  do({
+    plot = ggplot(., aes(reorder(value, sort), fill = term)) +
+      geom_histogram(stat = "count") +
+      scale_fill_manual(values = wesanderson::wes_palette("Darjeeling1", 3, "continuous")) +
+      labs(title = .$item[[1]], x = "priority rank") +
+      theme_minimal()
+    print(plot)
+  })
+```
+
+## top priorities
+```{r}
+priorities %>%
+  filter(top3 == 1) %>%
+  group_by(item) %>%
+  summarize(count = n()) %>%
+  ungroup() %>%
+  ggplot(aes(reorder(item, -count), count)) + 
+    geom_bar(stat = "identity") +
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10)) + 
+    labs(x = "priority area", title = "Number of times this area was in the top 3 rated")
+
+priorities %>%
+  filter(top5 == 1) %>%
+  group_by(item) %>%
+  summarize(count = n()) %>%
+  ungroup() %>%
+  ggplot(aes(reorder(item, -count), count)) + 
+    geom_bar(stat = "identity") +
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10)) + 
+    labs(x = "priority area", title = "Number of times this area was in the top 5 rated")
+```
+
+# GPS
+## subset goals questions
+```{r}
+gps = surveys_long_clean %>% 
+  filter(grepl("GPS", item)) %>%
+  filter(!item == "GPS_1") %>%
+  mutate(term = ifelse(survey_name %in% c("CheckIn_Fall", "Freshman Project T2 Survey"), "Fall",
+                ifelse(survey_name %in% c("CheckIn_Winter", "Freshman Project T3 Survey"), "Winter",
+                ifelse(survey_name %in% c("CheckIn_Spring", "Freshman Project T4 Survey"), "Spring", NA))),
+         survey = ifelse(grepl("CheckIn", survey_name), "check in", "follow up"),
+         personalproject = ifelse(grepl("GPS_2_[1-3]{1}", item), "first", "second"),
+         item = ifelse(grepl("GPS_[2-3]{1}_1", item), "importance",
+                ifelse(grepl("GPS_[2-3]{1}_2", item), "commitment",
+                ifelse(grepl("GPS_[2-3]{1}_3", item), "complete", item))),
+         sort = ifelse(item == "importance", 1,
+                ifelse(item == "commitement", 2, 3))) 
+```
+
+## progress
+```{r}
+gps %>%
+  filter(item %in% c("importance", "commitment", "complete")) %>%
+  ggplot(aes(survey, as.numeric(value), color = term)) +
+    stat_summary(fun.data = "mean_cl_boot") +
+    stat_summary(aes(group = term), fun.y = mean, geom = "line") +
+    facet_grid(personalproject ~ reorder(item, sort)) +
+    scale_color_manual(values = wesanderson::wes_palette("Darjeeling1", 3, "continuous")) +
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10)) +
+    labs(y = "rating")
+
+gps %>%
+  filter(item %in% c("importance", "commitment", "complete")) %>%
+  group_by(item, term, survey, personalproject) %>%
+  summarize(mean = mean(as.numeric(value), na.rm = TRUE)) %>%
+  spread(survey, mean)
+```
+
+## progress by priority area
+```{r, warning=FALSE}
+prios = priorities %>%
+  filter(value %in% 1:2) %>%
+  rename("PPA" = item) %>%
+  mutate(personalproject = ifelse(value == "1", "first", "second")) %>%
+  select(-sort, -value, -starts_with("top"))
+
+merged = gps %>%
+  left_join(., prios, by = c("SID", "term", "personalproject"))
+
+merged %>%
+  filter(item %in% c("importance", "commitment", "complete")) %>%
+  group_by(PPA) %>%
+  do({
+    plot = ggplot(., aes(survey, as.numeric(value), color = term)) +
+              stat_summary(fun.data = "mean_cl_boot") +
+              stat_summary(aes(group = term), fun.y = mean, geom = "line") +
+              facet_grid(personalproject ~ reorder(item, sort)) +
+              scale_color_manual(values = wesanderson::wes_palette("Darjeeling1", 3, "continuous")) +
+              theme_minimal() + 
+              theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+              theme(text = element_text(size = 10)) +
+              labs(title = .$PPA[[1]], y = "rating")
+    print(plot)
+  })
+
+merged %>%
+  filter(item %in% c("importance", "commitment", "complete")) %>%
+  group_by(item, survey, PPA) %>%
+  summarize(mean = mean(as.numeric(value), na.rm = TRUE)) %>%
+  spread(survey, mean)
+
+# social personal project areas only
+merged %>%
+  filter(item %in% c("importance", "commitment", "complete") & social == 1) %>%
+  group_by(item, survey, PPA, term) %>%
+  summarize(mean = mean(as.numeric(value), na.rm = TRUE)) %>%
+  spread(survey, mean) %>%
+  mutate(change = `follow up` - `check in`)
+```
+

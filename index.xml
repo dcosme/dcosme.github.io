@@ -11,6 +11,488 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Autonomy can support affect regulation during illness and in health</title>
+      <link>https://dcosme.github.io/publication/autonomy-affect-regulation/</link>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 -0700</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/autonomy-affect-regulation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;Cosme, D.&lt;/strong&gt;, &amp;amp; Berkman, E. T. (In Press) Autonomy can support affect regulation during illness and in health. &lt;em&gt;Journal of Health Psychology&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>FP Pilot GPS</title>
+      <link>https://dcosme.github.io/data-vis/fp_pilot_gps/</link>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/data-vis/fp_pilot_gps/</guid>
+      <description>&lt;p&gt;This code is a first pass analysis of the goals and priorities survey.&lt;/p&gt;
+&lt;div id=&#34;get-and-clean-the-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Get and clean the data&lt;/h1&gt;
+&lt;div id=&#34;define-variables-and-paths&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Define variables and paths&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cred_file_location&lt;/code&gt; = path to your Qualtrics credential file. You’ll need to generate this via Qualtrics using the instructios above.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;id_column_name&lt;/code&gt; = subject ID column name in Qualtrics survey; can be a regular expression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cred_file_location = &amp;#39;~/credentials.yaml.DEFAULT&amp;#39;
+sid_column_name = &amp;#39;(SID|ExternalDataReference|qid)&amp;#39;
+survey_name_filter = &amp;#39;Freshman Project T|CheckIn&amp;#39;
+sid_pattern = &amp;#39;FP[0-9]{3}&amp;#39;
+exclude_sid = &amp;#39;FP999&amp;#39; # subject IDs to exclude
+identifiableData = c(&amp;#39;EmailAddress&amp;#39;, &amp;#39;IPAddress&amp;#39;) # exclude when printing duplicates &amp;#39;EmailAddress&amp;#39;,
+output_file_dir = &amp;#39;~/Documents/code/score-qualtrics/&amp;#39;
+rubric_dir = &amp;#39;/Users/danicosme/Dropbox (PfeiBer Lab)/FreshmanProject/Qualtrics/Scoring_Rubrics&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;packages&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Packages&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (!require(tidyverse)) {
+  install.packages(&amp;#39;tidyverse&amp;#39;)
+}
+
+if (!require(knitr)) {
+  install.packages(&amp;#39;knitr&amp;#39;)
+}
+
+if (!require(devtools)) {
+  install.packages(&amp;#39;devtools&amp;#39;)
+}
+
+if (!require(scorequaltrics)) {
+  devtools::install_github(&amp;#39;jflournoy/qualtrics&amp;#39;)
+}
+
+if (!require(ggcorrplot)) {
+  install.packages(&amp;#39;ggcorrplot&amp;#39;)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;access-qualtrics-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Access qualtrics data&lt;/h2&gt;
+&lt;p&gt;Filter available surveys based on the filter specified above.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load credential file
+credentials = scorequaltrics::creds_from_file(cred_file_location)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in readLines(con): incomplete final line found on &amp;#39;~/
+## credentials.yaml.DEFAULT&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# filter
+surveysAvail = scorequaltrics::get_surveys(credentials)
+surveysFiltered = filter(surveysAvail, grepl(survey_name_filter, SurveyName))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;bindrcpp&amp;#39; was built under R version 3.4.4&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::kable(arrange(select(surveysFiltered, SurveyName), SurveyName))&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr class=&#34;header&#34;&gt;
+&lt;th align=&#34;left&#34;&gt;SurveyName&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;CheckIn_Fall&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;CheckIn_Spring&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;CheckIn_Summer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;CheckIn_Winter&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Freshman Project T1 Survey&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Freshman Project T2 Survey&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;odd&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Freshman Project T3 Survey&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&#34;even&#34;&gt;
+&lt;td align=&#34;left&#34;&gt;Freshman Project T4 Survey&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cleaning-and-scoring-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Cleaning and scoring data&lt;/h2&gt;
+&lt;div id=&#34;get-survey-data&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Get survey data&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;get_survey_data&lt;/code&gt; funcion pulls the data from the surveys specified in &lt;code&gt;surveysFiltered&lt;/code&gt; and reshapes into the long format. Because the example data also includes some identifying information, we also want to filter those items out of our dataframe.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# get data
+surveys_long = scorequaltrics::get_survey_data(surveysFiltered,
+                                               credentials, 
+                                               pid_col = sid_column_name) %&amp;gt;%
+               filter(!item %in% identifiableData) #filter out identifiable data
+
+# print first 10 rows
+head(surveys_long, 10)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 6
+##    ExternalDataReference qid               item   value  survey_name SID  
+##    &amp;lt;chr&amp;gt;                 &amp;lt;chr&amp;gt;             &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;       &amp;lt;chr&amp;gt;
+##  1 FP029                 R_33ygWqHzCB58knT Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
+##  2 FP007                 R_1DwZ8Zo04Fbg2L7 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
+##  3 FP009                 R_1LwkWM4naqq1Km4 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
+##  4 FP022                 R_3J5fpeg3l2J8lm3 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
+##  5 FP004                 R_2xLwcqXVmjyGTu1 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
+##  6 FP011                 R_3ErQEYh1MfbxJuE Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
+##  7 FP021                 R_3MhvO1mHDYLJG8R Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
+##  8 FP013                 R_2roTMgwYFyfbTm3 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
+##  9 FP008                 R_1zx6EDFCLn2ZtMB Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
+## 10 FP018                 R_3KD8bk96YXxIuvu Respo… Defau… Freshman P… &amp;lt;NA&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;cleaning&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Cleaning&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;exclude non-sub responses&lt;/li&gt;
+&lt;li&gt;convert missing values to NA&lt;/li&gt;
+&lt;li&gt;duplicates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First, exclude responses that are not subject responses. In this dataset, some subjects have their ID in the &lt;code&gt;ExternalDataReference&lt;/code&gt; column only, so we’ll need to add that to the &lt;code&gt;SID&lt;/code&gt; column before filtering. There are also some test responses that match our SID pattern, so we’ll want to exclude those using the &lt;code&gt;exclude_SID&lt;/code&gt; pattern.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;missingSIDs = surveys_long %&amp;gt;%
+  mutate(SID = ifelse(is.na(SID), ExternalDataReference,
+               ifelse(grepl(&amp;quot;SV&amp;quot;, SID), ExternalDataReference, SID))) %&amp;gt;%
+  select(-ExternalDataReference) %&amp;gt;%
+  filter(SID == &amp;quot;&amp;quot; | grepl(sid_pattern, SID)) %&amp;gt;%
+  filter(!grepl(exclude_sid, SID)) %&amp;gt;%
+  arrange(value) %&amp;gt;%
+  filter(item == &amp;quot;Name&amp;quot;) %&amp;gt;%
+  mutate(SID = ifelse(SID == &amp;quot;&amp;quot; &amp;amp; survey_name == &amp;quot;CheckIn_Fall&amp;quot;, lead(SID), SID)) %&amp;gt;%
+  filter(!SID == &amp;quot;&amp;quot;) %&amp;gt;%
+  select(-item, -value)
+
+t1 = surveys_long %&amp;gt;%
+  filter(survey_name == &amp;quot;Freshman Project T1 Survey&amp;quot;)
+
+surveys_long_sub = surveys_long %&amp;gt;%
+  filter(!survey_name == &amp;quot;Freshman Project T1 Survey&amp;quot;) %&amp;gt;%
+  select(-SID) %&amp;gt;%
+  left_join(., missingSIDs, by = c(&amp;quot;qid&amp;quot;, &amp;quot;survey_name&amp;quot;)) %&amp;gt;%
+  bind_rows(t1) %&amp;gt;%
+  filter(grepl(sid_pattern, SID)) %&amp;gt;%
+  filter(!grepl(exclude_sid, SID)) %&amp;gt;%
+  filter(!item == &amp;quot;Name&amp;quot; &amp;amp;!is.na(SID)) %&amp;gt;%
+  select(-ExternalDataReference)
+
+# print unique SIDs
+unique(surveys_long_sub$SID)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;FP029&amp;quot; &amp;quot;FP007&amp;quot; &amp;quot;FP009&amp;quot; &amp;quot;FP022&amp;quot; &amp;quot;FP004&amp;quot; &amp;quot;FP011&amp;quot; &amp;quot;FP021&amp;quot; &amp;quot;FP013&amp;quot;
+##  [9] &amp;quot;FP008&amp;quot; &amp;quot;FP018&amp;quot; &amp;quot;FP003&amp;quot; &amp;quot;FP025&amp;quot; &amp;quot;FP035&amp;quot; &amp;quot;FP001&amp;quot; &amp;quot;FP031&amp;quot; &amp;quot;FP006&amp;quot;
+## [17] &amp;quot;FP030&amp;quot; &amp;quot;FP028&amp;quot; &amp;quot;FP026&amp;quot; &amp;quot;FP019&amp;quot; &amp;quot;FP024&amp;quot; &amp;quot;FP032&amp;quot; &amp;quot;FP023&amp;quot; &amp;quot;FP005&amp;quot;
+## [25] &amp;quot;FP015&amp;quot; &amp;quot;FP010&amp;quot; &amp;quot;FP034&amp;quot; &amp;quot;FP014&amp;quot; &amp;quot;FP016&amp;quot; &amp;quot;FP020&amp;quot; &amp;quot;FP027&amp;quot; &amp;quot;FP002&amp;quot;
+## [33] &amp;quot;FP012&amp;quot; &amp;quot;FP017&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# print number of surveys per participant
+surveys_long_sub %&amp;gt;%
+  group_by(SID, survey_name) %&amp;gt;%
+  summarize(n = n()) %&amp;gt;%
+  spread(survey_name, n)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 34 x 9
+## # Groups:   SID [34]
+##    SID   CheckIn_Fall CheckIn_Spring CheckIn_Summer CheckIn_Winter
+##    &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
+##  1 FP001           49             45             18             45
+##  2 FP002           49             45             NA             45
+##  3 FP003           49             45             NA             45
+##  4 FP004           49             45             18             45
+##  5 FP005           49             45             NA             45
+##  6 FP006           49             45             18             45
+##  7 FP007           49             45             NA             45
+##  8 FP008           49             45             18             45
+##  9 FP009           49             45             NA             45
+## 10 FP010           98             45             18             45
+## # ... with 24 more rows, and 4 more variables: `Freshman Project T1
+## #   Survey` &amp;lt;int&amp;gt;, `Freshman Project T2 Survey` &amp;lt;int&amp;gt;, `Freshman Project
+## #   T3 Survey` &amp;lt;int&amp;gt;, `Freshman Project T4 Survey` &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Convert missing values to NA.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_na = surveys_long_sub %&amp;gt;%
+  mutate(value = ifelse(value == &amp;quot;&amp;quot;, NA, value))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check for non-numeric items using the &lt;code&gt;get_uncoercibles()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# surveys_long_na %&amp;gt;%
+#   scorequaltrics::get_uncoercibles() %&amp;gt;%
+#   distinct(item, value) %&amp;gt;%
+#   arrange(item) %&amp;gt;%
+#   head(., 10)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check for duplicate responses. There is a &lt;code&gt;clean_dupes&lt;/code&gt; function that can do this, but since we have multiple waves with the same surveys, we’re going to do this homebrew.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_na %&amp;gt;%
+  spread(item, value) %&amp;gt;%
+  group_by(survey_name, SID) %&amp;gt;%
+  summarize(n = n()) %&amp;gt;%
+  arrange(desc(n)) %&amp;gt;%
+  filter(n &amp;gt; 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 3
+## # Groups:   survey_name [2]
+##   survey_name                SID       n
+##   &amp;lt;chr&amp;gt;                      &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;
+## 1 CheckIn_Fall               FP010     2
+## 2 CheckIn_Fall               FP018     2
+## 3 Freshman Project T2 Survey FP002     2&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Since FP002 appears to have taken the T2 survey twice, we’re simply going to randomly select based on the qid. We’ll also select the completed fall check ins for FP010 and FP018.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_clean = surveys_long_na %&amp;gt;%
+  filter(!grepl(&amp;quot;R_11YpEE2pH9Ozqvk|R_eCMNbhWMXaT1VaJ|R_2ypjM5npmQtcHqx&amp;quot;, qid)) %&amp;gt;%
+  select(-qid)
+
+surveys_long_clean %&amp;gt;%
+  spread(item, value) %&amp;gt;%
+  group_by(survey_name, SID) %&amp;gt;%
+  summarize(n = n()) %&amp;gt;%
+  arrange(desc(n)) %&amp;gt;%
+  filter(n &amp;gt; 1)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 0 x 3
+## # Groups:   survey_name [0]
+## # ... with 3 variables: survey_name &amp;lt;chr&amp;gt;, SID &amp;lt;chr&amp;gt;, n &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;subset-priorities-questions-and-tidy&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Subset priorities questions and tidy&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities = surveys_long_clean %&amp;gt;% filter(grepl(&amp;quot;PRIO&amp;quot;, item)) %&amp;gt;%
+  extract(survey_name, &amp;quot;term&amp;quot;, &amp;quot;CheckIn_(.*)&amp;quot;) %&amp;gt;%
+  mutate(
+    item = ifelse(item == &amp;quot;PRIO_1&amp;quot;, &amp;quot;Romantic relationships&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_2&amp;quot;, &amp;quot;Family&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_3&amp;quot;, &amp;quot;Exercise &amp;amp; athletics&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_4&amp;quot;, &amp;quot;Well-being&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_5&amp;quot;, &amp;quot;Physical appearance&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_6&amp;quot;, &amp;quot;Health &amp;amp; safety&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_7&amp;quot;, &amp;quot;Social exploration&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_8&amp;quot;, &amp;quot;Maintaining friendships&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_9&amp;quot;, &amp;quot;Community service&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_10&amp;quot;, &amp;quot;Religion &amp;amp; spirituality&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_11&amp;quot;, &amp;quot;Social awareness&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_12&amp;quot;, &amp;quot;New experiences &amp;quot;,
+                ifelse(item == &amp;quot;PRIO_13&amp;quot;, &amp;quot;Hobbies &amp;amp; entertainment&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_14&amp;quot;, &amp;quot;Aesthetics&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_15&amp;quot;, &amp;quot;Self discovery&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_16&amp;quot;, &amp;quot;Academics&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_17&amp;quot;, &amp;quot;Other&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_17_TEXT&amp;quot;, &amp;quot;Other_text&amp;quot;, NA)))))))))))))))))),
+   sort = as.numeric(value),
+   social = ifelse(grepl(&amp;quot;Social|Romantic|friendship|family&amp;quot;, item), 1, 0),
+   top3 = ifelse(value %in% 1:3, 1, 0),
+   top5 = ifelse(value %in% 1:5, 1, 0))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in evalq(as.numeric(value), &amp;lt;environment&amp;gt;): NAs introduced by
+## coercion
+
+## Warning in evalq(as.numeric(value), &amp;lt;environment&amp;gt;): NAs introduced by
+## coercion
+
+## Warning in evalq(as.numeric(value), &amp;lt;environment&amp;gt;): NAs introduced by
+## coercion&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;priorities&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Priorities&lt;/h1&gt;
+&lt;div id=&#34;density-plots&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;density plots&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
+  group_by(item) %&amp;gt;%
+  do({
+    plot = ggplot(., aes(as.numeric(value), fill = term, color = term)) +
+      geom_density(alpha = .1) +
+      scale_color_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
+      scale_fill_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
+      labs(title = .$item[[1]], x = &amp;quot;priority rank&amp;quot;) +
+      theme_minimal()
+    print(plot)
+  })&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-7.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-15.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Error: Results 1, 2, 3, 4, 5, ... must be data frames, not list&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;histograms&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;histograms&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
+  group_by(item) %&amp;gt;%
+  do({
+    plot = ggplot(., aes(reorder(value, sort), fill = term)) +
+      geom_histogram(stat = &amp;quot;count&amp;quot;) +
+      scale_fill_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
+      labs(title = .$item[[1]], x = &amp;quot;priority rank&amp;quot;) +
+      theme_minimal()
+    print(plot)
+  })&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-7.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-15.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Error: Results 1, 2, 3, 4, 5, ... must be data frames, not list&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;top-priorities&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;top priorities&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(top3 == 1) %&amp;gt;%
+  group_by(item) %&amp;gt;%
+  summarize(count = n()) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  ggplot(aes(reorder(item, -count), count)) + 
+    geom_bar(stat = &amp;quot;identity&amp;quot;) +
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10)) + 
+    labs(x = &amp;quot;priority area&amp;quot;, title = &amp;quot;Number of times this area was in the top 3 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(top5 == 1) %&amp;gt;%
+  group_by(item) %&amp;gt;%
+  summarize(count = n()) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  ggplot(aes(reorder(item, -count), count)) + 
+    geom_bar(stat = &amp;quot;identity&amp;quot;) +
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10)) + 
+    labs(x = &amp;quot;priority area&amp;quot;, title = &amp;quot;Number of times this area was in the top 5 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gps&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;GPS&lt;/h1&gt;
+&lt;div id=&#34;subset-goals-questions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;subset goals questions&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gps = surveys_long_clean %&amp;gt;% 
+  filter(grepl(&amp;quot;GPS&amp;quot;, item)) %&amp;gt;%
+  filter(!item == &amp;quot;GPS_1&amp;quot;) %&amp;gt;%
+  mutate(term = ifelse(survey_name %in% c(&amp;quot;CheckIn_Fall&amp;quot;, &amp;quot;Freshman Project T2 Survey&amp;quot;), &amp;quot;Fall&amp;quot;,
+                ifelse(survey_name %in% c(&amp;quot;CheckIn_Winter&amp;quot;, &amp;quot;Freshman Project T3 Survey&amp;quot;), &amp;quot;Winter&amp;quot;,
+                ifelse(survey_name %in% c(&amp;quot;CheckIn_Spring&amp;quot;, &amp;quot;Freshman Project T4 Survey&amp;quot;), &amp;quot;Spring&amp;quot;, NA))),
+         survey = ifelse(grepl(&amp;quot;CheckIn&amp;quot;, survey_name), &amp;quot;check in&amp;quot;, &amp;quot;follow up&amp;quot;),
+         personalproject = ifelse(grepl(&amp;quot;GPS_2_[1-3]{1}&amp;quot;, item), &amp;quot;first&amp;quot;, &amp;quot;second&amp;quot;),
+         item = ifelse(grepl(&amp;quot;GPS_[2-3]{1}_1&amp;quot;, item), &amp;quot;importance&amp;quot;,
+                ifelse(grepl(&amp;quot;GPS_[2-3]{1}_2&amp;quot;, item), &amp;quot;commitment&amp;quot;,
+                ifelse(grepl(&amp;quot;GPS_[2-3]{1}_3&amp;quot;, item), &amp;quot;complete&amp;quot;, item))),
+         sort = ifelse(item == &amp;quot;importance&amp;quot;, 1,
+                ifelse(item == &amp;quot;commitement&amp;quot;, 2, 3))) &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;progress&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;progress&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gps %&amp;gt;%
+  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
+  ggplot(aes(survey, as.numeric(value), color = term)) +
+    stat_summary(fun.data = &amp;quot;mean_cl_boot&amp;quot;) +
+    stat_summary(aes(group = term), fun.y = mean, geom = &amp;quot;line&amp;quot;) +
+    facet_grid(personalproject ~ reorder(item, sort)) +
+    scale_color_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10)) +
+    labs(y = &amp;quot;rating&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Removed 37 rows containing non-finite values (stat_summary).
+
+## Warning: Removed 37 rows containing non-finite values (stat_summary).&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gps %&amp;gt;%
+  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
+  group_by(item, term, survey, personalproject) %&amp;gt;%
+  summarize(mean = mean(as.numeric(value), na.rm = TRUE)) %&amp;gt;%
+  spread(survey, mean)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 18 x 5
+## # Groups:   item, term [9]
+##    item       term   personalproject `check in` `follow up`
+##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;                &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
+##  1 commitment Fall   first                 84.7        77.3
+##  2 commitment Fall   second                84.1        76.5
+##  3 commitment Spring first                 86.3        82.5
+##  4 commitment Spring second                83.4        82.2
+##  5 commitment Winter first                 84.9        78.8
+##  6 commitment Winter second                80.6        72.2
+##  7 complete   Fall   first                 39.9        61  
+##  8 complete   Fall   second                43.3        65.6
+##  9 complete   Spring first                 43.0        64.0
+## 10 complete   Spring second                43.1        72.0
+## 11 complete   Winter first                 41.2        66.2
+## 12 complete   Winter second                36.3        50.1
+## 13 importance Fall   first                 88.9        86  
+## 14 importance Fall   second                87.3        87.5
+## 15 importance Spring first                 91.5        87.6
+## 16 importance Spring second                88.2        85.1
+## 17 importance Winter first                 87.2        83.5
+## 18 importance Winter second                86.1        84.8&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;progress-by-priority-area&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;progress by priority area&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;prios = priorities %&amp;gt;%
+  filter(value %in% 1:2) %&amp;gt;%
+  rename(&amp;quot;PPA&amp;quot; = item) %&amp;gt;%
+  mutate(personalproject = ifelse(value == &amp;quot;1&amp;quot;, &amp;quot;first&amp;quot;, &amp;quot;second&amp;quot;)) %&amp;gt;%
+  select(-sort, -value, -starts_with(&amp;quot;top&amp;quot;))
+
+merged = gps %&amp;gt;%
+  left_join(., prios, by = c(&amp;quot;SID&amp;quot;, &amp;quot;term&amp;quot;, &amp;quot;personalproject&amp;quot;))
+
+merged %&amp;gt;%
+  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
+  group_by(PPA) %&amp;gt;%
+  do({
+    plot = ggplot(., aes(survey, as.numeric(value), color = term)) +
+              stat_summary(fun.data = &amp;quot;mean_cl_boot&amp;quot;) +
+              stat_summary(aes(group = term), fun.y = mean, geom = &amp;quot;line&amp;quot;) +
+              facet_grid(personalproject ~ reorder(item, sort)) +
+              scale_color_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
+              theme_minimal() + 
+              theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+              theme(text = element_text(size = 10)) +
+              labs(title = .$PPA[[1]], y = &amp;quot;rating&amp;quot;)
+    print(plot)
+  })&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## geom_path: Each group consists of only one observation. Do you need to
+## adjust the group aesthetic?&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## geom_path: Each group consists of only one observation. Do you need to
+## adjust the group aesthetic?&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-15.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## Error: Results 1, 2, 3, 4, 5, ... must be data frames, not list&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-17.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;merged %&amp;gt;%
+  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
+  group_by(item, survey, PPA) %&amp;gt;%
+  summarize(mean = mean(as.numeric(value), na.rm = TRUE)) %&amp;gt;%
+  spread(survey, mean)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 51 x 4
+## # Groups:   item [3]
+##    item       PPA                     `check in` `follow up`
+##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;                        &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
+##  1 commitment Academics                     90.6        86.1
+##  2 commitment Aesthetics                    84.3        73.3
+##  3 commitment Community service            100          81  
+##  4 commitment Exercise &amp;amp; athletics          80.4        76.7
+##  5 commitment Family                        80.2        78.1
+##  6 commitment Health &amp;amp; safety               86.2        76  
+##  7 commitment Hobbies &amp;amp; entertainment       75.9        74.5
+##  8 commitment Maintaining friendships       85.4        66  
+##  9 commitment &amp;quot;New experiences &amp;quot;            80.7        76.4
+## 10 commitment Physical appearance           83.5        76.5
+## # ... with 41 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# social personal project areas only
+merged %&amp;gt;%
+  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;) &amp;amp; social == 1) %&amp;gt;%
+  group_by(item, survey, PPA, term) %&amp;gt;%
+  summarize(mean = mean(as.numeric(value), na.rm = TRUE)) %&amp;gt;%
+  spread(survey, mean) %&amp;gt;%
+  mutate(change = `follow up` - `check in`)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 33 x 6
+## # Groups:   item, PPA [12]
+##    item       PPA                     term   `check in` `follow up` change
+##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;                   &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+##  1 commitment Maintaining friendships Fall         83.5        57.5 -26   
+##  2 commitment Maintaining friendships Spring       87          45   -42   
+##  3 commitment Maintaining friendships Winter       86.5        85    -1.5 
+##  4 commitment Romantic relationships  Fall         79          70    -9   
+##  5 commitment Romantic relationships  Spring       99.2       100     0.75
+##  6 commitment Romantic relationships  Winter       99          91.6  -7.4 
+##  7 commitment Social awareness        Spring       57          70    13   
+##  8 commitment Social awareness        Winter       75          50   -25   
+##  9 commitment Social exploration      Fall         75.2        63.2 -12   
+## 10 commitment Social exploration      Spring       84          59.5 -24.5 
+## # ... with 23 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Websites in RStudio</title>
       <link>https://dcosme.github.io/post/rstudio-website-tutorial/</link>
       <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>
