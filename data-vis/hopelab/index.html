@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.38.1" />
+  <meta name="author" content="Danielle Cosme">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="load libraries if (!require(tidyverse)) { install.packages(&#39;tidyverse&#39;) } if (!require(devtools)) { install.packages(&#39;devtools&#39;) } if (!require(scorequaltrics)) { devtools::install_github(&#39;jflournoy/qualtrics&#39;) } if (!require(ggcorrplot)) { install.packages(&#39;ggcorrplot&#39;) }  questionnaires to score  SWLS = Satisfaction with Life Scale CESD-10 = CES-Depression, 10 items PANAS = Positive and Negative Affect Schedule PSS = Perceived Stress Scale ULS-8 = UCLA Loneliness Scale, 8 items Priorities   define variables and paths  cred_file_location = path to your Qualtrics credential file.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://dcosme.github.io/data-vis/hopelab/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#F0BD00">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700%7cRoboto:400,400italic,700%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://dcosme.github.io/index.xml" type="application/rss+xml" title="Danielle Cosme">
+  <link rel="feed" href="https://dcosme.github.io/index.xml" type="application/rss+xml" title="Danielle Cosme">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://dcosme.github.io/data-vis/hopelab/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@danicosme">
+  <meta property="twitter:creator" content="@danicosme">
+  
+  <meta property="og:site_name" content="Danielle Cosme">
+  <meta property="og:url" content="https://dcosme.github.io/data-vis/hopelab/">
+  <meta property="og:title" content="Descriptives for Hopelab | Danielle Cosme">
+  <meta property="og:description" content="load libraries if (!require(tidyverse)) { install.packages(&#39;tidyverse&#39;) } if (!require(devtools)) { install.packages(&#39;devtools&#39;) } if (!require(scorequaltrics)) { devtools::install_github(&#39;jflournoy/qualtrics&#39;) } if (!require(ggcorrplot)) { install.packages(&#39;ggcorrplot&#39;) }  questionnaires to score  SWLS = Satisfaction with Life Scale CESD-10 = CES-Depression, 10 items PANAS = Positive and Negative Affect Schedule PSS = Perceived Stress Scale ULS-8 = UCLA Loneliness Scale, 8 items Priorities   define variables and paths  cred_file_location = path to your Qualtrics credential file.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2018-10-23T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2018-10-23T00:00:00&#43;00:00">
+  
+
+  
+  
+
+  <title>Descriptives for Hopelab | Danielle Cosme</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Danielle Cosme</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/cv_d.cosme.pdf">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Descriptives for Hopelab</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2018-10-23 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Oct 23, 2018
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Danielle Cosme">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Descriptives%20for%20Hopelab&amp;url=https%3a%2f%2fdcosme.github.io%2fdata-vis%2fhopelab%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fdcosme.github.io%2fdata-vis%2fhopelab%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdcosme.github.io%2fdata-vis%2fhopelab%2f&amp;title=Descriptives%20for%20Hopelab"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fdcosme.github.io%2fdata-vis%2fhopelab%2f&amp;title=Descriptives%20for%20Hopelab"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Descriptives%20for%20Hopelab&amp;body=https%3a%2f%2fdcosme.github.io%2fdata-vis%2fhopelab%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <div id="load-libraries" class="section level1">
+<h1>load libraries</h1>
+<pre class="r"><code>if (!require(tidyverse)) {
+  install.packages(&#39;tidyverse&#39;)
+}
+
+if (!require(devtools)) {
+  install.packages(&#39;devtools&#39;)
+}
+
+if (!require(scorequaltrics)) {
+  devtools::install_github(&#39;jflournoy/qualtrics&#39;)
+}
+
+if (!require(ggcorrplot)) {
+  install.packages(&#39;ggcorrplot&#39;)
+}</code></pre>
+</div>
+<div id="questionnaires-to-score" class="section level1">
+<h1>questionnaires to score</h1>
+<ul>
+<li>SWLS = Satisfaction with Life Scale</li>
+<li>CESD-10 = CES-Depression, 10 items</li>
+<li>PANAS = Positive and Negative Affect Schedule</li>
+<li>PSS = Perceived Stress Scale</li>
+<li>ULS-8 = UCLA Loneliness Scale, 8 items</li>
+<li>Priorities</li>
+</ul>
+</div>
+<div id="define-variables-and-paths" class="section level1">
+<h1>define variables and paths</h1>
+<ul>
+<li><code>cred_file_location</code> = path to your Qualtrics credential file. You’ll need to generate this via Qualtrics using the instructions above.</li>
+<li><code>id_column_name</code> = subject ID column name in Qualtrics survey; can be a regular expression</li>
+</ul>
+</div>
+<div id="access-qualtrics-data" class="section level1">
+<h1>access qualtrics data</h1>
+<p>Filter available surveys based on the filter specified above.</p>
+<pre class="r"><code># load credential file
+credentials = scorequaltrics::creds_from_file(cred_file_location)
+
+# filter
+surveysAvail = scorequaltrics::get_surveys(credentials)
+surveysFiltered = filter(surveysAvail, grepl(survey_name_filter, SurveyName))
+
+knitr::kable(arrange(select(surveysFiltered, SurveyName), SurveyName))</code></pre>
+</div>
+<div id="clean-and-score-data" class="section level1">
+<h1>clean and score data</h1>
+<div id="get-survey-data" class="section level2">
+<h2>get survey data</h2>
+<p>The <code>get_survey_data</code> funcion pulls the data from the surveys specified in <code>surveysFiltered</code> and reshapes into the long format. Because the example data also includes some identifying information, we also want to filter those items out of our dataframe.</p>
+<pre class="r"><code># get data
+surveys_long = scorequaltrics::get_survey_data(surveysFiltered,
+                                               credentials, 
+                                               pid_col = sid_column_name) %&gt;%
+               filter(!item %in% identifiableData) #filter out identifiable data
+
+# print first 10 rows
+head(surveys_long, 10)</code></pre>
+</div>
+<div id="load-scoring-rubrics" class="section level2">
+<h2>load scoring rubrics</h2>
+<p>Scoring rubrics should exist in <code>rubric_dir</code> and be named according to the following convention: <code>[measure]_scoring_rubric.csv</code></p>
+<pre class="r"><code># specify rubric paths
+scoring_rubrics = data.frame(file = dir(file.path(rubric_dir), 
+                                        pattern = &#39;.*scoring_rubric.*.csv&#39;,
+                                        full.names = TRUE))
+
+# read in rubrics
+scoring_data_long = scorequaltrics::get_rubrics(scoring_rubrics,
+                                                type = &#39;scoring&#39;)
+
+# print the first 10 rows
+head(scoring_data_long[, -1], 10)</code></pre>
+</div>
+<div id="clean" class="section level2">
+<h2>clean</h2>
+<ul>
+<li>exclude non-sub responses</li>
+<li>convert missing values to NA</li>
+<li>duplicates</li>
+</ul>
+<p>First, exclude responses that are not real or are incomplete responses. In this dataset, some subjects have their ID in the <code>ExternalDataReference</code> column only, so we’ll need to add that to the <code>subjectID</code> column before filtering.</p>
+<pre class="r"><code>surveys_long_sub = surveys_long %&gt;%
+  mutate(subjectID = ifelse(is.na(subjectID), ExternalDataReference, subjectID)) %&gt;%
+  # filter based on sid_pattern
+  filter(grepl(sid_pattern, subjectID)) %&gt;%
+  # only get finished surveys
+  filter(Finished == &#39;1&#39;) %&gt;%
+  select(-ExternalDataReference, -Finished) %&gt;%
+  arrange(subjectID) %&gt;%
+  # recode FPS &lt;--&gt; FP swaps
+  mutate(subjectID = ifelse(survey_name == &quot;FPS T1 In Person&quot; &amp; subjectID == &quot;FPS001&quot;, &quot;FPS015&quot;,
+                     ifelse(survey_name == &quot;FP MRI T1 Online&quot; &amp; subjectID == &quot;FP099&quot;, &quot;FPS220&quot;,
+                     ifelse(survey_name == &quot;FP MRI T1 Online&quot; &amp; subjectID == &quot;FP105&quot;, &quot;FPS221&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS003&quot;, &quot;FP083&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS008&quot;, &quot;FP084&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS028&quot;, &quot;FP122&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS035&quot;, &quot;FP121&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS053&quot;, &quot;FP114&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS054&quot;, &quot;FP120&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS055&quot;, &quot;FP115&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS064&quot;, &quot;FP088&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS068&quot;, &quot;FP112&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS077&quot;, &quot;FP086&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS079&quot;, &quot;FP106&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS080&quot;, &quot;FP025&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS088&quot;, &quot;FP085&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS089&quot;, &quot;FP103&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS091&quot;, &quot;FP093&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS165&quot;, &quot;FP087&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS171&quot;, &quot;FP113&quot;,
+                     ifelse(survey_name == &quot;FPS T1 Online&quot; &amp; subjectID == &quot;FPS100&quot;, &quot;FP026&quot;,
+                            subjectID))))))))))))))))))))))
+
+# print unique SIDs
+unique(surveys_long_sub$subjectID)</code></pre>
+<p>Convert missing values to NA</p>
+<pre class="r"><code>surveys_long_na = surveys_long_sub %&gt;%
+  mutate(value = ifelse(value == &quot;&quot;, NA, value))</code></pre>
+<p>Check for non-numeric items using the <code>get_uncoercibles()</code> function</p>
+<pre class="r"><code>surveys_long_na %&gt;%
+  scorequaltrics::get_uncoercibles() %&gt;%
+  distinct(item, value) %&gt;%
+  arrange(item) %&gt;%
+  select(item) %&gt;%
+  unique()
+
+surveys_long_na %&gt;%
+  scorequaltrics::get_uncoercibles() %&gt;%
+  distinct(item, value) %&gt;%
+  arrange(item)</code></pre>
+<p>Check for duplicate responses. The variable ‘qid’ is useful here because it allows us to find duplicate responses</p>
+<pre class="r"><code>(subs = surveys_long_na %&gt;%
+  spread(item, value) %&gt;%
+  group_by(subjectID) %&gt;%
+  summarize(n = n()) %&gt;%
+  arrange(desc(n)) %&gt;%
+  filter(n &gt; 2))
+
+surveys_long_na %&gt;%
+  filter(subjectID %in% subs$subjectID) %&gt;%
+  spread(item, value) %&gt;%
+  select(subjectID, survey_name)</code></pre>
+<p>Remove duplicate observations</p>
+<pre class="r"><code>surveys_long_clean = surveys_long_na %&gt;%
+  filter(!qid == &quot;R_2yfP0TaeKee6n1F&quot;) %&gt;% #FP058 first response
+  filter(!qid == &quot;R_a9JXCN17a6LALDz&quot;) %&gt;% #FP100 first response
+  filter(!(subjectID == &quot;FP025&quot; &amp; survey_name == &quot;FPS T1 Online&quot;)) %&gt;% #FP025 FPS
+  filter(!(subjectID == &quot;FP026&quot; &amp; survey_name == &quot;FPS T1 Online&quot;)) %&gt;% #FP026 FPS
+  filter(!(subjectID == &quot;FP112&quot; &amp; survey_name == &quot;FPS T1 Online&quot;)) %&gt;% #FP112 FPS
+  select(-qid)</code></pre>
+</div>
+<div id="score" class="section level2">
+<h2>score</h2>
+<p>Get only the items used in the scoring rubrics</p>
+<pre class="r"><code>scoring = scorequaltrics::get_items_in_rubric(surveys_long_clean, scoring_data_long)</code></pre>
+<p>Modify <code>score_questionnaire_dsn</code> function</p>
+<ul>
+<li>Change the function to also group by <code>survey_name</code> to be able to score multiple time points at once<br />
+</li>
+<li>Add SID as an argument to enable unique specification</li>
+</ul>
+<pre class="r"><code>reverse_score&lt;-function(
+  item_values,
+  min=stop(&#39;Must specify min and max score.&#39;),
+  max=stop(&#39;Must specify min and max score.&#39;)){
+  rev_items&lt;-max+min-item_values
+  rev_items
+}
+
+score_items&lt;-function(item_values,scoring_methods,na.rm=F,mean.na.rm=T,scale_name=&#39;&#39;, scored_scale=&#39;&#39;){
+  # item_values should be a vector of numbers
+  # scoring_methods should be a function that takes a vector, or &#39;1&#39;
+  #check that all elements in `scoring` are the same
+
+  if(!all(scoring_methods[1]==scoring_methods))
+    stop(paste0(&#39;Scoring methods not all the same. Check that you\&#39;re\n&#39;,
+                &#39;grouping rows correctly, and that the rubric is correct.\n&#39;,
+                &#39;(scale name is &#39;,scale_name,&#39;, scored scale is &#39;,scored_scale,&#39;)\n&#39;,
+                paste(scoring_methods, collapse=&#39;\n&#39;)))
+  scoring_method&lt;-unique(scoring_methods)
+  if (scoring_method==1){
+    scoring_func&lt;-mean
+    na.rm=mean.na.rm
+  }
+  else
+    scoring_func&lt;-try(get(scoring_method))
+  if (class(scoring_func)==&#39;try-error&#39;)
+    stop(paste(&#39;Scoring method &quot;&#39;,scoring_method,&#39;&quot; not found. (scale name is &#39;,scale_name,&#39;)&#39;))
+  if(na.rm)
+    do_for_na&lt;-na.exclude
+  else
+    do_for_na&lt;-na.pass
+  scoring_func(do_for_na(item_values))
+}
+
+score_questionnaire_dsn &lt;- function(dataDF,rubricsDF,SID){
+  #Takes long-form question data and rubric data, and a logical
+  # value specifying whether to use _part2 rubrics.
+  #Returns scored scales.
+  scores_with_scoring_params&lt;-rubricsDF  %&gt;%
+    left_join(
+      dataDF,
+      by=c(
+        #&quot;data_file_name&quot; = &quot;survey_name&quot;,
+        &quot;column_name&quot; = &quot;item&quot;)) %&gt;%
+    filter(!(include %in% c(0,NA,&#39;0&#39;,&#39;NA&#39;,&#39;&#39;))) # this filters the rubrics
+
+  nonNumeric_items = scores_with_scoring_params %&gt;% filter(include %in% &#39;I&#39;)
+
+  transform_scored&lt;-
+    scores_with_scoring_params %&gt;%
+    group_by(column_name) %&gt;%
+    mutate(
+      value=as.numeric(
+        ifelse(
+          !(transform %in% c(0,NA,&#39;&#39;)),
+          transform_scores(
+            value,
+            transform,
+            min=as.numeric(min[[1]]),
+            max=as.numeric(max[[1]])),
+          value)))
+
+  reverse_scored&lt;-
+    transform_scored %&gt;%
+    group_by(column_name) %&gt;%
+    mutate(
+      value=as.numeric(
+        ifelse(
+          reverse %in% 1,
+          reverse_score(
+            value,
+            min=as.numeric(min[[1]]),
+            max=as.numeric(max[[1]])),
+          value))) %&gt;%
+    filter(!include %in% &#39;I&#39;)
+
+  grouping_vars &lt;- lapply(c(&#39;survey_name&#39;,&#39;scale_name&#39;,&#39;scored_scale&#39;, SID), as.symbol)
+  
+  non_numeric &lt;- nonNumeric_items %&gt;%
+    mutate(na.rm=F) %&gt;%
+    group_by_(.dots=grouping_vars) %&gt;%
+    summarise(
+      score=score_items(value,include,na.rm=na.rm[[1]],scale_name=scale_name[[1]],scored_scale=scored_scale[[1]]),
+      n_items=sum(!is.na(value)),
+      n_missing=sum(is.na(value)),
+      method=unique(include))
+
+  scored&lt;-reverse_scored %&gt;%
+    mutate(na.rm=F) %&gt;%
+    group_by_(.dots=grouping_vars) %&gt;%
+    summarise(
+      score=score_items(value,include,na.rm=na.rm[[1]],scale_name=scale_name[[1]],scored_scale=scored_scale[[1]]),
+      n_items=sum(!is.na(value)),
+      n_missing=sum(is.na(value)),
+      method=unique(include)) %&gt;%
+    mutate(
+      score=as.character(score)) %&gt;%
+    bind_rows(non_numeric,.)
+}
+
+score_questionnaire_homebrew&lt;-function(dataDF, rubricsDF, SID, psych = FALSE, ...){
+  if(psych){
+    score_questionnaire_psych(dataDF, rubricsDF, ...)
+  } else {
+    score_questionnaire_dsn(dataDF, rubricsDF, SID, ...)
+  }
+}</code></pre>
+<p>Score the data</p>
+<pre class="r"><code>scored = score_questionnaire_homebrew(scoring, scoring_data_long, &#39;subjectID&#39;)</code></pre>
+<p>Score priorities survey</p>
+<pre class="r"><code>priorities = surveys_long_clean %&gt;% filter(grepl(&quot;PRIO&quot;, item)) %&gt;%
+  mutate(
+    item = ifelse(item == &quot;PRIO_1&quot;, &quot;Romantic relationships&quot;,
+                ifelse(item == &quot;PRIO_2&quot;, &quot;Family&quot;,
+                ifelse(item == &quot;PRIO_3&quot;, &quot;Exercise &amp; athletics&quot;,
+                ifelse(item == &quot;PRIO_4&quot;, &quot;Well-being&quot;,
+                ifelse(item == &quot;PRIO_5&quot;, &quot;Physical appearance&quot;,
+                ifelse(item == &quot;PRIO_6&quot;, &quot;Health &amp; safety&quot;,
+                ifelse(item == &quot;PRIO_7&quot;, &quot;Social exploration&quot;,
+                ifelse(item == &quot;PRIO_8&quot;, &quot;Maintaining friendships&quot;,
+                ifelse(item == &quot;PRIO_9&quot;, &quot;Community service&quot;,
+                ifelse(item == &quot;PRIO_10&quot;, &quot;Religion &amp; spirituality&quot;,
+                ifelse(item == &quot;PRIO_11&quot;, &quot;Social awareness&quot;,
+                ifelse(item == &quot;PRIO_12&quot;, &quot;New experiences &quot;,
+                ifelse(item == &quot;PRIO_13&quot;, &quot;Hobbies &amp; entertainment&quot;,
+                ifelse(item == &quot;PRIO_14&quot;, &quot;Aesthetics&quot;,
+                ifelse(item == &quot;PRIO_15&quot;, &quot;Self discovery&quot;,
+                ifelse(item == &quot;PRIO_16&quot;, &quot;Academics&quot;,
+                ifelse(item == &quot;PRIO_17&quot;, &quot;Other&quot;,
+                ifelse(item == &quot;PRIO_17_TEXT&quot;, &quot;Other_text&quot;, NA)))))))))))))))))),
+   sort = as.numeric(value),
+   social = ifelse(grepl(&quot;Social|Romantic|friendship|family&quot;, item), 1, 0),
+   top3 = ifelse(value %in% 1:3, 1, 0),
+   top5 = ifelse(value %in% 1:5, 1, 0))</code></pre>
+</div>
+</div>
+<div id="plots" class="section level1">
+<h1>plots</h1>
+<p>Questionnaire abbreviations</p>
+<ul>
+<li>SWLS = Satisfaction with Life Scale</li>
+<li>CESD-10 = CES-Depression, 10 items
+<ul>
+<li>scores &gt; 10 = considered depressed</li>
+</ul></li>
+<li>PANAS = Positive and Negative Affect Schedule</li>
+<li>PSS = Perceived Stress Scale</li>
+<li>ULS-8 = UCLA Loneliness Scale, 8 items
+<ul>
+<li>scores &gt; 8 = probable anxiety diagnosis</li>
+</ul></li>
+</ul>
+<div id="distributions" class="section level2">
+<h2>distributions</h2>
+<pre class="r"><code>scored %&gt;%
+  mutate(score = as.numeric(score)) %&gt;%
+  group_by(scale_name) %&gt;%
+    do({
+      plot = ggplot(., aes(scored_scale, score)) +
+        geom_boxplot() +
+        geom_jitter(width = .15, alpha = .5, color = &quot;#2A908B&quot;) +
+        labs(x = &quot;&quot;, y = &quot;&quot;, title = paste0(.$scale_name[[1]])) +
+        theme_minimal()
+      print(plot)
+      data.frame()
+    })</code></pre>
+<p><img src="/data-vis/hopelab_files/figure-html/plotdist-1.png" width="672" /><img src="/data-vis/hopelab_files/figure-html/plotdist-2.png" width="672" /><img src="/data-vis/hopelab_files/figure-html/plotdist-3.png" width="672" /><img src="/data-vis/hopelab_files/figure-html/plotdist-4.png" width="672" /><img src="/data-vis/hopelab_files/figure-html/plotdist-5.png" width="672" /><img src="/data-vis/hopelab_files/figure-html/plotdist-6.png" width="672" /></p>
+<pre><code>## # A tibble: 0 x 1
+## # Groups:   scale_name [0]
+## # ... with 1 variable: scale_name &lt;chr&gt;</code></pre>
+</div>
+<div id="correlations" class="section level2">
+<h2>correlations</h2>
+<pre class="r"><code>scored %&gt;%
+  ungroup() %&gt;%
+  mutate(score = as.numeric(score),
+         var.name = paste(scale_name, scored_scale, sep = &quot;_&quot;)) %&gt;%
+  select(var.name, score, subjectID) %&gt;%
+  spread(var.name, score) %&gt;%
+  filter(!is.na(subjectID)) %&gt;%
+  select(-subjectID) %&gt;%
+  cor(., use = &quot;pairwise.complete.obs&quot;) %&gt;%
+ ggcorrplot(hc.order = TRUE, outline.col = &quot;white&quot;, colors = c(&quot;#431153&quot;, &quot;#2A908B&quot;, &quot;#FCE540&quot;)) +
+    geom_text(aes(label = round(value, 2)), size = 3) +
+    labs(title = &quot;Correlations between well-being measures&quot;)</code></pre>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
+</div>
+<div id="priorities-density-plots" class="section level2">
+<h2>priorities density plots</h2>
+<pre class="r"><code>priorities %&gt;%
+  filter(!grepl(&quot;Other&quot;, item)) %&gt;%
+  group_by(item) %&gt;%
+  mutate(value = as.numeric(value),
+         mean = mean(value, na.rm = TRUE)) %&gt;%
+  ggplot(aes(value, item, fill = mean)) + 
+    ggridges::geom_density_ridges() + 
+    scale_fill_viridis_c(name = &quot;mean\nranking&quot;, direction = -1) +
+    labs(x = &quot;ranking&quot;, y = &quot;&quot;, title = &quot;Ranking density among priority areas&quot;) + 
+    theme_minimal()</code></pre>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-14-1.png" width="768" /></p>
+</div>
+<div id="top-priorities" class="section level2">
+<h2>top priorities</h2>
+<pre class="r"><code>priorities %&gt;%
+  filter(top3 == 1) %&gt;%
+  group_by(item) %&gt;%
+  summarize(count = n()) %&gt;%
+  ungroup() %&gt;%
+  ggplot(aes(reorder(item, -count), count, fill = count)) + 
+    geom_bar(stat = &quot;identity&quot;) +
+    scale_fill_viridis_c() + 
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10),
+          legend.position = &quot;none&quot;) + 
+    labs(x = &quot;&quot;, y = &quot;&quot;, title = &quot;Number of times this priority area was in the top 3 rated&quot;)</code></pre>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<pre class="r"><code>priorities %&gt;%
+  filter(top5 == 1) %&gt;%
+  group_by(item) %&gt;%
+  summarize(count = n()) %&gt;%
+  ungroup() %&gt;%
+  ggplot(aes(reorder(item, -count), count, fill = count)) + 
+    geom_bar(stat = &quot;identity&quot;) +
+    scale_fill_viridis_c() + 
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10),
+          legend.position = &quot;none&quot;) + 
+    labs(x = &quot;&quot;, y = &quot;&quot;, title = &quot;Number of times this priority area was in the top 5 rated&quot;)</code></pre>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-15-2.png" width="672" /></p>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+    
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

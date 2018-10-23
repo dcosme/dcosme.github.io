@@ -11,6 +11,413 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Descriptives for Hopelab</title>
+      <link>https://dcosme.github.io/data-vis/hopelab/</link>
+      <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/data-vis/hopelab/</guid>
+      <description>&lt;div id=&#34;load-libraries&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;load libraries&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (!require(tidyverse)) {
+  install.packages(&amp;#39;tidyverse&amp;#39;)
+}
+
+if (!require(devtools)) {
+  install.packages(&amp;#39;devtools&amp;#39;)
+}
+
+if (!require(scorequaltrics)) {
+  devtools::install_github(&amp;#39;jflournoy/qualtrics&amp;#39;)
+}
+
+if (!require(ggcorrplot)) {
+  install.packages(&amp;#39;ggcorrplot&amp;#39;)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;questionnaires-to-score&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;questionnaires to score&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;SWLS = Satisfaction with Life Scale&lt;/li&gt;
+&lt;li&gt;CESD-10 = CES-Depression, 10 items&lt;/li&gt;
+&lt;li&gt;PANAS = Positive and Negative Affect Schedule&lt;/li&gt;
+&lt;li&gt;PSS = Perceived Stress Scale&lt;/li&gt;
+&lt;li&gt;ULS-8 = UCLA Loneliness Scale, 8 items&lt;/li&gt;
+&lt;li&gt;Priorities&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;define-variables-and-paths&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;define variables and paths&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;cred_file_location&lt;/code&gt; = path to your Qualtrics credential file. You’ll need to generate this via Qualtrics using the instructions above.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;id_column_name&lt;/code&gt; = subject ID column name in Qualtrics survey; can be a regular expression&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;access-qualtrics-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;access qualtrics data&lt;/h1&gt;
+&lt;p&gt;Filter available surveys based on the filter specified above.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load credential file
+credentials = scorequaltrics::creds_from_file(cred_file_location)
+
+# filter
+surveysAvail = scorequaltrics::get_surveys(credentials)
+surveysFiltered = filter(surveysAvail, grepl(survey_name_filter, SurveyName))
+
+knitr::kable(arrange(select(surveysFiltered, SurveyName), SurveyName))&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clean-and-score-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;clean and score data&lt;/h1&gt;
+&lt;div id=&#34;get-survey-data&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;get survey data&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;get_survey_data&lt;/code&gt; funcion pulls the data from the surveys specified in &lt;code&gt;surveysFiltered&lt;/code&gt; and reshapes into the long format. Because the example data also includes some identifying information, we also want to filter those items out of our dataframe.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# get data
+surveys_long = scorequaltrics::get_survey_data(surveysFiltered,
+                                               credentials, 
+                                               pid_col = sid_column_name) %&amp;gt;%
+               filter(!item %in% identifiableData) #filter out identifiable data
+
+# print first 10 rows
+head(surveys_long, 10)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;load-scoring-rubrics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;load scoring rubrics&lt;/h2&gt;
+&lt;p&gt;Scoring rubrics should exist in &lt;code&gt;rubric_dir&lt;/code&gt; and be named according to the following convention: &lt;code&gt;[measure]_scoring_rubric.csv&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# specify rubric paths
+scoring_rubrics = data.frame(file = dir(file.path(rubric_dir), 
+                                        pattern = &amp;#39;.*scoring_rubric.*.csv&amp;#39;,
+                                        full.names = TRUE))
+
+# read in rubrics
+scoring_data_long = scorequaltrics::get_rubrics(scoring_rubrics,
+                                                type = &amp;#39;scoring&amp;#39;)
+
+# print the first 10 rows
+head(scoring_data_long[, -1], 10)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;clean&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;clean&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;exclude non-sub responses&lt;/li&gt;
+&lt;li&gt;convert missing values to NA&lt;/li&gt;
+&lt;li&gt;duplicates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;First, exclude responses that are not real or are incomplete responses. In this dataset, some subjects have their ID in the &lt;code&gt;ExternalDataReference&lt;/code&gt; column only, so we’ll need to add that to the &lt;code&gt;subjectID&lt;/code&gt; column before filtering.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_sub = surveys_long %&amp;gt;%
+  mutate(subjectID = ifelse(is.na(subjectID), ExternalDataReference, subjectID)) %&amp;gt;%
+  # filter based on sid_pattern
+  filter(grepl(sid_pattern, subjectID)) %&amp;gt;%
+  # only get finished surveys
+  filter(Finished == &amp;#39;1&amp;#39;) %&amp;gt;%
+  select(-ExternalDataReference, -Finished) %&amp;gt;%
+  arrange(subjectID) %&amp;gt;%
+  # recode FPS &amp;lt;--&amp;gt; FP swaps
+  mutate(subjectID = ifelse(survey_name == &amp;quot;FPS T1 In Person&amp;quot; &amp;amp; subjectID == &amp;quot;FPS001&amp;quot;, &amp;quot;FPS015&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FP MRI T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FP099&amp;quot;, &amp;quot;FPS220&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FP MRI T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FP105&amp;quot;, &amp;quot;FPS221&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS003&amp;quot;, &amp;quot;FP083&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS008&amp;quot;, &amp;quot;FP084&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS028&amp;quot;, &amp;quot;FP122&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS035&amp;quot;, &amp;quot;FP121&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS053&amp;quot;, &amp;quot;FP114&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS054&amp;quot;, &amp;quot;FP120&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS055&amp;quot;, &amp;quot;FP115&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS064&amp;quot;, &amp;quot;FP088&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS068&amp;quot;, &amp;quot;FP112&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS077&amp;quot;, &amp;quot;FP086&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS079&amp;quot;, &amp;quot;FP106&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS080&amp;quot;, &amp;quot;FP025&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS088&amp;quot;, &amp;quot;FP085&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS089&amp;quot;, &amp;quot;FP103&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS091&amp;quot;, &amp;quot;FP093&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS165&amp;quot;, &amp;quot;FP087&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS171&amp;quot;, &amp;quot;FP113&amp;quot;,
+                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS100&amp;quot;, &amp;quot;FP026&amp;quot;,
+                            subjectID))))))))))))))))))))))
+
+# print unique SIDs
+unique(surveys_long_sub$subjectID)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Convert missing values to NA&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_na = surveys_long_sub %&amp;gt;%
+  mutate(value = ifelse(value == &amp;quot;&amp;quot;, NA, value))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check for non-numeric items using the &lt;code&gt;get_uncoercibles()&lt;/code&gt; function&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_na %&amp;gt;%
+  scorequaltrics::get_uncoercibles() %&amp;gt;%
+  distinct(item, value) %&amp;gt;%
+  arrange(item) %&amp;gt;%
+  select(item) %&amp;gt;%
+  unique()
+
+surveys_long_na %&amp;gt;%
+  scorequaltrics::get_uncoercibles() %&amp;gt;%
+  distinct(item, value) %&amp;gt;%
+  arrange(item)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Check for duplicate responses. The variable ‘qid’ is useful here because it allows us to find duplicate responses&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;(subs = surveys_long_na %&amp;gt;%
+  spread(item, value) %&amp;gt;%
+  group_by(subjectID) %&amp;gt;%
+  summarize(n = n()) %&amp;gt;%
+  arrange(desc(n)) %&amp;gt;%
+  filter(n &amp;gt; 2))
+
+surveys_long_na %&amp;gt;%
+  filter(subjectID %in% subs$subjectID) %&amp;gt;%
+  spread(item, value) %&amp;gt;%
+  select(subjectID, survey_name)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Remove duplicate observations&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_clean = surveys_long_na %&amp;gt;%
+  filter(!qid == &amp;quot;R_2yfP0TaeKee6n1F&amp;quot;) %&amp;gt;% #FP058 first response
+  filter(!qid == &amp;quot;R_a9JXCN17a6LALDz&amp;quot;) %&amp;gt;% #FP100 first response
+  filter(!(subjectID == &amp;quot;FP025&amp;quot; &amp;amp; survey_name == &amp;quot;FPS T1 Online&amp;quot;)) %&amp;gt;% #FP025 FPS
+  filter(!(subjectID == &amp;quot;FP026&amp;quot; &amp;amp; survey_name == &amp;quot;FPS T1 Online&amp;quot;)) %&amp;gt;% #FP026 FPS
+  filter(!(subjectID == &amp;quot;FP112&amp;quot; &amp;amp; survey_name == &amp;quot;FPS T1 Online&amp;quot;)) %&amp;gt;% #FP112 FPS
+  select(-qid)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;score&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;score&lt;/h2&gt;
+&lt;p&gt;Get only the items used in the scoring rubrics&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scoring = scorequaltrics::get_items_in_rubric(surveys_long_clean, scoring_data_long)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Modify &lt;code&gt;score_questionnaire_dsn&lt;/code&gt; function&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Change the function to also group by &lt;code&gt;survey_name&lt;/code&gt; to be able to score multiple time points at once&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Add SID as an argument to enable unique specification&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;reverse_score&amp;lt;-function(
+  item_values,
+  min=stop(&amp;#39;Must specify min and max score.&amp;#39;),
+  max=stop(&amp;#39;Must specify min and max score.&amp;#39;)){
+  rev_items&amp;lt;-max+min-item_values
+  rev_items
+}
+
+score_items&amp;lt;-function(item_values,scoring_methods,na.rm=F,mean.na.rm=T,scale_name=&amp;#39;&amp;#39;, scored_scale=&amp;#39;&amp;#39;){
+  # item_values should be a vector of numbers
+  # scoring_methods should be a function that takes a vector, or &amp;#39;1&amp;#39;
+  #check that all elements in `scoring` are the same
+
+  if(!all(scoring_methods[1]==scoring_methods))
+    stop(paste0(&amp;#39;Scoring methods not all the same. Check that you\&amp;#39;re\n&amp;#39;,
+                &amp;#39;grouping rows correctly, and that the rubric is correct.\n&amp;#39;,
+                &amp;#39;(scale name is &amp;#39;,scale_name,&amp;#39;, scored scale is &amp;#39;,scored_scale,&amp;#39;)\n&amp;#39;,
+                paste(scoring_methods, collapse=&amp;#39;\n&amp;#39;)))
+  scoring_method&amp;lt;-unique(scoring_methods)
+  if (scoring_method==1){
+    scoring_func&amp;lt;-mean
+    na.rm=mean.na.rm
+  }
+  else
+    scoring_func&amp;lt;-try(get(scoring_method))
+  if (class(scoring_func)==&amp;#39;try-error&amp;#39;)
+    stop(paste(&amp;#39;Scoring method &amp;quot;&amp;#39;,scoring_method,&amp;#39;&amp;quot; not found. (scale name is &amp;#39;,scale_name,&amp;#39;)&amp;#39;))
+  if(na.rm)
+    do_for_na&amp;lt;-na.exclude
+  else
+    do_for_na&amp;lt;-na.pass
+  scoring_func(do_for_na(item_values))
+}
+
+score_questionnaire_dsn &amp;lt;- function(dataDF,rubricsDF,SID){
+  #Takes long-form question data and rubric data, and a logical
+  # value specifying whether to use _part2 rubrics.
+  #Returns scored scales.
+  scores_with_scoring_params&amp;lt;-rubricsDF  %&amp;gt;%
+    left_join(
+      dataDF,
+      by=c(
+        #&amp;quot;data_file_name&amp;quot; = &amp;quot;survey_name&amp;quot;,
+        &amp;quot;column_name&amp;quot; = &amp;quot;item&amp;quot;)) %&amp;gt;%
+    filter(!(include %in% c(0,NA,&amp;#39;0&amp;#39;,&amp;#39;NA&amp;#39;,&amp;#39;&amp;#39;))) # this filters the rubrics
+
+  nonNumeric_items = scores_with_scoring_params %&amp;gt;% filter(include %in% &amp;#39;I&amp;#39;)
+
+  transform_scored&amp;lt;-
+    scores_with_scoring_params %&amp;gt;%
+    group_by(column_name) %&amp;gt;%
+    mutate(
+      value=as.numeric(
+        ifelse(
+          !(transform %in% c(0,NA,&amp;#39;&amp;#39;)),
+          transform_scores(
+            value,
+            transform,
+            min=as.numeric(min[[1]]),
+            max=as.numeric(max[[1]])),
+          value)))
+
+  reverse_scored&amp;lt;-
+    transform_scored %&amp;gt;%
+    group_by(column_name) %&amp;gt;%
+    mutate(
+      value=as.numeric(
+        ifelse(
+          reverse %in% 1,
+          reverse_score(
+            value,
+            min=as.numeric(min[[1]]),
+            max=as.numeric(max[[1]])),
+          value))) %&amp;gt;%
+    filter(!include %in% &amp;#39;I&amp;#39;)
+
+  grouping_vars &amp;lt;- lapply(c(&amp;#39;survey_name&amp;#39;,&amp;#39;scale_name&amp;#39;,&amp;#39;scored_scale&amp;#39;, SID), as.symbol)
+  
+  non_numeric &amp;lt;- nonNumeric_items %&amp;gt;%
+    mutate(na.rm=F) %&amp;gt;%
+    group_by_(.dots=grouping_vars) %&amp;gt;%
+    summarise(
+      score=score_items(value,include,na.rm=na.rm[[1]],scale_name=scale_name[[1]],scored_scale=scored_scale[[1]]),
+      n_items=sum(!is.na(value)),
+      n_missing=sum(is.na(value)),
+      method=unique(include))
+
+  scored&amp;lt;-reverse_scored %&amp;gt;%
+    mutate(na.rm=F) %&amp;gt;%
+    group_by_(.dots=grouping_vars) %&amp;gt;%
+    summarise(
+      score=score_items(value,include,na.rm=na.rm[[1]],scale_name=scale_name[[1]],scored_scale=scored_scale[[1]]),
+      n_items=sum(!is.na(value)),
+      n_missing=sum(is.na(value)),
+      method=unique(include)) %&amp;gt;%
+    mutate(
+      score=as.character(score)) %&amp;gt;%
+    bind_rows(non_numeric,.)
+}
+
+score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FALSE, ...){
+  if(psych){
+    score_questionnaire_psych(dataDF, rubricsDF, ...)
+  } else {
+    score_questionnaire_dsn(dataDF, rubricsDF, SID, ...)
+  }
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Score the data&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored = score_questionnaire_homebrew(scoring, scoring_data_long, &amp;#39;subjectID&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Score priorities survey&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities = surveys_long_clean %&amp;gt;% filter(grepl(&amp;quot;PRIO&amp;quot;, item)) %&amp;gt;%
+  mutate(
+    item = ifelse(item == &amp;quot;PRIO_1&amp;quot;, &amp;quot;Romantic relationships&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_2&amp;quot;, &amp;quot;Family&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_3&amp;quot;, &amp;quot;Exercise &amp;amp; athletics&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_4&amp;quot;, &amp;quot;Well-being&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_5&amp;quot;, &amp;quot;Physical appearance&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_6&amp;quot;, &amp;quot;Health &amp;amp; safety&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_7&amp;quot;, &amp;quot;Social exploration&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_8&amp;quot;, &amp;quot;Maintaining friendships&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_9&amp;quot;, &amp;quot;Community service&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_10&amp;quot;, &amp;quot;Religion &amp;amp; spirituality&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_11&amp;quot;, &amp;quot;Social awareness&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_12&amp;quot;, &amp;quot;New experiences &amp;quot;,
+                ifelse(item == &amp;quot;PRIO_13&amp;quot;, &amp;quot;Hobbies &amp;amp; entertainment&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_14&amp;quot;, &amp;quot;Aesthetics&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_15&amp;quot;, &amp;quot;Self discovery&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_16&amp;quot;, &amp;quot;Academics&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_17&amp;quot;, &amp;quot;Other&amp;quot;,
+                ifelse(item == &amp;quot;PRIO_17_TEXT&amp;quot;, &amp;quot;Other_text&amp;quot;, NA)))))))))))))))))),
+   sort = as.numeric(value),
+   social = ifelse(grepl(&amp;quot;Social|Romantic|friendship|family&amp;quot;, item), 1, 0),
+   top3 = ifelse(value %in% 1:3, 1, 0),
+   top5 = ifelse(value %in% 1:5, 1, 0))&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;plots&lt;/h1&gt;
+&lt;p&gt;Questionnaire abbreviations&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SWLS = Satisfaction with Life Scale&lt;/li&gt;
+&lt;li&gt;CESD-10 = CES-Depression, 10 items
+&lt;ul&gt;
+&lt;li&gt;scores &amp;gt; 10 = considered depressed&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;PANAS = Positive and Negative Affect Schedule&lt;/li&gt;
+&lt;li&gt;PSS = Perceived Stress Scale&lt;/li&gt;
+&lt;li&gt;ULS-8 = UCLA Loneliness Scale, 8 items
+&lt;ul&gt;
+&lt;li&gt;scores &amp;gt; 8 = probable anxiety diagnosis&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;distributions&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;distributions&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored %&amp;gt;%
+  mutate(score = as.numeric(score)) %&amp;gt;%
+  group_by(scale_name) %&amp;gt;%
+    do({
+      plot = ggplot(., aes(scored_scale, score)) +
+        geom_boxplot() +
+        geom_jitter(width = .15, alpha = .5, color = &amp;quot;#2A908B&amp;quot;) +
+        labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = paste0(.$scale_name[[1]])) +
+        theme_minimal()
+      print(plot)
+      data.frame()
+    })&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 0 x 1
+## # Groups:   scale_name [0]
+## # ... with 1 variable: scale_name &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;correlations&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;correlations&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored %&amp;gt;%
+  ungroup() %&amp;gt;%
+  mutate(score = as.numeric(score),
+         var.name = paste(scale_name, scored_scale, sep = &amp;quot;_&amp;quot;)) %&amp;gt;%
+  select(var.name, score, subjectID) %&amp;gt;%
+  spread(var.name, score) %&amp;gt;%
+  filter(!is.na(subjectID)) %&amp;gt;%
+  select(-subjectID) %&amp;gt;%
+  cor(., use = &amp;quot;pairwise.complete.obs&amp;quot;) %&amp;gt;%
+ ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#431153&amp;quot;, &amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
+    geom_text(aes(label = round(value, 2)), size = 3) +
+    labs(title = &amp;quot;Correlations between well-being measures&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;priorities-density-plots&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;priorities density plots&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
+  group_by(item) %&amp;gt;%
+  mutate(value = as.numeric(value),
+         mean = mean(value, na.rm = TRUE)) %&amp;gt;%
+  ggplot(aes(value, item, fill = mean)) + 
+    ggridges::geom_density_ridges() + 
+    scale_fill_viridis_c(name = &amp;quot;mean\nranking&amp;quot;, direction = -1) +
+    labs(x = &amp;quot;ranking&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Ranking density among priority areas&amp;quot;) + 
+    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;top-priorities&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;top priorities&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(top3 == 1) %&amp;gt;%
+  group_by(item) %&amp;gt;%
+  summarize(count = n()) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  ggplot(aes(reorder(item, -count), count, fill = count)) + 
+    geom_bar(stat = &amp;quot;identity&amp;quot;) +
+    scale_fill_viridis_c() + 
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10),
+          legend.position = &amp;quot;none&amp;quot;) + 
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 3 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(top5 == 1) %&amp;gt;%
+  group_by(item) %&amp;gt;%
+  summarize(count = n()) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  ggplot(aes(reorder(item, -count), count, fill = count)) + 
+    geom_bar(stat = &amp;quot;identity&amp;quot;) +
+    scale_fill_viridis_c() + 
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
+    theme(text = element_text(size = 10),
+          legend.position = &amp;quot;none&amp;quot;) + 
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 5 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Autonomy can support affect regulation during illness and in health</title>
       <link>https://dcosme.github.io/publication/autonomy-affect-regulation/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 -0700</pubDate>

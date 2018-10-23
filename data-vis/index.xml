@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Descriptives for Hopelab</title>
+      <link>https://dcosme.github.io/data-vis/hopelab/</link>
+      <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/data-vis/hopelab/</guid>
+      <description>load libraries if (!require(tidyverse)) { install.packages(&amp;#39;tidyverse&amp;#39;) } if (!require(devtools)) { install.packages(&amp;#39;devtools&amp;#39;) } if (!require(scorequaltrics)) { devtools::install_github(&amp;#39;jflournoy/qualtrics&amp;#39;) } if (!require(ggcorrplot)) { install.packages(&amp;#39;ggcorrplot&amp;#39;) }  questionnaires to score  SWLS = Satisfaction with Life Scale CESD-10 = CES-Depression, 10 items PANAS = Positive and Negative Affect Schedule PSS = Perceived Stress Scale ULS-8 = UCLA Loneliness Scale, 8 items Priorities   define variables and paths  cred_file_location = path to your Qualtrics credential file.</description>
+    </item>
+    
+    <item>
       <title>FP Pilot GPS</title>
       <link>https://dcosme.github.io/data-vis/fp_pilot_gps/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
