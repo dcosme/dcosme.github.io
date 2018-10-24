@@ -13,10 +13,11 @@
     <item>
       <title>Descriptives for Hopelab</title>
       <link>https://dcosme.github.io/data-vis/hopelab/</link>
-      <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/data-vis/hopelab/</guid>
-      <description>&lt;div id=&#34;load-libraries&#34; class=&#34;section level1&#34;&gt;
+      <description>&lt;p&gt;Well-being descriptives for Hopelab.&lt;/p&gt;
+&lt;div id=&#34;load-libraries&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;load libraries&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (!require(tidyverse)) {
   install.packages(&amp;#39;tidyverse&amp;#39;)
@@ -37,11 +38,18 @@ if (!require(ggcorrplot)) {
 &lt;div id=&#34;questionnaires-to-score&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;questionnaires to score&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;SWLS = Satisfaction with Life Scale&lt;/li&gt;
-&lt;li&gt;CESD-10 = CES-Depression, 10 items&lt;/li&gt;
+&lt;li&gt;CESD-10 = CES-Depression, 10 items
+&lt;ul&gt;
+&lt;li&gt;scores &amp;gt; 10 = considered depressed&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;GAD7 = Generalized Anxiety Disorder, 7 items&lt;/li&gt;
 &lt;li&gt;PANAS = Positive and Negative Affect Schedule&lt;/li&gt;
 &lt;li&gt;PSS = Perceived Stress Scale&lt;/li&gt;
-&lt;li&gt;ULS-8 = UCLA Loneliness Scale, 8 items&lt;/li&gt;
+&lt;li&gt;SWLS = Satisfaction with Life Scale&lt;/li&gt;
+&lt;li&gt;ULS-8 = UCLA Loneliness Scale, 8 items
+&lt;ul&gt;
+&lt;li&gt;scores &amp;gt; 8 = probable anxiety diagnosis&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Priorities&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/div&gt;
@@ -321,13 +329,14 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
 &lt;h1&gt;plots&lt;/h1&gt;
 &lt;p&gt;Questionnaire abbreviations&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;SWLS = Satisfaction with Life Scale&lt;/li&gt;
 &lt;li&gt;CESD-10 = CES-Depression, 10 items
 &lt;ul&gt;
 &lt;li&gt;scores &amp;gt; 10 = considered depressed&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;GAD7 = Generalized Anxiety Disorder, 7 items&lt;/li&gt;
 &lt;li&gt;PANAS = Positive and Negative Affect Schedule&lt;/li&gt;
 &lt;li&gt;PSS = Perceived Stress Scale&lt;/li&gt;
+&lt;li&gt;SWLS = Satisfaction with Life Scale&lt;/li&gt;
 &lt;li&gt;ULS-8 = UCLA Loneliness Scale, 8 items
 &lt;ul&gt;
 &lt;li&gt;scores &amp;gt; 8 = probable anxiety diagnosis&lt;/li&gt;
@@ -365,7 +374,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
   cor(., use = &amp;quot;pairwise.complete.obs&amp;quot;) %&amp;gt;%
  ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#431153&amp;quot;, &amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
     geom_text(aes(label = round(value, 2)), size = 3) +
-    labs(title = &amp;quot;Correlations between well-being measures&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+    labs(title = &amp;quot;Correlations between well-being measures\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;priorities-density-plots&#34; class=&#34;section level2&#34;&gt;
@@ -378,7 +387,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
   ggplot(aes(value, item, fill = mean)) + 
     ggridges::geom_density_ridges() + 
     scale_fill_viridis_c(name = &amp;quot;mean\nranking&amp;quot;, direction = -1) +
-    labs(x = &amp;quot;ranking&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Ranking density among priority areas&amp;quot;) + 
+    labs(x = &amp;quot;ranking&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Ranking density among priority areas\n&amp;quot;) + 
     theme_minimal()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
@@ -396,8 +405,8 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
     theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
     theme(text = element_text(size = 10),
           legend.position = &amp;quot;none&amp;quot;) + 
-    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 3 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 3 rated\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
   filter(top5 == 1) %&amp;gt;%
   group_by(item) %&amp;gt;%
@@ -410,8 +419,75 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
     theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
     theme(text = element_text(size = 10),
           legend.position = &amp;quot;none&amp;quot;) + 
-    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 5 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 5 rated\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;priorities-by-loneliness&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;priorities by loneliness&lt;/h2&gt;
+&lt;p&gt;The higher the quartile, the greater the loneliness reported.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;loneliness = scored %&amp;gt;%
+  filter(scale_name == &amp;quot;ULS-8&amp;quot;) %&amp;gt;%
+  mutate(score = as.numeric(score),
+         loneliness = ifelse(score &amp;lt; 1.62, &amp;quot;1st quartile&amp;quot;,
+                      ifelse(score &amp;gt;= 1.62 &amp;amp; score &amp;lt; median(score), &amp;quot;2nd quartile&amp;quot;,
+                      ifelse(score &amp;gt;= median(score) &amp;amp; score &amp;lt; 2.5, &amp;quot;3rd quartile&amp;quot;, 
+                      ifelse(score &amp;gt;= 2.5, &amp;quot;4th quartile&amp;quot;, NA))))) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  select(subjectID, loneliness)
+
+priorities %&amp;gt;%
+  left_join(loneliness, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
+  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
+  group_by(item, loneliness) %&amp;gt;%
+  mutate(value = as.numeric(value),
+         mean = mean(value, na.rm = TRUE)) %&amp;gt;%
+  ggplot(aes(value, item, fill = mean)) + 
+    ggridges::geom_density_ridges() + 
+    scale_fill_viridis_c(name = &amp;quot;mean\nranking&amp;quot;, direction = -1) +
+    facet_grid(~loneliness) +
+    labs(x = &amp;quot;ranking&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Ranking density among priority areas as a function of loneliness\n&amp;quot;) + 
+    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  left_join(loneliness, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
+  filter(top3 == 1) %&amp;gt;%
+  group_by(item, loneliness) %&amp;gt;%
+  summarize(count = n()) %&amp;gt;%
+  mutate(n = ifelse(grepl(&amp;quot;1&amp;quot;, loneliness), 52,
+             ifelse(grepl(&amp;quot;2&amp;quot;, loneliness), 61,
+             ifelse(grepl(&amp;quot;3&amp;quot;, loneliness), 80,
+             ifelse(grepl(&amp;quot;4&amp;quot;, loneliness), 69, NA)))),
+    count.scaled = count / n) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  ggplot(aes(reorder(item, -count.scaled), count.scaled, fill = loneliness)) + 
+    geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+    scale_fill_viridis_d() + #scale_fill_manual( &amp;quot;loneliness&amp;quot;, values = c(&amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1),
+          text = element_text(size = 10),
+          legend.position = c(.9,.75)) + 
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;count scaled by quartile n\n&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 3 rated by loneliness\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  left_join(loneliness, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
+  filter(top5 == 1) %&amp;gt;%
+  group_by(item, loneliness) %&amp;gt;%
+  summarize(count = n()) %&amp;gt;%
+  mutate(n = ifelse(grepl(&amp;quot;1&amp;quot;, loneliness), 52,
+             ifelse(grepl(&amp;quot;2&amp;quot;, loneliness), 61,
+             ifelse(grepl(&amp;quot;3&amp;quot;, loneliness), 80,
+             ifelse(grepl(&amp;quot;4&amp;quot;, loneliness), 69, NA)))),
+    count.scaled = count / n) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  ggplot(aes(reorder(item, -count.scaled), count.scaled, fill = loneliness)) + 
+    geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
+    scale_fill_viridis_d() + #scale_fill_manual( &amp;quot;loneliness&amp;quot;, values = c(&amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
+    theme_minimal() + 
+    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1),
+          text = element_text(size = 10),
+          legend.position = c(.9,.75)) + 
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;count scaled by quartile n\n&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 5 rated by loneliness\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-17-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
