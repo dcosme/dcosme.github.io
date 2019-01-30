@@ -832,7 +832,7 @@ priorities %&gt;%
     scale_color_viridis_d() +
     theme_minimal() + 
     theme(text = element_text(size = 10))</code></pre>
-<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-19-1.png" width="768" /></p>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-19-1.png" width="960" /></p>
 <pre class="r"><code>priorities %&gt;%
   filter(!grepl(&quot;Other&quot;, item)) %&gt;%
   mutate(value = as.integer(value)) %&gt;%
@@ -841,10 +841,10 @@ priorities %&gt;%
   left_join(., loneliness) %&gt;%
   select(-subjectID) %&gt;%
   cor(., use = &quot;pairwise.complete.obs&quot;) %&gt;%
-  ggcorrplot(hc.order = TRUE, outline.col = &quot;white&quot;, colors = c(&quot;#431153&quot;, &quot;white&quot;, &quot;#FCE540&quot;)) +
+  ggcorrplot(hc.order = TRUE, outline.col = &quot;white&quot;, colors = c(&quot;#3D6f8B&quot;, &quot;white&quot;, &quot;#FCE540&quot;)) +
     geom_text(aes(label = round(value, 2)), size = 3) +
     labs(title = &quot;Correlations among loneliness and priority ranking\n&quot;)</code></pre>
-<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-19-2.png" width="768" /></p>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-19-2.png" width="960" /></p>
 </div>
 </div>
 

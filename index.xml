@@ -540,7 +540,7 @@ priorities %&amp;gt;%
     scale_color_viridis_d() +
     theme_minimal() + 
     theme(text = element_text(size = 10))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
   filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
   mutate(value = as.integer(value)) %&amp;gt;%
@@ -549,10 +549,10 @@ priorities %&amp;gt;%
   left_join(., loneliness) %&amp;gt;%
   select(-subjectID) %&amp;gt;%
   cor(., use = &amp;quot;pairwise.complete.obs&amp;quot;) %&amp;gt;%
-  ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#431153&amp;quot;, &amp;quot;white&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
+  ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#3D6f8B&amp;quot;, &amp;quot;white&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
     geom_text(aes(label = round(value, 2)), size = 3) +
     labs(title = &amp;quot;Correlations among loneliness and priority ranking\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
