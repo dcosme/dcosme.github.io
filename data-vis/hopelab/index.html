@@ -84,9 +84,9 @@ load libraries if (!require(tidyverse)) { install.packages(&#39;tidyverse&#39;) 
 load libraries if (!require(tidyverse)) { install.packages(&#39;tidyverse&#39;) } if (!require(devtools)) { install.packages(&#39;devtools&#39;) } if (!require(scorequaltrics)) { devtools::install_github(&#39;jflournoy/qualtrics&#39;) } if (!require(ggcorrplot)) { install.packages(&#39;ggcorrplot&#39;) }  questionnaires to score  CESD-10 = CES-Depression, 10 items  scores &gt; 10 = considered depressed  GAD7 = Generalized Anxiety Disorder, 7 items PANAS = Positive and Negative Affect Schedule PSS = Perceived Stress Scale SWLS = Satisfaction with Life Scale ULS-8 = UCLA Loneliness Scale, 8 items  scores &gt; 8 = probable anxiety diagnosis  Priorities   define variables and paths  cred_file_location = path to your Qualtrics credential file.">
   <meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2018-10-24T00:00:00&#43;00:00">
+  <meta property="article:published_time" content="2019-01-29T00:00:00&#43;00:00">
   
-  <meta property="article:modified_time" content="2018-10-24T00:00:00&#43;00:00">
+  <meta property="article:modified_time" content="2019-01-29T00:00:00&#43;00:00">
   
 
   
@@ -240,8 +240,8 @@ load libraries if (!require(tidyverse)) { install.packages(&#39;tidyverse&#39;) 
 
   <span class="article-date">
     
-    <time datetime="2018-10-24 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      Oct 24, 2018
+    <time datetime="2019-01-29 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Jan 29, 2019
     </time>
   </span>
   <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
@@ -251,7 +251,7 @@ load libraries if (!require(tidyverse)) { install.packages(&#39;tidyverse&#39;) 
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    9 min read
+    11 min read
   </span>
   
 
@@ -589,7 +589,8 @@ score_questionnaire_homebrew&lt;-function(dataDF, rubricsDF, SID, psych = FALSE,
   }
 }</code></pre>
 <p>Score the data</p>
-<pre class="r"><code>scored = score_questionnaire_homebrew(scoring, scoring_data_long, &#39;subjectID&#39;)</code></pre>
+<pre class="r"><code>scored = score_questionnaire_homebrew(scoring, scoring_data_long, &#39;subjectID&#39;) %&gt;%
+  mutate(score = ifelse(score == &quot;NaN&quot;, NA, score))</code></pre>
 <p>Score priorities survey</p>
 <pre class="r"><code>priorities = surveys_long_clean %&gt;% filter(grepl(&quot;PRIO&quot;, item)) %&gt;%
   mutate(
@@ -637,6 +638,7 @@ score_questionnaire_homebrew&lt;-function(dataDF, rubricsDF, SID, psych = FALSE,
 <div id="distributions" class="section level2">
 <h2>distributions</h2>
 <pre class="r"><code>scored %&gt;%
+  filter(scale_name %in% c(&quot;CESD-10&quot;, &quot;GAD7&quot;, &quot;PANAS&quot;, &quot;PSS&quot;, &quot;SWLS&quot;, &quot;ULS-8&quot;)) %&gt;%
   mutate(score = as.numeric(score)) %&gt;%
   group_by(scale_name) %&gt;%
     do({
@@ -656,6 +658,7 @@ score_questionnaire_homebrew&lt;-function(dataDF, rubricsDF, SID, psych = FALSE,
 <div id="correlations" class="section level2">
 <h2>correlations</h2>
 <pre class="r"><code>scored %&gt;%
+  filter(scale_name %in% c(&quot;CESD-10&quot;, &quot;GAD7&quot;, &quot;PANAS&quot;, &quot;PSS&quot;, &quot;SWLS&quot;, &quot;ULS-8&quot;)) %&gt;%
   ungroup() %&gt;%
   mutate(score = as.numeric(score),
          var.name = paste(scale_name, scored_scale, sep = &quot;_&quot;)) %&gt;%
@@ -664,9 +667,9 @@ score_questionnaire_homebrew&lt;-function(dataDF, rubricsDF, SID, psych = FALSE,
   filter(!is.na(subjectID)) %&gt;%
   select(-subjectID) %&gt;%
   cor(., use = &quot;pairwise.complete.obs&quot;) %&gt;%
- ggcorrplot(hc.order = TRUE, outline.col = &quot;white&quot;, colors = c(&quot;#431153&quot;, &quot;#2A908B&quot;, &quot;#FCE540&quot;)) +
+  ggcorrplot(hc.order = TRUE, outline.col = &quot;white&quot;, colors = c(&quot;#431153&quot;, &quot;#2A908B&quot;, &quot;#FCE540&quot;)) +
     geom_text(aes(label = round(value, 2)), size = 3) +
-    labs(title = &quot;Correlations between well-being measures\n&quot;)</code></pre>
+    labs(title = &quot;Correlations amoong well-being measures\n&quot;)</code></pre>
 <p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
 </div>
 <div id="priorities-density-plots" class="section level2">
@@ -717,7 +720,7 @@ score_questionnaire_homebrew&lt;-function(dataDF, rubricsDF, SID, psych = FALSE,
 <div id="priorities-by-loneliness" class="section level2">
 <h2>priorities by loneliness</h2>
 <p>The higher the quartile, the greater the loneliness reported.</p>
-<pre class="r"><code>loneliness = scored %&gt;%
+<pre class="r"><code>loneliness.qt = scored %&gt;%
   filter(scale_name == &quot;ULS-8&quot;) %&gt;%
   mutate(score = as.numeric(score),
          loneliness = ifelse(score &lt; 1.62, &quot;1st quartile&quot;,
@@ -728,7 +731,7 @@ score_questionnaire_homebrew&lt;-function(dataDF, rubricsDF, SID, psych = FALSE,
   select(subjectID, loneliness)
 
 priorities %&gt;%
-  left_join(loneliness, by = &quot;subjectID&quot;) %&gt;%
+  left_join(loneliness.qt, by = &quot;subjectID&quot;) %&gt;%
   filter(!grepl(&quot;Other&quot;, item)) %&gt;%
   group_by(item, loneliness) %&gt;%
   mutate(value = as.numeric(value),
@@ -741,7 +744,7 @@ priorities %&gt;%
     theme_minimal()</code></pre>
 <p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-16-1.png" width="768" /></p>
 <pre class="r"><code>priorities %&gt;%
-  left_join(loneliness, by = &quot;subjectID&quot;) %&gt;%
+  left_join(loneliness.qt, by = &quot;subjectID&quot;) %&gt;%
   filter(top3 == 1) %&gt;%
   group_by(item, loneliness) %&gt;%
   summarize(count = n()) %&gt;%
@@ -761,7 +764,7 @@ priorities %&gt;%
     labs(x = &quot;&quot;, y = &quot;count scaled by quartile n\n&quot;, title = &quot;Number of times this priority area was in the top 3 rated by loneliness\n&quot;)</code></pre>
 <p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-17-1.png" width="768" /></p>
 <pre class="r"><code>priorities %&gt;%
-  left_join(loneliness, by = &quot;subjectID&quot;) %&gt;%
+  left_join(loneliness.qt, by = &quot;subjectID&quot;) %&gt;%
   filter(top5 == 1) %&gt;%
   group_by(item, loneliness) %&gt;%
   summarize(count = n()) %&gt;%
@@ -780,6 +783,68 @@ priorities %&gt;%
           legend.position = c(.9,.75)) + 
     labs(x = &quot;&quot;, y = &quot;count scaled by quartile n\n&quot;, title = &quot;Number of times this priority area was in the top 5 rated by loneliness\n&quot;)</code></pre>
 <p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-17-2.png" width="768" /></p>
+</div>
+</div>
+<div id="correlations-between-area-ranking-and-loneliness" class="section level1">
+<h1>correlations between area ranking and loneliness</h1>
+<div id="academics-well-being-social-exploration-new-experiences-and-self-discovery" class="section level2">
+<h2>academics, well-being, social exploration, new experiences, and self-discovery</h2>
+<pre class="r"><code>loneliness = scored %&gt;%
+  filter(scale_name == &quot;ULS-8&quot;) %&gt;%
+  ungroup() %&gt;%
+  select(subjectID, score) %&gt;%
+  rename(&quot;loneliness&quot; = score) %&gt;%
+  mutate(loneliness = as.numeric(loneliness))
+
+priorities %&gt;%
+  filter(item %in% c(&quot;Academics&quot;, &quot;Well-being&quot;, &quot;Social exploration&quot;, &quot;New experiences &quot;, &quot;Self discovery&quot;)) %&gt;%
+  mutate(value = as.integer(value)) %&gt;%
+  left_join(., loneliness) %&gt;%
+  ggplot(aes(loneliness, value, color = item)) +
+    geom_point(position = &quot;jitter&quot;, alpha = .2) +
+    geom_smooth(method = &quot;lm&quot;, alpha = .2) + 
+    scale_color_viridis_d() +
+    theme_minimal() + 
+    theme(text = element_text(size = 10))</code></pre>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<pre class="r"><code>priorities %&gt;%
+  filter(item %in% c(&quot;Academics&quot;, &quot;Well-being&quot;, &quot;Social exploration&quot;, &quot;New experiences &quot;, &quot;Self discovery&quot;)) %&gt;%
+  mutate(value = as.integer(value)) %&gt;%
+  select(subjectID, item, value) %&gt;%
+  spread(item, value) %&gt;%
+  left_join(., loneliness) %&gt;%
+  select(-subjectID) %&gt;%
+  cor(., use = &quot;pairwise.complete.obs&quot;) %&gt;%
+  ggcorrplot(hc.order = TRUE, outline.col = &quot;white&quot;, colors = c(&quot;#3D6f8B&quot;, &quot;white&quot;, &quot;#FCE540&quot;)) +
+    geom_text(aes(label = round(value, 2)), size = 3) +
+    labs(title = &quot;Correlations among loneliness and priority ranking\n&quot;)</code></pre>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-18-2.png" width="672" /></p>
+</div>
+<div id="all-measures" class="section level2">
+<h2>all measures</h2>
+<pre class="r"><code>priorities %&gt;%
+  filter(!grepl(&quot;Other&quot;, item)) %&gt;%
+  mutate(value = as.integer(value)) %&gt;%
+  left_join(., loneliness) %&gt;%
+  ggplot(aes(loneliness, value, color = item)) +
+    geom_point(position = &quot;jitter&quot;, alpha = .2) +
+    geom_smooth(method = &quot;lm&quot;, alpha = .1) + 
+    scale_color_viridis_d() +
+    theme_minimal() + 
+    theme(text = element_text(size = 10))</code></pre>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-19-1.png" width="768" /></p>
+<pre class="r"><code>priorities %&gt;%
+  filter(!grepl(&quot;Other&quot;, item)) %&gt;%
+  mutate(value = as.integer(value)) %&gt;%
+  select(subjectID, item, value) %&gt;%
+  spread(item, value) %&gt;%
+  left_join(., loneliness) %&gt;%
+  select(-subjectID) %&gt;%
+  cor(., use = &quot;pairwise.complete.obs&quot;) %&gt;%
+  ggcorrplot(hc.order = TRUE, outline.col = &quot;white&quot;, colors = c(&quot;#431153&quot;, &quot;white&quot;, &quot;#FCE540&quot;)) +
+    geom_text(aes(label = round(value, 2)), size = 3) +
+    labs(title = &quot;Correlations among loneliness and priority ranking\n&quot;)</code></pre>
+<p><img src="/data-vis/hopelab_files/figure-html/unnamed-chunk-19-2.png" width="768" /></p>
 </div>
 </div>
 

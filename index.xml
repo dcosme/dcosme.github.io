@@ -13,7 +13,7 @@
     <item>
       <title>Descriptives for Hopelab</title>
       <link>https://dcosme.github.io/data-vis/hopelab/</link>
-      <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/data-vis/hopelab/</guid>
       <description>&lt;p&gt;Well-being descriptives for Hopelab.&lt;/p&gt;
@@ -297,7 +297,8 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
   }
 }&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Score the data&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored = score_questionnaire_homebrew(scoring, scoring_data_long, &amp;#39;subjectID&amp;#39;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored = score_questionnaire_homebrew(scoring, scoring_data_long, &amp;#39;subjectID&amp;#39;) %&amp;gt;%
+  mutate(score = ifelse(score == &amp;quot;NaN&amp;quot;, NA, score))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Score priorities survey&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities = surveys_long_clean %&amp;gt;% filter(grepl(&amp;quot;PRIO&amp;quot;, item)) %&amp;gt;%
   mutate(
@@ -345,6 +346,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
 &lt;div id=&#34;distributions&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;distributions&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored %&amp;gt;%
+  filter(scale_name %in% c(&amp;quot;CESD-10&amp;quot;, &amp;quot;GAD7&amp;quot;, &amp;quot;PANAS&amp;quot;, &amp;quot;PSS&amp;quot;, &amp;quot;SWLS&amp;quot;, &amp;quot;ULS-8&amp;quot;)) %&amp;gt;%
   mutate(score = as.numeric(score)) %&amp;gt;%
   group_by(scale_name) %&amp;gt;%
     do({
@@ -364,6 +366,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
 &lt;div id=&#34;correlations&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;correlations&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored %&amp;gt;%
+  filter(scale_name %in% c(&amp;quot;CESD-10&amp;quot;, &amp;quot;GAD7&amp;quot;, &amp;quot;PANAS&amp;quot;, &amp;quot;PSS&amp;quot;, &amp;quot;SWLS&amp;quot;, &amp;quot;ULS-8&amp;quot;)) %&amp;gt;%
   ungroup() %&amp;gt;%
   mutate(score = as.numeric(score),
          var.name = paste(scale_name, scored_scale, sep = &amp;quot;_&amp;quot;)) %&amp;gt;%
@@ -372,9 +375,9 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
   filter(!is.na(subjectID)) %&amp;gt;%
   select(-subjectID) %&amp;gt;%
   cor(., use = &amp;quot;pairwise.complete.obs&amp;quot;) %&amp;gt;%
- ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#431153&amp;quot;, &amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
+  ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#431153&amp;quot;, &amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
     geom_text(aes(label = round(value, 2)), size = 3) +
-    labs(title = &amp;quot;Correlations between well-being measures\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+    labs(title = &amp;quot;Correlations amoong well-being measures\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;priorities-density-plots&#34; class=&#34;section level2&#34;&gt;
@@ -425,7 +428,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
 &lt;div id=&#34;priorities-by-loneliness&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;priorities by loneliness&lt;/h2&gt;
 &lt;p&gt;The higher the quartile, the greater the loneliness reported.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;loneliness = scored %&amp;gt;%
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;loneliness.qt = scored %&amp;gt;%
   filter(scale_name == &amp;quot;ULS-8&amp;quot;) %&amp;gt;%
   mutate(score = as.numeric(score),
          loneliness = ifelse(score &amp;lt; 1.62, &amp;quot;1st quartile&amp;quot;,
@@ -436,7 +439,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
   select(subjectID, loneliness)
 
 priorities %&amp;gt;%
-  left_join(loneliness, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
+  left_join(loneliness.qt, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
   filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
   group_by(item, loneliness) %&amp;gt;%
   mutate(value = as.numeric(value),
@@ -449,7 +452,7 @@ priorities %&amp;gt;%
     theme_minimal()&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  left_join(loneliness, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
+  left_join(loneliness.qt, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
   filter(top3 == 1) %&amp;gt;%
   group_by(item, loneliness) %&amp;gt;%
   summarize(count = n()) %&amp;gt;%
@@ -469,7 +472,7 @@ priorities %&amp;gt;%
     labs(x = &amp;quot;&amp;quot;, y = &amp;quot;count scaled by quartile n\n&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 3 rated by loneliness\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  left_join(loneliness, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
+  left_join(loneliness.qt, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
   filter(top5 == 1) %&amp;gt;%
   group_by(item, loneliness) %&amp;gt;%
   summarize(count = n()) %&amp;gt;%
@@ -488,6 +491,68 @@ priorities %&amp;gt;%
           legend.position = c(.9,.75)) + 
     labs(x = &amp;quot;&amp;quot;, y = &amp;quot;count scaled by quartile n\n&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 5 rated by loneliness\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-17-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;correlations-between-area-ranking-and-loneliness&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;correlations between area ranking and loneliness&lt;/h1&gt;
+&lt;div id=&#34;academics-well-being-social-exploration-new-experiences-and-self-discovery&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;academics, well-being, social exploration, new experiences, and self-discovery&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;loneliness = scored %&amp;gt;%
+  filter(scale_name == &amp;quot;ULS-8&amp;quot;) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  select(subjectID, score) %&amp;gt;%
+  rename(&amp;quot;loneliness&amp;quot; = score) %&amp;gt;%
+  mutate(loneliness = as.numeric(loneliness))
+
+priorities %&amp;gt;%
+  filter(item %in% c(&amp;quot;Academics&amp;quot;, &amp;quot;Well-being&amp;quot;, &amp;quot;Social exploration&amp;quot;, &amp;quot;New experiences &amp;quot;, &amp;quot;Self discovery&amp;quot;)) %&amp;gt;%
+  mutate(value = as.integer(value)) %&amp;gt;%
+  left_join(., loneliness) %&amp;gt;%
+  ggplot(aes(loneliness, value, color = item)) +
+    geom_point(position = &amp;quot;jitter&amp;quot;, alpha = .2) +
+    geom_smooth(method = &amp;quot;lm&amp;quot;, alpha = .2) + 
+    scale_color_viridis_d() +
+    theme_minimal() + 
+    theme(text = element_text(size = 10))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(item %in% c(&amp;quot;Academics&amp;quot;, &amp;quot;Well-being&amp;quot;, &amp;quot;Social exploration&amp;quot;, &amp;quot;New experiences &amp;quot;, &amp;quot;Self discovery&amp;quot;)) %&amp;gt;%
+  mutate(value = as.integer(value)) %&amp;gt;%
+  select(subjectID, item, value) %&amp;gt;%
+  spread(item, value) %&amp;gt;%
+  left_join(., loneliness) %&amp;gt;%
+  select(-subjectID) %&amp;gt;%
+  cor(., use = &amp;quot;pairwise.complete.obs&amp;quot;) %&amp;gt;%
+  ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#3D6f8B&amp;quot;, &amp;quot;white&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
+    geom_text(aes(label = round(value, 2)), size = 3) +
+    labs(title = &amp;quot;Correlations among loneliness and priority ranking\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-18-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;all-measures&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;all measures&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
+  mutate(value = as.integer(value)) %&amp;gt;%
+  left_join(., loneliness) %&amp;gt;%
+  ggplot(aes(loneliness, value, color = item)) +
+    geom_point(position = &amp;quot;jitter&amp;quot;, alpha = .2) +
+    geom_smooth(method = &amp;quot;lm&amp;quot;, alpha = .1) + 
+    scale_color_viridis_d() +
+    theme_minimal() + 
+    theme(text = element_text(size = 10))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
+  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
+  mutate(value = as.integer(value)) %&amp;gt;%
+  select(subjectID, item, value) %&amp;gt;%
+  spread(item, value) %&amp;gt;%
+  left_join(., loneliness) %&amp;gt;%
+  select(-subjectID) %&amp;gt;%
+  cor(., use = &amp;quot;pairwise.complete.obs&amp;quot;) %&amp;gt;%
+  ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#431153&amp;quot;, &amp;quot;white&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
+    geom_text(aes(label = round(value, 2)), size = 3) +
+    labs(title = &amp;quot;Correlations among loneliness and priority ranking\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
