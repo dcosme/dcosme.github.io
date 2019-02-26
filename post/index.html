@@ -278,7 +278,7 @@
   <div class="article-style" itemprop="articleBody">
     
     load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function
-# set na.action for dredge options(na.action = &quot;na.fail&quot;) # omit NAs airquality.na = airquality %&gt;% na.omit() # run full model full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na) # run all possible nested models all.models = dredge(full.model) # set AIC for null model you want to compare model AIC values to null.
+# set na.action for dredge options(na.action = &quot;na.fail&quot;) # omit NAs airquality.na = airquality %&gt;% na.omit() # run full model full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na) # run all possible nested models all.models = dredge(full.model, rank = &quot;AIC&quot;) # set AIC for null model you want to compare model AIC values to null.
     
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">

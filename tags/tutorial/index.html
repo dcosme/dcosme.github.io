@@ -237,7 +237,7 @@
       
       load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function</p>
 
-<h1 id="set-na-action-for-dredge-options-na-action-quot-na-fail-quot-omit-nas-airquality-na-airquality-gt-na-omit-run-full-model-full-model-lm-ozone-solar-r-wind-temp-month-day-data-airquality-na-run-all-possible-nested-models-all-models-dredge-full-model-set-aic-for-null-model-you-want-to-compare-model-aic-values-to-null">set na.action for dredge options(na.action = &quot;na.fail&quot;) # omit NAs airquality.na = airquality %&gt;% na.omit() # run full model full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na) # run all possible nested models all.models = dredge(full.model) # set AIC for null model you want to compare model AIC values to null.</h1>
+<h1 id="set-na-action-for-dredge-options-na-action-quot-na-fail-quot-omit-nas-airquality-na-airquality-gt-na-omit-run-full-model-full-model-lm-ozone-solar-r-wind-temp-month-day-data-airquality-na-run-all-possible-nested-models-all-models-dredge-full-model-rank-quot-aic-quot-set-aic-for-null-model-you-want-to-compare-model-aic-values-to-null">set na.action for dredge options(na.action = &quot;na.fail&quot;) # omit NAs airquality.na = airquality %&gt;% na.omit() # run full model full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na) # run all possible nested models all.models = dredge(full.model, rank = &quot;AIC&quot;) # set AIC for null model you want to compare model AIC values to null.</h1>
 
       
     </div>

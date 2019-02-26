@@ -37,7 +37,7 @@ airquality.na = airquality %&amp;gt;%
 full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na)
 
 # run all possible nested models
-all.models = dredge(full.model)
+all.models = dredge(full.model, rank = &amp;quot;AIC&amp;quot;)
 
 # set AIC for null model you want to compare model AIC values to
 null.AIC = 1025
@@ -49,7 +49,6 @@ variable.names = names(airquality)[-1]&lt;/code&gt;&lt;/pre&gt;
 &lt;h1&gt;plot&lt;/h1&gt;
 &lt;p&gt;On the top panel, plot the AIC of each model and color based on whether each is a better fitting model than some comparator (e.g., the AIC for the null model). The bottom panel specifies which variables were included in each model in the top panel.&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot.data = all.models %&amp;gt;%
-  rename(&amp;quot;AIC&amp;quot; = &amp;quot;AICc&amp;quot;) %&amp;gt;%
   arrange(AIC) %&amp;gt;%
   mutate(specification = row_number(), 
          better.fit = ifelse(AIC &amp;lt; null.AIC, &amp;quot;yes&amp;quot;, &amp;quot;no&amp;quot;))
