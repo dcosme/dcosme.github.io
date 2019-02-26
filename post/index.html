@@ -233,8 +233,8 @@
 
   <span class="article-date">
     
-    <time datetime="2019-02-25 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
-      Feb 25, 2019
+    <time datetime="2019-02-26 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Feb 26, 2019
     </time>
   </span>
   <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
@@ -277,8 +277,10 @@
   </h3>
   <div class="article-style" itemprop="articleBody">
     
-    load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function
-# set na.action for dredge options(na.action = &quot;na.fail&quot;) # omit NAs airquality.na = airquality %&gt;% na.omit() # run full model full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na) # run all possible nested models all.models = dredge(full.model, rank = &quot;AIC&quot;) # set AIC for null model you want to compare model AIC values to null.
+    I was inspired by these amazing examples of specification curves by Julia Rohrer and Amy Orben, so I wrote some code to generate a curve like this:
+Below is code to create a specification curve using a toy example from the airquality dataset. Enjoy!
+load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function from the MuMIn package.
+# set na.action for dredge options(na.
     
   </div>
   <p class="read-more" itemprop="mainEntityOfPage">
