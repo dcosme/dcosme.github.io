@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>Specification curve example</title>
+      <link>https://dcosme.github.io/post/specification_curve_example/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/post/specification_curve_example/</guid>
+      <description>load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function
+# set na.action for dredge options(na.action = &amp;quot;na.fail&amp;quot;) # omit NAs airquality.na = airquality %&amp;gt;% na.omit() # run full model full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na) # run all possible nested models all.models = dredge(full.model) # set AIC for null model you want to compare model AIC values to null.</description>
+    </item>
+    
+    <item>
       <title>Websites in RStudio</title>
       <link>https://dcosme.github.io/post/rstudio-website-tutorial/</link>
       <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>

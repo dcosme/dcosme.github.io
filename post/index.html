@@ -233,6 +233,74 @@
 
   <span class="article-date">
     
+    <time datetime="2019-02-25 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Feb 25, 2019
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Danielle Cosme">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    2 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="https://dcosme.github.io/categories/r/">R</a
+    >
+    
+  </span>
+  
+  
+
+  
+
+</div>
+
+
+  
+  
+  <h3 class="article-title" itemprop="headline">
+    <a href="https://dcosme.github.io/post/specification_curve_example/" itemprop="url">Specification curve example</a>
+  </h3>
+  <div class="article-style" itemprop="articleBody">
+    
+    load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function
+# set na.action for dredge options(na.action = &quot;na.fail&quot;) # omit NAs airquality.na = airquality %&gt;% na.omit() # run full model full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na) # run all possible nested models all.models = dredge(full.model) # set AIC for null model you want to compare model AIC values to null.
+    
+  </div>
+  <p class="read-more" itemprop="mainEntityOfPage">
+    <a href="https://dcosme.github.io/post/specification_curve_example/" class="btn btn-primary btn-outline">
+      CONTINUE READING
+    </a>
+  </p>
+</div>
+
+    
+  
+    
+    
+      
+
+<div class="card-simple" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+  
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
     <time datetime="2018-06-10 19:50:03 &#43;0000 UTC" itemprop="datePublished dateModified">
       Jun 10, 2018
     </time>

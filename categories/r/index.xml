@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 10 Jun 2018 19:50:03 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://dcosme.github.io/categories/r/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Specification curve example</title>
+      <link>https://dcosme.github.io/post/specification_curve_example/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/post/specification_curve_example/</guid>
+      <description>load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function
+# set na.action for dredge options(na.action = &amp;quot;na.fail&amp;quot;) # omit NAs airquality.na = airquality %&amp;gt;% na.omit() # run full model full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na) # run all possible nested models all.models = dredge(full.model) # set AIC for null model you want to compare model AIC values to null.</description>
+    </item>
     
     <item>
       <title>Websites in RStudio</title>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tutorial on Danielle Cosme</title>
-    <link>https://dcosme.github.io/tags/tutorial/</link>
-    <description>Recent content in Tutorial on Danielle Cosme</description>
+    <title>Specification curve on Danielle Cosme</title>
+    <link>https://dcosme.github.io/tags/specification-curve/</link>
+    <description>Recent content in Specification curve on Danielle Cosme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Mon, 25 Feb 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dcosme.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dcosme.github.io/tags/specification-curve/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,19 +20,6 @@
       <guid>https://dcosme.github.io/post/specification_curve_example/</guid>
       <description>load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function
 # set na.action for dredge options(na.action = &amp;quot;na.fail&amp;quot;) # omit NAs airquality.na = airquality %&amp;gt;% na.omit() # run full model full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na) # run all possible nested models all.models = dredge(full.model) # set AIC for null model you want to compare model AIC values to null.</description>
-    </item>
-    
-    <item>
-      <title>Websites in RStudio</title>
-      <link>https://dcosme.github.io/post/rstudio-website-tutorial/</link>
-      <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/post/rstudio-website-tutorial/</guid>
-      <description>This tutorial was created by Dani Cosme and Sam Chavez as part of PSY 607: Data Science Seminar at the University of Oregon.
-The tutorial and associated files can also be found on GitHub.
-Overview of the tutorial Background Learn the basics
- Explore advanced features
- Check out the hugo-academic theme Publish your website to GitHub   Background Most of the information in this tutorial is taken from a few amazing resources on using the blogdown package to create static websites in RStudio using R Markdown:</description>
     </item>
     
   </channel>

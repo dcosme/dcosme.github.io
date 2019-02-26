@@ -11,6 +11,89 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Specification curve example</title>
+      <link>https://dcosme.github.io/post/specification_curve_example/</link>
+      <pubDate>Mon, 25 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/post/specification_curve_example/</guid>
+      <description>&lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;load packages&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(lme4)
+library(MuMIn)
+library(cowplot)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;run-models&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;run models&lt;/h1&gt;
+&lt;p&gt;Run all possible nested models using the &lt;code&gt;dredge&lt;/code&gt; function&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set na.action for dredge
+options(na.action = &amp;quot;na.fail&amp;quot;)
+
+# omit NAs
+airquality.na = airquality %&amp;gt;% 
+  na.omit()
+
+# run full model
+full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na)
+
+# run all possible nested models
+all.models = dredge(full.model)
+
+# set AIC for null model you want to compare model AIC values to
+null.AIC = 1025
+
+# variables included in model
+variable.names = names(airquality)[-1]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;plot&lt;/h1&gt;
+&lt;p&gt;On the top panel, plot the AIC of each model and color based on whether each is a better fitting model than some comparator (e.g., the AIC for the null model). The bottom panel specifies which variables were included in each model in the top panel.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot.data = all.models %&amp;gt;%
+  rename(&amp;quot;AIC&amp;quot; = &amp;quot;AICc&amp;quot;) %&amp;gt;%
+  arrange(AIC) %&amp;gt;%
+  mutate(specification = row_number(), 
+         better.fit = ifelse(AIC &amp;lt; null.AIC, &amp;quot;yes&amp;quot;, &amp;quot;no&amp;quot;))
+
+top = plot.data %&amp;gt;%
+  ggplot(aes(specification, AIC, color = better.fit)) + # color is based on whether model is better fitting than the null
+    geom_point(shape = &amp;quot;|&amp;quot;, size = 4) +
+    geom_hline(yintercept = null.AIC, linetype = &amp;quot;dashed&amp;quot;, color = &amp;quot;red&amp;quot;) + # dashed line for null model AIC
+    scale_color_manual(values = c(&amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;AIC\n&amp;quot;) + 
+    theme_minimal(base_size = 12) +
+    theme(text = element_text(family = &amp;quot;Futura Medium&amp;quot;),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+bottom = plot.data %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% # gather predictor variables
+  mutate(value = ifelse(!is.na(value), &amp;quot;|&amp;quot;, &amp;quot;&amp;quot;)) %&amp;gt;% # plot a line if included in the model
+  ggplot(aes(specification, variable, color = better.fit)) +
+    geom_text(aes(label = value), alpha = 1) +
+    scale_color_manual(values = c(&amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;\nspecification number&amp;quot;, y = &amp;quot;variables\n&amp;quot;) + 
+    theme_minimal(base_size = 12) +
+    theme(text = element_text(family = &amp;quot;Futura Medium&amp;quot;),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/specification_curve_example_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Descriptives for Hopelab</title>
       <link>https://dcosme.github.io/data-vis/hopelab/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
