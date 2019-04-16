@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Comparison of University of Oregon GE Salaries</title>
+      <link>https://dcosme.github.io/data-vis/ge_salaries/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/data-vis/ge_salaries/</guid>
+      <description>load packages library(tidyverse) library(readxl)  define palette area = wesanderson::wes_palette(&amp;quot;Zissou1&amp;quot;, 6, &amp;quot;continuous&amp;quot;)[2:6]  load data data = read_excel(&amp;quot;~/Documents/GTFF/Winter Appts.xlsx&amp;quot;) %&amp;gt;% rename(&amp;quot;ID&amp;quot; = `GTFF Knack ID`, &amp;quot;FTE&amp;quot; = `Appt Percent`, &amp;quot;MonthlySalary&amp;quot; = `Monthly Salary`, &amp;quot;Department&amp;quot; = `Department Connection`, &amp;quot;Membership&amp;quot; = `Member Status (static)`)  tidy data # check duplicate IDs duplicates = data[duplicated(data$ID),] %&amp;gt;% arrange(ID) data.dup = data %&amp;gt;% filter(ID %in% duplicates$ID) %&amp;gt;% group_by(ID) %&amp;gt;% mutate(MonthlySalary1 = sum(MonthlySalary), FTE1 = sum(FTE)) %&amp;gt;% group_by(ID) %&amp;gt;% slice(1) %&amp;gt;% mutate(MonthlySalary1 = ifelse(FTE1 &amp;gt; 50, MonthlySalary, MonthlySalary1), FTE1 = ifelse(FTE1 &amp;gt; 50, FTE, FTE1), MonthlySalary = MonthlySalary1, FTE = FTE1) %&amp;gt;% select(-c(MonthlySalary1, FTE1)) # tidy data1 = data %&amp;gt;% filter(!</description>
+    </item>
+    
+    <item>
       <title>Descriptives for Hopelab</title>
       <link>https://dcosme.github.io/data-vis/hopelab/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>

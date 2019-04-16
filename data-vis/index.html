@@ -225,6 +225,15 @@
   
   
   <div>
+    <h2><a href="https://dcosme.github.io/data-vis/ge_salaries/">Comparison of University of Oregon GE Salaries</a></h2>
+    <div class="article-style">
+      
+      load packages library(tidyverse) library(readxl)  define palette area = wesanderson::wes_palette(&quot;Zissou1&quot;, 6, &quot;continuous&quot;)[2:6]  load data data = read_excel(&quot;~/Documents/GTFF/Winter Appts.xlsx&quot;) %&gt;% rename(&quot;ID&quot; = <code>GTFF Knack ID</code>, &quot;FTE&quot; = <code>Appt Percent</code>, &quot;MonthlySalary&quot; = <code>Monthly Salary</code>, &quot;Department&quot; = <code>Department Connection</code>, &quot;Membership&quot; = <code>Member Status (static)</code>)  tidy data # check duplicate IDs duplicates = data[duplicated(data$ID),] %&gt;% arrange(ID) data.dup = data %&gt;% filter(ID %in% duplicates$ID) %&gt;% group_by(ID) %&gt;% mutate(MonthlySalary1 = sum(MonthlySalary), FTE1 = sum(FTE)) %&gt;% group_by(ID) %&gt;% slice(1) %&gt;% mutate(MonthlySalary1 = ifelse(FTE1 &gt; 50, MonthlySalary, MonthlySalary1), FTE1 = ifelse(FTE1 &gt; 50, FTE, FTE1), MonthlySalary = MonthlySalary1, FTE = FTE1) %&gt;% select(-c(MonthlySalary1, FTE1)) # tidy data1 = data %&gt;% filter(!
+      
+    </div>
+  </div>
+  
+  <div>
     <h2><a href="https://dcosme.github.io/data-vis/hopelab/">Descriptives for Hopelab</a></h2>
     <div class="article-style">
       

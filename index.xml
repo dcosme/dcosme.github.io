@@ -11,6 +11,176 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Comparison of University of Oregon GE Salaries</title>
+      <link>https://dcosme.github.io/data-vis/ge_salaries/</link>
+      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/data-vis/ge_salaries/</guid>
+      <description>&lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;load packages&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(readxl)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;define-palette&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;define palette&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;area = wesanderson::wes_palette(&amp;quot;Zissou1&amp;quot;, 6, &amp;quot;continuous&amp;quot;)[2:6]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;load-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;load data&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data = read_excel(&amp;quot;~/Documents/GTFF/Winter Appts.xlsx&amp;quot;) %&amp;gt;%
+  rename(&amp;quot;ID&amp;quot; = `GTFF Knack ID`,
+         &amp;quot;FTE&amp;quot; = `Appt Percent`,
+         &amp;quot;MonthlySalary&amp;quot; = `Monthly Salary`,
+         &amp;quot;Department&amp;quot; = `Department Connection`,
+         &amp;quot;Membership&amp;quot; = `Member Status (static)`)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tidy-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;tidy data&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# check duplicate IDs
+duplicates = data[duplicated(data$ID),] %&amp;gt;%
+  arrange(ID)
+
+data.dup = data %&amp;gt;% 
+  filter(ID %in% duplicates$ID) %&amp;gt;%
+  group_by(ID) %&amp;gt;%
+  mutate(MonthlySalary1 = sum(MonthlySalary),
+         FTE1 = sum(FTE)) %&amp;gt;%
+  group_by(ID) %&amp;gt;% 
+  slice(1) %&amp;gt;%
+  mutate(MonthlySalary1 = ifelse(FTE1 &amp;gt; 50, MonthlySalary, MonthlySalary1),
+         FTE1 = ifelse(FTE1 &amp;gt; 50, FTE, FTE1),
+         MonthlySalary = MonthlySalary1,
+         FTE = FTE1) %&amp;gt;%
+  select(-c(MonthlySalary1, FTE1))
+
+# tidy
+data1 = data %&amp;gt;% 
+  filter(!ID %in% duplicates$ID) %&amp;gt;%
+  bind_rows(data.dup) %&amp;gt;%
+  mutate(Level = ifelse(grepl(&amp;quot;1&amp;quot;, Grade), &amp;quot;level 1&amp;quot;, ifelse(grepl(&amp;quot;2&amp;quot;, Grade), &amp;quot;level 2&amp;quot;, ifelse(grepl(&amp;quot;3&amp;quot;, Grade), &amp;quot;level 3&amp;quot;, Grade))),
+         Area = ifelse(is.na(Area), &amp;quot;Other&amp;quot;, Area))&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;visualize-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;visualize data&lt;/h1&gt;
+&lt;p&gt;These data are from winter quarter 2019 and are visualized based on the department in which graduate employees (GEs) are hired. Often GEs are hired in the same department they are pursuing their academic studies, but not always.&lt;/p&gt;
+&lt;p&gt;To zoom in on the plots, right-click on it and open the image in a new tab.&lt;/p&gt;
+&lt;p&gt;If there are no error bars in the plots, that means there is no variability in salaries (either because there is a single GE or because all GEs are paid the same). There will also be no density distributions for departments with only one GE.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Area code&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;AE = Arts &amp;amp; Education&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;HU = Humanities&lt;/li&gt;
+&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
+&lt;li&gt;SS = Social Sciences&lt;/li&gt;
+&lt;li&gt;Other = Other&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div id=&#34;density-distributions-of-fte-by-department&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;density distributions of FTE by department&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
+  ggplot(aes(FTE, Department, fill = Area)) +
+    ggridges::geom_density_ridges() +
+    theme(axis.text = element_text(size = 8)) +
+    scale_fill_manual(values = area) +
+    labs(x = &amp;quot;FTE&amp;quot;) +
+    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;density-distributions-of-salary-by-department&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;density distributions of salary by department&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
+  ggplot(aes(MonthlySalary, Department, fill = Area)) +
+    ggridges::geom_density_ridges() +
+    theme(axis.text = element_text(size = 8)) +
+    scale_fill_manual(values = area) +
+    labs(x = &amp;quot;Monthly salary (dollars)&amp;quot;) +
+    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;average-salary-by-gtf-level&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;average salary by GTF level&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
+  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
+  ggplot(aes(Level, MonthlySalary)) +
+    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
+    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
+    labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
+    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;average-salary-by-gtf-level-and-department-area&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;average salary by GTF level and department area&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
+  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
+  ggplot(aes(Level, MonthlySalary, fill = Area)) +
+    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
+    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
+    facet_grid(~Area) +
+    scale_fill_manual(values = area) +
+    labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;average-salary-by-gtf-level-and-fte&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;average salary by GTF level and FTE&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
+  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
+  ggplot(aes(Level, MonthlySalary, fill = FTE)) +
+    stat_summary(aes(group = interaction(Level, FTE)), fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
+    stat_summary(aes(group = interaction(Level, FTE)), fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
+    scale_fill_gradientn(colors = c(&amp;quot;#F43C13&amp;quot;, &amp;quot;#FEC601&amp;quot;, &amp;quot;#8EC922&amp;quot;, &amp;quot;#06AED5&amp;quot;, &amp;quot;#3066BE&amp;quot;, &amp;quot;#4B3F72&amp;quot;)) +
+    labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
+    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;average-salary-by-department-scaled-by-number-of-ges&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;average salary by department, scaled by number of GEs&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
+  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
+  group_by(Department, Area) %&amp;gt;%
+  mutate(`# GEs` = n()) %&amp;gt;%
+  ggplot(aes(reorder(Department, MonthlySalary), MonthlySalary, color = Area, size = `# GEs`)) +
+    stat_summary(fun.y = mean, geom = &amp;quot;point&amp;quot;) +
+    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;pointrange&amp;quot;, width = 0) +
+    scale_color_manual(values = area) +
+    labs(x = &amp;quot;Department&amp;quot;, y = &amp;quot;\n\n\nMonthly salary (dollars)&amp;quot;, size = &amp;quot;# GEs&amp;quot;) + 
+    scale_size_continuous(range = c(.25, 1.5)) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;average-salary-by-department&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;average salary by department&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
+  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
+  ggplot(aes(reorder(Department, MonthlySalary), MonthlySalary, fill = Area)) +
+    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
+    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
+    scale_fill_manual(values = area) +
+    labs(x = &amp;quot;Department&amp;quot;, y = &amp;quot;\n\n\nMonthly salary (dollars)&amp;quot;) + 
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;average-salary-by-department-and-gtf-level&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;average salary by department and GTF level&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
+  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
+  ggplot(aes(reorder(Department, MonthlySalary), MonthlySalary, fill = Area)) +
+    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
+    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
+    scale_fill_manual(values = area) +
+    facet_wrap(~Level, nrow = 3) + 
+    labs(x = &amp;quot;Department&amp;quot;, y = &amp;quot;\n\n\nMonthly salary (dollars)&amp;quot;) + 
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Specification curve example</title>
       <link>https://dcosme.github.io/post/specification_curve_example/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
