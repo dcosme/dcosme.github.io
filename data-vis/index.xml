@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data Visualization on Danielle Cosme</title>
-    <link>https://dcosme.github.io/data-vis/</link>
+    <link>/data-vis/</link>
     <description>Recent content in Data Visualization on Danielle Cosme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Mon, 11 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dcosme.github.io/data-vis/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/data-vis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Comparison of University of Oregon GE Salaries</title>
-      <link>https://dcosme.github.io/data-vis/ge_salaries/</link>
+      <link>/data-vis/ge_salaries/</link>
       <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/data-vis/ge_salaries/</guid>
+      <guid>/data-vis/ge_salaries/</guid>
       <description>load packages library(tidyverse) library(readxl)  define palette area = wesanderson::wes_palette(&amp;quot;Zissou1&amp;quot;, 6, &amp;quot;continuous&amp;quot;)[2:6]  load data data = read_excel(&amp;quot;~/Documents/GTFF/Winter Appts.xlsx&amp;quot;) %&amp;gt;% rename(&amp;quot;ID&amp;quot; = `GTFF Knack ID`, &amp;quot;FTE&amp;quot; = `Appt Percent`, &amp;quot;MonthlySalary&amp;quot; = `Monthly Salary`, &amp;quot;Department&amp;quot; = `Department Connection`, &amp;quot;Membership&amp;quot; = `Member Status (static)`)  tidy data # check duplicate IDs duplicates = data[duplicated(data$ID),] %&amp;gt;% arrange(ID) data.dup = data %&amp;gt;% filter(ID %in% duplicates$ID) %&amp;gt;% group_by(ID) %&amp;gt;% mutate(MonthlySalary1 = sum(MonthlySalary), FTE1 = sum(FTE)) %&amp;gt;% group_by(ID) %&amp;gt;% slice(1) %&amp;gt;% mutate(MonthlySalary1 = ifelse(FTE1 &amp;gt; 50, MonthlySalary, MonthlySalary1), FTE1 = ifelse(FTE1 &amp;gt; 50, FTE, FTE1), MonthlySalary = MonthlySalary1, FTE = FTE1) %&amp;gt;% select(-c(MonthlySalary1, FTE1)) # tidy data1 = data %&amp;gt;% filter(!</description>
     </item>
     
     <item>
       <title>Descriptives for Hopelab</title>
-      <link>https://dcosme.github.io/data-vis/hopelab/</link>
+      <link>/data-vis/hopelab/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/data-vis/hopelab/</guid>
+      <guid>/data-vis/hopelab/</guid>
       <description>Well-being descriptives for Hopelab.
 load libraries if (!require(tidyverse)) { install.packages(&amp;#39;tidyverse&amp;#39;) } if (!require(devtools)) { install.packages(&amp;#39;devtools&amp;#39;) } if (!require(scorequaltrics)) { devtools::install_github(&amp;#39;jflournoy/qualtrics&amp;#39;) } if (!require(ggcorrplot)) { install.packages(&amp;#39;ggcorrplot&amp;#39;) }  questionnaires to score  CESD-10 = CES-Depression, 10 items  scores &amp;gt; 10 = considered depressed  GAD7 = Generalized Anxiety Disorder, 7 items PANAS = Positive and Negative Affect Schedule PSS = Perceived Stress Scale SWLS = Satisfaction with Life Scale ULS-8 = UCLA Loneliness Scale, 8 items  scores &amp;gt; 8 = probable anxiety diagnosis  Priorities   define variables and paths  cred_file_location = path to your Qualtrics credential file.</description>
     </item>
     
     <item>
       <title>FP Pilot GPS</title>
-      <link>https://dcosme.github.io/data-vis/fp_pilot_gps/</link>
+      <link>/data-vis/fp_pilot_gps/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/data-vis/fp_pilot_gps/</guid>
+      <guid>/data-vis/fp_pilot_gps/</guid>
       <description>This code is a first pass analysis of the goals and priorities survey.
 Get and clean the data Define variables and paths  cred_file_location = path to your Qualtrics credential file. You’ll need to generate this via Qualtrics using the instructios above. id_column_name = subject ID column name in Qualtrics survey; can be a regular expression  cred_file_location = &amp;#39;~/credentials.yaml.DEFAULT&amp;#39; sid_column_name = &amp;#39;(SID|ExternalDataReference|qid)&amp;#39; survey_name_filter = &amp;#39;Freshman Project T|CheckIn&amp;#39; sid_pattern = &amp;#39;FP[0-9]{3}&amp;#39; exclude_sid = &amp;#39;FP999&amp;#39; # subject IDs to exclude identifiableData = c(&amp;#39;EmailAddress&amp;#39;, &amp;#39;IPAddress&amp;#39;) # exclude when printing duplicates &amp;#39;EmailAddress&amp;#39;, output_file_dir = &amp;#39;~/Documents/code/score-qualtrics/&amp;#39; rubric_dir = &amp;#39;/Users/danicosme/Dropbox (PfeiBer Lab)/FreshmanProject/Qualtrics/Scoring_Rubrics&amp;#39;  Packages if (!</description>
     </item>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Danielle Cosme on Danielle Cosme</title>
-    <link>https://dcosme.github.io/</link>
+    <link>/</link>
     <description>Recent content in Danielle Cosme on Danielle Cosme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Comparison of University of Oregon GE Salaries</title>
-      <link>https://dcosme.github.io/data-vis/ge_salaries/</link>
+      <link>/data-vis/ge_salaries/</link>
       <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/data-vis/ge_salaries/</guid>
+      <guid>/data-vis/ge_salaries/</guid>
       <description>&lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;load packages&lt;/h1&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
@@ -64,7 +64,7 @@ data1 = data %&amp;gt;%
 &lt;h1&gt;visualize data&lt;/h1&gt;
 &lt;p&gt;These data are from winter quarter 2019 and are visualized based on the department in which graduate employees (GEs) are hired. Often GEs are hired in the same department they are pursuing their academic studies, but not always.&lt;/p&gt;
 &lt;p&gt;To zoom in on the plots, right-click on it and open the image in a new tab.&lt;/p&gt;
-&lt;p&gt;If there are no error bars in the plots, that means there is no variability in salaries (either because there is a single GE or because all GEs are paid the same). There will also be no density distributions for departments with only one GE.&lt;/p&gt;
+&lt;p&gt;Error bars are 95% confidence intervals. If there are no error bars in the plots, that means there is no variability in salaries (either because there is a single GE or because all GEs are paid the same). There will also be no density distributions for departments with only one GE.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Area code&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;AE = Arts &amp;amp; Education&lt;br /&gt;
@@ -83,7 +83,7 @@ data1 = data %&amp;gt;%
     scale_fill_manual(values = area) +
     labs(x = &amp;quot;FTE&amp;quot;) +
     theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/GE_salaries_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;density-distributions-of-salary-by-department&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;density distributions of salary by department&lt;/h2&gt;
@@ -94,7 +94,7 @@ data1 = data %&amp;gt;%
     scale_fill_manual(values = area) +
     labs(x = &amp;quot;Monthly salary (dollars)&amp;quot;) +
     theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/GE_salaries_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;average-salary-by-gtf-level&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;average salary by GTF level&lt;/h2&gt;
@@ -105,7 +105,7 @@ data1 = data %&amp;gt;%
     stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
     labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
     theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/GE_salaries_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;average-salary-by-gtf-level-and-department-area&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;average salary by GTF level and department area&lt;/h2&gt;
@@ -119,7 +119,7 @@ data1 = data %&amp;gt;%
     labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/GE_salaries_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;average-salary-by-gtf-level-and-fte&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;average salary by GTF level and FTE&lt;/h2&gt;
@@ -131,7 +131,7 @@ data1 = data %&amp;gt;%
     scale_fill_gradientn(colors = c(&amp;quot;#F43C13&amp;quot;, &amp;quot;#FEC601&amp;quot;, &amp;quot;#8EC922&amp;quot;, &amp;quot;#06AED5&amp;quot;, &amp;quot;#3066BE&amp;quot;, &amp;quot;#4B3F72&amp;quot;)) +
     labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
     theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/GE_salaries_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;average-salary-by-department-scaled-by-number-of-ges&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;average salary by department, scaled by number of GEs&lt;/h2&gt;
@@ -147,7 +147,7 @@ data1 = data %&amp;gt;%
     scale_size_continuous(range = c(.25, 1.5)) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/GE_salaries_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;average-salary-by-department&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;average salary by department&lt;/h2&gt;
@@ -160,7 +160,7 @@ data1 = data %&amp;gt;%
     labs(x = &amp;quot;Department&amp;quot;, y = &amp;quot;\n\n\nMonthly salary (dollars)&amp;quot;) + 
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/GE_salaries_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;average-salary-by-department-and-gtf-level&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;average salary by department and GTF level&lt;/h2&gt;
@@ -174,7 +174,7 @@ data1 = data %&amp;gt;%
     labs(x = &amp;quot;Department&amp;quot;, y = &amp;quot;\n\n\nMonthly salary (dollars)&amp;quot;) + 
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/GE_salaries_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -182,12 +182,12 @@ data1 = data %&amp;gt;%
     
     <item>
       <title>Specification curve example</title>
-      <link>https://dcosme.github.io/post/specification_curve_example/</link>
+      <link>/post/specification_curve_example/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/post/specification_curve_example/</guid>
+      <guid>/post/specification_curve_example/</guid>
       <description>&lt;p&gt;I was inspired by these amazing examples of specification curves by &lt;a href=&#34;https://www.psychologicalscience.org/observer/run-all-the-models-dealing-with-data-analytic-flexibility&#34;&gt;Julia Rohrer&lt;/a&gt; and &lt;a href=&#34;https://www.nature.com/articles/s41562-018-0506-1&#34;&gt;Amy Orben&lt;/a&gt;, so I wrote some code to generate a curve like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/img/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Below is code to create a specification curve using a toy example from the &lt;code&gt;airquality&lt;/code&gt; dataset. Enjoy!&lt;/p&gt;
 &lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;load packages&lt;/h1&gt;
@@ -260,17 +260,17 @@ bottom = plot.data %&amp;gt;%
           panel.background = element_blank())
 
 plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/specification_curve_example_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/specification_curve_example_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Descriptives for Hopelab</title>
-      <link>https://dcosme.github.io/data-vis/hopelab/</link>
+      <link>/data-vis/hopelab/</link>
       <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/data-vis/hopelab/</guid>
+      <guid>/data-vis/hopelab/</guid>
       <description>&lt;p&gt;Well-being descriptives for Hopelab.&lt;/p&gt;
 &lt;div id=&#34;load-libraries&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;load libraries&lt;/h1&gt;
@@ -613,7 +613,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
       print(plot)
       data.frame()
     })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/plotdist-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/plotdist-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/plotdist-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/plotdist-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/plotdist-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/plotdist-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 0 x 1
 ## # Groups:   scale_name [0]
 ## # ... with 1 variable: scale_name &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
@@ -633,7 +633,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
   ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#431153&amp;quot;, &amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
     geom_text(aes(label = round(value, 2)), size = 3) +
     labs(title = &amp;quot;Correlations amoong well-being measures\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;priorities-density-plots&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;priorities density plots&lt;/h2&gt;
@@ -647,7 +647,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
     scale_fill_viridis_c(name = &amp;quot;mean\nranking&amp;quot;, direction = -1) +
     labs(x = &amp;quot;ranking&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Ranking density among priority areas\n&amp;quot;) + 
     theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;top-priorities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;top priorities&lt;/h2&gt;
@@ -664,7 +664,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
     theme(text = element_text(size = 10),
           legend.position = &amp;quot;none&amp;quot;) + 
     labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 3 rated\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
   filter(top5 == 1) %&amp;gt;%
   group_by(item) %&amp;gt;%
@@ -678,7 +678,7 @@ score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FA
     theme(text = element_text(size = 10),
           legend.position = &amp;quot;none&amp;quot;) + 
     labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 5 rated\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;priorities-by-loneliness&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;priorities by loneliness&lt;/h2&gt;
@@ -705,7 +705,7 @@ priorities %&amp;gt;%
     facet_grid(~loneliness) +
     labs(x = &amp;quot;ranking&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Ranking density among priority areas as a function of loneliness\n&amp;quot;) + 
     theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
   left_join(loneliness.qt, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
   filter(top3 == 1) %&amp;gt;%
@@ -725,7 +725,7 @@ priorities %&amp;gt;%
           text = element_text(size = 10),
           legend.position = c(.9,.75)) + 
     labs(x = &amp;quot;&amp;quot;, y = &amp;quot;count scaled by quartile n\n&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 3 rated by loneliness\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
   left_join(loneliness.qt, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
   filter(top5 == 1) %&amp;gt;%
@@ -745,7 +745,7 @@ priorities %&amp;gt;%
           text = element_text(size = 10),
           legend.position = c(.9,.75)) + 
     labs(x = &amp;quot;&amp;quot;, y = &amp;quot;count scaled by quartile n\n&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 5 rated by loneliness\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-17-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-17-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;correlations-between-area-ranking-and-loneliness&#34; class=&#34;section level1&#34;&gt;
@@ -769,7 +769,7 @@ priorities %&amp;gt;%
     scale_color_viridis_d() +
     theme_minimal() + 
     theme(text = element_text(size = 10))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
   filter(item %in% c(&amp;quot;Academics&amp;quot;, &amp;quot;Well-being&amp;quot;, &amp;quot;Social exploration&amp;quot;, &amp;quot;New experiences &amp;quot;, &amp;quot;Self discovery&amp;quot;)) %&amp;gt;%
   mutate(value = as.integer(value)) %&amp;gt;%
@@ -781,7 +781,7 @@ priorities %&amp;gt;%
   ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#3D6f8B&amp;quot;, &amp;quot;white&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
     geom_text(aes(label = round(value, 2)), size = 3) +
     labs(title = &amp;quot;Correlations among loneliness and priority ranking\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-18-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-18-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;all-measures&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;all measures&lt;/h2&gt;
@@ -795,7 +795,7 @@ priorities %&amp;gt;%
     scale_color_viridis_d() +
     theme_minimal() + 
     theme(text = element_text(size = 10))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
   filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
   mutate(value = as.integer(value)) %&amp;gt;%
@@ -807,7 +807,7 @@ priorities %&amp;gt;%
   ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#3D6f8B&amp;quot;, &amp;quot;white&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
     geom_text(aes(label = round(value, 2)), size = 3) +
     labs(title = &amp;quot;Correlations among loneliness and priority ranking\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/hopelab_files/figure-html/unnamed-chunk-19-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 </description>
@@ -815,10 +815,10 @@ priorities %&amp;gt;%
     
     <item>
       <title>Autonomy can support affect regulation during illness and in health</title>
-      <link>https://dcosme.github.io/publication/autonomy-affect-regulation/</link>
+      <link>/publication/autonomy-affect-regulation/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 -0700</pubDate>
       
-      <guid>https://dcosme.github.io/publication/autonomy-affect-regulation/</guid>
+      <guid>/publication/autonomy-affect-regulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Berkman, E. T. (In Press) &lt;a href=&#34;http://journals.sagepub.com/doi/10.1177/1359105318787013&#34; target=&#34;_blank&#34;&gt;Autonomy can support affect regulation during illness and in health.&lt;/a&gt; &lt;em&gt;Journal of Health Psychology&lt;/em&gt;.&lt;/p&gt;
 </description>
@@ -826,10 +826,10 @@ Cosme, D., &amp;amp; Berkman, E. T. (In Press) &lt;a href=&#34;http://journals.s
     
     <item>
       <title>FP Pilot GPS</title>
-      <link>https://dcosme.github.io/data-vis/fp_pilot_gps/</link>
+      <link>/data-vis/fp_pilot_gps/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/data-vis/fp_pilot_gps/</guid>
+      <guid>/data-vis/fp_pilot_gps/</guid>
       <description>&lt;p&gt;This code is a first pass analysis of the goals and priorities survey.&lt;/p&gt;
 &lt;div id=&#34;get-and-clean-the-data&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;Get and clean the data&lt;/h1&gt;
@@ -1098,9 +1098,9 @@ surveys_long_clean %&amp;gt;%
       theme_minimal()
     print(plot)
   })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-7.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-15.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-7.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-15.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## Error: Results 1, 2, 3, 4, 5, ... must be data frames, not list&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;histograms&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;histograms&lt;/h2&gt;
@@ -1115,9 +1115,9 @@ surveys_long_clean %&amp;gt;%
       theme_minimal()
     print(plot)
   })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-7.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-15.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-7.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-15.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## Error: Results 1, 2, 3, 4, 5, ... must be data frames, not list&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;top-priorities&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;top priorities&lt;/h2&gt;
@@ -1133,7 +1133,7 @@ surveys_long_clean %&amp;gt;%
     theme(text = element_text(size = 10)) + 
     labs(x = &amp;quot;priority area&amp;quot;, title = &amp;quot;Number of times this area was in the top 3 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
   filter(top5 == 1) %&amp;gt;%
   group_by(item) %&amp;gt;%
@@ -1146,7 +1146,7 @@ surveys_long_clean %&amp;gt;%
     theme(text = element_text(size = 10)) + 
     labs(x = &amp;quot;priority area&amp;quot;, title = &amp;quot;Number of times this area was in the top 5 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;gps&#34; class=&#34;section level1&#34;&gt;
@@ -1183,7 +1183,7 @@ surveys_long_clean %&amp;gt;%
 &lt;pre&gt;&lt;code&gt;## Warning: Removed 37 rows containing non-finite values (stat_summary).
 
 ## Warning: Removed 37 rows containing non-finite values (stat_summary).&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gps %&amp;gt;%
   filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
   group_by(item, term, survey, personalproject) %&amp;gt;%
@@ -1239,15 +1239,15 @@ merged %&amp;gt;%
               labs(title = .$PPA[[1]], y = &amp;quot;rating&amp;quot;)
     print(plot)
   })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## geom_path: Each group consists of only one observation. Do you need to
 ## adjust the group aesthetic?&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## geom_path: Each group consists of only one observation. Do you need to
 ## adjust the group aesthetic?&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-15.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-15.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;## Error: Results 1, 2, 3, 4, 5, ... must be data frames, not list&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-17.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-17.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;merged %&amp;gt;%
   filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
   group_by(item, survey, PPA) %&amp;gt;%
@@ -1297,10 +1297,10 @@ merged %&amp;gt;%
     
     <item>
       <title>Websites in RStudio</title>
-      <link>https://dcosme.github.io/post/rstudio-website-tutorial/</link>
+      <link>/post/rstudio-website-tutorial/</link>
       <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/post/rstudio-website-tutorial/</guid>
+      <guid>/post/rstudio-website-tutorial/</guid>
       <description>&lt;p&gt;This tutorial was created by Dani Cosme and &lt;a href=&#34;https://github.com/schavez6/&#34;&gt;Sam Chavez&lt;/a&gt; as part of PSY 607: Data Science Seminar at the University of Oregon.&lt;/p&gt;
 &lt;p&gt;The tutorial and associated files can also be found &lt;a href=&#34;https://github.com/dcosme/rstudio-websites&#34;&gt;on GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;overview-of-the-tutorial&#34; class=&#34;section level3&#34;&gt;
@@ -2185,7 +2185,7 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Push local changes to remote repository&lt;/p&gt;
 &lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In Github, enable GitHub Pages &lt;code&gt;Your repo &amp;gt; Settings &amp;gt; GitHub Page &amp;gt; Source = master branch &amp;gt; Save&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;https://dcosme.github.io/img/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;/img/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Go to your website and bask in the glory 🎉&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;workflow&#34; class=&#34;section level1&#34;&gt;
@@ -2238,11 +2238,11 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Neural predictors of eating behavior and dietary change</title>
-      <link>https://dcosme.github.io/publication/neural-predictors-dietary-change/</link>
+      <link>/publication/neural-predictors-dietary-change/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 -0700</pubDate>
       
-      <guid>https://dcosme.github.io/publication/neural-predictors-dietary-change/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/img/NYAS_cover.png&#34; alt=&#34;Neural predictors of eating behavior and dietary change. Figure 2.&#34;&gt;&lt;/p&gt;
+      <guid>/publication/neural-predictors-dietary-change/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/img/NYAS_cover.png&#34; alt=&#34;Neural predictors of eating behavior and dietary change. Figure 2.&#34;&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Giuliani, N. R., Merchant, J. S., Cosme, D., &amp;amp; Berkman, E. T. (2018) &lt;a href=&#34;http://doi.org/10.1111/nyas.13637&#34; target=&#34;_blank&#34;&gt;Neural predictors of eating behavior and dietary change.&lt;/a&gt; &lt;em&gt;Annals of the New York Academy of Science&lt;/em&gt;.&lt;/p&gt;
@@ -2251,10 +2251,10 @@ Giuliani, N. R., Merchant, J. S., Cosme, D., &amp;amp; Berkman, E. T. (2018) &lt
     
     <item>
       <title>Choosing to regulate: Does choice enhance craving regulation?</title>
-      <link>https://dcosme.github.io/publication/choosing-to-regulate/</link>
+      <link>/publication/choosing-to-regulate/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 -0800</pubDate>
       
-      <guid>https://dcosme.github.io/publication/choosing-to-regulate/</guid>
+      <guid>/publication/choosing-to-regulate/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H. (2018) &lt;a href=&#34;http://doi.org/10.1093/scan/nsy010&#34; target=&#34;_blank&#34;&gt;Choosing to regulate: Does choice enhance craving regulation?.&lt;/a&gt; &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;, 13(3), 300-309.&lt;/p&gt;
 </description>
@@ -2262,10 +2262,10 @@ Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H.
     
     <item>
       <title>Methodological considerations for developmental longitudinal fMRI research</title>
-      <link>https://dcosme.github.io/publication/longitudinal-fmri/</link>
+      <link>/publication/longitudinal-fmri/</link>
       <pubDate>Wed, 07 Feb 2018 00:00:00 -0800</pubDate>
       
-      <guid>https://dcosme.github.io/publication/longitudinal-fmri/</guid>
+      <guid>/publication/longitudinal-fmri/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Telzer, E. H., McCormick, E. M., Peters, S., Cosme, D., Pfeifer, J. H., &amp;amp; van Duijvenvoorde, A. C. K. (In Press) &lt;a href=&#34;http://doi.org/10.1016/j.dcn.2018.02.004&#34; target=&#34;_blank&#34;&gt;Methodological considerations for developmental longitudinal fMRI research.&lt;/a&gt; &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;.&lt;/p&gt;
 </description>
@@ -2273,20 +2273,20 @@ Telzer, E. H., McCormick, E. M., Peters, S., Cosme, D., Pfeifer, J. H., &amp;amp
     
     <item>
       <title>Example Talk</title>
-      <link>https://dcosme.github.io/talk/example-talk/</link>
+      <link>/talk/example-talk/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0800</pubDate>
       
-      <guid>https://dcosme.github.io/talk/example-talk/</guid>
+      <guid>/talk/example-talk/</guid>
       <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Deep Learning</title>
-      <link>https://dcosme.github.io/project/deep-learning/</link>
+      <link>/project/deep-learning/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
       
-      <guid>https://dcosme.github.io/project/deep-learning/</guid>
+      <guid>/project/deep-learning/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -2301,19 +2301,19 @@ Telzer, E. H., McCormick, E. M., Peters, S., Cosme, D., Pfeifer, J. H., &amp;amp
     
     <item>
       <title>External Project</title>
-      <link>https://dcosme.github.io/project/example-external-project/</link>
+      <link>/project/example-external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
       
-      <guid>https://dcosme.github.io/project/example-external-project/</guid>
+      <guid>/project/example-external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures</title>
-      <link>https://dcosme.github.io/publication/mindfulness-affective-reactivity/</link>
+      <link>/publication/mindfulness-affective-reactivity/</link>
       <pubDate>Fri, 06 Mar 2015 00:00:00 -0800</pubDate>
       
-      <guid>https://dcosme.github.io/publication/mindfulness-affective-reactivity/</guid>
+      <guid>/publication/mindfulness-affective-reactivity/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Wiens, S. (2015). &lt;a href=&#34;http://doi.org/10.1371/journal.pone.0119466&#34; target=&#34;_blank&#34;&gt;Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures.&lt;/a&gt; &lt;em&gt;PLOS One&lt;/em&gt;, 10(3), e0119466.&lt;/p&gt;
 </description>

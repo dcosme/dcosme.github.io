@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Danielle Cosme</title>
-    <link>https://dcosme.github.io/post/</link>
+    <link>/post/</link>
     <description>Recent content in Posts on Danielle Cosme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
     
-	<atom:link href="https://dcosme.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Specification curve example</title>
-      <link>https://dcosme.github.io/post/specification_curve_example/</link>
+      <link>/post/specification_curve_example/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/post/specification_curve_example/</guid>
+      <guid>/post/specification_curve_example/</guid>
       <description>I was inspired by these amazing examples of specification curves by Julia Rohrer and Amy Orben, so I wrote some code to generate a curve like this:
 Below is code to create a specification curve using a toy example from the airquality dataset. Enjoy!
 load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function from the MuMIn package.
@@ -26,10 +26,10 @@ load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  
     
     <item>
       <title>Websites in RStudio</title>
-      <link>https://dcosme.github.io/post/rstudio-website-tutorial/</link>
+      <link>/post/rstudio-website-tutorial/</link>
       <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/post/rstudio-website-tutorial/</guid>
+      <guid>/post/rstudio-website-tutorial/</guid>
       <description>This tutorial was created by Dani Cosme and Sam Chavez as part of PSY 607: Data Science Seminar at the University of Oregon.
 The tutorial and associated files can also be found on GitHub.
 Overview of the tutorial Background Learn the basics

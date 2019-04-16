@@ -2,76 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Danielle Cosme</title>
-    <link>https://dcosme.github.io/tags/</link>
+    <link>/tags/</link>
     <description>Recent content in Tags on Danielle Cosme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
     
-	<atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Content tagged as &#39;Academic&#39;</title>
-      <link>https://dcosme.github.io/tags/academic/</link>
+      <link>/tags/academic/</link>
       <pubDate>Sun, 01 Jan 2017 00:00:00 -0800</pubDate>
       
-      <guid>https://dcosme.github.io/tags/academic/</guid>
+      <guid>/tags/academic/</guid>
       <description>Here is a list of all the content that has been tagged as academic.</description>
     </item>
     
     <item>
       <title>Blogdown</title>
-      <link>https://dcosme.github.io/tags/blogdown/</link>
+      <link>/tags/blogdown/</link>
       <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/tags/blogdown/</guid>
+      <guid>/tags/blogdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Deep-learning</title>
-      <link>https://dcosme.github.io/tags/deep-learning/</link>
+      <link>/tags/deep-learning/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
       
-      <guid>https://dcosme.github.io/tags/deep-learning/</guid>
+      <guid>/tags/deep-learning/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Demo</title>
-      <link>https://dcosme.github.io/tags/demo/</link>
+      <link>/tags/demo/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
       
-      <guid>https://dcosme.github.io/tags/demo/</guid>
+      <guid>/tags/demo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Specification curve</title>
-      <link>https://dcosme.github.io/tags/specification-curve/</link>
+      <link>/tags/specification-curve/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/tags/specification-curve/</guid>
+      <guid>/tags/specification-curve/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tutorial</title>
-      <link>https://dcosme.github.io/tags/tutorial/</link>
+      <link>/tags/tutorial/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/tags/tutorial/</guid>
+      <guid>/tags/tutorial/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Websites</title>
-      <link>https://dcosme.github.io/tags/websites/</link>
+      <link>/tags/websites/</link>
       <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/tags/websites/</guid>
+      <guid>/tags/websites/</guid>
       <description></description>
     </item>
     
