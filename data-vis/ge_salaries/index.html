@@ -249,7 +249,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    8 min read
   </span>
   
 
@@ -343,7 +343,8 @@ areas = data.int %&gt;%
                 ifelse(HU &gt; AE &amp; HU &gt; NS &amp; HU &gt; SS, &quot;HU&quot;, 
                 ifelse(NS &gt; AE &amp; NS &gt; HU &amp; NS &gt; SS, &quot;NS&quot;, 
                 ifelse(SS &gt; AE &amp; SS &gt; NS &amp; SS &gt; HU, &quot;SS&quot;, 
-                ifelse(Major == &quot;Curriculum &amp; Teacher Education&quot;, &quot;AE&quot;, NA)))))) %&gt;%
+                ifelse(Major == &quot;Curriculum &amp; Teacher Education&quot;, &quot;AE&quot;, NA))))),
+         Area = ifelse(Major == &quot;Psychology&quot;, &quot;NS&quot;, Area)) %&gt;%
   select(Major, Area)
 
 data = data.int %&gt;%
@@ -375,6 +376,7 @@ data1 = data %&gt;%
   filter(!ID %in% duplicates$ID) %&gt;%
   bind_rows(data.dup) %&gt;%
   mutate(Level = ifelse(grepl(&quot;1&quot;, Grade), &quot;level 1&quot;, ifelse(grepl(&quot;2&quot;, Grade), &quot;level 2&quot;, ifelse(grepl(&quot;3&quot;, Grade), &quot;level 3&quot;, Grade))),
+         Type = ifelse(grepl(&quot;GT&quot;, Grade), &quot;GTF&quot;, ifelse(grepl(&quot;GR&quot;, Grade), &quot;GRF&quot;, ifelse(grepl(&quot;GA&quot;, Grade), &quot;GAF&quot;, Grade))),
          Area = ifelse(is.na(Area) &amp; grepl(&quot;DSGN|Law&quot;, Department), &quot;AE&quot;, 
                 ifelse(is.na(Area) &amp; grepl(&quot;Philosophy|Asian&quot;, Department), &quot;HU&quot;, 
                 ifelse(is.na(Area) &amp; grepl(&quot;CHC&quot;, Department), &quot;SS&quot;, Area)))) %&gt;%
@@ -386,34 +388,55 @@ data1 = data %&gt;%
 <p>To zoom in on the plots, right-click on it and open the image in a new tab.</p>
 <p>Error bars are 95% confidence intervals. If there are no error bars in the plots, that means there is no variability in salaries (either because there is a single GE or because all GEs are paid the same).</p>
 <p>Please note that the density distributions do not represent the actual range on the x-axis. Rather, these plots should be used to compare densities across departments. Individual points are included to help illustrate the distributions. Departments with only one GE will not have a distribution.</p>
-<p><strong>Area codes</strong></p>
+<p><strong>Important note: many GEs are only guarenteed funding for 9 months, so please keep this in mind when calculating yearly salaries.</strong></p>
+<div id="density-distributions-of-fte-by-department" class="section level2">
+<h2>density distributions of FTE by department</h2>
 <ul>
 <li>AE = Arts, Education, &amp; Business</li>
 <li>HU = Humanities</li>
 <li>NS = Natural Sciences</li>
 <li>SS = Social Sciences</li>
 </ul>
-<p><strong>Important note: many GEs are only guarenteed funding for 9 months, so please keep this in mind when calculating yearly salaries.</strong></p>
-<div id="density-distributions-of-fte-by-department" class="section level2">
-<h2>density distributions of FTE by department</h2>
 <pre class="r"><code>data1 %&gt;%
   ggplot(aes(FTE, Major, fill = Area)) +
     geom_density_ridges(aes(point_fill = Area), alpha = .7, point_alpha = .1, point_size = .5, jittered_points = TRUE) +
     scale_fill_manual(values = area) +
-    labs(x = &quot;FTE&quot;) +
+    labs(x = &quot;FTE&quot;, y = &quot;Department&quot;) +
     theme_minimal()</code></pre>
 <p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-5-1.png" width="576" /></p>
 </div>
 <div id="density-distributions-of-salary-by-department" class="section level2">
 <h2>density distributions of salary by department</h2>
+<ul>
+<li>AE = Arts, Education, &amp; Business</li>
+<li>HU = Humanities</li>
+<li>NS = Natural Sciences</li>
+<li>SS = Social Sciences</li>
+</ul>
 <pre class="r"><code>data1 %&gt;%
   ggplot(aes(MonthlySalary, Major, fill = Area)) +
     geom_density_ridges(aes(point_fill = Area), alpha = .7, point_alpha = .1, point_size = .5, jittered_points = TRUE) +
     theme(axis.text = element_text(size = 8)) +
     scale_fill_manual(values = area) +
-    labs(x = &quot;Monthly salary (dollars)&quot;) +
+    labs(x = &quot;Monthly salary (dollars)&quot;, y = &quot;Department&quot;) +
     theme_minimal()</code></pre>
 <p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-6-1.png" width="576" /></p>
+</div>
+<div id="average-salary-by-ge-type" class="section level2">
+<h2>average salary by GE type</h2>
+<ul>
+<li>GTF = Graduate Teaching Fellow</li>
+<li>GRF = Graduate Research Fellow</li>
+<li>GAF = Graduate Administrative Fellow</li>
+</ul>
+<pre class="r"><code>data1 %&gt;%
+  filter(!Level == &quot;S&quot;) %&gt;%
+  ggplot(aes(Type, MonthlySalary)) +
+    stat_summary(fun.y = mean, geom = &quot;bar&quot;, position = position_dodge(width = 0.95), fill = area[1]) +
+    stat_summary(fun.data = mean_cl_boot, geom = &quot;errorbar&quot;, position = position_dodge(width = 0.95), width = 0) +
+    labs(x = &quot;GE Type&quot;, y = &quot;Monthly salary (dollars)&quot;) +
+    theme_minimal()</code></pre>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 </div>
 <div id="average-salary-by-gtf-level" class="section level2">
 <h2>average salary by GTF level</h2>
@@ -424,10 +447,65 @@ data1 = data %&gt;%
     stat_summary(fun.data = mean_cl_boot, geom = &quot;errorbar&quot;, position = position_dodge(width = 0.95), width = 0) +
     labs(x = &quot;GTF level&quot;, y = &quot;Monthly salary (dollars)&quot;) +
     theme_minimal()</code></pre>
-<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+</div>
+<div id="average-salary-by-ge-type-and-department-area" class="section level2">
+<h2>average salary by GE type and department area</h2>
+<ul>
+<li>GTF = Graduate Teaching Fellow</li>
+<li>GRF = Graduate Research Fellow</li>
+<li><p>GAF = Graduate Administrative Fellow</p></li>
+<li>AE = Arts, Education, &amp; Business</li>
+<li>HU = Humanities</li>
+<li>NS = Natural Sciences</li>
+<li><p>SS = Social Sciences</p></li>
+</ul>
+<pre class="r"><code>data1 %&gt;%
+  filter(!Level == &quot;S&quot;) %&gt;%
+  ggplot(aes(Type, MonthlySalary, fill = Area)) +
+    stat_summary(fun.y = mean, geom = &quot;bar&quot;, position = position_dodge(width = 0.95)) +
+    stat_summary(fun.data = mean_cl_boot, geom = &quot;errorbar&quot;, position = position_dodge(width = 0.95), width = 0) +
+    facet_grid(~Area) +
+    scale_fill_manual(values = area) +
+    labs(x = &quot;GE type&quot;, y = &quot;Monthly salary (dollars)&quot;) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))</code></pre>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+</div>
+<div id="average-salary-by-ge-type-and-department-area-scaled-by-number-of-ges" class="section level2">
+<h2>average salary by GE type and department area, scaled by number of GEs</h2>
+<ul>
+<li>GTF = Graduate Teaching Fellow</li>
+<li>GRF = Graduate Research Fellow</li>
+<li><p>GAF = Graduate Administrative Fellow</p></li>
+<li>AE = Arts, Education, &amp; Business</li>
+<li>HU = Humanities</li>
+<li>NS = Natural Sciences</li>
+<li><p>SS = Social Sciences</p></li>
+</ul>
+<pre class="r"><code>data1 %&gt;%
+  filter(!Level == &quot;S&quot;) %&gt;%
+  group_by(Area, Type) %&gt;%
+  mutate(`# GEs` = n()) %&gt;%
+  ggplot(aes(Type, MonthlySalary, color = Area, size = `# GEs`)) +
+    stat_summary(fun.y = mean, geom = &quot;point&quot;) +
+    stat_summary(fun.data = mean_cl_boot, geom = &quot;pointrange&quot;, width = 0) +
+    facet_grid(~Area) +
+    scale_color_manual(values = area) +
+    scale_size_continuous(range = c(.1, 1)) +
+    labs(x = &quot;GE type&quot;, y = &quot;Monthly salary (dollars)&quot;, size = &quot;# GEs&quot;) +
+    theme_minimal() +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))</code></pre>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
 </div>
 <div id="average-salary-by-gtf-level-and-department-area" class="section level2">
 <h2>average salary by GTF level and department area</h2>
+<ul>
+<li>AE = Arts, Education, &amp; Business</li>
+<li>HU = Humanities</li>
+<li>NS = Natural Sciences</li>
+<li>SS = Social Sciences</li>
+</ul>
 <pre class="r"><code>data1 %&gt;%
   filter(!Level == &quot;S&quot;) %&gt;%
   ggplot(aes(Level, MonthlySalary, fill = Area)) +
@@ -438,10 +516,16 @@ data1 = data %&gt;%
     labs(x = &quot;GTF level&quot;, y = &quot;Monthly salary (dollars)&quot;) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))</code></pre>
-<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
 </div>
 <div id="average-salary-by-program-type-and-department-area" class="section level2">
 <h2>average salary by program type and department area</h2>
+<ul>
+<li>AE = Arts, Education, &amp; Business</li>
+<li>HU = Humanities</li>
+<li>NS = Natural Sciences</li>
+<li>SS = Social Sciences</li>
+</ul>
 <pre class="r"><code>data1 %&gt;%
   ggplot(aes(ProgramType, MonthlySalary, fill = Area)) +
     stat_summary(fun.y = mean, geom = &quot;bar&quot;, position = position_dodge(width = 0.95)) +
@@ -451,7 +535,7 @@ data1 = data %&gt;%
     labs(x = &quot;GTF level&quot;, y = &quot;Monthly salary (dollars)&quot;) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))</code></pre>
-<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
 </div>
 <div id="average-salary-by-gtf-level-and-fte" class="section level2">
 <h2>average salary by GTF level and FTE</h2>
@@ -463,10 +547,16 @@ data1 = data %&gt;%
     scale_fill_gradientn(colors = c(&quot;#F43C13&quot;, &quot;#FEC601&quot;, &quot;#8EC922&quot;, &quot;#06AED5&quot;, &quot;#3066BE&quot;, &quot;#4B3F72&quot;)) +
     labs(x = &quot;GTF level&quot;, y = &quot;Monthly salary (dollars)&quot;) +
     theme_minimal()</code></pre>
-<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
 </div>
 <div id="average-salary-by-department-scaled-by-number-of-ges" class="section level2">
 <h2>average salary by department, scaled by number of GEs</h2>
+<ul>
+<li>AE = Arts, Education, &amp; Business</li>
+<li>HU = Humanities</li>
+<li>NS = Natural Sciences</li>
+<li>SS = Social Sciences</li>
+</ul>
 <pre class="r"><code>data1 %&gt;%
   group_by(Major, Area) %&gt;%
   mutate(`# GEs` = n()) %&gt;%
@@ -480,10 +570,16 @@ data1 = data %&gt;%
     scale_size_continuous(range = c(.1, .75)) +
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))</code></pre>
-<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-11-1.png" width="1536" /></p>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-14-1.png" width="1536" /></p>
 </div>
 <div id="average-salary-by-department" class="section level2">
 <h2>average salary by department</h2>
+<ul>
+<li>AE = Arts, Education, &amp; Business</li>
+<li>HU = Humanities</li>
+<li>NS = Natural Sciences</li>
+<li>SS = Social Sciences</li>
+</ul>
 <pre class="r"><code>data1 %&gt;%
   ggplot(aes(reorder(Major, MonthlySalary), MonthlySalary, fill = Area)) +
     stat_summary(fun.y = mean, geom = &quot;bar&quot;, position = position_dodge(width = 0.95)) +
@@ -494,10 +590,16 @@ data1 = data %&gt;%
     labs(x = &quot;Department&quot;, y = &quot;\n\n\nMonthly salary (dollars)&quot;) + 
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))</code></pre>
-<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-12-1.png" width="1536" /></p>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-15-1.png" width="1536" /></p>
 </div>
 <div id="average-salary-by-department-and-gtf-level" class="section level2">
 <h2>average salary by department and GTF level</h2>
+<ul>
+<li>AE = Arts, Education, &amp; Business</li>
+<li>HU = Humanities</li>
+<li>NS = Natural Sciences</li>
+<li>SS = Social Sciences</li>
+</ul>
 <pre class="r"><code>data1 %&gt;%
   filter(!Level == &quot;S&quot;) %&gt;%
   ggplot(aes(reorder(Major, MonthlySalary), MonthlySalary, fill = Area)) +
@@ -508,7 +610,7 @@ data1 = data %&gt;%
     labs(x = &quot;Department&quot;, y = &quot;\n\n\nMonthly salary (dollars)&quot;) + 
     theme_minimal() +
     theme(axis.text.x = element_text(angle = 45, hjust = 1))</code></pre>
-<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-13-1.png" width="1536" /></p>
+<p><img src="/data-vis/GE_salaries_files/figure-html/unnamed-chunk-16-1.png" width="1536" /></p>
 </div>
 </div>
 
