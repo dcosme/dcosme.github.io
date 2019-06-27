@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rstats on Danielle Cosme</title>
+    <link>https://dcosme.github.io/tags/rstats/</link>
+    <description>Recent content in Rstats on Danielle Cosme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 27 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dcosme.github.io/tags/rstats/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Specification curve analysis (SCA) tutorial</title>
+      <link>https://dcosme.github.io/post/specification_curve_tutorial/</link>
+      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/post/specification_curve_tutorial/</guid>
+      <description>This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.
+The repository can be found at: https://github.com/dcosme/specification-curves/
+background  The problem: there are many different wants to test a model and we usually only report one or a few specifications, which rely on choices by the researcher, which are often artbitrary and sometimes driven by a desire for significant results. The solution (according to Simonsohn, Simmons, &amp;amp; Nelson, 2015: specify all “reasonable” models and assess the distribution of effects  Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015 steps for conducting SCA Specify all reasonable models Plot specification curve showing estimates/model fits as a function of analytic decisions or model parameters Test how consistent the curve results are the null hypothesis (no effect)   1.</description>
+    </item>
+    
+  </channel>
+</rss>

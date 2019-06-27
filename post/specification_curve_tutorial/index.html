@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.38.1" />
+  <meta name="author" content="DANIELLE COSME">
+
+  
+  
+  
+  
+    
+      
+    
+  
+  <meta name="description" content="This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.
+The repository can be found at: https://github.com/dcosme/specification-curves/
+background  The problem: there are many different wants to test a model and we usually only report one or a few specifications, which rely on choices by the researcher, which are often artbitrary and sometimes driven by a desire for significant results. The solution (according to Simonsohn, Simmons, &amp; Nelson, 2015: specify all “reasonable” models and assess the distribution of effects  Figure 1 Simonsohn, Simmons, &amp; Nelson, 2015 steps for conducting SCA Specify all reasonable models Plot specification curve showing estimates/model fits as a function of analytic decisions or model parameters Test how consistent the curve results are the null hypothesis (no effect)   1.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://dcosme.github.io/post/specification_curve_tutorial/">
+
+  
+
+
+  
+
+  
+  
+  <meta name="theme-color" content="#F0BD00">
+  
+  
+  
+  
+    
+  
+  
+    
+    
+      
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+      
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+  
+  
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Futura:400,700%7cCentury%20Gothic%7cRoboto&#43;Mono">
+  
+  <link rel="stylesheet" href="/styles.css">
+  
+
+  
+
+  
+  <link rel="alternate" href="https://dcosme.github.io/index.xml" type="application/rss+xml" title="Danielle Cosme">
+  <link rel="feed" href="https://dcosme.github.io/index.xml" type="application/rss+xml" title="Danielle Cosme">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://dcosme.github.io/post/specification_curve_tutorial/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@danicosme">
+  <meta property="twitter:creator" content="@danicosme">
+  
+  <meta property="og:site_name" content="Danielle Cosme">
+  <meta property="og:url" content="https://dcosme.github.io/post/specification_curve_tutorial/">
+  <meta property="og:title" content="Specification curve analysis (SCA) tutorial | Danielle Cosme">
+  <meta property="og:description" content="This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.
+The repository can be found at: https://github.com/dcosme/specification-curves/
+background  The problem: there are many different wants to test a model and we usually only report one or a few specifications, which rely on choices by the researcher, which are often artbitrary and sometimes driven by a desire for significant results. The solution (according to Simonsohn, Simmons, &amp; Nelson, 2015: specify all “reasonable” models and assess the distribution of effects  Figure 1 Simonsohn, Simmons, &amp; Nelson, 2015 steps for conducting SCA Specify all reasonable models Plot specification curve showing estimates/model fits as a function of analytic decisions or model parameters Test how consistent the curve results are the null hypothesis (no effect)   1.">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2019-06-27T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2019-06-27T00:00:00&#43;00:00">
+  
+
+  
+  
+
+  <title>Specification curve analysis (SCA) tutorial | Danielle Cosme</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#toc" data-offset="71" >
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+      <a class="navbar-brand" href="/">Danielle Cosme</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+        
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a href="/cv_d.cosme.pdf">
+            
+            <span>CV</span>
+            
+          </a>
+        </li>
+
+        
+        
+      
+
+      
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+  <div class="article-container">
+    <h1 itemprop="name">Specification curve analysis (SCA) tutorial</h1>
+
+    
+
+<div class="article-metadata">
+
+  <span class="article-date">
+    
+    <time datetime="2019-06-27 00:00:00 &#43;0000 UTC" itemprop="datePublished dateModified">
+      Jun 27, 2019
+    </time>
+  </span>
+  <span itemscope itemprop="author publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="DANIELLE COSME">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    15 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fa fa-folder"></i>
+    
+    <a href="https://dcosme.github.io/categories/r/">R</a
+    >
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Specification%20curve%20analysis%20%28SCA%29%20tutorial&amp;url=https%3a%2f%2fdcosme.github.io%2fpost%2fspecification_curve_tutorial%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fdcosme.github.io%2fpost%2fspecification_curve_tutorial%2f"
+         target="_blank" rel="noopener">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fdcosme.github.io%2fpost%2fspecification_curve_tutorial%2f&amp;title=Specification%20curve%20analysis%20%28SCA%29%20tutorial"
+         target="_blank" rel="noopener">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fdcosme.github.io%2fpost%2fspecification_curve_tutorial%2f&amp;title=Specification%20curve%20analysis%20%28SCA%29%20tutorial"
+         target="_blank" rel="noopener">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Specification%20curve%20analysis%20%28SCA%29%20tutorial&amp;body=https%3a%2f%2fdcosme.github.io%2fpost%2fspecification_curve_tutorial%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+
+    <div class="article-style" itemprop="articleBody">
+      <p>This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.</p>
+<p>The repository can be found at: <a href="https://github.com/dcosme/specification-curves/" class="uri">https://github.com/dcosme/specification-curves/</a></p>
+<div id="background" class="section level1">
+<h1>background</h1>
+<ul>
+<li>The problem: there are many different wants to test a model and we usually only report one or a few specifications, which rely on choices by the researcher, which are often artbitrary and sometimes driven by a desire for significant results.</li>
+<li>The solution (according to <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2694998">Simonsohn, Simmons, &amp; Nelson, 2015</a>: specify all “reasonable” models and assess the distribution of effects</li>
+</ul>
+<p><strong>Figure 1 Simonsohn, Simmons, &amp; Nelson, 2015</strong> <img src="/img/sca-tutorial/figure1.png" alt="Figure 1 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
+<div id="steps-for-conducting-sca" class="section level2">
+<h2>steps for conducting SCA</h2>
+<ol style="list-style-type: decimal">
+<li>Specify all reasonable models</li>
+<li>Plot specification curve showing estimates/model fits as a function of analytic decisions or model parameters</li>
+<li>Test how consistent the curve results are the null hypothesis (no effect)</li>
+</ol>
+</div>
+<div id="reasonable-specifications-should-be" class="section level2">
+<h2>1. Reasonable specifications should be:</h2>
+<ul>
+<li>Consistent with theory</li>
+<li>Expected to be statistically valid</li>
+<li>Non-redundant</li>
+</ul>
+<p><strong>Table 1 Simonsohn, Simmons, &amp; Nelson, 2015</strong> <img src="/img/sca-tutorial/table1.png" alt="Table 1 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
+</div>
+<div id="descriptive-specification-curve" class="section level2">
+<h2>2. Descriptive specification curve</h2>
+<p><strong>Figure 2 Simonsohn, Simmons, &amp; Nelson, 2015</strong> <img src="/img/sca-tutorial/figure2.png" alt="Figure 2 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
+</div>
+<div id="inferential-statistics" class="section level2">
+<h2>3. Inferential statistics</h2>
+<ul>
+<li>Use permutation testing to run many specification curve analyses and create null distribution</li>
+<li>Potential questions to test versus null:
+<ul>
+<li>Is the median effect size in the observed statistically different than in the null distribution?</li>
+<li>Is the share of dominant signs (e.g., positive or negative effects) different than the null?</li>
+<li>Is the share of dominant signs that are statistically significant different than the null?</li>
+</ul></li>
+</ul>
+<p><strong>Table 2 Simonsohn, Simmons, &amp; Nelson, 2015</strong><br />
+<img src="/img/sca-tutorial/table2.png" alt="Table2 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
+<ul>
+<li>Also possible to compare specification surves between two variables of interest</li>
+</ul>
+<p><strong>Figure 6 Orben &amp; Przybylski, 2019</strong> <img src="/img/sca-tutorial/figure6.png" alt="Figure 6 Orben &amp; Przybylski, 2019" /></p>
+</div>
+</div>
+<div id="examples" class="section level1">
+<h1>examples</h1>
+<ul>
+<li><a href="https://www.psychologicalscience.org/observer/run-all-the-models-dealing-with-data-analytic-flexibility">Run All the Models! Dealing With Data Analytic Flexibility - Julia Rohrer</a></li>
+<li><a href="https://www.amyorben.com/pdf/2019_orbenprzybylski_nhb.pdf">The association between adolescent well-being and digital technology use - Orben &amp; Przybylski, 2019</a></li>
+<li><a href="https://www.amyorben.com/pdf/2019_orbenprzybylski_ps.pdf">Screens, Teens, and Psychological Well-Being: Evidence From Three Time-Use-Diary Studies - Orben &amp; Przybylski, 2019</a></li>
+</ul>
+</div>
+<div id="reading-list" class="section level1">
+<h1>reading list</h1>
+<ul>
+<li><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2694998">Specification Curve: Descriptive and Inferential Statistics on All Reasonable Specifications - Simonsohn, Simmons, &amp; Nelson, 2015</a></li>
+</ul>
+</div>
+<div id="programming-resources" class="section level1">
+<h1>programming resources</h1>
+<ul>
+<li><a href="https://uo-datasci-specialization.github.io/c3-fun_program_r/schedule.html">EDUC 610, Functional Programming with R - Daniel Anderson</a></li>
+<li><a href="https://r4ds.had.co.nz/many-models.html">R for Data Science - Grolemund &amp; Wickham</a></li>
+</ul>
+</div>
+<div id="load-packages" class="section level1">
+<h1>load packages</h1>
+<pre class="r"><code>if (!require(tidyverse)) {
+  install.packages(&#39;tidyverse&#39;)
+}
+if (!require(purrr)) {
+  install.packages(&#39;purrr&#39;)
+}
+if (!require(broom)) {
+  install.packages(&#39;broom&#39;)
+}
+if (!require(cowplot)) {
+  install.packages(&#39;cowplot&#39;)
+}</code></pre>
+</div>
+<div id="run-multiple-models-using-map-from-purrr" class="section level1">
+<h1>run multiple models using <code>map</code> from <code>purrr</code></h1>
+<ul>
+<li>Note that if you are running linera mixed effects modesl, you can use the <code>broom.mixed</code> instead of the <code>broom</code> package to tidy the model output</li>
+</ul>
+<pre class="r"><code># specify models
+models = list(mpg ~ cyl,
+              mpg ~ cyl + hp,
+              mpg ~ cyl * hp)
+
+# run models and extract parameter estimates and stats
+(model_params = map(models, ~lm(.x,  data = mtcars)) %&gt;%
+  tibble() %&gt;%
+  rename(&quot;model&quot; = &quot;.&quot;) %&gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&gt;%
+  select(model_num, tidied) %&gt;%
+  unnest())</code></pre>
+<pre><code>## # A tibble: 9 x 6
+##   model_num term        estimate std.error statistic  p.value
+##       &lt;int&gt; &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+## 1         1 (Intercept)  37.9      2.07        18.3  8.37e-18
+## 2         1 cyl          -2.88     0.322       -8.92 6.11e-10
+## 3         2 (Intercept)  36.9      2.19        16.8  1.62e-16
+## 4         2 cyl          -2.26     0.576       -3.93 4.80e- 4
+## 5         2 hp           -0.0191   0.0150      -1.27 2.13e- 1
+## 6         3 (Intercept)  50.8      6.51         7.79 1.72e- 8
+## 7         3 cyl          -4.12     0.988       -4.17 2.67e- 4
+## 8         3 hp           -0.171    0.0691      -2.47 1.99e- 2
+## 9         3 cyl:hp        0.0197   0.00881      2.24 3.32e- 2</code></pre>
+<pre class="r"><code># run models and extract model fits
+(model_fits = purrr::map(models, ~lm(.x,  data = mtcars)) %&gt;%
+  tibble() %&gt;%
+  rename(&quot;model&quot; = &quot;.&quot;) %&gt;%
+  mutate(model_num = row_number(),
+         AIC = map_dbl(model, AIC),
+         BIC = map_dbl(model, BIC)) %&gt;%
+  select(-model))</code></pre>
+<pre><code>## # A tibble: 3 x 3
+##   model_num   AIC   BIC
+##       &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1         1  169.  174.
+## 2         2  170.  175.
+## 3         3  166.  174.</code></pre>
+<pre class="r"><code># join dataframes and select model fits and parameter estimates
+model_params %&gt;%
+  select(model_num, term, estimate) %&gt;%
+  spread(term, estimate) %&gt;%
+  left_join(., model_fits) %&gt;%
+  arrange(AIC)</code></pre>
+<pre><code>## # A tibble: 3 x 7
+##   model_num `(Intercept)`   cyl `cyl:hp`       hp   AIC   BIC
+##       &lt;int&gt;         &lt;dbl&gt; &lt;dbl&gt;    &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1         3          50.8 -4.12   0.0197  -0.171   166.  174.
+## 2         1          37.9 -2.88  NA       NA       169.  174.
+## 3         2          36.9 -2.26  NA       -0.0191  170.  175.</code></pre>
+</div>
+<div id="run-all-nested-models-using-dredge-from-mumin" class="section level1">
+<h1>run all nested models using <code>dredge</code> from <code>MuMIn</code></h1>
+<ul>
+<li>max number of predictors = 30</li>
+<li>doesn’t give parameter estimates for factors</li>
+</ul>
+<pre class="r"><code># set na.action for dredge
+options(na.action = &quot;na.fail&quot;)
+
+# omit NAs
+mtcars.na = mtcars %&gt;% 
+  na.omit()
+
+# run full model
+full.model = lm(mpg ~ cyl*hp, data = mtcars.na)
+
+# run all possible nested models
+(all.models = MuMIn::dredge(full.model, rank = &quot;AIC&quot;, extra = &quot;BIC&quot;))</code></pre>
+<pre><code>## Global model call: lm(formula = mpg ~ cyl * hp, data = mtcars.na)
+## ---
+## Model selection table 
+##   (Int)    cyl       hp  cyl:hp   BIC df   logLik   AIC delta weight
+## 8 50.75 -4.119 -0.17070 0.01974 173.6  5  -78.143 166.3  0.00  0.706
+## 2 37.88 -2.876                  173.7  3  -81.653 169.3  3.02  0.156
+## 4 36.91 -2.265 -0.01912         175.4  4  -80.781 169.6  3.28  0.137
+## 3 30.10        -0.06823         185.6  3  -87.619 181.2 14.95  0.000
+## 1 20.09                         211.7  2 -102.378 208.8 42.47  0.000
+## Models ranked by AIC(x)</code></pre>
+</div>
+<div id="issues-with-factors" class="section level1">
+<h1>issues with factors</h1>
+<div id="run-factor-models-using-dredge" class="section level2">
+<h2>run factor models using <code>dredge</code></h2>
+<pre class="r"><code># run full model
+full.model = lm(mpg ~ cyl*as.factor(vs), data = mtcars.na)
+
+# run all possible nested models
+MuMIn::dredge(full.model, rank = &quot;AIC&quot;, extra = &quot;BIC&quot;) %&gt;%
+  select(AIC, BIC, everything())</code></pre>
+<pre><code>##        AIC      BIC (Intercept) as.factor(vs)       cyl as.factor(vs):cyl
+## 3 169.3064 173.7036    37.88458          &lt;NA&gt; -2.875790              &lt;NA&gt;
+## 4 171.0585 176.9215    39.62502             + -3.090675              &lt;NA&gt;
+## 8 172.1312 179.4598    36.92673             + -2.728218                 +
+## 2 192.1471 196.5443    16.61667             +        NA              &lt;NA&gt;
+## 1 208.7555 211.6870    20.09062          &lt;NA&gt;        NA              &lt;NA&gt;
+##   df     logLik     delta       weight
+## 3  3  -81.65321  0.000000 6.024117e-01
+## 4  4  -81.52927  1.752124 2.508560e-01
+## 8  5  -81.06558  2.824753 1.467257e-01
+## 2  3  -93.07356 22.840708 6.608407e-06
+## 1  2 -102.37776 39.449099 1.635424e-09</code></pre>
+</div>
+<div id="run-factor-models-using-map" class="section level2">
+<h2>run factor models using <code>map</code></h2>
+<pre class="r"><code># specify models
+models = list(mpg ~ 1,
+              mpg ~ cyl,
+              mpg ~ as.factor(vs),
+              mpg ~ cyl + as.factor(vs),
+              mpg ~ cyl*as.factor(vs))
+
+# run models and extract parameter estimates and stats
+model_params = map(models, ~lm(.x,  data = mtcars)) %&gt;%
+  tibble() %&gt;%
+  rename(&quot;model&quot; = &quot;.&quot;) %&gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&gt;%
+  select(model_num, tidied) %&gt;%
+  unnest()
+
+# run models and extract model fits
+model_fits = purrr::map(models, ~lm(.x,  data = mtcars)) %&gt;%
+  tibble() %&gt;%
+  rename(&quot;model&quot; = &quot;.&quot;) %&gt;%
+  mutate(model_num = row_number(),
+         AIC = map_dbl(model, AIC),
+         BIC = map_dbl(model, BIC)) %&gt;%
+  select(-model)
+
+# join dataframes and select model fits and parameter estimates
+(models.sca = model_params %&gt;%
+  select(model_num, term, estimate) %&gt;%
+  spread(term, estimate) %&gt;%
+  left_join(., model_fits) %&gt;%
+  arrange(AIC)%&gt;%
+  select(AIC, BIC, everything()))</code></pre>
+<pre><code>## # A tibble: 5 x 7
+##     AIC   BIC model_num `(Intercept)` `as.factor(vs)1`    cyl
+##   &lt;dbl&gt; &lt;dbl&gt;     &lt;int&gt;         &lt;dbl&gt;            &lt;dbl&gt;  &lt;dbl&gt;
+## 1  169.  174.         2          37.9           NA      -2.88
+## 2  171.  177.         4          39.6           -0.939  -3.09
+## 3  172.  179.         5          36.9            5.01   -2.73
+## 4  192.  197.         3          16.6            7.94   NA   
+## 5  209.  212.         1          20.1           NA      NA   
+## # … with 1 more variable: `cyl:as.factor(vs)1` &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<div id="plot-specification-curve" class="section level1">
+<h1>plot specification curve</h1>
+<pre class="r"><code># specify mpg ~ cyl as the null model for comparison
+null.df = models.sca %&gt;% 
+  filter(model_num == 2)
+
+# tidy for plotting
+plot.data = models.sca %&gt;%
+  arrange(AIC) %&gt;%
+  mutate(specification = row_number(),
+         better.fit = ifelse(AIC == null.df$AIC, &quot;equal&quot;, 
+                      ifelse(AIC &lt; null.df$AIC, &quot;yes&quot;,&quot;no&quot;)))
+
+# get names of variables included in model
+variable.names = names(select(plot.data, -model_num, -starts_with(&quot;better&quot;), -specification, -AIC, -BIC))
+
+# plot top panel
+top = plot.data %&gt;%
+  ggplot(aes(specification, AIC, color = better.fit)) +
+    geom_point(shape = &quot;|&quot;, size = 4) +
+    geom_hline(yintercept = null.df$AIC, linetype = &quot;dashed&quot;, color = &quot;lightblue&quot;) +
+    scale_color_manual(values = c(&quot;lightblue&quot;, &quot;black&quot;, &quot;red&quot;)) +
+    labs(x = &quot;&quot;, y = &quot;AIC\n&quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &quot;black&quot;),
+          axis.line = element_line(colour = &quot;black&quot;),
+          legend.position = &quot;none&quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# plot bottom panel
+bottom = plot.data %&gt;%
+  gather(variable, value, eval(variable.names)) %&gt;% 
+  mutate(value = ifelse(!is.na(value), &quot;|&quot;, &quot;&quot;)) %&gt;%
+  ggplot(aes(specification, variable, color = better.fit)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&quot;lightblue&quot;, &quot;black&quot;, &quot;red&quot;)) +
+    labs(x = &quot;\nspecification number&quot;, y = &quot;variables\n&quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &quot;black&quot;),
+          axis.line = element_line(colour = &quot;black&quot;),
+          legend.position = &quot;none&quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels
+cowplot::plot_grid(top, bottom, ncol = 1, align = &quot;v&quot;, labels = c(&#39;A&#39;, &#39;B&#39;))</code></pre>
+<p><img src="/post/specification_curve_tutorial_files/figure-html/specification%20curve-1.png" width="672" /></p>
+<div id="reorder-and-rename-variables" class="section level2">
+<h2>reorder and rename variables</h2>
+<pre class="r"><code># set plotting order for variables based on number of times it&#39;s included in better fitting models
+order = plot.data %&gt;%
+  arrange(AIC) %&gt;%
+  mutate(better.fit.num = ifelse(better.fit == &quot;yes&quot;, 1, 0)) %&gt;%
+  rename(&quot;intercept&quot; = `(Intercept)`,
+         &quot;vs&quot; = `as.factor(vs)1`,
+         &quot;cyl x vs&quot; = `cyl:as.factor(vs)1`) %&gt;%
+  gather(variable, value, -model_num, -starts_with(&quot;better&quot;), -specification, -AIC, -BIC) %&gt;% 
+  filter(!is.na(value)) %&gt;%
+  group_by(variable) %&gt;%
+  mutate(order = sum(better.fit.num)) %&gt;%
+  select(variable, order) %&gt;%
+  unique()
+
+# rename variables and plot bottom panel
+bottom = plot.data %&gt;%
+  gather(variable, value, eval(variable.names)) %&gt;% 
+  mutate(value = ifelse(!is.na(value), &quot;|&quot;, &quot;&quot;),
+         variable = ifelse(variable == &quot;(Intercept)&quot;, &quot;intercept&quot;,
+                    ifelse(variable == &quot;as.factor(vs)1&quot;, &quot;vs&quot;,
+                    ifelse(variable == &quot;cyl:as.factor(vs)1&quot;, &quot;cyl x vs&quot;, variable)))) %&gt;%
+  left_join(., order, by = &quot;variable&quot;) %&gt;%
+  ggplot(aes(specification, reorder(variable, order), color = better.fit)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&quot;lightblue&quot;, &quot;black&quot;, &quot;red&quot;)) +
+    labs(x = &quot;\nspecification number&quot;, y = &quot;variables\n&quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &quot;black&quot;),
+          axis.line = element_line(colour = &quot;black&quot;),
+          legend.position = &quot;none&quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels
+cowplot::plot_grid(top, bottom, ncol = 1, align = &quot;v&quot;, labels = c(&#39;A&#39;, &#39;B&#39;))</code></pre>
+<p><img src="/post/specification_curve_tutorial_files/figure-html/clean%20up%20spec%20curve-1.png" width="672" /></p>
+</div>
+</div>
+<div id="a-more-complicated-example" class="section level1">
+<h1>a more complicated example</h1>
+<div id="run-all-nested-models-using-dredge" class="section level2">
+<h2>run all nested models using <code>dredge</code></h2>
+<pre class="r"><code># run full model
+full.model = lm(mpg ~ cyl + disp + hp + drat + wt + qsec + as.factor(vs) + am + gear + carb, data = mtcars.na)
+
+# run all possible nested models
+models.sca = MuMIn::dredge(full.model, rank = &quot;AIC&quot;, extra = &quot;BIC&quot;)</code></pre>
+</div>
+<div id="plot-specification-curve-1" class="section level2">
+<h2>plot specification curve</h2>
+<pre class="r"><code># tidy for plotting
+plot.data = models.sca %&gt;%
+  arrange(AIC) %&gt;%
+  mutate(specification = row_number(),
+         better.fit = ifelse(AIC == null.df$AIC, &quot;equal&quot;, 
+                      ifelse(AIC &lt; null.df$AIC, &quot;yes&quot;,&quot;no&quot;))) %&gt;%
+  gather(variable, value, -starts_with(&quot;better&quot;), -specification, -AIC, -BIC, -df, -logLik, -delta, -weight) %&gt;% 
+  mutate(variable = gsub(&quot;[()]&quot;, &quot;&quot;, variable),
+         variable = gsub(&quot;Intercept&quot;, &quot;intercept&quot;, variable),
+         variable = gsub(&quot;as.factor(vs)&quot;, &quot;vs&quot;, variable)) %&gt;%
+  spread(variable, value)
+
+# get names of variables included in model
+variable.names = names(select(plot.data, -starts_with(&quot;better&quot;), -specification, -AIC, -BIC, -df, -logLik, -delta, -weight))
+
+# plot top panel
+top = plot.data %&gt;%
+  ggplot(aes(specification, AIC, color = better.fit)) +
+    geom_point(shape = &quot;|&quot;, size = 4) +
+    geom_hline(yintercept = null.df$AIC, linetype = &quot;dashed&quot;, color = &quot;lightblue&quot;) +
+    scale_color_manual(values = c(&quot;lightblue&quot;, &quot;black&quot;, &quot;red&quot;)) +
+    labs(x = &quot;&quot;, y = &quot;AIC\n&quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &quot;black&quot;),
+          axis.line = element_line(colour = &quot;black&quot;),
+          legend.position = &quot;none&quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# set plotting order for variables based on number of times it&#39;s included in better fitting models
+order = plot.data %&gt;%
+  arrange(AIC) %&gt;%
+  mutate(better.fit.num = ifelse(better.fit == &quot;yes&quot;, 1, 0)) %&gt;%
+  gather(variable, value, eval(variable.names)) %&gt;% 
+  filter(!is.na(value)) %&gt;%
+  group_by(variable) %&gt;%
+  mutate(order = sum(better.fit.num)) %&gt;%
+  select(variable, order) %&gt;%
+  unique()
+
+# rename variables and plot bottom panel
+bottom = plot.data %&gt;%
+  gather(variable, value, eval(variable.names)) %&gt;% 
+  mutate(value = ifelse(!is.na(value), &quot;|&quot;, &quot;&quot;),
+         variable = ifelse(variable == &quot;(Intercept)&quot;, &quot;intercept&quot;,
+                    ifelse(variable == &quot;as.factor(vs)1&quot;, &quot;vs&quot;, variable))) %&gt;%
+  left_join(., order, by = &quot;variable&quot;) %&gt;%
+  ggplot(aes(specification, reorder(variable, order), color = better.fit)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&quot;lightblue&quot;, &quot;black&quot;, &quot;red&quot;)) +
+    labs(x = &quot;\nspecification number&quot;, y = &quot;variables\n&quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &quot;black&quot;),
+          axis.line = element_line(colour = &quot;black&quot;),
+          legend.position = &quot;none&quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels
+cowplot::plot_grid(top, bottom, ncol = 1, align = &quot;v&quot;, labels = c(&#39;A&#39;, &#39;B&#39;))</code></pre>
+<p><img src="/post/specification_curve_tutorial_files/figure-html/copmlicated%20spec%20curve-1.png" width="960" /></p>
+</div>
+</div>
+<div id="coefficient-specification-curve" class="section level1">
+<h1>coefficient specification curve</h1>
+<div id="mpg-wt" class="section level2">
+<h2>mpg ~ wt</h2>
+<div id="extract-coefficients" class="section level3">
+<h3>extract coefficients</h3>
+<pre class="r"><code># extract parameter estimate (step-by-step output)
+MuMIn::get.models(models.sca, subset = TRUE) %&gt;%
+  tibble() %&gt;%
+  rename(&quot;model&quot; = &quot;.&quot;)</code></pre>
+<pre><code>## # A tibble: 1,024 x 1
+##    model   
+##    &lt;list&gt;  
+##  1 &lt;S3: lm&gt;
+##  2 &lt;S3: lm&gt;
+##  3 &lt;S3: lm&gt;
+##  4 &lt;S3: lm&gt;
+##  5 &lt;S3: lm&gt;
+##  6 &lt;S3: lm&gt;
+##  7 &lt;S3: lm&gt;
+##  8 &lt;S3: lm&gt;
+##  9 &lt;S3: lm&gt;
+## 10 &lt;S3: lm&gt;
+## # … with 1,014 more rows</code></pre>
+<pre class="r"><code>MuMIn::get.models(models.sca, subset = TRUE) %&gt;%
+  tibble() %&gt;%
+  rename(&quot;model&quot; = &quot;.&quot;) %&gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&gt;%
+  select(model_num, tidied) %&gt;%
+  unnest()</code></pre>
+<pre><code>## # A tibble: 6,144 x 6
+##    model_num term        estimate std.error statistic    p.value
+##        &lt;int&gt; &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;
+##  1         1 (Intercept)   9.62      6.96        1.38 0.178     
+##  2         1 am            2.94      1.41        2.08 0.0467    
+##  3         1 qsec          1.23      0.289       4.25 0.000216  
+##  4         1 wt           -3.92      0.711      -5.51 0.00000695
+##  5         2 (Intercept)  17.4       9.32        1.87 0.0721    
+##  6         2 am            2.93      1.40        2.09 0.0458    
+##  7         2 hp           -0.0176    0.0142     -1.25 0.223     
+##  8         2 qsec          0.811     0.439       1.85 0.0757    
+##  9         2 wt           -3.24      0.890      -3.64 0.00114   
+## 10         3 (Intercept)  12.9       7.47        1.73 0.0958    
+## # … with 6,134 more rows</code></pre>
+<pre class="r"><code># extract parameter estimate
+(model_params = MuMIn::get.models(models.sca, subset = TRUE) %&gt;%
+  tibble() %&gt;%
+  rename(&quot;model&quot; = &quot;.&quot;) %&gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&gt;%
+  select(model_num, tidied) %&gt;%
+  unnest() %&gt;%
+  select(model_num, term, estimate) %&gt;%
+  spread(term, estimate))</code></pre>
+<pre><code>## # A tibble: 1,024 x 12
+##    model_num `(Intercept)`    am `as.factor(vs)1`    carb     cyl     disp
+##        &lt;int&gt;         &lt;dbl&gt; &lt;dbl&gt;            &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+##  1         1          9.62  2.94               NA  NA      NA     NA      
+##  2         2         17.4   2.93               NA  NA      NA     NA      
+##  3         3         12.9   3.51               NA  -0.489  NA     NA      
+##  4         4         14.4   3.47               NA  NA      NA      0.0112 
+##  5         5         38.8  NA                  NA  NA      -0.942 NA      
+##  6         6          6.44  3.31               NA  NA      NA      0.00769
+##  7         7         39.6  NA                  NA  -0.486  -1.29  NA      
+##  8         8          9.92  2.96               NA  -0.602  NA     NA      
+##  9         9         17.7   3.32               NA  -0.336  NA     NA      
+## 10        10         14.9   2.47               NA  NA      -0.354 NA      
+## # … with 1,014 more rows, and 5 more variables: drat &lt;dbl&gt;, gear &lt;dbl&gt;,
+## #   hp &lt;dbl&gt;, qsec &lt;dbl&gt;, wt &lt;dbl&gt;</code></pre>
+<pre class="r"><code># extract p-values for the intercept term
+(model_ps = MuMIn::get.models(models.sca, subset = TRUE) %&gt;%
+  tibble() %&gt;%
+  rename(&quot;model&quot; = &quot;.&quot;) %&gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&gt;%
+  select(model_num, tidied) %&gt;%
+  unnest() %&gt;%
+  filter(term == &quot;wt&quot;) %&gt;%
+  ungroup() %&gt;%
+  select(model_num, estimate, std.error, p.value))</code></pre>
+<pre><code>## # A tibble: 512 x 4
+##    model_num estimate std.error    p.value
+##        &lt;int&gt;    &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;
+##  1         1    -3.92     0.711 0.00000695
+##  2         2    -3.24     0.890 0.00114   
+##  3         3    -3.43     0.820 0.000269  
+##  4         4    -4.08     1.19  0.00208   
+##  5         5    -3.17     0.741 0.000199  
+##  6         6    -4.59     1.17  0.000529  
+##  7         7    -3.16     0.742 0.000211  
+##  8         8    -3.11     0.905 0.00199   
+##  9         9    -3.08     0.925 0.00263   
+## 10        10    -3.64     0.910 0.000436  
+## # … with 502 more rows</code></pre>
+</div>
+<div id="plot-specification-curve-2" class="section level3">
+<h3>plot specification curve</h3>
+<pre class="r"><code># merge and tidy for plotting
+plot.data = left_join(model_ps, model_params, by = &quot;model_num&quot;) %&gt;%
+  arrange(estimate) %&gt;%
+  mutate(specification = row_number(),
+         significant.p = ifelse(p.value &lt; .05, &quot;yes&quot;, &quot;no&quot;)) %&gt;%
+  gather(variable, value, -estimate, -specification, -model_num, -std.error, -p.value, -significant.p) %&gt;% 
+  mutate(variable = gsub(&quot;[()]&quot;, &quot;&quot;, variable),
+         variable = gsub(&quot;Intercept&quot;, &quot;intercept&quot;, variable),
+         variable = gsub(&quot;as.factor(vs)1&quot;, &quot;vs&quot;, variable)) %&gt;%
+  spread(variable, value)  
+
+# get names of variables included in model
+variable.names = names(select(plot.data, -estimate, -specification, -model_num, -std.error, -p.value, -significant.p))
+
+# plot top panel
+top = plot.data %&gt;%
+  ggplot(aes(specification, estimate, color = significant.p)) +
+    geom_point(shape = &quot;|&quot;, size = 4) +
+    #geom_hline(yintercept = null.df$AIC, linetype = &quot;dashed&quot;, color = &quot;lightblue&quot;) +
+    scale_color_manual(values = c(&quot;black&quot;, &quot;red&quot;)) +
+    labs(x = &quot;&quot;, y = &quot;regression coefficient\n&quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &quot;black&quot;),
+          axis.line = element_line(colour = &quot;black&quot;),
+          legend.position = &quot;none&quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# set plotting order for variables based on number of times it&#39;s included in better fitting models
+order = plot.data %&gt;%
+  arrange(estimate) %&gt;%
+  mutate(significant.p.num = ifelse(significant.p == &quot;yes&quot;, 1, 0)) %&gt;%
+  gather(variable, value, eval(variable.names)) %&gt;% 
+  filter(!is.na(value)) %&gt;%
+  group_by(variable) %&gt;%
+  mutate(order = sum(significant.p.num)) %&gt;%
+  select(variable, order) %&gt;%
+  unique()
+
+# rename variables and plot bottom panel
+bottom = plot.data %&gt;%
+  gather(variable, value, eval(variable.names)) %&gt;% 
+  mutate(value = ifelse(!is.na(value), &quot;|&quot;, &quot;&quot;),
+         variable = ifelse(variable == &quot;(Intercept)&quot;, &quot;intercept&quot;,
+                    ifelse(variable == &quot;as.factor(vs)1&quot;, &quot;vs&quot;, variable))) %&gt;%
+  left_join(., order, by = &quot;variable&quot;) %&gt;%
+  ggplot(aes(specification, reorder(variable, order), color = significant.p)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&quot;black&quot;, &quot;red&quot;)) +
+    labs(x = &quot;\nspecification number&quot;, y = &quot;variables\n&quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &quot;black&quot;),
+          axis.line = element_line(colour = &quot;black&quot;),
+          legend.position = &quot;none&quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels
+(wt = cowplot::plot_grid(top, bottom, ncol = 1, align = &quot;v&quot;, labels = c(&#39;A&#39;, &#39;B&#39;)))</code></pre>
+<p><img src="/post/specification_curve_tutorial_files/figure-html/coefficient%20spec%20curve-1.png" width="960" /></p>
+</div>
+</div>
+<div id="mpg-cyl" class="section level2">
+<h2>mpg ~ cyl</h2>
+<div id="extract-coefficients-1" class="section level3">
+<h3>extract coefficients</h3>
+<pre class="r"><code># extract p-values for the intercept term
+model_ps = MuMIn::get.models(models.sca, subset = TRUE) %&gt;%
+  tibble() %&gt;%
+  rename(&quot;model&quot; = &quot;.&quot;) %&gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&gt;%
+  select(model_num, tidied) %&gt;%
+  unnest() %&gt;%
+  filter(term == &quot;cyl&quot;) %&gt;%
+  ungroup() %&gt;%
+  select(model_num, estimate, std.error, p.value)</code></pre>
+</div>
+<div id="plot-specification-curve-3" class="section level3">
+<h3>plot specification curve</h3>
+<pre class="r"><code># merge and tidy for plotting
+plot.data = left_join(model_ps, model_params, by = &quot;model_num&quot;) %&gt;%
+  arrange(estimate) %&gt;%
+  mutate(specification = row_number(),
+         significant.p = ifelse(p.value &lt; .05, &quot;yes&quot;, &quot;no&quot;)) %&gt;%
+  gather(variable, value, -estimate, -specification, -model_num, -std.error, -p.value, -significant.p) %&gt;% 
+  mutate(variable = gsub(&quot;[()]&quot;, &quot;&quot;, variable),
+         variable = gsub(&quot;Intercept&quot;, &quot;intercept&quot;, variable),
+         variable = gsub(&quot;as.factor(vs)1&quot;, &quot;vs&quot;, variable)) %&gt;%
+  spread(variable, value)  
+
+# get names of variables included in model
+variable.names = names(select(plot.data, -estimate, -specification, -model_num, -std.error, -p.value, -significant.p))
+
+# plot top panel
+top = plot.data %&gt;%
+  ggplot(aes(specification, estimate, color = significant.p)) +
+    geom_point(shape = &quot;|&quot;, size = 4) +
+    #geom_hline(yintercept = null.df$AIC, linetype = &quot;dashed&quot;, color = &quot;lightblue&quot;) +
+    scale_color_manual(values = c(&quot;black&quot;, &quot;red&quot;)) +
+    labs(x = &quot;&quot;, y = &quot;regression coefficient\n&quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &quot;black&quot;),
+          axis.line = element_line(colour = &quot;black&quot;),
+          legend.position = &quot;none&quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# set plotting order for variables based on number of times it&#39;s included in better fitting models
+order = plot.data %&gt;%
+  arrange(estimate) %&gt;%
+  mutate(significant.p.num = ifelse(significant.p == &quot;yes&quot;, 1, 0)) %&gt;%
+  gather(variable, value, eval(variable.names)) %&gt;% 
+  filter(!is.na(value)) %&gt;%
+  group_by(variable) %&gt;%
+  mutate(order = sum(significant.p.num)) %&gt;%
+  select(variable, order) %&gt;%
+  unique()
+
+# rename variables and plot bottom panel
+bottom = plot.data %&gt;%
+  gather(variable, value, eval(variable.names)) %&gt;% 
+  mutate(value = ifelse(!is.na(value), &quot;|&quot;, &quot;&quot;),
+         variable = ifelse(variable == &quot;(Intercept)&quot;, &quot;intercept&quot;,
+                    ifelse(variable == &quot;as.factor(vs)1&quot;, &quot;vs&quot;, variable))) %&gt;%
+  left_join(., order, by = &quot;variable&quot;) %&gt;%
+  ggplot(aes(specification, reorder(variable, order), color = significant.p)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&quot;black&quot;, &quot;red&quot;)) +
+    labs(x = &quot;\nspecification number&quot;, y = &quot;variables\n&quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &quot;black&quot;),
+          axis.line = element_line(colour = &quot;black&quot;),
+          legend.position = &quot;none&quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels and compare plots
+(cyl = cowplot::plot_grid(top, bottom, ncol = 1, align = &quot;v&quot;, labels = c(&#39;A&#39;, &#39;B&#39;)))</code></pre>
+<p><img src="/post/specification_curve_tutorial_files/figure-html/coefficient%20spec%20curve%20cyl-1.png" width="960" /></p>
+<pre class="r"><code>wt</code></pre>
+<p><img src="/post/specification_curve_tutorial_files/figure-html/coefficient%20spec%20curve%20cyl-2.png" width="960" /></p>
+</div>
+</div>
+</div>
+<div id="next-steps" class="section level1">
+<h1>next steps</h1>
+<p>… Inferential statistics using specification curves!</p>
+<p>… Plot standard errors!</p>
+</div>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="btn btn-primary btn-outline" href="https://dcosme.github.io/tags/specification-curve/">specification curve</a>
+  
+  <a class="btn btn-primary btn-outline" href="https://dcosme.github.io/tags/tutorial/">tutorial</a>
+  
+  <a class="btn btn-primary btn-outline" href="https://dcosme.github.io/tags/rstats/">rstats</a>
+  
+  <a class="btn btn-primary btn-outline" href="https://dcosme.github.io/tags/functional-programming/">functional programming</a>
+  
+</div>
+
+
+
+
+    
+    
+    <div class="article-widget">
+      <div class="hr-light"></div>
+      <h3>Related</h3>
+      <ul>
+        
+        <li><a href="/post/specification_curve_example/">Specification curve example</a></li>
+        
+        <li><a href="/post/rstudio-website-tutorial/">Websites in RStudio</a></li>
+        
+      </ul>
+    </div>
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2018 &middot; 
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Cite</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+    
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+      
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+
