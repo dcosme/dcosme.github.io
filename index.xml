@@ -1,43 +1,141 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Danielle Cosme on Danielle Cosme</title>
+    <title>Danielle Cosme</title>
     <link>https://dcosme.github.io/</link>
-    <description>Recent content in Danielle Cosme on Danielle Cosme</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content on Danielle Cosme</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0700</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
+    <lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://dcosme.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Example Page 1</title>
+      <link>https://dcosme.github.io/courses/example/example1/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://dcosme.github.io/courses/example/example1/</guid>
+      <description>
+
+&lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-1&#34;&gt;Tip 1&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-2&#34;&gt;Tip 2&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Page 2</title>
+      <link>https://dcosme.github.io/courses/example/example2/</link>
+      <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
+      
+      <guid>https://dcosme.github.io/courses/example/example2/</guid>
+      <description>
+
+&lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-3&#34;&gt;Tip 3&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+
+&lt;h2 id=&#34;tip-4&#34;&gt;Tip 4&lt;/h2&gt;
+
+&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+
+&lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
+
+&lt;p&gt;Cras aliquam rhoncus ipsum, in hendrerit nunc mattis vitae. Duis vitae efficitur metus, ac tempus leo. Cras nec fringilla lacus. Quisque sit amet risus at ipsum pharetra commodo. Sed aliquam mauris at consequat eleifend. Praesent porta, augue sed viverra bibendum, neque ante euismod ante, in vehicula justo lorem ac eros. Suspendisse augue libero, venenatis eget tincidunt ut, malesuada at lorem. Donec vitae bibendum arcu. Aenean maximus nulla non pretium iaculis. Quisque imperdiet, nulla in pulvinar aliquet, velit quam ultrices quam, sit amet fringilla leo sem vel nunc. Mauris in lacinia lacus.&lt;/p&gt;
+
+&lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
+
+&lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Example Talk</title>
+      <link>https://dcosme.github.io/talk/example/</link>
+      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/talk/example/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Academic&amp;rsquo;s &lt;a href=&#34;https://sourcethemes.com/academic/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://sourcethemes.com/academic/docs/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Further talk details can easily be added to this page using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Comparing two neurocognitive models of self-control during dietary decisions</title>
-      <link>https://dcosme.github.io/publication/neurocognitive-models-self-control/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 -0700</pubDate>
+      <link>https://dcosme.github.io/publication/2019-06-28-neurocognitive-models-self-control/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/neurocognitive-models-self-control/</guid>
+      <guid>https://dcosme.github.io/publication/2019-06-28-neurocognitive-models-self-control/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Ludwig, R. M., &amp;amp; Berkman, E. T. &lt;a href=&#34;https://osf.io/8bvxe/&#34; target=&#34;_blank&#34;&gt;Comparing two neurocognitive models of self-control during dietary decisions.&lt;/a&gt; (under review)&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being</title>
-      <link>https://dcosme.github.io/publication/happy-and-you-know-it/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 -0700</pubDate>
+      <title>If you’re happy and you know it: Neural correlates of self-evaluated psychological health</title>
+      <link>https://dcosme.github.io/publication/2019-06-28-happy-and-you-know-it/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/happy-and-you-know-it/</guid>
+      <guid>https://dcosme.github.io/publication/2019-06-28-happy-and-you-know-it/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
-Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. &lt;a href=&#34;https://osf.io/x2zra/&#34; target=&#34;_blank&#34;&gt;If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being.&lt;/a&gt; (in preparation)&lt;/p&gt;
+Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. &lt;a href=&#34;https://osf.io/x2zra/&#34; target=&#34;_blank&#34;&gt;If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being.&lt;/a&gt; (submitted)&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice</title>
-      <link>https://dcosme.github.io/publication/neural-signatures-health-neuro/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 -0700</pubDate>
+      <link>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/neural-signatures-health-neuro/</guid>
+      <guid>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. &lt;a href=&#34;https://osf.io/7jf82/&#34; target=&#34;_blank&#34;&gt;Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice.&lt;/a&gt; (under review)&lt;/p&gt;
 </description>
@@ -45,11 +143,14 @@ Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. &lt;a href=&#34;htt
     
     <item>
       <title>Specification curve analysis (SCA) tutorial</title>
-      <link>https://dcosme.github.io/post/specification_curve_tutorial/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
+      <link>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/post/specification_curve_tutorial/</guid>
-      <description>&lt;p&gt;This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.&lt;/p&gt;
+      <guid>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</guid>
+      <description>
+
+
+&lt;p&gt;This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.&lt;/p&gt;
 &lt;p&gt;The repository can be found at: &lt;a href=&#34;https://github.com/dcosme/specification-curves/&#34; class=&#34;uri&#34;&gt;https://github.com/dcosme/specification-curves/&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;background&lt;/h1&gt;
@@ -343,7 +444,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/specification_curve_tutorial_files/figure-html/specification%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/specification%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;reorder-and-rename-variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;reorder and rename variables&lt;/h2&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set plotting order for variables based on number of times it&amp;#39;s included in better fitting models
@@ -385,7 +486,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/specification_curve_tutorial_files/figure-html/clean%20up%20spec%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/clean%20up%20spec%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;a-more-complicated-example&#34; class=&#34;section level1&#34;&gt;
@@ -468,7 +569,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/specification_curve_tutorial_files/figure-html/copmlicated%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/copmlicated%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;coefficient-specification-curve&#34; class=&#34;section level1&#34;&gt;
@@ -525,7 +626,8 @@ MuMIn::get.models(models.sca, subset = TRUE) %&amp;gt;%
   select(model_num, tidied) %&amp;gt;%
   unnest() %&amp;gt;%
   select(model_num, term, estimate) %&amp;gt;%
-  spread(term, estimate))&lt;/code&gt;&lt;/pre&gt;
+  spread(term, estimate)) %&amp;gt;%
+  select(-starts_with(&amp;quot;sd&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;## # A tibble: 1,024 x 12
 ##    model_num `(Intercept)`    am `as.factor(vs)1`    carb     cyl     disp
 ##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
@@ -636,7 +738,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (wt = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/specification_curve_tutorial_files/figure-html/coefficient%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mpg-cyl&#34; class=&#34;section level2&#34;&gt;
@@ -724,9 +826,9 @@ bottom = plot.data %&amp;gt;%
 
 # join panels and compare plots
 (cyl = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/specification_curve_tutorial_files/figure-html/coefficient%20spec%20curve%20cyl-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;wt&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/specification_curve_tutorial_files/figure-html/coefficient%20spec%20curve%20cyl-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -739,329 +841,16 @@ bottom = plot.data %&amp;gt;%
     </item>
     
     <item>
-      <title>Comparison of University of Oregon GE Salaries</title>
-      <link>https://dcosme.github.io/data-vis/ge_salaries/</link>
-      <pubDate>Tue, 16 Apr 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/data-vis/ge_salaries/</guid>
-      <description>&lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;load packages&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
-library(readxl)
-library(ggridges)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;define-palette&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;define palette&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;area = wesanderson::wes_palette(&amp;quot;Zissou1&amp;quot;, 4, &amp;quot;continuous&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;load-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;load data&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data.hire = read_excel(&amp;quot;~/Documents/GTFF/Winter Appts.xlsx&amp;quot;) %&amp;gt;%
-  rename(&amp;quot;ID&amp;quot; = `GTFF Knack ID`,
-         &amp;quot;FTE&amp;quot; = `Appt Percent`,
-         &amp;quot;MonthlySalary&amp;quot; = `Monthly Salary`,
-         &amp;quot;Department&amp;quot; = `Department Connection`,
-         &amp;quot;Membership&amp;quot; = `Member Status (static)`)
-
-data.dept = read_excel(&amp;quot;~/Documents/GTFF/ListWinter2019_Acad&amp;amp;HiringDept.xlsx&amp;quot;) %&amp;gt;%
-  rename(&amp;quot;ID&amp;quot; = `Knack ID`,
-         &amp;quot;ProgramType&amp;quot; = `Class Desc`) %&amp;gt;%
-  select(ID, Major, ProgramType)
-
-data.int = data.hire %&amp;gt;%
-  full_join(., data.dept, by = &amp;quot;ID&amp;quot;)
-
-areas = data.int %&amp;gt;%
-  group_by(Major, Area) %&amp;gt;%
-  summarize(n = n()) %&amp;gt;%
-  filter(!is.na(Major)) %&amp;gt;%
-  spread(Area, n) %&amp;gt;%
-  mutate_if(is.numeric, funs(ifelse(is.na(.), 0, .))) %&amp;gt;%
-  mutate(Area = ifelse(AE &amp;gt; HU &amp;amp; AE &amp;gt; NS &amp;amp; AE &amp;gt; SS, &amp;quot;AE&amp;quot;, 
-                ifelse(HU &amp;gt; AE &amp;amp; HU &amp;gt; NS &amp;amp; HU &amp;gt; SS, &amp;quot;HU&amp;quot;, 
-                ifelse(NS &amp;gt; AE &amp;amp; NS &amp;gt; HU &amp;amp; NS &amp;gt; SS, &amp;quot;NS&amp;quot;, 
-                ifelse(SS &amp;gt; AE &amp;amp; SS &amp;gt; NS &amp;amp; SS &amp;gt; HU, &amp;quot;SS&amp;quot;, 
-                ifelse(Major == &amp;quot;Curriculum &amp;amp; Teacher Education&amp;quot;, &amp;quot;AE&amp;quot;, NA))))),
-         Area = ifelse(Major == &amp;quot;Psychology&amp;quot;, &amp;quot;NS&amp;quot;, Area)) %&amp;gt;%
-  select(Major, Area)
-
-data = data.int %&amp;gt;%
-  select(-Area) %&amp;gt;%
-  full_join(., areas, by = &amp;quot;Major&amp;quot;) %&amp;gt;%
-  unique()&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;tidy-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;tidy data&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# check duplicate IDs
-duplicates = data[duplicated(data$ID),] %&amp;gt;%
-  arrange(ID)
-
-data.dup = data %&amp;gt;% 
-  filter(ID %in% duplicates$ID) %&amp;gt;%
-  group_by(ID) %&amp;gt;%
-  mutate(MonthlySalary1 = sum(MonthlySalary),
-         FTE1 = sum(FTE)) %&amp;gt;%
-  group_by(ID) %&amp;gt;% 
-  slice(1) %&amp;gt;%
-  mutate(MonthlySalary1 = ifelse(FTE1 &amp;gt; 50, MonthlySalary, MonthlySalary1),
-         FTE1 = ifelse(FTE1 &amp;gt; 50, FTE, FTE1),
-         MonthlySalary = MonthlySalary1,
-         FTE = FTE1) %&amp;gt;%
-  select(-c(MonthlySalary1, FTE1))
-
-# tidy
-data1 = data %&amp;gt;% 
-  filter(!ID %in% duplicates$ID) %&amp;gt;%
-  bind_rows(data.dup) %&amp;gt;%
-  mutate(Level = ifelse(grepl(&amp;quot;1&amp;quot;, Grade), &amp;quot;level 1&amp;quot;, ifelse(grepl(&amp;quot;2&amp;quot;, Grade), &amp;quot;level 2&amp;quot;, ifelse(grepl(&amp;quot;3&amp;quot;, Grade), &amp;quot;level 3&amp;quot;, Grade))),
-         Type = ifelse(grepl(&amp;quot;GT&amp;quot;, Grade), &amp;quot;GTF&amp;quot;, ifelse(grepl(&amp;quot;GR&amp;quot;, Grade), &amp;quot;GRF&amp;quot;, ifelse(grepl(&amp;quot;GA&amp;quot;, Grade), &amp;quot;GAF&amp;quot;, Grade))),
-         Area = ifelse(is.na(Area) &amp;amp; grepl(&amp;quot;DSGN|Law&amp;quot;, Department), &amp;quot;AE&amp;quot;, 
-                ifelse(is.na(Area) &amp;amp; grepl(&amp;quot;Philosophy|Asian&amp;quot;, Department), &amp;quot;HU&amp;quot;, 
-                ifelse(is.na(Area) &amp;amp; grepl(&amp;quot;CHC&amp;quot;, Department), &amp;quot;SS&amp;quot;, Area)))) %&amp;gt;%
-  filter(!is.na(Major))&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;visualize-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;visualize data&lt;/h1&gt;
-&lt;p&gt;These data are from winter quarter 2019 and are visualized based on the department in which graduate employees (GEs) are studying. GEs are often hired in the same department in which they are pursuing their academic studies, but not always.&lt;/p&gt;
-&lt;p&gt;To zoom in on the plots, right-click on it and open the image in a new tab.&lt;/p&gt;
-&lt;p&gt;Error bars are 95% confidence intervals. If there are no error bars in the plots, that means there is no variability in salaries (either because there is a single GE or because all GEs are paid the same).&lt;/p&gt;
-&lt;p&gt;Please note that the density distributions do not represent the actual range on the x-axis. Rather, these plots should be used to compare densities across departments. Individual points are included to help illustrate the distributions. Departments with only one GE will not have a distribution.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Important note: many GEs are only guarenteed funding for 9 months, so please keep this in mind when calculating yearly salaries.&lt;/strong&gt;&lt;/p&gt;
-&lt;div id=&#34;density-distributions-of-fte-by-department&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;density distributions of FTE by department&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AE = Arts, Education, &amp;amp; Business&lt;/li&gt;
-&lt;li&gt;HU = Humanities&lt;/li&gt;
-&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
-&lt;li&gt;SS = Social Sciences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  ggplot(aes(FTE, Major, fill = Area)) +
-    geom_density_ridges(aes(point_fill = Area), alpha = .7, point_alpha = .1, point_size = .5, jittered_points = TRUE) +
-    scale_fill_manual(values = area) +
-    labs(x = &amp;quot;FTE&amp;quot;, y = &amp;quot;Department&amp;quot;) +
-    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-5-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;density-distributions-of-salary-by-department&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;density distributions of salary by department&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AE = Arts, Education, &amp;amp; Business&lt;/li&gt;
-&lt;li&gt;HU = Humanities&lt;/li&gt;
-&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
-&lt;li&gt;SS = Social Sciences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  ggplot(aes(MonthlySalary, Major, fill = Area)) +
-    geom_density_ridges(aes(point_fill = Area), alpha = .7, point_alpha = .1, point_size = .5, jittered_points = TRUE) +
-    theme(axis.text = element_text(size = 8)) +
-    scale_fill_manual(values = area) +
-    labs(x = &amp;quot;Monthly salary (dollars)&amp;quot;, y = &amp;quot;Department&amp;quot;) +
-    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-ge-type&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by GE type&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;GTF = Graduate Teaching Fellow&lt;/li&gt;
-&lt;li&gt;GRF = Graduate Research Fellow&lt;/li&gt;
-&lt;li&gt;GAF = Graduate Administrative Fellow&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
-  ggplot(aes(Type, MonthlySalary)) +
-    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95), fill = area[1]) +
-    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
-    labs(x = &amp;quot;GE Type&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
-    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-7-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-gtf-level&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by GTF level&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
-  ggplot(aes(Level, MonthlySalary)) +
-    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95), fill = area[1]) +
-    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
-    labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
-    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-8-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-ge-type-and-department-area&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by GE type and department area&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;GTF = Graduate Teaching Fellow&lt;/li&gt;
-&lt;li&gt;GRF = Graduate Research Fellow&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;GAF = Graduate Administrative Fellow&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;AE = Arts, Education, &amp;amp; Business&lt;/li&gt;
-&lt;li&gt;HU = Humanities&lt;/li&gt;
-&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SS = Social Sciences&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
-  ggplot(aes(Type, MonthlySalary, fill = Area)) +
-    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
-    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
-    facet_grid(~Area) +
-    scale_fill_manual(values = area) +
-    labs(x = &amp;quot;GE type&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
-    theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-ge-type-and-department-area-scaled-by-number-of-ges&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by GE type and department area, scaled by number of GEs&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;GTF = Graduate Teaching Fellow&lt;/li&gt;
-&lt;li&gt;GRF = Graduate Research Fellow&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;GAF = Graduate Administrative Fellow&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;AE = Arts, Education, &amp;amp; Business&lt;/li&gt;
-&lt;li&gt;HU = Humanities&lt;/li&gt;
-&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;SS = Social Sciences&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
-  group_by(Area, Type) %&amp;gt;%
-  mutate(`# GEs` = n()) %&amp;gt;%
-  ggplot(aes(Type, MonthlySalary, color = Area, size = `# GEs`)) +
-    stat_summary(fun.y = mean, geom = &amp;quot;point&amp;quot;) +
-    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;pointrange&amp;quot;, width = 0) +
-    facet_grid(~Area) +
-    scale_color_manual(values = area) +
-    scale_size_continuous(range = c(.1, 1)) +
-    labs(x = &amp;quot;GE type&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;, size = &amp;quot;# GEs&amp;quot;) +
-    theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-gtf-level-and-department-area&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by GTF level and department area&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AE = Arts, Education, &amp;amp; Business&lt;/li&gt;
-&lt;li&gt;HU = Humanities&lt;/li&gt;
-&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
-&lt;li&gt;SS = Social Sciences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
-  ggplot(aes(Level, MonthlySalary, fill = Area)) +
-    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
-    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
-    facet_grid(~Area) +
-    scale_fill_manual(values = area) +
-    labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
-    theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-program-type-and-department-area&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by program type and department area&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AE = Arts, Education, &amp;amp; Business&lt;/li&gt;
-&lt;li&gt;HU = Humanities&lt;/li&gt;
-&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
-&lt;li&gt;SS = Social Sciences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  ggplot(aes(ProgramType, MonthlySalary, fill = Area)) +
-    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
-    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
-    facet_grid(~Area) +
-    scale_fill_manual(values = area) +
-    labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
-    theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-gtf-level-and-fte&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by GTF level and FTE&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
-  ggplot(aes(Level, MonthlySalary, fill = FTE)) +
-    stat_summary(aes(group = interaction(Level, FTE)), fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
-    stat_summary(aes(group = interaction(Level, FTE)), fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
-    scale_fill_gradientn(colors = c(&amp;quot;#F43C13&amp;quot;, &amp;quot;#FEC601&amp;quot;, &amp;quot;#8EC922&amp;quot;, &amp;quot;#06AED5&amp;quot;, &amp;quot;#3066BE&amp;quot;, &amp;quot;#4B3F72&amp;quot;)) +
-    labs(x = &amp;quot;GTF level&amp;quot;, y = &amp;quot;Monthly salary (dollars)&amp;quot;) +
-    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-department-scaled-by-number-of-ges&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by department, scaled by number of GEs&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AE = Arts, Education, &amp;amp; Business&lt;/li&gt;
-&lt;li&gt;HU = Humanities&lt;/li&gt;
-&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
-&lt;li&gt;SS = Social Sciences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  group_by(Major, Area) %&amp;gt;%
-  mutate(`# GEs` = n()) %&amp;gt;%
-  ggplot(aes(reorder(Major, MonthlySalary), MonthlySalary, color = Area, size = `# GEs`)) +
-    geom_hline(yintercept = mean(data1$MonthlySalary, na.rm = TRUE), linetype = &amp;quot;dotted&amp;quot;, color = &amp;quot;black&amp;quot;) +
-    stat_summary(fun.y = mean, geom = &amp;quot;point&amp;quot;) +
-    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;pointrange&amp;quot;, width = 0) +
-    annotate(&amp;quot;text&amp;quot;, x = 6, y = 1900, label = sprintf(&amp;quot;mean GE salary = $%s&amp;quot;, round(mean(data1$MonthlySalary, na.rm = TRUE), 0))) +
-    scale_color_manual(values = area) +
-    labs(x = &amp;quot;Department&amp;quot;, y = &amp;quot;\n\n\nMonthly salary (dollars)&amp;quot;, size = &amp;quot;# GEs&amp;quot;) + 
-    scale_size_continuous(range = c(.1, .75)) +
-    theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-department&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by department&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AE = Arts, Education, &amp;amp; Business&lt;/li&gt;
-&lt;li&gt;HU = Humanities&lt;/li&gt;
-&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
-&lt;li&gt;SS = Social Sciences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  ggplot(aes(reorder(Major, MonthlySalary), MonthlySalary, fill = Area)) +
-    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
-    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
-    geom_hline(yintercept = mean(data1$MonthlySalary, na.rm = TRUE), linetype = &amp;quot;dotted&amp;quot;, color = &amp;quot;black&amp;quot;) +
-    annotate(&amp;quot;text&amp;quot;, x = 6, y = 1900, label = sprintf(&amp;quot;mean GE salary = $%s&amp;quot;, round(mean(data1$MonthlySalary, na.rm = TRUE), 0))) +
-    scale_fill_manual(values = area) +
-    labs(x = &amp;quot;Department&amp;quot;, y = &amp;quot;\n\n\nMonthly salary (dollars)&amp;quot;) + 
-    theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;average-salary-by-department-and-gtf-level&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;average salary by department and GTF level&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;AE = Arts, Education, &amp;amp; Business&lt;/li&gt;
-&lt;li&gt;HU = Humanities&lt;/li&gt;
-&lt;li&gt;NS = Natural Sciences&lt;/li&gt;
-&lt;li&gt;SS = Social Sciences&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data1 %&amp;gt;%
-  filter(!Level == &amp;quot;S&amp;quot;) %&amp;gt;%
-  ggplot(aes(reorder(Major, MonthlySalary), MonthlySalary, fill = Area)) +
-    stat_summary(fun.y = mean, geom = &amp;quot;bar&amp;quot;, position = position_dodge(width = 0.95)) +
-    stat_summary(fun.data = mean_cl_boot, geom = &amp;quot;errorbar&amp;quot;, position = position_dodge(width = 0.95), width = 0) +
-    scale_fill_manual(values = area) +
-    facet_wrap(~Level, nrow = 3) + 
-    labs(x = &amp;quot;Department&amp;quot;, y = &amp;quot;\n\n\nMonthly salary (dollars)&amp;quot;) + 
-    theme_minimal() +
-    theme(axis.text.x = element_text(angle = 45, hjust = 1))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/GE_salaries_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;1536&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Specification curve example</title>
-      <link>https://dcosme.github.io/post/specification_curve_example/</link>
+      <link>https://dcosme.github.io/2019/02/26/specification-curve-example/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/post/specification_curve_example/</guid>
-      <description>&lt;p&gt;I was inspired by these amazing examples of specification curves by &lt;a href=&#34;https://www.psychologicalscience.org/observer/run-all-the-models-dealing-with-data-analytic-flexibility&#34;&gt;Julia Rohrer&lt;/a&gt; and &lt;a href=&#34;https://www.nature.com/articles/s41562-018-0506-1&#34;&gt;Amy Orben&lt;/a&gt;, so I wrote some code to generate a curve like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/img/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
+      <guid>https://dcosme.github.io/2019/02/26/specification-curve-example/</guid>
+      <description>
+
+
+&lt;p&gt;I was inspired by these amazing examples of specification curves by &lt;a href=&#34;https://www.psychologicalscience.org/observer/run-all-the-models-dealing-with-data-analytic-flexibility&#34;&gt;Julia Rohrer&lt;/a&gt; and &lt;a href=&#34;https://www.nature.com/articles/s41562-018-0506-1&#34;&gt;Amy Orben&lt;/a&gt;, so I wrote some code to generate a curve like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/img/sca-example/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Below is code to create a specification curve using a toy example from the &lt;code&gt;airquality&lt;/code&gt; dataset. Enjoy!&lt;/p&gt;
 &lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;load packages&lt;/h1&gt;
@@ -1134,1048 +923,214 @@ bottom = plot.data %&amp;gt;%
           panel.background = element_blank())
 
 plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/specification_curve_example_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-02-26-specification-curve-example/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
-      <title>Descriptives for Hopelab</title>
-      <link>https://dcosme.github.io/data-vis/hopelab/</link>
-      <pubDate>Tue, 29 Jan 2019 00:00:00 +0000</pubDate>
+      <title>Slides</title>
+      <link>https://dcosme.github.io/slides/example/</link>
+      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/data-vis/hopelab/</guid>
-      <description>&lt;p&gt;Well-being descriptives for Hopelab.&lt;/p&gt;
-&lt;div id=&#34;load-libraries&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;load libraries&lt;/h1&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (!require(tidyverse)) {
-  install.packages(&amp;#39;tidyverse&amp;#39;)
-}
+      <guid>https://dcosme.github.io/slides/example/</guid>
+      <description>
 
-if (!require(devtools)) {
-  install.packages(&amp;#39;devtools&amp;#39;)
-}
+&lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
 
-if (!require(scorequaltrics)) {
-  devtools::install_github(&amp;#39;jflournoy/qualtrics&amp;#39;)
-}
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34;&gt;Academic&lt;/a&gt;&lt;/p&gt;
 
-if (!require(ggcorrplot)) {
-  install.packages(&amp;#39;ggcorrplot&amp;#39;)
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;questionnaires-to-score&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;questionnaires to score&lt;/h1&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+
 &lt;ul&gt;
-&lt;li&gt;CESD-10 = CES-Depression, 10 items
-&lt;ul&gt;
-&lt;li&gt;scores &amp;gt; 10 = considered depressed&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;GAD7 = Generalized Anxiety Disorder, 7 items&lt;/li&gt;
-&lt;li&gt;PANAS = Positive and Negative Affect Schedule&lt;/li&gt;
-&lt;li&gt;PSS = Perceived Stress Scale&lt;/li&gt;
-&lt;li&gt;SWLS = Satisfaction with Life Scale&lt;/li&gt;
-&lt;li&gt;ULS-8 = UCLA Loneliness Scale, 8 items
-&lt;ul&gt;
-&lt;li&gt;scores &amp;gt; 8 = probable anxiety diagnosis&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Priorities&lt;/li&gt;
+&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
+&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
+&lt;li&gt;Supports speaker notes&lt;/li&gt;
+&lt;li&gt;Mobile friendly slides&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;define-variables-and-paths&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;define variables and paths&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
+
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;cred_file_location&lt;/code&gt; = path to your Qualtrics credential file. You’ll need to generate this via Qualtrics using the instructions above.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;id_column_name&lt;/code&gt; = subject ID column name in Qualtrics survey; can be a regular expression&lt;/li&gt;
+&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/div&gt;
-&lt;div id=&#34;access-qualtrics-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;access qualtrics data&lt;/h1&gt;
-&lt;p&gt;Filter available surveys based on the filter specified above.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load credential file
-credentials = scorequaltrics::creds_from_file(cred_file_location)
 
-# filter
-surveysAvail = scorequaltrics::get_surveys(credentials)
-surveysFiltered = filter(surveysAvail, grepl(survey_name_filter, SurveyName))
+&lt;hr /&gt;
 
-knitr::kable(arrange(select(surveysFiltered, SurveyName), SurveyName))&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;clean-and-score-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;clean and score data&lt;/h1&gt;
-&lt;div id=&#34;get-survey-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;get survey data&lt;/h2&gt;
-&lt;p&gt;The &lt;code&gt;get_survey_data&lt;/code&gt; funcion pulls the data from the surveys specified in &lt;code&gt;surveysFiltered&lt;/code&gt; and reshapes into the long format. Because the example data also includes some identifying information, we also want to filter those items out of our dataframe.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# get data
-surveys_long = scorequaltrics::get_survey_data(surveysFiltered,
-                                               credentials, 
-                                               pid_col = sid_column_name) %&amp;gt;%
-               filter(!item %in% identifiableData) #filter out identifiable data
+&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
 
-# print first 10 rows
-head(surveys_long, 10)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;load-scoring-rubrics&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;load scoring rubrics&lt;/h2&gt;
-&lt;p&gt;Scoring rubrics should exist in &lt;code&gt;rubric_dir&lt;/code&gt; and be named according to the following convention: &lt;code&gt;[measure]_scoring_rubric.csv&lt;/code&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# specify rubric paths
-scoring_rubrics = data.frame(file = dir(file.path(rubric_dir), 
-                                        pattern = &amp;#39;.*scoring_rubric.*.csv&amp;#39;,
-                                        full.names = TRUE))
+&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
 
-# read in rubrics
-scoring_data_long = scorequaltrics::get_rubrics(scoring_rubrics,
-                                                type = &amp;#39;scoring&amp;#39;)
+&lt;p&gt;Code block:&lt;/p&gt;
 
-# print the first 10 rows
-head(scoring_data_long[, -1], 10)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;clean&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;clean&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
+if porridge == &amp;quot;blueberry&amp;quot;:
+    print(&amp;quot;Eating...&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
+
+&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
+
+&lt;p&gt;Block math:&lt;/p&gt;
+
+&lt;p&gt;$$
+f\left( x \right) = \;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
+$$&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
+
+&lt;p&gt;Make content appear incrementally&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
+{{% fragment %}} **Two** {{% /fragment %}}
+{{% fragment %}} Three {{% /fragment %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&#34;fragment &#34; &gt;
+   One
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+   &lt;strong&gt;Two&lt;/strong&gt;
+&lt;/span&gt;
+&lt;span class=&#34;fragment &#34; &gt;
+   Three
+&lt;/span&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
+
 &lt;ul&gt;
-&lt;li&gt;exclude non-sub responses&lt;/li&gt;
-&lt;li&gt;convert missing values to NA&lt;/li&gt;
-&lt;li&gt;duplicates&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;First, exclude responses that are not real or are incomplete responses. In this dataset, some subjects have their ID in the &lt;code&gt;ExternalDataReference&lt;/code&gt; column only, so we’ll need to add that to the &lt;code&gt;subjectID&lt;/code&gt; column before filtering.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_sub = surveys_long %&amp;gt;%
-  mutate(subjectID = ifelse(is.na(subjectID), ExternalDataReference, subjectID)) %&amp;gt;%
-  # filter based on sid_pattern
-  filter(grepl(sid_pattern, subjectID)) %&amp;gt;%
-  # only get finished surveys
-  filter(Finished == &amp;#39;1&amp;#39;) %&amp;gt;%
-  select(-ExternalDataReference, -Finished) %&amp;gt;%
-  arrange(subjectID) %&amp;gt;%
-  # recode FPS &amp;lt;--&amp;gt; FP swaps
-  mutate(subjectID = ifelse(survey_name == &amp;quot;FPS T1 In Person&amp;quot; &amp;amp; subjectID == &amp;quot;FPS001&amp;quot;, &amp;quot;FPS015&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FP MRI T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FP099&amp;quot;, &amp;quot;FPS220&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FP MRI T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FP105&amp;quot;, &amp;quot;FPS221&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS003&amp;quot;, &amp;quot;FP083&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS008&amp;quot;, &amp;quot;FP084&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS028&amp;quot;, &amp;quot;FP122&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS035&amp;quot;, &amp;quot;FP121&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS053&amp;quot;, &amp;quot;FP114&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS054&amp;quot;, &amp;quot;FP120&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS055&amp;quot;, &amp;quot;FP115&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS064&amp;quot;, &amp;quot;FP088&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS068&amp;quot;, &amp;quot;FP112&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS077&amp;quot;, &amp;quot;FP086&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS079&amp;quot;, &amp;quot;FP106&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS080&amp;quot;, &amp;quot;FP025&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS088&amp;quot;, &amp;quot;FP085&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS089&amp;quot;, &amp;quot;FP103&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS091&amp;quot;, &amp;quot;FP093&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS165&amp;quot;, &amp;quot;FP087&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS171&amp;quot;, &amp;quot;FP113&amp;quot;,
-                     ifelse(survey_name == &amp;quot;FPS T1 Online&amp;quot; &amp;amp; subjectID == &amp;quot;FPS100&amp;quot;, &amp;quot;FP026&amp;quot;,
-                            subjectID))))))))))))))))))))))
 
-# print unique SIDs
-unique(surveys_long_sub$subjectID)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Convert missing values to NA&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_na = surveys_long_sub %&amp;gt;%
-  mutate(value = ifelse(value == &amp;quot;&amp;quot;, NA, value))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Check for non-numeric items using the &lt;code&gt;get_uncoercibles()&lt;/code&gt; function&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_na %&amp;gt;%
-  scorequaltrics::get_uncoercibles() %&amp;gt;%
-  distinct(item, value) %&amp;gt;%
-  arrange(item) %&amp;gt;%
-  select(item) %&amp;gt;%
-  unique()
+&lt;hr /&gt;
 
-surveys_long_na %&amp;gt;%
-  scorequaltrics::get_uncoercibles() %&amp;gt;%
-  distinct(item, value) %&amp;gt;%
-  arrange(item)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Check for duplicate responses. The variable ‘qid’ is useful here because it allows us to find duplicate responses&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;(subs = surveys_long_na %&amp;gt;%
-  spread(item, value) %&amp;gt;%
-  group_by(subjectID) %&amp;gt;%
-  summarize(n = n()) %&amp;gt;%
-  arrange(desc(n)) %&amp;gt;%
-  filter(n &amp;gt; 2))
+&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
 
-surveys_long_na %&amp;gt;%
-  filter(subjectID %in% subs$subjectID) %&amp;gt;%
-  spread(item, value) %&amp;gt;%
-  select(subjectID, survey_name)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Remove duplicate observations&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_clean = surveys_long_na %&amp;gt;%
-  filter(!qid == &amp;quot;R_2yfP0TaeKee6n1F&amp;quot;) %&amp;gt;% #FP058 first response
-  filter(!qid == &amp;quot;R_a9JXCN17a6LALDz&amp;quot;) %&amp;gt;% #FP100 first response
-  filter(!(subjectID == &amp;quot;FP025&amp;quot; &amp;amp; survey_name == &amp;quot;FPS T1 Online&amp;quot;)) %&amp;gt;% #FP025 FPS
-  filter(!(subjectID == &amp;quot;FP026&amp;quot; &amp;amp; survey_name == &amp;quot;FPS T1 Online&amp;quot;)) %&amp;gt;% #FP026 FPS
-  filter(!(subjectID == &amp;quot;FP112&amp;quot; &amp;amp; survey_name == &amp;quot;FPS T1 Online&amp;quot;)) %&amp;gt;% #FP112 FPS
-  select(-qid)&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;score&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;score&lt;/h2&gt;
-&lt;p&gt;Get only the items used in the scoring rubrics&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scoring = scorequaltrics::get_items_in_rubric(surveys_long_clean, scoring_data_long)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Modify &lt;code&gt;score_questionnaire_dsn&lt;/code&gt; function&lt;/p&gt;
+&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
+- Only the speaker can read these notes
+- Press `S` key to view
+{{% /speaker_note %}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
+
+&lt;aside class=&#34;notes&#34;&gt;
+  &lt;ul&gt;
+&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
+&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/aside&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
+
 &lt;ul&gt;
-&lt;li&gt;Change the function to also group by &lt;code&gt;survey_name&lt;/code&gt; to be able to score multiple time points at once&lt;br /&gt;
-&lt;/li&gt;
-&lt;li&gt;Add SID as an argument to enable unique specification&lt;/li&gt;
+&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
+&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
+&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
+&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;reverse_score&amp;lt;-function(
-  item_values,
-  min=stop(&amp;#39;Must specify min and max score.&amp;#39;),
-  max=stop(&amp;#39;Must specify min and max score.&amp;#39;)){
-  rev_items&amp;lt;-max+min-item_values
-  rev_items
-}
 
-score_items&amp;lt;-function(item_values,scoring_methods,na.rm=F,mean.na.rm=T,scale_name=&amp;#39;&amp;#39;, scored_scale=&amp;#39;&amp;#39;){
-  # item_values should be a vector of numbers
-  # scoring_methods should be a function that takes a vector, or &amp;#39;1&amp;#39;
-  #check that all elements in `scoring` are the same
+&lt;hr /&gt;
 
-  if(!all(scoring_methods[1]==scoring_methods))
-    stop(paste0(&amp;#39;Scoring methods not all the same. Check that you\&amp;#39;re\n&amp;#39;,
-                &amp;#39;grouping rows correctly, and that the rubric is correct.\n&amp;#39;,
-                &amp;#39;(scale name is &amp;#39;,scale_name,&amp;#39;, scored scale is &amp;#39;,scored_scale,&amp;#39;)\n&amp;#39;,
-                paste(scoring_methods, collapse=&amp;#39;\n&amp;#39;)))
-  scoring_method&amp;lt;-unique(scoring_methods)
-  if (scoring_method==1){
-    scoring_func&amp;lt;-mean
-    na.rm=mean.na.rm
-  }
-  else
-    scoring_func&amp;lt;-try(get(scoring_method))
-  if (class(scoring_func)==&amp;#39;try-error&amp;#39;)
-    stop(paste(&amp;#39;Scoring method &amp;quot;&amp;#39;,scoring_method,&amp;#39;&amp;quot; not found. (scale name is &amp;#39;,scale_name,&amp;#39;)&amp;#39;))
-  if(na.rm)
-    do_for_na&amp;lt;-na.exclude
-  else
-    do_for_na&amp;lt;-na.pass
-  scoring_func(do_for_na(item_values))
-}
+&lt;ul&gt;
+&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
+&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
+&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
+&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
+&lt;/ul&gt;
 
-score_questionnaire_dsn &amp;lt;- function(dataDF,rubricsDF,SID){
-  #Takes long-form question data and rubric data, and a logical
-  # value specifying whether to use _part2 rubrics.
-  #Returns scored scales.
-  scores_with_scoring_params&amp;lt;-rubricsDF  %&amp;gt;%
-    left_join(
-      dataDF,
-      by=c(
-        #&amp;quot;data_file_name&amp;quot; = &amp;quot;survey_name&amp;quot;,
-        &amp;quot;column_name&amp;quot; = &amp;quot;item&amp;quot;)) %&amp;gt;%
-    filter(!(include %in% c(0,NA,&amp;#39;0&amp;#39;,&amp;#39;NA&amp;#39;,&amp;#39;&amp;#39;))) # this filters the rubrics
+&lt;hr /&gt;
 
-  nonNumeric_items = scores_with_scoring_params %&amp;gt;% filter(include %in% &amp;#39;I&amp;#39;)
 
-  transform_scored&amp;lt;-
-    scores_with_scoring_params %&amp;gt;%
-    group_by(column_name) %&amp;gt;%
-    mutate(
-      value=as.numeric(
-        ifelse(
-          !(transform %in% c(0,NA,&amp;#39;&amp;#39;)),
-          transform_scores(
-            value,
-            transform,
-            min=as.numeric(min[[1]]),
-            max=as.numeric(max[[1]])),
-          value)))
-
-  reverse_scored&amp;lt;-
-    transform_scored %&amp;gt;%
-    group_by(column_name) %&amp;gt;%
-    mutate(
-      value=as.numeric(
-        ifelse(
-          reverse %in% 1,
-          reverse_score(
-            value,
-            min=as.numeric(min[[1]]),
-            max=as.numeric(max[[1]])),
-          value))) %&amp;gt;%
-    filter(!include %in% &amp;#39;I&amp;#39;)
-
-  grouping_vars &amp;lt;- lapply(c(&amp;#39;survey_name&amp;#39;,&amp;#39;scale_name&amp;#39;,&amp;#39;scored_scale&amp;#39;, SID), as.symbol)
+&lt;section data-noprocess data-shortcode-slide
   
-  non_numeric &amp;lt;- nonNumeric_items %&amp;gt;%
-    mutate(na.rm=F) %&amp;gt;%
-    group_by_(.dots=grouping_vars) %&amp;gt;%
-    summarise(
-      score=score_items(value,include,na.rm=na.rm[[1]],scale_name=scale_name[[1]],scored_scale=scored_scale[[1]]),
-      n_items=sum(!is.na(value)),
-      n_missing=sum(is.na(value)),
-      method=unique(include))
+      
+      data-background-image=&#34;/img/boards.jpg&#34;
+  &gt;
 
-  scored&amp;lt;-reverse_scored %&amp;gt;%
-    mutate(na.rm=F) %&amp;gt;%
-    group_by_(.dots=grouping_vars) %&amp;gt;%
-    summarise(
-      score=score_items(value,include,na.rm=na.rm[[1]],scale_name=scale_name[[1]],scored_scale=scored_scale[[1]]),
-      n_items=sum(!is.na(value)),
-      n_missing=sum(is.na(value)),
-      method=unique(include)) %&amp;gt;%
-    mutate(
-      score=as.character(score)) %&amp;gt;%
-    bind_rows(non_numeric,.)
+
+&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
+
+&lt;p&gt;Customize the slide style and background&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/img/boards.jpg&amp;quot; &amp;gt;}}
+{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
+{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
+
+&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
+
+&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
+.reveal section h2,
+.reveal section h3 {
+  color: navy;
 }
+&lt;/code&gt;&lt;/pre&gt;
 
-score_questionnaire_homebrew&amp;lt;-function(dataDF, rubricsDF, SID, psych = FALSE, ...){
-  if(psych){
-    score_questionnaire_psych(dataDF, rubricsDF, ...)
-  } else {
-    score_questionnaire_dsn(dataDF, rubricsDF, SID, ...)
-  }
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Score the data&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored = score_questionnaire_homebrew(scoring, scoring_data_long, &amp;#39;subjectID&amp;#39;) %&amp;gt;%
-  mutate(score = ifelse(score == &amp;quot;NaN&amp;quot;, NA, score))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Score priorities survey&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities = surveys_long_clean %&amp;gt;% filter(grepl(&amp;quot;PRIO&amp;quot;, item)) %&amp;gt;%
-  mutate(
-    item = ifelse(item == &amp;quot;PRIO_1&amp;quot;, &amp;quot;Romantic relationships&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_2&amp;quot;, &amp;quot;Family&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_3&amp;quot;, &amp;quot;Exercise &amp;amp; athletics&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_4&amp;quot;, &amp;quot;Well-being&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_5&amp;quot;, &amp;quot;Physical appearance&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_6&amp;quot;, &amp;quot;Health &amp;amp; safety&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_7&amp;quot;, &amp;quot;Social exploration&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_8&amp;quot;, &amp;quot;Maintaining friendships&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_9&amp;quot;, &amp;quot;Community service&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_10&amp;quot;, &amp;quot;Religion &amp;amp; spirituality&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_11&amp;quot;, &amp;quot;Social awareness&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_12&amp;quot;, &amp;quot;New experiences &amp;quot;,
-                ifelse(item == &amp;quot;PRIO_13&amp;quot;, &amp;quot;Hobbies &amp;amp; entertainment&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_14&amp;quot;, &amp;quot;Aesthetics&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_15&amp;quot;, &amp;quot;Self discovery&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_16&amp;quot;, &amp;quot;Academics&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_17&amp;quot;, &amp;quot;Other&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_17_TEXT&amp;quot;, &amp;quot;Other_text&amp;quot;, NA)))))))))))))))))),
-   sort = as.numeric(value),
-   social = ifelse(grepl(&amp;quot;Social|Romantic|friendship|family&amp;quot;, item), 1, 0),
-   top3 = ifelse(value %in% 1:3, 1, 0),
-   top5 = ifelse(value %in% 1:5, 1, 0))&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;plots&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;plots&lt;/h1&gt;
-&lt;p&gt;Questionnaire abbreviations&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;CESD-10 = CES-Depression, 10 items
-&lt;ul&gt;
-&lt;li&gt;scores &amp;gt; 10 = considered depressed&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;GAD7 = Generalized Anxiety Disorder, 7 items&lt;/li&gt;
-&lt;li&gt;PANAS = Positive and Negative Affect Schedule&lt;/li&gt;
-&lt;li&gt;PSS = Perceived Stress Scale&lt;/li&gt;
-&lt;li&gt;SWLS = Satisfaction with Life Scale&lt;/li&gt;
-&lt;li&gt;ULS-8 = UCLA Loneliness Scale, 8 items
-&lt;ul&gt;
-&lt;li&gt;scores &amp;gt; 8 = probable anxiety diagnosis&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;div id=&#34;distributions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;distributions&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored %&amp;gt;%
-  filter(scale_name %in% c(&amp;quot;CESD-10&amp;quot;, &amp;quot;GAD7&amp;quot;, &amp;quot;PANAS&amp;quot;, &amp;quot;PSS&amp;quot;, &amp;quot;SWLS&amp;quot;, &amp;quot;ULS-8&amp;quot;)) %&amp;gt;%
-  mutate(score = as.numeric(score)) %&amp;gt;%
-  group_by(scale_name) %&amp;gt;%
-    do({
-      plot = ggplot(., aes(scored_scale, score)) +
-        geom_boxplot() +
-        geom_jitter(width = .15, alpha = .5, color = &amp;quot;#2A908B&amp;quot;) +
-        labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = paste0(.$scale_name[[1]])) +
-        theme_minimal()
-      print(plot)
-      data.frame()
-    })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/plotdist-6.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 0 x 1
-## # Groups:   scale_name [0]
-## # ... with 1 variable: scale_name &amp;lt;chr&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;correlations&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;correlations&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;scored %&amp;gt;%
-  filter(scale_name %in% c(&amp;quot;CESD-10&amp;quot;, &amp;quot;GAD7&amp;quot;, &amp;quot;PANAS&amp;quot;, &amp;quot;PSS&amp;quot;, &amp;quot;SWLS&amp;quot;, &amp;quot;ULS-8&amp;quot;)) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  mutate(score = as.numeric(score),
-         var.name = paste(scale_name, scored_scale, sep = &amp;quot;_&amp;quot;)) %&amp;gt;%
-  select(var.name, score, subjectID) %&amp;gt;%
-  spread(var.name, score) %&amp;gt;%
-  filter(!is.na(subjectID)) %&amp;gt;%
-  select(-subjectID) %&amp;gt;%
-  cor(., use = &amp;quot;pairwise.complete.obs&amp;quot;) %&amp;gt;%
-  ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#431153&amp;quot;, &amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
-    geom_text(aes(label = round(value, 2)), size = 3) +
-    labs(title = &amp;quot;Correlations amoong well-being measures\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;priorities-density-plots&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;priorities density plots&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
-  group_by(item) %&amp;gt;%
-  mutate(value = as.numeric(value),
-         mean = mean(value, na.rm = TRUE)) %&amp;gt;%
-  ggplot(aes(value, item, fill = mean)) + 
-    ggridges::geom_density_ridges() + 
-    scale_fill_viridis_c(name = &amp;quot;mean\nranking&amp;quot;, direction = -1) +
-    labs(x = &amp;quot;ranking&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Ranking density among priority areas\n&amp;quot;) + 
-    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;top-priorities&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;top priorities&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(top3 == 1) %&amp;gt;%
-  group_by(item) %&amp;gt;%
-  summarize(count = n()) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  ggplot(aes(reorder(item, -count), count, fill = count)) + 
-    geom_bar(stat = &amp;quot;identity&amp;quot;) +
-    scale_fill_viridis_c() + 
-    theme_minimal() + 
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
-    theme(text = element_text(size = 10),
-          legend.position = &amp;quot;none&amp;quot;) + 
-    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 3 rated\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(top5 == 1) %&amp;gt;%
-  group_by(item) %&amp;gt;%
-  summarize(count = n()) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  ggplot(aes(reorder(item, -count), count, fill = count)) + 
-    geom_bar(stat = &amp;quot;identity&amp;quot;) +
-    scale_fill_viridis_c() + 
-    theme_minimal() + 
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
-    theme(text = element_text(size = 10),
-          legend.position = &amp;quot;none&amp;quot;) + 
-    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 5 rated\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;priorities-by-loneliness&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;priorities by loneliness&lt;/h2&gt;
-&lt;p&gt;The higher the quartile, the greater the loneliness reported.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;loneliness.qt = scored %&amp;gt;%
-  filter(scale_name == &amp;quot;ULS-8&amp;quot;) %&amp;gt;%
-  mutate(score = as.numeric(score),
-         loneliness = ifelse(score &amp;lt; 1.62, &amp;quot;1st quartile&amp;quot;,
-                      ifelse(score &amp;gt;= 1.62 &amp;amp; score &amp;lt; median(score), &amp;quot;2nd quartile&amp;quot;,
-                      ifelse(score &amp;gt;= median(score) &amp;amp; score &amp;lt; 2.5, &amp;quot;3rd quartile&amp;quot;, 
-                      ifelse(score &amp;gt;= 2.5, &amp;quot;4th quartile&amp;quot;, NA))))) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  select(subjectID, loneliness)
+&lt;hr /&gt;
 
-priorities %&amp;gt;%
-  left_join(loneliness.qt, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
-  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
-  group_by(item, loneliness) %&amp;gt;%
-  mutate(value = as.numeric(value),
-         mean = mean(value, na.rm = TRUE)) %&amp;gt;%
-  ggplot(aes(value, item, fill = mean)) + 
-    ggridges::geom_density_ridges() + 
-    scale_fill_viridis_c(name = &amp;quot;mean\nranking&amp;quot;, direction = -1) +
-    facet_grid(~loneliness) +
-    labs(x = &amp;quot;ranking&amp;quot;, y = &amp;quot;&amp;quot;, title = &amp;quot;Ranking density among priority areas as a function of loneliness\n&amp;quot;) + 
-    theme_minimal()&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  left_join(loneliness.qt, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
-  filter(top3 == 1) %&amp;gt;%
-  group_by(item, loneliness) %&amp;gt;%
-  summarize(count = n()) %&amp;gt;%
-  mutate(n = ifelse(grepl(&amp;quot;1&amp;quot;, loneliness), 52,
-             ifelse(grepl(&amp;quot;2&amp;quot;, loneliness), 61,
-             ifelse(grepl(&amp;quot;3&amp;quot;, loneliness), 80,
-             ifelse(grepl(&amp;quot;4&amp;quot;, loneliness), 69, NA)))),
-    count.scaled = count / n) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  ggplot(aes(reorder(item, -count.scaled), count.scaled, fill = loneliness)) + 
-    geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
-    scale_fill_viridis_d() + #scale_fill_manual( &amp;quot;loneliness&amp;quot;, values = c(&amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
-    theme_minimal() + 
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1),
-          text = element_text(size = 10),
-          legend.position = c(.9,.75)) + 
-    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;count scaled by quartile n\n&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 3 rated by loneliness\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  left_join(loneliness.qt, by = &amp;quot;subjectID&amp;quot;) %&amp;gt;%
-  filter(top5 == 1) %&amp;gt;%
-  group_by(item, loneliness) %&amp;gt;%
-  summarize(count = n()) %&amp;gt;%
-  mutate(n = ifelse(grepl(&amp;quot;1&amp;quot;, loneliness), 52,
-             ifelse(grepl(&amp;quot;2&amp;quot;, loneliness), 61,
-             ifelse(grepl(&amp;quot;3&amp;quot;, loneliness), 80,
-             ifelse(grepl(&amp;quot;4&amp;quot;, loneliness), 69, NA)))),
-    count.scaled = count / n) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  ggplot(aes(reorder(item, -count.scaled), count.scaled, fill = loneliness)) + 
-    geom_bar(stat = &amp;quot;identity&amp;quot;, position = &amp;quot;dodge&amp;quot;) +
-    scale_fill_viridis_d() + #scale_fill_manual( &amp;quot;loneliness&amp;quot;, values = c(&amp;quot;#2A908B&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
-    theme_minimal() + 
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1),
-          text = element_text(size = 10),
-          legend.position = c(.9,.75)) + 
-    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;count scaled by quartile n\n&amp;quot;, title = &amp;quot;Number of times this priority area was in the top 5 rated by loneliness\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-17-2.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;correlations-between-area-ranking-and-loneliness&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;correlations between area ranking and loneliness&lt;/h1&gt;
-&lt;div id=&#34;academics-well-being-social-exploration-new-experiences-and-self-discovery&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;academics, well-being, social exploration, new experiences, and self-discovery&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;loneliness = scored %&amp;gt;%
-  filter(scale_name == &amp;quot;ULS-8&amp;quot;) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  select(subjectID, score) %&amp;gt;%
-  rename(&amp;quot;loneliness&amp;quot; = score) %&amp;gt;%
-  mutate(loneliness = as.numeric(loneliness))
+&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
 
-priorities %&amp;gt;%
-  filter(item %in% c(&amp;quot;Academics&amp;quot;, &amp;quot;Well-being&amp;quot;, &amp;quot;Social exploration&amp;quot;, &amp;quot;New experiences &amp;quot;, &amp;quot;Self discovery&amp;quot;)) %&amp;gt;%
-  mutate(value = as.integer(value)) %&amp;gt;%
-  left_join(., loneliness) %&amp;gt;%
-  ggplot(aes(loneliness, value, color = item)) +
-    geom_point(position = &amp;quot;jitter&amp;quot;, alpha = .2) +
-    geom_smooth(method = &amp;quot;lm&amp;quot;, alpha = .2) + 
-    scale_color_viridis_d() +
-    theme_minimal() + 
-    theme(text = element_text(size = 10))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(item %in% c(&amp;quot;Academics&amp;quot;, &amp;quot;Well-being&amp;quot;, &amp;quot;Social exploration&amp;quot;, &amp;quot;New experiences &amp;quot;, &amp;quot;Self discovery&amp;quot;)) %&amp;gt;%
-  mutate(value = as.integer(value)) %&amp;gt;%
-  select(subjectID, item, value) %&amp;gt;%
-  spread(item, value) %&amp;gt;%
-  left_join(., loneliness) %&amp;gt;%
-  select(-subjectID) %&amp;gt;%
-  cor(., use = &amp;quot;pairwise.complete.obs&amp;quot;) %&amp;gt;%
-  ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#3D6f8B&amp;quot;, &amp;quot;white&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
-    geom_text(aes(label = round(value, 2)), size = 3) +
-    labs(title = &amp;quot;Correlations among loneliness and priority ranking\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-18-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;all-measures&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;all measures&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
-  mutate(value = as.integer(value)) %&amp;gt;%
-  left_join(., loneliness) %&amp;gt;%
-  ggplot(aes(loneliness, value, color = item)) +
-    geom_point(position = &amp;quot;jitter&amp;quot;, alpha = .2) +
-    geom_smooth(method = &amp;quot;lm&amp;quot;, alpha = .1) + 
-    scale_color_viridis_d() +
-    theme_minimal() + 
-    theme(text = element_text(size = 10))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
-  mutate(value = as.integer(value)) %&amp;gt;%
-  select(subjectID, item, value) %&amp;gt;%
-  spread(item, value) %&amp;gt;%
-  left_join(., loneliness) %&amp;gt;%
-  select(-subjectID) %&amp;gt;%
-  cor(., use = &amp;quot;pairwise.complete.obs&amp;quot;) %&amp;gt;%
-  ggcorrplot(hc.order = TRUE, outline.col = &amp;quot;white&amp;quot;, colors = c(&amp;quot;#3D6f8B&amp;quot;, &amp;quot;white&amp;quot;, &amp;quot;#FCE540&amp;quot;)) +
-    geom_text(aes(label = round(value, 2)), size = 3) +
-    labs(title = &amp;quot;Correlations among loneliness and priority ranking\n&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/hopelab_files/figure-html/unnamed-chunk-19-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+&lt;p&gt;&lt;a href=&#34;https://discourse.gohugo.io&#34; target=&#34;_blank&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://sourcethemes.com/academic/docs/&#34; target=&#34;_blank&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Autonomy can support affect regulation during illness and in health</title>
-      <link>https://dcosme.github.io/publication/autonomy-affect-regulation/</link>
-      <pubDate>Mon, 11 Jun 2018 00:00:00 -0700</pubDate>
-      
-      <guid>https://dcosme.github.io/publication/autonomy-affect-regulation/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
-Cosme, D., &amp;amp; Berkman, E. T. (In Press) &lt;a href=&#34;http://journals.sagepub.com/doi/10.1177/1359105318787013&#34; target=&#34;_blank&#34;&gt;Autonomy can support affect regulation during illness and in health.&lt;/a&gt; &lt;em&gt;Journal of Health Psychology&lt;/em&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>FP Pilot GPS</title>
-      <link>https://dcosme.github.io/data-vis/fp_pilot_gps/</link>
+      <link>https://dcosme.github.io/publication/2019-06-28-autonomy-affect-regulation/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/data-vis/fp_pilot_gps/</guid>
-      <description>&lt;p&gt;This code is a first pass analysis of the goals and priorities survey.&lt;/p&gt;
-&lt;div id=&#34;get-and-clean-the-data&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Get and clean the data&lt;/h1&gt;
-&lt;div id=&#34;define-variables-and-paths&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Define variables and paths&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;cred_file_location&lt;/code&gt; = path to your Qualtrics credential file. You’ll need to generate this via Qualtrics using the instructios above.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;id_column_name&lt;/code&gt; = subject ID column name in Qualtrics survey; can be a regular expression&lt;/li&gt;
-&lt;/ul&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;cred_file_location = &amp;#39;~/credentials.yaml.DEFAULT&amp;#39;
-sid_column_name = &amp;#39;(SID|ExternalDataReference|qid)&amp;#39;
-survey_name_filter = &amp;#39;Freshman Project T|CheckIn&amp;#39;
-sid_pattern = &amp;#39;FP[0-9]{3}&amp;#39;
-exclude_sid = &amp;#39;FP999&amp;#39; # subject IDs to exclude
-identifiableData = c(&amp;#39;EmailAddress&amp;#39;, &amp;#39;IPAddress&amp;#39;) # exclude when printing duplicates &amp;#39;EmailAddress&amp;#39;,
-output_file_dir = &amp;#39;~/Documents/code/score-qualtrics/&amp;#39;
-rubric_dir = &amp;#39;/Users/danicosme/Dropbox (PfeiBer Lab)/FreshmanProject/Qualtrics/Scoring_Rubrics&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;packages&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Packages&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (!require(tidyverse)) {
-  install.packages(&amp;#39;tidyverse&amp;#39;)
-}
-
-if (!require(knitr)) {
-  install.packages(&amp;#39;knitr&amp;#39;)
-}
-
-if (!require(devtools)) {
-  install.packages(&amp;#39;devtools&amp;#39;)
-}
-
-if (!require(scorequaltrics)) {
-  devtools::install_github(&amp;#39;jflournoy/qualtrics&amp;#39;)
-}
-
-if (!require(ggcorrplot)) {
-  install.packages(&amp;#39;ggcorrplot&amp;#39;)
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;access-qualtrics-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Access qualtrics data&lt;/h2&gt;
-&lt;p&gt;Filter available surveys based on the filter specified above.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# load credential file
-credentials = scorequaltrics::creds_from_file(cred_file_location)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in readLines(con): incomplete final line found on &amp;#39;~/
-## credentials.yaml.DEFAULT&amp;#39;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# filter
-surveysAvail = scorequaltrics::get_surveys(credentials)
-surveysFiltered = filter(surveysAvail, grepl(survey_name_filter, SurveyName))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: package &amp;#39;bindrcpp&amp;#39; was built under R version 3.4.4&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;knitr::kable(arrange(select(surveysFiltered, SurveyName), SurveyName))&lt;/code&gt;&lt;/pre&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr class=&#34;header&#34;&gt;
-&lt;th align=&#34;left&#34;&gt;SurveyName&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;CheckIn_Fall&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;CheckIn_Spring&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;CheckIn_Summer&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;CheckIn_Winter&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Freshman Project T1 Survey&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Freshman Project T2 Survey&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;odd&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Freshman Project T3 Survey&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr class=&#34;even&#34;&gt;
-&lt;td align=&#34;left&#34;&gt;Freshman Project T4 Survey&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cleaning-and-scoring-data&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;Cleaning and scoring data&lt;/h2&gt;
-&lt;div id=&#34;get-survey-data&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Get survey data&lt;/h3&gt;
-&lt;p&gt;The &lt;code&gt;get_survey_data&lt;/code&gt; funcion pulls the data from the surveys specified in &lt;code&gt;surveysFiltered&lt;/code&gt; and reshapes into the long format. Because the example data also includes some identifying information, we also want to filter those items out of our dataframe.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# get data
-surveys_long = scorequaltrics::get_survey_data(surveysFiltered,
-                                               credentials, 
-                                               pid_col = sid_column_name) %&amp;gt;%
-               filter(!item %in% identifiableData) #filter out identifiable data
-
-# print first 10 rows
-head(surveys_long, 10)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 10 x 6
-##    ExternalDataReference qid               item   value  survey_name SID  
-##    &amp;lt;chr&amp;gt;                 &amp;lt;chr&amp;gt;             &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;       &amp;lt;chr&amp;gt;
-##  1 FP029                 R_33ygWqHzCB58knT Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
-##  2 FP007                 R_1DwZ8Zo04Fbg2L7 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
-##  3 FP009                 R_1LwkWM4naqq1Km4 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
-##  4 FP022                 R_3J5fpeg3l2J8lm3 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
-##  5 FP004                 R_2xLwcqXVmjyGTu1 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
-##  6 FP011                 R_3ErQEYh1MfbxJuE Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
-##  7 FP021                 R_3MhvO1mHDYLJG8R Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
-##  8 FP013                 R_2roTMgwYFyfbTm3 Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
-##  9 FP008                 R_1zx6EDFCLn2ZtMB Respo… Defau… Freshman P… &amp;lt;NA&amp;gt; 
-## 10 FP018                 R_3KD8bk96YXxIuvu Respo… Defau… Freshman P… &amp;lt;NA&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;cleaning&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Cleaning&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;exclude non-sub responses&lt;/li&gt;
-&lt;li&gt;convert missing values to NA&lt;/li&gt;
-&lt;li&gt;duplicates&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;First, exclude responses that are not subject responses. In this dataset, some subjects have their ID in the &lt;code&gt;ExternalDataReference&lt;/code&gt; column only, so we’ll need to add that to the &lt;code&gt;SID&lt;/code&gt; column before filtering. There are also some test responses that match our SID pattern, so we’ll want to exclude those using the &lt;code&gt;exclude_SID&lt;/code&gt; pattern.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;missingSIDs = surveys_long %&amp;gt;%
-  mutate(SID = ifelse(is.na(SID), ExternalDataReference,
-               ifelse(grepl(&amp;quot;SV&amp;quot;, SID), ExternalDataReference, SID))) %&amp;gt;%
-  select(-ExternalDataReference) %&amp;gt;%
-  filter(SID == &amp;quot;&amp;quot; | grepl(sid_pattern, SID)) %&amp;gt;%
-  filter(!grepl(exclude_sid, SID)) %&amp;gt;%
-  arrange(value) %&amp;gt;%
-  filter(item == &amp;quot;Name&amp;quot;) %&amp;gt;%
-  mutate(SID = ifelse(SID == &amp;quot;&amp;quot; &amp;amp; survey_name == &amp;quot;CheckIn_Fall&amp;quot;, lead(SID), SID)) %&amp;gt;%
-  filter(!SID == &amp;quot;&amp;quot;) %&amp;gt;%
-  select(-item, -value)
-
-t1 = surveys_long %&amp;gt;%
-  filter(survey_name == &amp;quot;Freshman Project T1 Survey&amp;quot;)
-
-surveys_long_sub = surveys_long %&amp;gt;%
-  filter(!survey_name == &amp;quot;Freshman Project T1 Survey&amp;quot;) %&amp;gt;%
-  select(-SID) %&amp;gt;%
-  left_join(., missingSIDs, by = c(&amp;quot;qid&amp;quot;, &amp;quot;survey_name&amp;quot;)) %&amp;gt;%
-  bind_rows(t1) %&amp;gt;%
-  filter(grepl(sid_pattern, SID)) %&amp;gt;%
-  filter(!grepl(exclude_sid, SID)) %&amp;gt;%
-  filter(!item == &amp;quot;Name&amp;quot; &amp;amp;!is.na(SID)) %&amp;gt;%
-  select(-ExternalDataReference)
-
-# print unique SIDs
-unique(surveys_long_sub$SID)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;FP029&amp;quot; &amp;quot;FP007&amp;quot; &amp;quot;FP009&amp;quot; &amp;quot;FP022&amp;quot; &amp;quot;FP004&amp;quot; &amp;quot;FP011&amp;quot; &amp;quot;FP021&amp;quot; &amp;quot;FP013&amp;quot;
-##  [9] &amp;quot;FP008&amp;quot; &amp;quot;FP018&amp;quot; &amp;quot;FP003&amp;quot; &amp;quot;FP025&amp;quot; &amp;quot;FP035&amp;quot; &amp;quot;FP001&amp;quot; &amp;quot;FP031&amp;quot; &amp;quot;FP006&amp;quot;
-## [17] &amp;quot;FP030&amp;quot; &amp;quot;FP028&amp;quot; &amp;quot;FP026&amp;quot; &amp;quot;FP019&amp;quot; &amp;quot;FP024&amp;quot; &amp;quot;FP032&amp;quot; &amp;quot;FP023&amp;quot; &amp;quot;FP005&amp;quot;
-## [25] &amp;quot;FP015&amp;quot; &amp;quot;FP010&amp;quot; &amp;quot;FP034&amp;quot; &amp;quot;FP014&amp;quot; &amp;quot;FP016&amp;quot; &amp;quot;FP020&amp;quot; &amp;quot;FP027&amp;quot; &amp;quot;FP002&amp;quot;
-## [33] &amp;quot;FP012&amp;quot; &amp;quot;FP017&amp;quot;&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# print number of surveys per participant
-surveys_long_sub %&amp;gt;%
-  group_by(SID, survey_name) %&amp;gt;%
-  summarize(n = n()) %&amp;gt;%
-  spread(survey_name, n)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 34 x 9
-## # Groups:   SID [34]
-##    SID   CheckIn_Fall CheckIn_Spring CheckIn_Summer CheckIn_Winter
-##    &amp;lt;chr&amp;gt;        &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;          &amp;lt;int&amp;gt;
-##  1 FP001           49             45             18             45
-##  2 FP002           49             45             NA             45
-##  3 FP003           49             45             NA             45
-##  4 FP004           49             45             18             45
-##  5 FP005           49             45             NA             45
-##  6 FP006           49             45             18             45
-##  7 FP007           49             45             NA             45
-##  8 FP008           49             45             18             45
-##  9 FP009           49             45             NA             45
-## 10 FP010           98             45             18             45
-## # ... with 24 more rows, and 4 more variables: `Freshman Project T1
-## #   Survey` &amp;lt;int&amp;gt;, `Freshman Project T2 Survey` &amp;lt;int&amp;gt;, `Freshman Project
-## #   T3 Survey` &amp;lt;int&amp;gt;, `Freshman Project T4 Survey` &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Convert missing values to NA.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_na = surveys_long_sub %&amp;gt;%
-  mutate(value = ifelse(value == &amp;quot;&amp;quot;, NA, value))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Check for non-numeric items using the &lt;code&gt;get_uncoercibles()&lt;/code&gt; function.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# surveys_long_na %&amp;gt;%
-#   scorequaltrics::get_uncoercibles() %&amp;gt;%
-#   distinct(item, value) %&amp;gt;%
-#   arrange(item) %&amp;gt;%
-#   head(., 10)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Check for duplicate responses. There is a &lt;code&gt;clean_dupes&lt;/code&gt; function that can do this, but since we have multiple waves with the same surveys, we’re going to do this homebrew.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_na %&amp;gt;%
-  spread(item, value) %&amp;gt;%
-  group_by(survey_name, SID) %&amp;gt;%
-  summarize(n = n()) %&amp;gt;%
-  arrange(desc(n)) %&amp;gt;%
-  filter(n &amp;gt; 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 3
-## # Groups:   survey_name [2]
-##   survey_name                SID       n
-##   &amp;lt;chr&amp;gt;                      &amp;lt;chr&amp;gt; &amp;lt;int&amp;gt;
-## 1 CheckIn_Fall               FP010     2
-## 2 CheckIn_Fall               FP018     2
-## 3 Freshman Project T2 Survey FP002     2&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Since FP002 appears to have taken the T2 survey twice, we’re simply going to randomly select based on the qid. We’ll also select the completed fall check ins for FP010 and FP018.&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;surveys_long_clean = surveys_long_na %&amp;gt;%
-  filter(!grepl(&amp;quot;R_11YpEE2pH9Ozqvk|R_eCMNbhWMXaT1VaJ|R_2ypjM5npmQtcHqx&amp;quot;, qid)) %&amp;gt;%
-  select(-qid)
-
-surveys_long_clean %&amp;gt;%
-  spread(item, value) %&amp;gt;%
-  group_by(survey_name, SID) %&amp;gt;%
-  summarize(n = n()) %&amp;gt;%
-  arrange(desc(n)) %&amp;gt;%
-  filter(n &amp;gt; 1)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 0 x 3
-## # Groups:   survey_name [0]
-## # ... with 3 variables: survey_name &amp;lt;chr&amp;gt;, SID &amp;lt;chr&amp;gt;, n &amp;lt;int&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;subset-priorities-questions-and-tidy&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;Subset priorities questions and tidy&lt;/h3&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities = surveys_long_clean %&amp;gt;% filter(grepl(&amp;quot;PRIO&amp;quot;, item)) %&amp;gt;%
-  extract(survey_name, &amp;quot;term&amp;quot;, &amp;quot;CheckIn_(.*)&amp;quot;) %&amp;gt;%
-  mutate(
-    item = ifelse(item == &amp;quot;PRIO_1&amp;quot;, &amp;quot;Romantic relationships&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_2&amp;quot;, &amp;quot;Family&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_3&amp;quot;, &amp;quot;Exercise &amp;amp; athletics&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_4&amp;quot;, &amp;quot;Well-being&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_5&amp;quot;, &amp;quot;Physical appearance&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_6&amp;quot;, &amp;quot;Health &amp;amp; safety&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_7&amp;quot;, &amp;quot;Social exploration&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_8&amp;quot;, &amp;quot;Maintaining friendships&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_9&amp;quot;, &amp;quot;Community service&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_10&amp;quot;, &amp;quot;Religion &amp;amp; spirituality&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_11&amp;quot;, &amp;quot;Social awareness&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_12&amp;quot;, &amp;quot;New experiences &amp;quot;,
-                ifelse(item == &amp;quot;PRIO_13&amp;quot;, &amp;quot;Hobbies &amp;amp; entertainment&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_14&amp;quot;, &amp;quot;Aesthetics&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_15&amp;quot;, &amp;quot;Self discovery&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_16&amp;quot;, &amp;quot;Academics&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_17&amp;quot;, &amp;quot;Other&amp;quot;,
-                ifelse(item == &amp;quot;PRIO_17_TEXT&amp;quot;, &amp;quot;Other_text&amp;quot;, NA)))))))))))))))))),
-   sort = as.numeric(value),
-   social = ifelse(grepl(&amp;quot;Social|Romantic|friendship|family&amp;quot;, item), 1, 0),
-   top3 = ifelse(value %in% 1:3, 1, 0),
-   top5 = ifelse(value %in% 1:5, 1, 0))&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning in evalq(as.numeric(value), &amp;lt;environment&amp;gt;): NAs introduced by
-## coercion
-
-## Warning in evalq(as.numeric(value), &amp;lt;environment&amp;gt;): NAs introduced by
-## coercion
-
-## Warning in evalq(as.numeric(value), &amp;lt;environment&amp;gt;): NAs introduced by
-## coercion&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;priorities&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;Priorities&lt;/h1&gt;
-&lt;div id=&#34;density-plots&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;density plots&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
-  group_by(item) %&amp;gt;%
-  do({
-    plot = ggplot(., aes(as.numeric(value), fill = term, color = term)) +
-      geom_density(alpha = .1) +
-      scale_color_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
-      scale_fill_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
-      labs(title = .$item[[1]], x = &amp;quot;priority rank&amp;quot;) +
-      theme_minimal()
-    print(plot)
-  })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-7.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-15.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## Error: Results 1, 2, 3, 4, 5, ... must be data frames, not list&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-10-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;histograms&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;histograms&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(!grepl(&amp;quot;Other&amp;quot;, item)) %&amp;gt;%
-  group_by(item) %&amp;gt;%
-  do({
-    plot = ggplot(., aes(reorder(value, sort), fill = term)) +
-      geom_histogram(stat = &amp;quot;count&amp;quot;) +
-      scale_fill_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
-      labs(title = .$item[[1]], x = &amp;quot;priority rank&amp;quot;) +
-      theme_minimal()
-    print(plot)
-  })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-2.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-7.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-15.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## Error: Results 1, 2, 3, 4, 5, ... must be data frames, not list&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-11-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;div id=&#34;top-priorities&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;top priorities&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(top3 == 1) %&amp;gt;%
-  group_by(item) %&amp;gt;%
-  summarize(count = n()) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  ggplot(aes(reorder(item, -count), count)) + 
-    geom_bar(stat = &amp;quot;identity&amp;quot;) +
-    theme_minimal() + 
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
-    theme(text = element_text(size = 10)) + 
-    labs(x = &amp;quot;priority area&amp;quot;, title = &amp;quot;Number of times this area was in the top 3 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;priorities %&amp;gt;%
-  filter(top5 == 1) %&amp;gt;%
-  group_by(item) %&amp;gt;%
-  summarize(count = n()) %&amp;gt;%
-  ungroup() %&amp;gt;%
-  ggplot(aes(reorder(item, -count), count)) + 
-    geom_bar(stat = &amp;quot;identity&amp;quot;) +
-    theme_minimal() + 
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
-    theme(text = element_text(size = 10)) + 
-    labs(x = &amp;quot;priority area&amp;quot;, title = &amp;quot;Number of times this area was in the top 5 rated&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-12-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div id=&#34;gps&#34; class=&#34;section level1&#34;&gt;
-&lt;h1&gt;GPS&lt;/h1&gt;
-&lt;div id=&#34;subset-goals-questions&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;subset goals questions&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gps = surveys_long_clean %&amp;gt;% 
-  filter(grepl(&amp;quot;GPS&amp;quot;, item)) %&amp;gt;%
-  filter(!item == &amp;quot;GPS_1&amp;quot;) %&amp;gt;%
-  mutate(term = ifelse(survey_name %in% c(&amp;quot;CheckIn_Fall&amp;quot;, &amp;quot;Freshman Project T2 Survey&amp;quot;), &amp;quot;Fall&amp;quot;,
-                ifelse(survey_name %in% c(&amp;quot;CheckIn_Winter&amp;quot;, &amp;quot;Freshman Project T3 Survey&amp;quot;), &amp;quot;Winter&amp;quot;,
-                ifelse(survey_name %in% c(&amp;quot;CheckIn_Spring&amp;quot;, &amp;quot;Freshman Project T4 Survey&amp;quot;), &amp;quot;Spring&amp;quot;, NA))),
-         survey = ifelse(grepl(&amp;quot;CheckIn&amp;quot;, survey_name), &amp;quot;check in&amp;quot;, &amp;quot;follow up&amp;quot;),
-         personalproject = ifelse(grepl(&amp;quot;GPS_2_[1-3]{1}&amp;quot;, item), &amp;quot;first&amp;quot;, &amp;quot;second&amp;quot;),
-         item = ifelse(grepl(&amp;quot;GPS_[2-3]{1}_1&amp;quot;, item), &amp;quot;importance&amp;quot;,
-                ifelse(grepl(&amp;quot;GPS_[2-3]{1}_2&amp;quot;, item), &amp;quot;commitment&amp;quot;,
-                ifelse(grepl(&amp;quot;GPS_[2-3]{1}_3&amp;quot;, item), &amp;quot;complete&amp;quot;, item))),
-         sort = ifelse(item == &amp;quot;importance&amp;quot;, 1,
-                ifelse(item == &amp;quot;commitement&amp;quot;, 2, 3))) &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;progress&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;progress&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gps %&amp;gt;%
-  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
-  ggplot(aes(survey, as.numeric(value), color = term)) +
-    stat_summary(fun.data = &amp;quot;mean_cl_boot&amp;quot;) +
-    stat_summary(aes(group = term), fun.y = mean, geom = &amp;quot;line&amp;quot;) +
-    facet_grid(personalproject ~ reorder(item, sort)) +
-    scale_color_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
-    theme_minimal() + 
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
-    theme(text = element_text(size = 10)) +
-    labs(y = &amp;quot;rating&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Removed 37 rows containing non-finite values (stat_summary).
-
-## Warning: Removed 37 rows containing non-finite values (stat_summary).&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;gps %&amp;gt;%
-  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
-  group_by(item, term, survey, personalproject) %&amp;gt;%
-  summarize(mean = mean(as.numeric(value), na.rm = TRUE)) %&amp;gt;%
-  spread(survey, mean)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## Warning: Grouping rowwise data frame strips rowwise nature&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 18 x 5
-## # Groups:   item, term [9]
-##    item       term   personalproject `check in` `follow up`
-##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;                &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
-##  1 commitment Fall   first                 84.7        77.3
-##  2 commitment Fall   second                84.1        76.5
-##  3 commitment Spring first                 86.3        82.5
-##  4 commitment Spring second                83.4        82.2
-##  5 commitment Winter first                 84.9        78.8
-##  6 commitment Winter second                80.6        72.2
-##  7 complete   Fall   first                 39.9        61  
-##  8 complete   Fall   second                43.3        65.6
-##  9 complete   Spring first                 43.0        64.0
-## 10 complete   Spring second                43.1        72.0
-## 11 complete   Winter first                 41.2        66.2
-## 12 complete   Winter second                36.3        50.1
-## 13 importance Fall   first                 88.9        86  
-## 14 importance Fall   second                87.3        87.5
-## 15 importance Spring first                 91.5        87.6
-## 16 importance Spring second                88.2        85.1
-## 17 importance Winter first                 87.2        83.5
-## 18 importance Winter second                86.1        84.8&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;div id=&#34;progress-by-priority-area&#34; class=&#34;section level2&#34;&gt;
-&lt;h2&gt;progress by priority area&lt;/h2&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;prios = priorities %&amp;gt;%
-  filter(value %in% 1:2) %&amp;gt;%
-  rename(&amp;quot;PPA&amp;quot; = item) %&amp;gt;%
-  mutate(personalproject = ifelse(value == &amp;quot;1&amp;quot;, &amp;quot;first&amp;quot;, &amp;quot;second&amp;quot;)) %&amp;gt;%
-  select(-sort, -value, -starts_with(&amp;quot;top&amp;quot;))
-
-merged = gps %&amp;gt;%
-  left_join(., prios, by = c(&amp;quot;SID&amp;quot;, &amp;quot;term&amp;quot;, &amp;quot;personalproject&amp;quot;))
-
-merged %&amp;gt;%
-  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
-  group_by(PPA) %&amp;gt;%
-  do({
-    plot = ggplot(., aes(survey, as.numeric(value), color = term)) +
-              stat_summary(fun.data = &amp;quot;mean_cl_boot&amp;quot;) +
-              stat_summary(aes(group = term), fun.y = mean, geom = &amp;quot;line&amp;quot;) +
-              facet_grid(personalproject ~ reorder(item, sort)) +
-              scale_color_manual(values = wesanderson::wes_palette(&amp;quot;Darjeeling1&amp;quot;, 3, &amp;quot;continuous&amp;quot;)) +
-              theme_minimal() + 
-              theme(axis.text.x = element_text(angle = 45, vjust = 1, size = 10, hjust = 1)) +
-              theme(text = element_text(size = 10)) +
-              labs(title = .$PPA[[1]], y = &amp;quot;rating&amp;quot;)
-    print(plot)
-  })&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## geom_path: Each group consists of only one observation. Do you need to
-## adjust the group aesthetic?&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-3.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-4.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-5.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-6.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-7.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## geom_path: Each group consists of only one observation. Do you need to
-## adjust the group aesthetic?&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-8.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-9.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-10.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-11.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-12.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-13.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-14.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-15.png&#34; width=&#34;672&#34; /&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-16.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;## Error: Results 1, 2, 3, 4, 5, ... must be data frames, not list&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/data-vis/FP_pilot_GPS_files/figure-html/unnamed-chunk-15-17.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;merged %&amp;gt;%
-  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;)) %&amp;gt;%
-  group_by(item, survey, PPA) %&amp;gt;%
-  summarize(mean = mean(as.numeric(value), na.rm = TRUE)) %&amp;gt;%
-  spread(survey, mean)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 51 x 4
-## # Groups:   item [3]
-##    item       PPA                     `check in` `follow up`
-##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;                        &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;
-##  1 commitment Academics                     90.6        86.1
-##  2 commitment Aesthetics                    84.3        73.3
-##  3 commitment Community service            100          81  
-##  4 commitment Exercise &amp;amp; athletics          80.4        76.7
-##  5 commitment Family                        80.2        78.1
-##  6 commitment Health &amp;amp; safety               86.2        76  
-##  7 commitment Hobbies &amp;amp; entertainment       75.9        74.5
-##  8 commitment Maintaining friendships       85.4        66  
-##  9 commitment &amp;quot;New experiences &amp;quot;            80.7        76.4
-## 10 commitment Physical appearance           83.5        76.5
-## # ... with 41 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# social personal project areas only
-merged %&amp;gt;%
-  filter(item %in% c(&amp;quot;importance&amp;quot;, &amp;quot;commitment&amp;quot;, &amp;quot;complete&amp;quot;) &amp;amp; social == 1) %&amp;gt;%
-  group_by(item, survey, PPA, term) %&amp;gt;%
-  summarize(mean = mean(as.numeric(value), na.rm = TRUE)) %&amp;gt;%
-  spread(survey, mean) %&amp;gt;%
-  mutate(change = `follow up` - `check in`)&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;## # A tibble: 33 x 6
-## # Groups:   item, PPA [12]
-##    item       PPA                     term   `check in` `follow up` change
-##    &amp;lt;chr&amp;gt;      &amp;lt;chr&amp;gt;                   &amp;lt;chr&amp;gt;       &amp;lt;dbl&amp;gt;       &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
-##  1 commitment Maintaining friendships Fall         83.5        57.5 -26   
-##  2 commitment Maintaining friendships Spring       87          45   -42   
-##  3 commitment Maintaining friendships Winter       86.5        85    -1.5 
-##  4 commitment Romantic relationships  Fall         79          70    -9   
-##  5 commitment Romantic relationships  Spring       99.2       100     0.75
-##  6 commitment Romantic relationships  Winter       99          91.6  -7.4 
-##  7 commitment Social awareness        Spring       57          70    13   
-##  8 commitment Social awareness        Winter       75          50   -25   
-##  9 commitment Social exploration      Fall         75.2        63.2 -12   
-## 10 commitment Social exploration      Spring       84          59.5 -24.5 
-## # ... with 23 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+      <guid>https://dcosme.github.io/publication/2019-06-28-autonomy-affect-regulation/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
+Cosme, D., &amp;amp; Berkman, E. T. (2018) Autonomy can support affect regulation during illness and in health. &lt;em&gt;Journal of Health Psychology&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/1359105318787013&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.1177/1359105318787013&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Websites in RStudio</title>
-      <link>https://dcosme.github.io/post/rstudio-website-tutorial/</link>
-      <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>
+      <link>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</link>
+      <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/post/rstudio-website-tutorial/</guid>
-      <description>&lt;p&gt;This tutorial was created by Dani Cosme and &lt;a href=&#34;https://github.com/schavez6/&#34;&gt;Sam Chavez&lt;/a&gt; as part of PSY 607: Data Science Seminar at the University of Oregon.&lt;/p&gt;
+      <guid>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</guid>
+      <description>
+
+
+&lt;p&gt;This tutorial was created by Dani Cosme and &lt;a href=&#34;https://github.com/schavez6/&#34;&gt;Sam Chavez&lt;/a&gt; as part of PSY 607: Data Science Seminar at the University of Oregon.&lt;/p&gt;
 &lt;p&gt;The tutorial and associated files can also be found &lt;a href=&#34;https://github.com/dcosme/rstudio-websites&#34;&gt;on GitHub&lt;/a&gt;.&lt;/p&gt;
 &lt;div id=&#34;overview-of-the-tutorial&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;Overview of the tutorial&lt;/h3&gt;
@@ -2319,7 +1274,7 @@ blogdown::serve_site()&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;about-page&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;About page&lt;/h2&gt;
 &lt;p&gt;Open &lt;code&gt;/content/about.md&lt;/code&gt; and check it out. Add the following text to the &lt;code&gt;about.md&lt;/code&gt; file and look at the difference.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Because we enabled emojis in `config.toml`, we can use them here. I :heart: emojis!
+&lt;pre&gt;&lt;code&gt;Because we enabled emojis in `config.toml`, we can use them here. I ❤️ emojis!
 
 Posts are written in plain markdown. Here is some useful syntax. More on plain markdown in the default post [A Plain Markdown Post](../2016/12/30/a-plain-markdown-post/). There&amp;#39;s also lots more information in the digital book [*blogdown: Creating Websites with R Markdown*](https://bookdown.org/yihui/blogdown/output-format.html).
 
@@ -3059,7 +2014,7 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Push local changes to remote repository&lt;/p&gt;
 &lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In Github, enable GitHub Pages &lt;code&gt;Your repo &amp;gt; Settings &amp;gt; GitHub Page &amp;gt; Source = master branch &amp;gt; Save&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;https://dcosme.github.io/img/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;https://dcosme.github.io/img/website-tutorial/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Go to your website and bask in the glory 🎉&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;workflow&#34; class=&#34;section level1&#34;&gt;
@@ -3112,55 +2067,50 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Neural predictors of eating behavior and dietary change</title>
-      <link>https://dcosme.github.io/publication/neural-predictors-dietary-change/</link>
-      <pubDate>Thu, 15 Mar 2018 00:00:00 -0700</pubDate>
+      <link>https://dcosme.github.io/publication/2018-03-15-neural-predictors-dietary-change/</link>
+      <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/neural-predictors-dietary-change/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/img/NYAS_cover.png&#34; alt=&#34;Neural predictors of eating behavior and dietary change. Figure 2.&#34;&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
-Giuliani, N. R., Merchant, J. S., Cosme, D., &amp;amp; Berkman, E. T. (2018) &lt;a href=&#34;http://doi.org/10.1111/nyas.13637&#34; target=&#34;_blank&#34;&gt;Neural predictors of eating behavior and dietary change.&lt;/a&gt; &lt;em&gt;Annals of the New York Academy of Science&lt;/em&gt;.&lt;/p&gt;
+      <guid>https://dcosme.github.io/publication/2018-03-15-neural-predictors-dietary-change/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
+Cosme, D., &amp;amp; Berkman, E. T. (2018) Autonomy can support affect regulation during illness and in health. &lt;em&gt;Journal of Health Psychology&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/1359105318787013&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.1177/1359105318787013&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Choosing to regulate: Does choice enhance craving regulation?</title>
-      <link>https://dcosme.github.io/publication/choosing-to-regulate/</link>
-      <pubDate>Thu, 15 Feb 2018 00:00:00 -0800</pubDate>
+      <link>https://dcosme.github.io/publication/2019-06-28-choosing-to-regulate/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/choosing-to-regulate/</guid>
+      <guid>https://dcosme.github.io/publication/2019-06-28-choosing-to-regulate/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
-Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H. (2018) &lt;a href=&#34;http://doi.org/10.1093/scan/nsy010&#34; target=&#34;_blank&#34;&gt;Choosing to regulate: Does choice enhance craving regulation?.&lt;/a&gt; &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;, 13(3), 300-309.&lt;/p&gt;
+Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H. (2018) Choosing to regulate: Does choice enhance craving regulation?. &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;, 13(3), 300-309.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Methodological considerations for developmental longitudinal fMRI research</title>
-      <link>https://dcosme.github.io/publication/longitudinal-fmri/</link>
-      <pubDate>Wed, 07 Feb 2018 00:00:00 -0800</pubDate>
+      <link>https://dcosme.github.io/publication/2018-02-07-longitudinal-fmri/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/longitudinal-fmri/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
-Telzer, E. H., McCormick, E. M., Peters, S., Cosme, D., Pfeifer, J. H., &amp;amp; van Duijvenvoorde, A. C. K. (In Press) &lt;a href=&#34;http://doi.org/10.1016/j.dcn.2018.02.004&#34; target=&#34;_blank&#34;&gt;Methodological considerations for developmental longitudinal fMRI research.&lt;/a&gt; &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;.&lt;/p&gt;
-</description>
+      <guid>https://dcosme.github.io/publication/2018-02-07-longitudinal-fmri/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Example Talk</title>
-      <link>https://dcosme.github.io/talk/example-talk/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 -0800</pubDate>
+      <title>External Project</title>
+      <link>https://dcosme.github.io/project/external-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/talk/example-talk/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://sourcethemes.com/academic/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <guid>https://dcosme.github.io/project/external-project/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Deep Learning</title>
-      <link>https://dcosme.github.io/project/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
+      <title>Internal Project</title>
+      <link>https://dcosme.github.io/project/internal-project/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/project/deep-learning/</guid>
+      <guid>https://dcosme.github.io/project/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -3170,6 +2120,17 @@ Telzer, E. H., McCormick, E. M., Peters, S., Cosme, D., Pfeifer, J. H., &amp;amp
 &lt;p&gt;Suspendisse a tincidunt lacus. Curabitur at urna sagittis, dictum ante sit amet, euismod magna. Sed rutrum massa id tortor commodo, vitae elementum turpis tempus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean purus turpis, venenatis a ullamcorper nec, tincidunt et massa. Integer posuere quam rutrum arcu vehicula imperdiet. Mauris ullamcorper quam vitae purus congue, quis euismod magna eleifend. Vestibulum semper vel augue eget tincidunt. Fusce eget justo sodales, dapibus odio eu, ultrices lorem. Duis condimentum lorem id eros commodo, in facilisis mauris scelerisque. Morbi sed auctor leo. Nullam volutpat a lacus quis pharetra. Nulla congue rutrum magna a ornare.&lt;/p&gt;
 
 &lt;p&gt;Aliquam in turpis accumsan, malesuada nibh ut, hendrerit justo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque sed erat nec justo posuere suscipit. Donec ut efficitur arcu, in malesuada neque. Nunc dignissim nisl massa, id vulputate nunc pretium nec. Quisque eget urna in risus suscipit ultricies. Pellentesque odio odio, tincidunt in eleifend sed, posuere a diam. Nam gravida nisl convallis semper elementum. Morbi vitae felis faucibus, vulputate orci placerat, aliquet nisi. Aliquam erat volutpat. Maecenas sagittis pulvinar purus, sed porta quam laoreet at.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures</title>
+      <link>https://dcosme.github.io/publication/2015-03-06-mindfulness-affective-reactivity/</link>
+      <pubDate>Fri, 06 Mar 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/2015-03-06-mindfulness-affective-reactivity/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
+Cosme, D., &amp;amp; Wiens, S. (2015). Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures. &lt;em&gt;PLOS One&lt;/em&gt;, 10(3), e0119466.&lt;/p&gt;
 </description>
     </item>
     

@@ -4,36 +4,333 @@
     <title>Tags on Danielle Cosme</title>
     <link>https://dcosme.github.io/tags/</link>
     <description>Recent content in Tags on Danielle Cosme</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
+    <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
+    <lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Content tagged as &#39;Academic&#39;</title>
-      <link>https://dcosme.github.io/tags/academic/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 -0800</pubDate>
+      <title>craving regulation</title>
+      <link>https://dcosme.github.io/tags/craving-regulation/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/tags/academic/</guid>
-      <description>Here is a list of all the content that has been tagged as academic.</description>
+      <guid>https://dcosme.github.io/tags/craving-regulation/</guid>
+      <description></description>
     </item>
     
     <item>
-      <title>Blogdown</title>
+      <title>decision neuroscience</title>
+      <link>https://dcosme.github.io/tags/decision-neuroscience/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/decision-neuroscience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dual-process</title>
+      <link>https://dcosme.github.io/tags/dual-process/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/dual-process/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eating behavior</title>
+      <link>https://dcosme.github.io/tags/eating-behavior/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/eating-behavior/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>food valuation</title>
+      <link>https://dcosme.github.io/tags/food-valuation/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/food-valuation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>functional programming</title>
+      <link>https://dcosme.github.io/tags/functional-programming/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/functional-programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>health</title>
+      <link>https://dcosme.github.io/tags/health/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>health neuroscience</title>
+      <link>https://dcosme.github.io/tags/health-neuroscience/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/health-neuroscience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mindset</title>
+      <link>https://dcosme.github.io/tags/mindset/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/mindset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multivariate fmri</title>
+      <link>https://dcosme.github.io/tags/multivariate-fmri/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/multivariate-fmri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neural signature</title>
+      <link>https://dcosme.github.io/tags/neural-signature/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/neural-signature/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>positive neuroscience</title>
+      <link>https://dcosme.github.io/tags/positive-neuroscience/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/positive-neuroscience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psychological health</title>
+      <link>https://dcosme.github.io/tags/psychological-health/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/psychological-health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rstats</title>
+      <link>https://dcosme.github.io/tags/rstats/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/rstats/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-control</title>
+      <link>https://dcosme.github.io/tags/self-control/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-evaluation</title>
+      <link>https://dcosme.github.io/tags/self-evaluation/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-evaluation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>specification curve</title>
+      <link>https://dcosme.github.io/tags/specification-curve/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/specification-curve/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://dcosme.github.io/tags/tutorial/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>value-based choice</title>
+      <link>https://dcosme.github.io/tags/value-based-choice/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/value-based-choice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vmPFC</title>
+      <link>https://dcosme.github.io/tags/vmpfc/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/vmpfc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>well-being</title>
+      <link>https://dcosme.github.io/tags/well-being/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/well-being/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>autonomy</title>
+      <link>https://dcosme.github.io/tags/autonomy/</link>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/autonomy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emotion regulation</title>
+      <link>https://dcosme.github.io/tags/emotion-regulation/</link>
+      <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/emotion-regulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blogdown</title>
       <link>https://dcosme.github.io/tags/blogdown/</link>
-      <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>
+      <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/blogdown/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Deep-learning</title>
+      <title>website</title>
+      <link>https://dcosme.github.io/tags/website/</link>
+      <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>craving</title>
+      <link>https://dcosme.github.io/tags/craving/</link>
+      <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/craving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reactivity</title>
+      <link>https://dcosme.github.io/tags/reactivity/</link>
+      <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/reactivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-regulation</title>
+      <link>https://dcosme.github.io/tags/self-regulation/</link>
+      <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-regulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>valuation</title>
+      <link>https://dcosme.github.io/tags/valuation/</link>
+      <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/valuation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>choice</title>
+      <link>https://dcosme.github.io/tags/choice/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/choice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cognitive reappraisal</title>
+      <link>https://dcosme.github.io/tags/cognitive-reappraisal/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/cognitive-reappraisal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-determination</title>
+      <link>https://dcosme.github.io/tags/self-determination/</link>
+      <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-determination/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://dcosme.github.io/tags/development/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>longitudinal fmri</title>
+      <link>https://dcosme.github.io/tags/longitudinal-fmri/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/longitudinal-fmri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>methods</title>
+      <link>https://dcosme.github.io/tags/methods/</link>
+      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/methods/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
       <link>https://dcosme.github.io/tags/deep-learning/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/deep-learning/</guid>
       <description></description>
@@ -42,54 +339,9 @@
     <item>
       <title>Demo</title>
       <link>https://dcosme.github.io/tags/demo/</link>
-      <pubDate>Wed, 27 Apr 2016 00:00:00 -0700</pubDate>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/demo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Functional programming</title>
-      <link>https://dcosme.github.io/tags/functional-programming/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/functional-programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Rstats</title>
-      <link>https://dcosme.github.io/tags/rstats/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/rstats/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Specification curve</title>
-      <link>https://dcosme.github.io/tags/specification-curve/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/specification-curve/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>https://dcosme.github.io/tags/tutorial/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/tutorial/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Websites</title>
-      <link>https://dcosme.github.io/tags/websites/</link>
-      <pubDate>Sun, 10 Jun 2018 19:50:03 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/websites/</guid>
       <description></description>
     </item>
     

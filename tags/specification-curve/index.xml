@@ -1,38 +1,802 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Specification curve on Danielle Cosme</title>
+    <title>specification curve on Danielle Cosme</title>
     <link>https://dcosme.github.io/tags/specification-curve/</link>
-    <description>Recent content in Specification curve on Danielle Cosme</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in specification curve on Danielle Cosme</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 27 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
+    <lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://dcosme.github.io/tags/specification-curve/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://dcosme.github.io/tags/specification-curve/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Specification curve analysis (SCA) tutorial</title>
-      <link>https://dcosme.github.io/post/specification_curve_tutorial/</link>
-      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
+      <link>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</link>
+      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/post/specification_curve_tutorial/</guid>
-      <description>This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.
-The repository can be found at: https://github.com/dcosme/specification-curves/
-background  The problem: there are many different wants to test a model and we usually only report one or a few specifications, which rely on choices by the researcher, which are often artbitrary and sometimes driven by a desire for significant results. The solution (according to Simonsohn, Simmons, &amp;amp; Nelson, 2015: specify all “reasonable” models and assess the distribution of effects  Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015 steps for conducting SCA Specify all reasonable models Plot specification curve showing estimates/model fits as a function of analytic decisions or model parameters Test how consistent the curve results are the null hypothesis (no effect)   1.</description>
+      <guid>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</guid>
+      <description>
+
+
+&lt;p&gt;This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.&lt;/p&gt;
+&lt;p&gt;The repository can be found at: &lt;a href=&#34;https://github.com/dcosme/specification-curves/&#34; class=&#34;uri&#34;&gt;https://github.com/dcosme/specification-curves/&lt;/a&gt;&lt;/p&gt;
+&lt;div id=&#34;background&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;background&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;The problem: there are many different wants to test a model and we usually only report one or a few specifications, which rely on choices by the researcher, which are often artbitrary and sometimes driven by a desire for significant results.&lt;/li&gt;
+&lt;li&gt;The solution (according to &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2694998&#34;&gt;Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/a&gt;: specify all “reasonable” models and assess the distribution of effects&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure1.png&#34; alt=&#34;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;steps-for-conducting-sca&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;steps for conducting SCA&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Specify all reasonable models&lt;/li&gt;
+&lt;li&gt;Plot specification curve showing estimates/model fits as a function of analytic decisions or model parameters&lt;/li&gt;
+&lt;li&gt;Test how consistent the curve results are the null hypothesis (no effect)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reasonable-specifications-should-be&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;1. Reasonable specifications should be:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Consistent with theory&lt;/li&gt;
+&lt;li&gt;Expected to be statistically valid&lt;/li&gt;
+&lt;li&gt;Non-redundant&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/table1.png&#34; alt=&#34;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;descriptive-specification-curve&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;2. Descriptive specification curve&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure2.png&#34; alt=&#34;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;inferential-statistics&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;3. Inferential statistics&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Use permutation testing to run many specification curve analyses and create null distribution&lt;/li&gt;
+&lt;li&gt;Potential questions to test versus null:
+&lt;ul&gt;
+&lt;li&gt;Is the median effect size in the observed statistically different than in the null distribution?&lt;/li&gt;
+&lt;li&gt;Is the share of dominant signs (e.g., positive or negative effects) different than the null?&lt;/li&gt;
+&lt;li&gt;Is the share of dominant signs that are statistically significant different than the null?&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Table 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/table2.png&#34; alt=&#34;Table2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Also possible to compare specification surves between two variables of interest&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Figure 6 Orben &amp;amp; Przybylski, 2019&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure6.png&#34; alt=&#34;Figure 6 Orben &amp;amp; Przybylski, 2019&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;examples&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;examples&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.psychologicalscience.org/observer/run-all-the-models-dealing-with-data-analytic-flexibility&#34;&gt;Run All the Models! Dealing With Data Analytic Flexibility - Julia Rohrer&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amyorben.com/pdf/2019_orbenprzybylski_nhb.pdf&#34;&gt;The association between adolescent well-being and digital technology use - Orben &amp;amp; Przybylski, 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amyorben.com/pdf/2019_orbenprzybylski_ps.pdf&#34;&gt;Screens, Teens, and Psychological Well-Being: Evidence From Three Time-Use-Diary Studies - Orben &amp;amp; Przybylski, 2019&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;reading-list&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;reading list&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2694998&#34;&gt;Specification Curve: Descriptive and Inferential Statistics on All Reasonable Specifications - Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;programming-resources&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;programming resources&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://uo-datasci-specialization.github.io/c3-fun_program_r/schedule.html&#34;&gt;EDUC 610, Functional Programming with R - Daniel Anderson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://r4ds.had.co.nz/many-models.html&#34;&gt;R for Data Science - Grolemund &amp;amp; Wickham&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;load packages&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (!require(tidyverse)) {
+  install.packages(&amp;#39;tidyverse&amp;#39;)
+}
+if (!require(purrr)) {
+  install.packages(&amp;#39;purrr&amp;#39;)
+}
+if (!require(broom)) {
+  install.packages(&amp;#39;broom&amp;#39;)
+}
+if (!require(cowplot)) {
+  install.packages(&amp;#39;cowplot&amp;#39;)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;run-multiple-models-using-map-from-purrr&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;run multiple models using &lt;code&gt;map&lt;/code&gt; from &lt;code&gt;purrr&lt;/code&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Note that if you are running linera mixed effects modesl, you can use the &lt;code&gt;broom.mixed&lt;/code&gt; instead of the &lt;code&gt;broom&lt;/code&gt; package to tidy the model output&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# specify models
+models = list(mpg ~ cyl,
+              mpg ~ cyl + hp,
+              mpg ~ cyl * hp)
+
+# run models and extract parameter estimates and stats
+(model_params = map(models, ~lm(.x,  data = mtcars)) %&amp;gt;%
+  tibble() %&amp;gt;%
+  rename(&amp;quot;model&amp;quot; = &amp;quot;.&amp;quot;) %&amp;gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&amp;gt;%
+  select(model_num, tidied) %&amp;gt;%
+  unnest())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 9 x 6
+##   model_num term        estimate std.error statistic  p.value
+##       &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+## 1         1 (Intercept)  37.9      2.07        18.3  8.37e-18
+## 2         1 cyl          -2.88     0.322       -8.92 6.11e-10
+## 3         2 (Intercept)  36.9      2.19        16.8  1.62e-16
+## 4         2 cyl          -2.26     0.576       -3.93 4.80e- 4
+## 5         2 hp           -0.0191   0.0150      -1.27 2.13e- 1
+## 6         3 (Intercept)  50.8      6.51         7.79 1.72e- 8
+## 7         3 cyl          -4.12     0.988       -4.17 2.67e- 4
+## 8         3 hp           -0.171    0.0691      -2.47 1.99e- 2
+## 9         3 cyl:hp        0.0197   0.00881      2.24 3.32e- 2&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# run models and extract model fits
+(model_fits = purrr::map(models, ~lm(.x,  data = mtcars)) %&amp;gt;%
+  tibble() %&amp;gt;%
+  rename(&amp;quot;model&amp;quot; = &amp;quot;.&amp;quot;) %&amp;gt;%
+  mutate(model_num = row_number(),
+         AIC = map_dbl(model, AIC),
+         BIC = map_dbl(model, BIC)) %&amp;gt;%
+  select(-model))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 3
+##   model_num   AIC   BIC
+##       &amp;lt;int&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1         1  169.  174.
+## 2         2  170.  175.
+## 3         3  166.  174.&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# join dataframes and select model fits and parameter estimates
+model_params %&amp;gt;%
+  select(model_num, term, estimate) %&amp;gt;%
+  spread(term, estimate) %&amp;gt;%
+  left_join(., model_fits) %&amp;gt;%
+  arrange(AIC)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 3 x 7
+##   model_num `(Intercept)`   cyl `cyl:hp`       hp   AIC   BIC
+##       &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;
+## 1         3          50.8 -4.12   0.0197  -0.171   166.  174.
+## 2         1          37.9 -2.88  NA       NA       169.  174.
+## 3         2          36.9 -2.26  NA       -0.0191  170.  175.&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;run-all-nested-models-using-dredge-from-mumin&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;run all nested models using &lt;code&gt;dredge&lt;/code&gt; from &lt;code&gt;MuMIn&lt;/code&gt;&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;max number of predictors = 30&lt;/li&gt;
+&lt;li&gt;doesn’t give parameter estimates for factors&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set na.action for dredge
+options(na.action = &amp;quot;na.fail&amp;quot;)
+
+# omit NAs
+mtcars.na = mtcars %&amp;gt;% 
+  na.omit()
+
+# run full model
+full.model = lm(mpg ~ cyl*hp, data = mtcars.na)
+
+# run all possible nested models
+(all.models = MuMIn::dredge(full.model, rank = &amp;quot;AIC&amp;quot;, extra = &amp;quot;BIC&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Global model call: lm(formula = mpg ~ cyl * hp, data = mtcars.na)
+## ---
+## Model selection table 
+##   (Int)    cyl       hp  cyl:hp   BIC df   logLik   AIC delta weight
+## 8 50.75 -4.119 -0.17070 0.01974 173.6  5  -78.143 166.3  0.00  0.706
+## 2 37.88 -2.876                  173.7  3  -81.653 169.3  3.02  0.156
+## 4 36.91 -2.265 -0.01912         175.4  4  -80.781 169.6  3.28  0.137
+## 3 30.10        -0.06823         185.6  3  -87.619 181.2 14.95  0.000
+## 1 20.09                         211.7  2 -102.378 208.8 42.47  0.000
+## Models ranked by AIC(x)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;issues-with-factors&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;issues with factors&lt;/h1&gt;
+&lt;div id=&#34;run-factor-models-using-dredge&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;run factor models using &lt;code&gt;dredge&lt;/code&gt;&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# run full model
+full.model = lm(mpg ~ cyl*as.factor(vs), data = mtcars.na)
+
+# run all possible nested models
+MuMIn::dredge(full.model, rank = &amp;quot;AIC&amp;quot;, extra = &amp;quot;BIC&amp;quot;) %&amp;gt;%
+  select(AIC, BIC, everything())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##        AIC      BIC (Intercept) as.factor(vs)       cyl as.factor(vs):cyl
+## 3 169.3064 173.7036    37.88458          &amp;lt;NA&amp;gt; -2.875790              &amp;lt;NA&amp;gt;
+## 4 171.0585 176.9215    39.62502             + -3.090675              &amp;lt;NA&amp;gt;
+## 8 172.1312 179.4598    36.92673             + -2.728218                 +
+## 2 192.1471 196.5443    16.61667             +        NA              &amp;lt;NA&amp;gt;
+## 1 208.7555 211.6870    20.09062          &amp;lt;NA&amp;gt;        NA              &amp;lt;NA&amp;gt;
+##   df     logLik     delta       weight
+## 3  3  -81.65321  0.000000 6.024117e-01
+## 4  4  -81.52927  1.752124 2.508560e-01
+## 8  5  -81.06558  2.824753 1.467257e-01
+## 2  3  -93.07356 22.840708 6.608407e-06
+## 1  2 -102.37776 39.449099 1.635424e-09&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;run-factor-models-using-map&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;run factor models using &lt;code&gt;map&lt;/code&gt;&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# specify models
+models = list(mpg ~ 1,
+              mpg ~ cyl,
+              mpg ~ as.factor(vs),
+              mpg ~ cyl + as.factor(vs),
+              mpg ~ cyl*as.factor(vs))
+
+# run models and extract parameter estimates and stats
+model_params = map(models, ~lm(.x,  data = mtcars)) %&amp;gt;%
+  tibble() %&amp;gt;%
+  rename(&amp;quot;model&amp;quot; = &amp;quot;.&amp;quot;) %&amp;gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&amp;gt;%
+  select(model_num, tidied) %&amp;gt;%
+  unnest()
+
+# run models and extract model fits
+model_fits = purrr::map(models, ~lm(.x,  data = mtcars)) %&amp;gt;%
+  tibble() %&amp;gt;%
+  rename(&amp;quot;model&amp;quot; = &amp;quot;.&amp;quot;) %&amp;gt;%
+  mutate(model_num = row_number(),
+         AIC = map_dbl(model, AIC),
+         BIC = map_dbl(model, BIC)) %&amp;gt;%
+  select(-model)
+
+# join dataframes and select model fits and parameter estimates
+(models.sca = model_params %&amp;gt;%
+  select(model_num, term, estimate) %&amp;gt;%
+  spread(term, estimate) %&amp;gt;%
+  left_join(., model_fits) %&amp;gt;%
+  arrange(AIC)%&amp;gt;%
+  select(AIC, BIC, everything()))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 5 x 7
+##     AIC   BIC model_num `(Intercept)` `as.factor(vs)1`    cyl
+##   &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;     &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;  &amp;lt;dbl&amp;gt;
+## 1  169.  174.         2          37.9           NA      -2.88
+## 2  171.  177.         4          39.6           -0.939  -3.09
+## 3  172.  179.         5          36.9            5.01   -2.73
+## 4  192.  197.         3          16.6            7.94   NA   
+## 5  209.  212.         1          20.1           NA      NA   
+## # … with 1 more variable: `cyl:as.factor(vs)1` &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-specification-curve&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;plot specification curve&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# specify mpg ~ cyl as the null model for comparison
+null.df = models.sca %&amp;gt;% 
+  filter(model_num == 2)
+
+# tidy for plotting
+plot.data = models.sca %&amp;gt;%
+  arrange(AIC) %&amp;gt;%
+  mutate(specification = row_number(),
+         better.fit = ifelse(AIC == null.df$AIC, &amp;quot;equal&amp;quot;, 
+                      ifelse(AIC &amp;lt; null.df$AIC, &amp;quot;yes&amp;quot;,&amp;quot;no&amp;quot;)))
+
+# get names of variables included in model
+variable.names = names(select(plot.data, -model_num, -starts_with(&amp;quot;better&amp;quot;), -specification, -AIC, -BIC))
+
+# plot top panel
+top = plot.data %&amp;gt;%
+  ggplot(aes(specification, AIC, color = better.fit)) +
+    geom_point(shape = &amp;quot;|&amp;quot;, size = 4) +
+    geom_hline(yintercept = null.df$AIC, linetype = &amp;quot;dashed&amp;quot;, color = &amp;quot;lightblue&amp;quot;) +
+    scale_color_manual(values = c(&amp;quot;lightblue&amp;quot;, &amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;AIC\n&amp;quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# plot bottom panel
+bottom = plot.data %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% 
+  mutate(value = ifelse(!is.na(value), &amp;quot;|&amp;quot;, &amp;quot;&amp;quot;)) %&amp;gt;%
+  ggplot(aes(specification, variable, color = better.fit)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&amp;quot;lightblue&amp;quot;, &amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;\nspecification number&amp;quot;, y = &amp;quot;variables\n&amp;quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels
+cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/specification%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;div id=&#34;reorder-and-rename-variables&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;reorder and rename variables&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set plotting order for variables based on number of times it&amp;#39;s included in better fitting models
+order = plot.data %&amp;gt;%
+  arrange(AIC) %&amp;gt;%
+  mutate(better.fit.num = ifelse(better.fit == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  rename(&amp;quot;intercept&amp;quot; = `(Intercept)`,
+         &amp;quot;vs&amp;quot; = `as.factor(vs)1`,
+         &amp;quot;cyl x vs&amp;quot; = `cyl:as.factor(vs)1`) %&amp;gt;%
+  gather(variable, value, -model_num, -starts_with(&amp;quot;better&amp;quot;), -specification, -AIC, -BIC) %&amp;gt;% 
+  filter(!is.na(value)) %&amp;gt;%
+  group_by(variable) %&amp;gt;%
+  mutate(order = sum(better.fit.num)) %&amp;gt;%
+  select(variable, order) %&amp;gt;%
+  unique()
+
+# rename variables and plot bottom panel
+bottom = plot.data %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% 
+  mutate(value = ifelse(!is.na(value), &amp;quot;|&amp;quot;, &amp;quot;&amp;quot;),
+         variable = ifelse(variable == &amp;quot;(Intercept)&amp;quot;, &amp;quot;intercept&amp;quot;,
+                    ifelse(variable == &amp;quot;as.factor(vs)1&amp;quot;, &amp;quot;vs&amp;quot;,
+                    ifelse(variable == &amp;quot;cyl:as.factor(vs)1&amp;quot;, &amp;quot;cyl x vs&amp;quot;, variable)))) %&amp;gt;%
+  left_join(., order, by = &amp;quot;variable&amp;quot;) %&amp;gt;%
+  ggplot(aes(specification, reorder(variable, order), color = better.fit)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&amp;quot;lightblue&amp;quot;, &amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;\nspecification number&amp;quot;, y = &amp;quot;variables\n&amp;quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels
+cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/clean%20up%20spec%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;a-more-complicated-example&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;a more complicated example&lt;/h1&gt;
+&lt;div id=&#34;run-all-nested-models-using-dredge&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;run all nested models using &lt;code&gt;dredge&lt;/code&gt;&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# run full model
+full.model = lm(mpg ~ cyl + disp + hp + drat + wt + qsec + as.factor(vs) + am + gear + carb, data = mtcars.na)
+
+# run all possible nested models
+models.sca = MuMIn::dredge(full.model, rank = &amp;quot;AIC&amp;quot;, extra = &amp;quot;BIC&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-specification-curve-1&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;plot specification curve&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# tidy for plotting
+plot.data = models.sca %&amp;gt;%
+  arrange(AIC) %&amp;gt;%
+  mutate(specification = row_number(),
+         better.fit = ifelse(AIC == null.df$AIC, &amp;quot;equal&amp;quot;, 
+                      ifelse(AIC &amp;lt; null.df$AIC, &amp;quot;yes&amp;quot;,&amp;quot;no&amp;quot;))) %&amp;gt;%
+  gather(variable, value, -starts_with(&amp;quot;better&amp;quot;), -specification, -AIC, -BIC, -df, -logLik, -delta, -weight) %&amp;gt;% 
+  mutate(variable = gsub(&amp;quot;[()]&amp;quot;, &amp;quot;&amp;quot;, variable),
+         variable = gsub(&amp;quot;Intercept&amp;quot;, &amp;quot;intercept&amp;quot;, variable),
+         variable = gsub(&amp;quot;as.factor(vs)&amp;quot;, &amp;quot;vs&amp;quot;, variable)) %&amp;gt;%
+  spread(variable, value)
+
+# get names of variables included in model
+variable.names = names(select(plot.data, -starts_with(&amp;quot;better&amp;quot;), -specification, -AIC, -BIC, -df, -logLik, -delta, -weight))
+
+# plot top panel
+top = plot.data %&amp;gt;%
+  ggplot(aes(specification, AIC, color = better.fit)) +
+    geom_point(shape = &amp;quot;|&amp;quot;, size = 4) +
+    geom_hline(yintercept = null.df$AIC, linetype = &amp;quot;dashed&amp;quot;, color = &amp;quot;lightblue&amp;quot;) +
+    scale_color_manual(values = c(&amp;quot;lightblue&amp;quot;, &amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;AIC\n&amp;quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# set plotting order for variables based on number of times it&amp;#39;s included in better fitting models
+order = plot.data %&amp;gt;%
+  arrange(AIC) %&amp;gt;%
+  mutate(better.fit.num = ifelse(better.fit == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% 
+  filter(!is.na(value)) %&amp;gt;%
+  group_by(variable) %&amp;gt;%
+  mutate(order = sum(better.fit.num)) %&amp;gt;%
+  select(variable, order) %&amp;gt;%
+  unique()
+
+# rename variables and plot bottom panel
+bottom = plot.data %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% 
+  mutate(value = ifelse(!is.na(value), &amp;quot;|&amp;quot;, &amp;quot;&amp;quot;),
+         variable = ifelse(variable == &amp;quot;(Intercept)&amp;quot;, &amp;quot;intercept&amp;quot;,
+                    ifelse(variable == &amp;quot;as.factor(vs)1&amp;quot;, &amp;quot;vs&amp;quot;, variable))) %&amp;gt;%
+  left_join(., order, by = &amp;quot;variable&amp;quot;) %&amp;gt;%
+  ggplot(aes(specification, reorder(variable, order), color = better.fit)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&amp;quot;lightblue&amp;quot;, &amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;\nspecification number&amp;quot;, y = &amp;quot;variables\n&amp;quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels
+cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/copmlicated%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;coefficient-specification-curve&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;coefficient specification curve&lt;/h1&gt;
+&lt;div id=&#34;mpg-wt&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;mpg ~ wt&lt;/h2&gt;
+&lt;div id=&#34;extract-coefficients&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;extract coefficients&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# extract parameter estimate (step-by-step output)
+MuMIn::get.models(models.sca, subset = TRUE) %&amp;gt;%
+  tibble() %&amp;gt;%
+  rename(&amp;quot;model&amp;quot; = &amp;quot;.&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,024 x 1
+##    model   
+##    &amp;lt;list&amp;gt;  
+##  1 &amp;lt;S3: lm&amp;gt;
+##  2 &amp;lt;S3: lm&amp;gt;
+##  3 &amp;lt;S3: lm&amp;gt;
+##  4 &amp;lt;S3: lm&amp;gt;
+##  5 &amp;lt;S3: lm&amp;gt;
+##  6 &amp;lt;S3: lm&amp;gt;
+##  7 &amp;lt;S3: lm&amp;gt;
+##  8 &amp;lt;S3: lm&amp;gt;
+##  9 &amp;lt;S3: lm&amp;gt;
+## 10 &amp;lt;S3: lm&amp;gt;
+## # … with 1,014 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;MuMIn::get.models(models.sca, subset = TRUE) %&amp;gt;%
+  tibble() %&amp;gt;%
+  rename(&amp;quot;model&amp;quot; = &amp;quot;.&amp;quot;) %&amp;gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&amp;gt;%
+  select(model_num, tidied) %&amp;gt;%
+  unnest()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 6,144 x 6
+##    model_num term        estimate std.error statistic    p.value
+##        &amp;lt;int&amp;gt; &amp;lt;chr&amp;gt;          &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;
+##  1         1 (Intercept)   9.62      6.96        1.38 0.178     
+##  2         1 am            2.94      1.41        2.08 0.0467    
+##  3         1 qsec          1.23      0.289       4.25 0.000216  
+##  4         1 wt           -3.92      0.711      -5.51 0.00000695
+##  5         2 (Intercept)  17.4       9.32        1.87 0.0721    
+##  6         2 am            2.93      1.40        2.09 0.0458    
+##  7         2 hp           -0.0176    0.0142     -1.25 0.223     
+##  8         2 qsec          0.811     0.439       1.85 0.0757    
+##  9         2 wt           -3.24      0.890      -3.64 0.00114   
+## 10         3 (Intercept)  12.9       7.47        1.73 0.0958    
+## # … with 6,134 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# extract parameter estimate
+(model_params = MuMIn::get.models(models.sca, subset = TRUE) %&amp;gt;%
+  tibble() %&amp;gt;%
+  rename(&amp;quot;model&amp;quot; = &amp;quot;.&amp;quot;) %&amp;gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&amp;gt;%
+  select(model_num, tidied) %&amp;gt;%
+  unnest() %&amp;gt;%
+  select(model_num, term, estimate) %&amp;gt;%
+  spread(term, estimate)) %&amp;gt;%
+  select(-starts_with(&amp;quot;sd&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 1,024 x 12
+##    model_num `(Intercept)`    am `as.factor(vs)1`    carb     cyl     disp
+##        &amp;lt;int&amp;gt;         &amp;lt;dbl&amp;gt; &amp;lt;dbl&amp;gt;            &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;    &amp;lt;dbl&amp;gt;
+##  1         1          9.62  2.94               NA  NA      NA     NA      
+##  2         2         17.4   2.93               NA  NA      NA     NA      
+##  3         3         12.9   3.51               NA  -0.489  NA     NA      
+##  4         4         14.4   3.47               NA  NA      NA      0.0112 
+##  5         5         38.8  NA                  NA  NA      -0.942 NA      
+##  6         6          6.44  3.31               NA  NA      NA      0.00769
+##  7         7         39.6  NA                  NA  -0.486  -1.29  NA      
+##  8         8          9.92  2.96               NA  -0.602  NA     NA      
+##  9         9         17.7   3.32               NA  -0.336  NA     NA      
+## 10        10         14.9   2.47               NA  NA      -0.354 NA      
+## # … with 1,014 more rows, and 5 more variables: drat &amp;lt;dbl&amp;gt;, gear &amp;lt;dbl&amp;gt;,
+## #   hp &amp;lt;dbl&amp;gt;, qsec &amp;lt;dbl&amp;gt;, wt &amp;lt;dbl&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# extract p-values for the intercept term
+(model_ps = MuMIn::get.models(models.sca, subset = TRUE) %&amp;gt;%
+  tibble() %&amp;gt;%
+  rename(&amp;quot;model&amp;quot; = &amp;quot;.&amp;quot;) %&amp;gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&amp;gt;%
+  select(model_num, tidied) %&amp;gt;%
+  unnest() %&amp;gt;%
+  filter(term == &amp;quot;wt&amp;quot;) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  select(model_num, estimate, std.error, p.value))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 512 x 4
+##    model_num estimate std.error    p.value
+##        &amp;lt;int&amp;gt;    &amp;lt;dbl&amp;gt;     &amp;lt;dbl&amp;gt;      &amp;lt;dbl&amp;gt;
+##  1         1    -3.92     0.711 0.00000695
+##  2         2    -3.24     0.890 0.00114   
+##  3         3    -3.43     0.820 0.000269  
+##  4         4    -4.08     1.19  0.00208   
+##  5         5    -3.17     0.741 0.000199  
+##  6         6    -4.59     1.17  0.000529  
+##  7         7    -3.16     0.742 0.000211  
+##  8         8    -3.11     0.905 0.00199   
+##  9         9    -3.08     0.925 0.00263   
+## 10        10    -3.64     0.910 0.000436  
+## # … with 502 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-specification-curve-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;plot specification curve&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# merge and tidy for plotting
+plot.data = left_join(model_ps, model_params, by = &amp;quot;model_num&amp;quot;) %&amp;gt;%
+  arrange(estimate) %&amp;gt;%
+  mutate(specification = row_number(),
+         significant.p = ifelse(p.value &amp;lt; .05, &amp;quot;yes&amp;quot;, &amp;quot;no&amp;quot;)) %&amp;gt;%
+  gather(variable, value, -estimate, -specification, -model_num, -std.error, -p.value, -significant.p) %&amp;gt;% 
+  mutate(variable = gsub(&amp;quot;[()]&amp;quot;, &amp;quot;&amp;quot;, variable),
+         variable = gsub(&amp;quot;Intercept&amp;quot;, &amp;quot;intercept&amp;quot;, variable),
+         variable = gsub(&amp;quot;as.factor(vs)1&amp;quot;, &amp;quot;vs&amp;quot;, variable)) %&amp;gt;%
+  spread(variable, value)  
+
+# get names of variables included in model
+variable.names = names(select(plot.data, -estimate, -specification, -model_num, -std.error, -p.value, -significant.p))
+
+# plot top panel
+top = plot.data %&amp;gt;%
+  ggplot(aes(specification, estimate, color = significant.p)) +
+    geom_point(shape = &amp;quot;|&amp;quot;, size = 4) +
+    #geom_hline(yintercept = null.df$AIC, linetype = &amp;quot;dashed&amp;quot;, color = &amp;quot;lightblue&amp;quot;) +
+    scale_color_manual(values = c(&amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;regression coefficient\n&amp;quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# set plotting order for variables based on number of times it&amp;#39;s included in better fitting models
+order = plot.data %&amp;gt;%
+  arrange(estimate) %&amp;gt;%
+  mutate(significant.p.num = ifelse(significant.p == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% 
+  filter(!is.na(value)) %&amp;gt;%
+  group_by(variable) %&amp;gt;%
+  mutate(order = sum(significant.p.num)) %&amp;gt;%
+  select(variable, order) %&amp;gt;%
+  unique()
+
+# rename variables and plot bottom panel
+bottom = plot.data %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% 
+  mutate(value = ifelse(!is.na(value), &amp;quot;|&amp;quot;, &amp;quot;&amp;quot;),
+         variable = ifelse(variable == &amp;quot;(Intercept)&amp;quot;, &amp;quot;intercept&amp;quot;,
+                    ifelse(variable == &amp;quot;as.factor(vs)1&amp;quot;, &amp;quot;vs&amp;quot;, variable))) %&amp;gt;%
+  left_join(., order, by = &amp;quot;variable&amp;quot;) %&amp;gt;%
+  ggplot(aes(specification, reorder(variable, order), color = significant.p)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;\nspecification number&amp;quot;, y = &amp;quot;variables\n&amp;quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels
+(wt = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mpg-cyl&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;mpg ~ cyl&lt;/h2&gt;
+&lt;div id=&#34;extract-coefficients-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;extract coefficients&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# extract p-values for the intercept term
+model_ps = MuMIn::get.models(models.sca, subset = TRUE) %&amp;gt;%
+  tibble() %&amp;gt;%
+  rename(&amp;quot;model&amp;quot; = &amp;quot;.&amp;quot;) %&amp;gt;%
+  mutate(tidied = purrr::map(model, broom::tidy),
+         model_num = row_number()) %&amp;gt;%
+  select(model_num, tidied) %&amp;gt;%
+  unnest() %&amp;gt;%
+  filter(term == &amp;quot;cyl&amp;quot;) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  select(model_num, estimate, std.error, p.value)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot-specification-curve-3&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;plot specification curve&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# merge and tidy for plotting
+plot.data = left_join(model_ps, model_params, by = &amp;quot;model_num&amp;quot;) %&amp;gt;%
+  arrange(estimate) %&amp;gt;%
+  mutate(specification = row_number(),
+         significant.p = ifelse(p.value &amp;lt; .05, &amp;quot;yes&amp;quot;, &amp;quot;no&amp;quot;)) %&amp;gt;%
+  gather(variable, value, -estimate, -specification, -model_num, -std.error, -p.value, -significant.p) %&amp;gt;% 
+  mutate(variable = gsub(&amp;quot;[()]&amp;quot;, &amp;quot;&amp;quot;, variable),
+         variable = gsub(&amp;quot;Intercept&amp;quot;, &amp;quot;intercept&amp;quot;, variable),
+         variable = gsub(&amp;quot;as.factor(vs)1&amp;quot;, &amp;quot;vs&amp;quot;, variable)) %&amp;gt;%
+  spread(variable, value)  
+
+# get names of variables included in model
+variable.names = names(select(plot.data, -estimate, -specification, -model_num, -std.error, -p.value, -significant.p))
+
+# plot top panel
+top = plot.data %&amp;gt;%
+  ggplot(aes(specification, estimate, color = significant.p)) +
+    geom_point(shape = &amp;quot;|&amp;quot;, size = 4) +
+    #geom_hline(yintercept = null.df$AIC, linetype = &amp;quot;dashed&amp;quot;, color = &amp;quot;lightblue&amp;quot;) +
+    scale_color_manual(values = c(&amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;regression coefficient\n&amp;quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# set plotting order for variables based on number of times it&amp;#39;s included in better fitting models
+order = plot.data %&amp;gt;%
+  arrange(estimate) %&amp;gt;%
+  mutate(significant.p.num = ifelse(significant.p == &amp;quot;yes&amp;quot;, 1, 0)) %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% 
+  filter(!is.na(value)) %&amp;gt;%
+  group_by(variable) %&amp;gt;%
+  mutate(order = sum(significant.p.num)) %&amp;gt;%
+  select(variable, order) %&amp;gt;%
+  unique()
+
+# rename variables and plot bottom panel
+bottom = plot.data %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% 
+  mutate(value = ifelse(!is.na(value), &amp;quot;|&amp;quot;, &amp;quot;&amp;quot;),
+         variable = ifelse(variable == &amp;quot;(Intercept)&amp;quot;, &amp;quot;intercept&amp;quot;,
+                    ifelse(variable == &amp;quot;as.factor(vs)1&amp;quot;, &amp;quot;vs&amp;quot;, variable))) %&amp;gt;%
+  left_join(., order, by = &amp;quot;variable&amp;quot;) %&amp;gt;%
+  ggplot(aes(specification, reorder(variable, order), color = significant.p)) +
+    geom_text(aes(label = value)) +
+    scale_color_manual(values = c(&amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;\nspecification number&amp;quot;, y = &amp;quot;variables\n&amp;quot;) + 
+    theme_minimal(base_size = 11) +
+    theme(legend.title = element_text(size = 10),
+          legend.text = element_text(size = 9),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+# join panels and compare plots
+(cyl = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;wt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-2.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;next-steps&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;next steps&lt;/h1&gt;
+&lt;p&gt;… Inferential statistics using specification curves!&lt;/p&gt;
+&lt;p&gt;… Plot standard errors!&lt;/p&gt;
+&lt;/div&gt;
+</description>
     </item>
     
     <item>
       <title>Specification curve example</title>
-      <link>https://dcosme.github.io/post/specification_curve_example/</link>
+      <link>https://dcosme.github.io/2019/02/26/specification-curve-example/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/post/specification_curve_example/</guid>
-      <description>I was inspired by these amazing examples of specification curves by Julia Rohrer and Amy Orben, so I wrote some code to generate a curve like this:
-Below is code to create a specification curve using a toy example from the airquality dataset. Enjoy!
-load packages library(tidyverse) library(lme4) library(MuMIn) library(cowplot)  run models Run all possible nested models using the dredge function from the MuMIn package.
-# set na.action for dredge options(na.</description>
+      <guid>https://dcosme.github.io/2019/02/26/specification-curve-example/</guid>
+      <description>
+
+
+&lt;p&gt;I was inspired by these amazing examples of specification curves by &lt;a href=&#34;https://www.psychologicalscience.org/observer/run-all-the-models-dealing-with-data-analytic-flexibility&#34;&gt;Julia Rohrer&lt;/a&gt; and &lt;a href=&#34;https://www.nature.com/articles/s41562-018-0506-1&#34;&gt;Amy Orben&lt;/a&gt;, so I wrote some code to generate a curve like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/img/sca-example/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Below is code to create a specification curve using a toy example from the &lt;code&gt;airquality&lt;/code&gt; dataset. Enjoy!&lt;/p&gt;
+&lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;load packages&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(lme4)
+library(MuMIn)
+library(cowplot)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;run-models&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;run models&lt;/h1&gt;
+&lt;p&gt;Run all possible nested models using the &lt;a href=&#34;https://www.rdocumentation.org/packages/MuMIn/versions/1.42.1/topics/dredge&#34;&gt;&lt;code&gt;dredge&lt;/code&gt;&lt;/a&gt; function from the &lt;a href=&#34;https://www.rdocumentation.org/packages/MuMIn/versions/1.42.1&#34;&gt;&lt;code&gt;MuMIn&lt;/code&gt;&lt;/a&gt; package.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set na.action for dredge
+options(na.action = &amp;quot;na.fail&amp;quot;)
+
+# omit NAs
+airquality.na = airquality %&amp;gt;% 
+  na.omit()
+
+# run full model
+full.model = lm(Ozone ~ Solar.R + Wind + Temp + Month + Day, data = airquality.na)
+
+# run all possible nested models
+all.models = dredge(full.model, rank = &amp;quot;AIC&amp;quot;, extra = &amp;quot;BIC&amp;quot;) # rank based on AIC, but include BIC as well
+
+# set AIC for null model you want to compare model AIC values to
+null.AIC = 1025
+
+# variables included in model
+variable.names = names(airquality)[-1]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;plot&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;plot&lt;/h1&gt;
+&lt;p&gt;On the top panel, plot the AIC of each model and color based on whether each is a better fitting model than some comparator (e.g., the AIC for the null model). The bottom panel specifies which variables were included in each model in the top panel.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot.data = all.models %&amp;gt;%
+  arrange(AIC) %&amp;gt;%
+  mutate(specification = row_number(), 
+         better.fit = ifelse(AIC &amp;lt; null.AIC, &amp;quot;yes&amp;quot;, &amp;quot;no&amp;quot;))
+
+top = plot.data %&amp;gt;%
+  ggplot(aes(specification, AIC, color = better.fit)) + # color is based on whether model is better fitting than the null
+    geom_point(shape = &amp;quot;|&amp;quot;, size = 4) +
+    geom_hline(yintercept = null.AIC, linetype = &amp;quot;dashed&amp;quot;, color = &amp;quot;red&amp;quot;) + # dashed line for null model AIC
+    scale_color_manual(values = c(&amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;&amp;quot;, y = &amp;quot;AIC\n&amp;quot;) + 
+    theme_minimal(base_size = 12) +
+    theme(text = element_text(family = &amp;quot;Futura Medium&amp;quot;),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+bottom = plot.data %&amp;gt;%
+  gather(variable, value, eval(variable.names)) %&amp;gt;% # gather predictor variables
+  mutate(value = ifelse(!is.na(value), &amp;quot;|&amp;quot;, &amp;quot;&amp;quot;)) %&amp;gt;% # plot a line if included in the model
+  ggplot(aes(specification, variable, color = better.fit)) +
+    geom_text(aes(label = value), alpha = 1) +
+    scale_color_manual(values = c(&amp;quot;black&amp;quot;, &amp;quot;red&amp;quot;)) +
+    labs(x = &amp;quot;\nspecification number&amp;quot;, y = &amp;quot;variables\n&amp;quot;) + 
+    theme_minimal(base_size = 12) +
+    theme(text = element_text(family = &amp;quot;Futura Medium&amp;quot;),
+          axis.text = element_text(color = &amp;quot;black&amp;quot;),
+          axis.line = element_line(colour = &amp;quot;black&amp;quot;),
+          legend.position = &amp;quot;none&amp;quot;,
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          panel.border = element_blank(),
+          panel.background = element_blank())
+
+plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-02-26-specification-curve-example/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
     </item>
     
   </channel>
