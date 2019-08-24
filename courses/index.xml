@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Courses on DANIELLE COSME</title>
-    <link>/courses/</link>
+    <link>https://dcosme.github.io/courses/</link>
     <description>Recent content in Courses on DANIELLE COSME</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
     
-	    <atom:link href="/courses/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://dcosme.github.io/courses/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>
