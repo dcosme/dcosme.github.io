@@ -469,7 +469,7 @@ cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels 
 &lt;div id=&#34;reorder-and-rename-variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;reorder and rename variables&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;make the plot pretties&lt;/li&gt;
+&lt;li&gt;make the plot prettier&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# set plotting order for variables based on number of times it&amp;#39;s included in better fitting models
 order = plot.data %&amp;gt;%
@@ -608,8 +608,7 @@ cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels 
 &lt;p&gt;Rather than plotting model fit, you can also plot curves for associations of interest and determine how inclusion of other variables or analytic decisions affects the association&lt;/p&gt;
 &lt;div id=&#34;mpg-wt&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;mpg ~ wt&lt;/h2&gt;
-&lt;div id=&#34;extract-coefficients-and-p-values&#34; class=&#34;section level3&#34;&gt;
-&lt;h3&gt;extract coefficients and p-values&lt;/h3&gt;
+&lt;p&gt;Use the same method with a different association of interest ### extract coefficients and p-values&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# extract parameter estimate (step-by-step output)
 MuMIn::get.models(models.sca, subset = TRUE) %&amp;gt;%
   tibble() %&amp;gt;%
@@ -700,7 +699,6 @@ MuMIn::get.models(models.sca, subset = TRUE) %&amp;gt;%
 ##  9         9    -3.08     0.925 0.00263   
 ## 10        10    -3.64     0.910 0.000436  
 ## # … with 502 more rows&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 &lt;div id=&#34;plot-specification-curve-2&#34; class=&#34;section level3&#34;&gt;
 &lt;h3&gt;plot specification curve&lt;/h3&gt;
 &lt;ul&gt;
@@ -976,7 +974,6 @@ bottom = plot.data %&amp;gt;%
 # join panels
 (wt_ci = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/plot%20with%20confidence-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
-&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggsave(wt_ci, filename = &amp;quot;~/Desktop/wt_ci.png&amp;quot;, width = 10, height = 7, dpi = 300)&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;next-steps&#34; class=&#34;section level1&#34;&gt;

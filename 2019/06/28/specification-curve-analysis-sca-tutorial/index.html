@@ -831,7 +831,7 @@ cowplot::plot_grid(top, bottom, ncol = 1, align = &quot;v&quot;, labels = c(&#39
 <div id="reorder-and-rename-variables" class="section level2">
 <h2>reorder and rename variables</h2>
 <ul>
-<li>make the plot pretties</li>
+<li>make the plot prettier</li>
 </ul>
 <pre class="r"><code># set plotting order for variables based on number of times it&#39;s included in better fitting models
 order = plot.data %&gt;%
@@ -970,8 +970,7 @@ cowplot::plot_grid(top, bottom, ncol = 1, align = &quot;v&quot;, labels = c(&#39
 <p>Rather than plotting model fit, you can also plot curves for associations of interest and determine how inclusion of other variables or analytic decisions affects the association</p>
 <div id="mpg-wt" class="section level2">
 <h2>mpg ~ wt</h2>
-<div id="extract-coefficients-and-p-values" class="section level3">
-<h3>extract coefficients and p-values</h3>
+<p>Use the same method with a different association of interest ### extract coefficients and p-values</p>
 <pre class="r"><code># extract parameter estimate (step-by-step output)
 MuMIn::get.models(models.sca, subset = TRUE) %&gt;%
   tibble() %&gt;%
@@ -1062,7 +1061,6 @@ MuMIn::get.models(models.sca, subset = TRUE) %&gt;%
 ##  9         9    -3.08     0.925 0.00263   
 ## 10        10    -3.64     0.910 0.000436  
 ## # … with 502 more rows</code></pre>
-</div>
 <div id="plot-specification-curve-2" class="section level3">
 <h3>plot specification curve</h3>
 <ul>
@@ -1338,7 +1336,6 @@ bottom = plot.data %&gt;%
 # join panels
 (wt_ci = cowplot::plot_grid(top, bottom, ncol = 1, align = &quot;v&quot;, labels = c(&#39;A&#39;, &#39;B&#39;)))</code></pre>
 <p><img src="/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/plot%20with%20confidence-1.png" width="960" /></p>
-<pre class="r"><code>ggsave(wt_ci, filename = &quot;~/Desktop/wt_ci.png&quot;, width = 10, height = 7, dpi = 300)</code></pre>
 </div>
 </div>
 <div id="next-steps" class="section level1">
