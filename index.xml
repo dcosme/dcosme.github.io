@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DANIELLE COSME</title>
-    <link>/</link>
+    <link>https://dcosme.github.io/</link>
     <description>Recent content on DANIELLE COSME</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
     <lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://dcosme.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Example Page 1</title>
-      <link>/courses/example/example1/</link>
+      <link>https://dcosme.github.io/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>/courses/example/example1/</guid>
+      <guid>https://dcosme.github.io/courses/example/example1/</guid>
       <description>
 
 &lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
@@ -50,10 +50,10 @@
     
     <item>
       <title>Example Page 2</title>
-      <link>/courses/example/example2/</link>
+      <link>https://dcosme.github.io/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>/courses/example/example2/</guid>
+      <guid>https://dcosme.github.io/courses/example/example2/</guid>
       <description>
 
 &lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
@@ -86,10 +86,10 @@
     
     <item>
       <title>Example Talk</title>
-      <link>/talk/example/</link>
+      <link>https://dcosme.github.io/talk/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
       
-      <guid>/talk/example/</guid>
+      <guid>https://dcosme.github.io/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
@@ -110,23 +110,21 @@
     
     <item>
       <title>Neural correlates of self-evaluation during puberty</title>
-      <link>/publication/2019-08-27-self-evaluation-puberty/</link>
+      <link>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</link>
       <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2019-08-27-self-evaluation-puberty/</guid>
+      <guid>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
-Cosme, D., Ludwig, R. M., &amp;amp; Berkman, E. T. Comparing two neurocognitive models of self-control during dietary decisions. (in press) &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Barendse, M. E. A., Cosme, D., Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Allen, N. B., &amp;amp; Pfeifer, J.H. (preprint) Neural correlates of self-evaluation during puberty. &lt;a href=&#34;https://doi.org/10.31234/osf.io/r2pjm&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.31234/osf.io/r2pjm&lt;/a&gt;&lt;/p&gt;
+Barendse, M. E. A., Cosme, D., Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Allen, N. B., &amp;amp; Pfeifer, J.H. (preprint) Neural correlates of self-evaluation during puberty. &lt;a href=&#34;https://doi.org/10.31234/osf.io/r2pjm&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.31234/osf.io/r2pjm&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Comparing two neurocognitive models of self-control during dietary decisions</title>
-      <link>/publication/2019-06-28-neurocognitive-models-self-control/</link>
+      <link>https://dcosme.github.io/publication/2019-06-28-neurocognitive-models-self-control/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2019-06-28-neurocognitive-models-self-control/</guid>
+      <guid>https://dcosme.github.io/publication/2019-06-28-neurocognitive-models-self-control/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Ludwig, R. M., &amp;amp; Berkman, E. T. Comparing two neurocognitive models of self-control during dietary decisions. (in press) &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;&lt;/p&gt;
 </description>
@@ -134,10 +132,10 @@ Cosme, D., Ludwig, R. M., &amp;amp; Berkman, E. T. Comparing two neurocognitive 
     
     <item>
       <title>If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being</title>
-      <link>/publication/2019-06-28-happy-and-you-know-it/</link>
+      <link>https://dcosme.github.io/publication/2019-06-28-happy-and-you-know-it/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2019-06-28-happy-and-you-know-it/</guid>
+      <guid>https://dcosme.github.io/publication/2019-06-28-happy-and-you-know-it/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being.&lt;/p&gt;
 </description>
@@ -145,10 +143,10 @@ Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. If you’re happy and
     
     <item>
       <title>Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice</title>
-      <link>/publication/2019-06-28-neural-signatures-health-neuros/</link>
+      <link>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2019-06-28-neural-signatures-health-neuros/</guid>
+      <guid>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice. (in revision)&lt;/p&gt;
 </description>
@@ -156,10 +154,10 @@ Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. Multivariate neural
     
     <item>
       <title>Specification curve analysis (SCA) tutorial</title>
-      <link>/2019/06/28/specification-curve-analysis-sca-tutorial/</link>
+      <link>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/28/specification-curve-analysis-sca-tutorial/</guid>
+      <guid>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</guid>
       <description>
 
 
@@ -171,7 +169,7 @@ Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. Multivariate neural
 &lt;li&gt;The problem: there are many different ways to test a model and we usually only report one or a few specifications. Model selection relies on choices by the researcher and these are often artbitrary and sometimes driven by a desire for significant results.&lt;/li&gt;
 &lt;li&gt;The solution (according to &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2694998&#34;&gt;Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/a&gt;: specify all “reasonable” models and assess the distribution of effects&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;/img/sca-tutorial/figure1.png&#34; alt=&#34;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure1.png&#34; alt=&#34;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;steps-for-conducting-sca&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;steps for conducting SCA&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -187,11 +185,11 @@ Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. Multivariate neural
 &lt;li&gt;Expected to be statistically valid&lt;/li&gt;
 &lt;li&gt;Non-redundant&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;/img/sca-tutorial/table1.png&#34; alt=&#34;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/table1.png&#34; alt=&#34;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;descriptive-specification-curve&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2. Descriptive specification curve&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;/img/sca-tutorial/figure2.png&#34; alt=&#34;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure2.png&#34; alt=&#34;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;inferential-statistics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;3. Inferential statistics&lt;/h2&gt;
@@ -205,11 +203,11 @@ Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. Multivariate neural
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Table 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt;&lt;br /&gt;
-&lt;img src=&#34;/img/sca-tutorial/table2.png&#34; alt=&#34;Table2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/table2.png&#34; alt=&#34;Table2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Also possible to compare specification surves between two variables of interest&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Figure 6 Orben &amp;amp; Przybylski, 2019&lt;/strong&gt; &lt;img src=&#34;/img/sca-tutorial/figure6.png&#34; alt=&#34;Figure 6 Orben &amp;amp; Przybylski, 2019&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 6 Orben &amp;amp; Przybylski, 2019&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure6.png&#34; alt=&#34;Figure 6 Orben &amp;amp; Przybylski, 2019&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;examples&#34; class=&#34;section level1&#34;&gt;
@@ -465,7 +463,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/specification%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/specification%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;reorder-and-rename-variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;reorder and rename variables&lt;/h2&gt;
 &lt;ul&gt;
@@ -510,7 +508,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/clean%20up%20spec%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/clean%20up%20spec%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;a-more-complicated-example&#34; class=&#34;section level1&#34;&gt;
@@ -600,7 +598,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/copmlicated%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/copmlicated%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;coefficient-specification-curve&#34; class=&#34;section level1&#34;&gt;
@@ -772,7 +770,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (wt = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mpg-cyl&#34; class=&#34;section level2&#34;&gt;
@@ -860,7 +858,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (cyl = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -973,7 +971,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (wt_ci = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/plot%20with%20confidence-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/plot%20with%20confidence-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;next-steps&#34; class=&#34;section level1&#34;&gt;
@@ -985,15 +983,15 @@ bottom = plot.data %&amp;gt;%
     
     <item>
       <title>Specification curve example</title>
-      <link>/2019/02/26/specification-curve-example/</link>
+      <link>https://dcosme.github.io/2019/02/26/specification-curve-example/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/02/26/specification-curve-example/</guid>
+      <guid>https://dcosme.github.io/2019/02/26/specification-curve-example/</guid>
       <description>
 
 
 &lt;p&gt;I was inspired by these amazing examples of specification curves by &lt;a href=&#34;https://www.psychologicalscience.org/observer/run-all-the-models-dealing-with-data-analytic-flexibility&#34;&gt;Julia Rohrer&lt;/a&gt; and &lt;a href=&#34;https://www.nature.com/articles/s41562-018-0506-1&#34;&gt;Amy Orben&lt;/a&gt;, so I wrote some code to generate a curve like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/sca-example/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/img/sca-example/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Below is code to create a specification curve using a toy example from the &lt;code&gt;airquality&lt;/code&gt; dataset. Enjoy!&lt;/p&gt;
 &lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;load packages&lt;/h1&gt;
@@ -1066,17 +1064,17 @@ bottom = plot.data %&amp;gt;%
           panel.background = element_blank())
 
 plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-02-26-specification-curve-example/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-02-26-specification-curve-example/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Slides</title>
-      <link>/slides/example/</link>
+      <link>https://dcosme.github.io/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/slides/example/</guid>
+      <guid>https://dcosme.github.io/slides/example/</guid>
       <description>
 
 &lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
@@ -1254,21 +1252,11 @@ $$&lt;/p&gt;
     </item>
     
     <item>
-      <title>Privacy Policy</title>
-      <link>/privacy/</link>
-      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
-      
-      <guid>/privacy/</guid>
-      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Autonomy can support affect regulation during illness and in health</title>
-      <link>/publication/2019-06-28-autonomy-affect-regulation/</link>
+      <link>https://dcosme.github.io/publication/2019-06-28-autonomy-affect-regulation/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2019-06-28-autonomy-affect-regulation/</guid>
+      <guid>https://dcosme.github.io/publication/2019-06-28-autonomy-affect-regulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Berkman, E. T. (2018) Autonomy can support affect regulation during illness and in health. &lt;em&gt;Journal of Health Psychology&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/1359105318787013&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.1177/1359105318787013&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -1276,10 +1264,10 @@ Cosme, D., &amp;amp; Berkman, E. T. (2018) Autonomy can support affect regulatio
     
     <item>
       <title>Websites in RStudio</title>
-      <link>/2018/06/10/websites-in-rstudio/</link>
+      <link>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</link>
       <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/06/10/websites-in-rstudio/</guid>
+      <guid>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</guid>
       <description>
 
 
@@ -2167,7 +2155,7 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Push local changes to remote repository&lt;/p&gt;
 &lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In Github, enable GitHub Pages &lt;code&gt;Your repo &amp;gt; Settings &amp;gt; GitHub Page &amp;gt; Source = master branch &amp;gt; Save&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;/img/website-tutorial/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;https://dcosme.github.io/img/website-tutorial/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Go to your website and bask in the glory 🎉&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;workflow&#34; class=&#34;section level1&#34;&gt;
@@ -2220,10 +2208,10 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Neural predictors of eating behavior and dietary change</title>
-      <link>/publication/2018-03-15-neural-predictors-dietary-change/</link>
+      <link>https://dcosme.github.io/publication/2018-03-15-neural-predictors-dietary-change/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2018-03-15-neural-predictors-dietary-change/</guid>
+      <guid>https://dcosme.github.io/publication/2018-03-15-neural-predictors-dietary-change/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Berkman, E. T. (2018) Autonomy can support affect regulation during illness and in health. &lt;em&gt;Journal of Health Psychology&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/1359105318787013&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.1177/1359105318787013&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -2231,10 +2219,10 @@ Cosme, D., &amp;amp; Berkman, E. T. (2018) Autonomy can support affect regulatio
     
     <item>
       <title>Choosing to regulate: Does choice enhance craving regulation?</title>
-      <link>/publication/2019-06-28-choosing-to-regulate/</link>
+      <link>https://dcosme.github.io/publication/2019-06-28-choosing-to-regulate/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2019-06-28-choosing-to-regulate/</guid>
+      <guid>https://dcosme.github.io/publication/2019-06-28-choosing-to-regulate/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H. (2018) Choosing to regulate: Does choice enhance craving regulation?. &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;, 13(3), 300-309.&lt;/p&gt;
 </description>
@@ -2242,28 +2230,28 @@ Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H.
     
     <item>
       <title>Methodological considerations for developmental longitudinal fMRI research</title>
-      <link>/publication/2018-02-07-longitudinal-fmri/</link>
+      <link>https://dcosme.github.io/publication/2018-02-07-longitudinal-fmri/</link>
       <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2018-02-07-longitudinal-fmri/</guid>
+      <guid>https://dcosme.github.io/publication/2018-02-07-longitudinal-fmri/</guid>
       <description></description>
     </item>
     
     <item>
       <title>External Project</title>
-      <link>/project/external-project/</link>
+      <link>https://dcosme.github.io/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/project/external-project/</guid>
+      <guid>https://dcosme.github.io/project/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>/project/internal-project/</link>
+      <link>https://dcosme.github.io/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>/project/internal-project/</guid>
+      <guid>https://dcosme.github.io/project/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -2278,10 +2266,10 @@ Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H.
     
     <item>
       <title>Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures</title>
-      <link>/publication/2015-03-06-mindfulness-affective-reactivity/</link>
+      <link>https://dcosme.github.io/publication/2015-03-06-mindfulness-affective-reactivity/</link>
       <pubDate>Fri, 06 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>/publication/2015-03-06-mindfulness-affective-reactivity/</guid>
+      <guid>https://dcosme.github.io/publication/2015-03-06-mindfulness-affective-reactivity/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Wiens, S. (2015). Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures. &lt;em&gt;PLOS One&lt;/em&gt;, 10(3), e0119466.&lt;/p&gt;
 </description>

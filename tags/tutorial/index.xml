@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tutorial on DANIELLE COSME</title>
-    <link>/tags/tutorial/</link>
+    <link>https://dcosme.github.io/tags/tutorial/</link>
     <description>Recent content in tutorial on DANIELLE COSME</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
     <lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="https://dcosme.github.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Specification curve analysis (SCA) tutorial</title>
-      <link>/2019/06/28/specification-curve-analysis-sca-tutorial/</link>
+      <link>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/06/28/specification-curve-analysis-sca-tutorial/</guid>
+      <guid>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</guid>
       <description>
 
 
@@ -29,7 +29,7 @@
 &lt;li&gt;The problem: there are many different ways to test a model and we usually only report one or a few specifications. Model selection relies on choices by the researcher and these are often artbitrary and sometimes driven by a desire for significant results.&lt;/li&gt;
 &lt;li&gt;The solution (according to &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2694998&#34;&gt;Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/a&gt;: specify all “reasonable” models and assess the distribution of effects&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;/img/sca-tutorial/figure1.png&#34; alt=&#34;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure1.png&#34; alt=&#34;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;steps-for-conducting-sca&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;steps for conducting SCA&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -45,11 +45,11 @@
 &lt;li&gt;Expected to be statistically valid&lt;/li&gt;
 &lt;li&gt;Non-redundant&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;/img/sca-tutorial/table1.png&#34; alt=&#34;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/table1.png&#34; alt=&#34;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;descriptive-specification-curve&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2. Descriptive specification curve&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;/img/sca-tutorial/figure2.png&#34; alt=&#34;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure2.png&#34; alt=&#34;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;inferential-statistics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;3. Inferential statistics&lt;/h2&gt;
@@ -63,11 +63,11 @@
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Table 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt;&lt;br /&gt;
-&lt;img src=&#34;/img/sca-tutorial/table2.png&#34; alt=&#34;Table2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/table2.png&#34; alt=&#34;Table2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Also possible to compare specification surves between two variables of interest&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Figure 6 Orben &amp;amp; Przybylski, 2019&lt;/strong&gt; &lt;img src=&#34;/img/sca-tutorial/figure6.png&#34; alt=&#34;Figure 6 Orben &amp;amp; Przybylski, 2019&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Figure 6 Orben &amp;amp; Przybylski, 2019&lt;/strong&gt; &lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure6.png&#34; alt=&#34;Figure 6 Orben &amp;amp; Przybylski, 2019&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;examples&#34; class=&#34;section level1&#34;&gt;
@@ -323,7 +323,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/specification%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/specification%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;reorder-and-rename-variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;reorder and rename variables&lt;/h2&gt;
 &lt;ul&gt;
@@ -368,7 +368,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/clean%20up%20spec%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/clean%20up%20spec%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;a-more-complicated-example&#34; class=&#34;section level1&#34;&gt;
@@ -458,7 +458,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/copmlicated%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/copmlicated%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;coefficient-specification-curve&#34; class=&#34;section level1&#34;&gt;
@@ -630,7 +630,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (wt = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mpg-cyl&#34; class=&#34;section level2&#34;&gt;
@@ -718,7 +718,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (cyl = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -831,7 +831,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (wt_ci = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/plot%20with%20confidence-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/plot%20with%20confidence-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;next-steps&#34; class=&#34;section level1&#34;&gt;
@@ -843,15 +843,15 @@ bottom = plot.data %&amp;gt;%
     
     <item>
       <title>Specification curve example</title>
-      <link>/2019/02/26/specification-curve-example/</link>
+      <link>https://dcosme.github.io/2019/02/26/specification-curve-example/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>/2019/02/26/specification-curve-example/</guid>
+      <guid>https://dcosme.github.io/2019/02/26/specification-curve-example/</guid>
       <description>
 
 
 &lt;p&gt;I was inspired by these amazing examples of specification curves by &lt;a href=&#34;https://www.psychologicalscience.org/observer/run-all-the-models-dealing-with-data-analytic-flexibility&#34;&gt;Julia Rohrer&lt;/a&gt; and &lt;a href=&#34;https://www.nature.com/articles/s41562-018-0506-1&#34;&gt;Amy Orben&lt;/a&gt;, so I wrote some code to generate a curve like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;/img/sca-example/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/img/sca-example/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Below is code to create a specification curve using a toy example from the &lt;code&gt;airquality&lt;/code&gt; dataset. Enjoy!&lt;/p&gt;
 &lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;load packages&lt;/h1&gt;
@@ -924,17 +924,17 @@ bottom = plot.data %&amp;gt;%
           panel.background = element_blank())
 
 plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;/post/2019-02-26-specification-curve-example/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-02-26-specification-curve-example/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Websites in RStudio</title>
-      <link>/2018/06/10/websites-in-rstudio/</link>
+      <link>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</link>
       <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>/2018/06/10/websites-in-rstudio/</guid>
+      <guid>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</guid>
       <description>
 
 
@@ -1822,7 +1822,7 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Push local changes to remote repository&lt;/p&gt;
 &lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In Github, enable GitHub Pages &lt;code&gt;Your repo &amp;gt; Settings &amp;gt; GitHub Page &amp;gt; Source = master branch &amp;gt; Save&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;/img/website-tutorial/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;https://dcosme.github.io/img/website-tutorial/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Go to your website and bask in the glory 🎉&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;workflow&#34; class=&#34;section level1&#34;&gt;
