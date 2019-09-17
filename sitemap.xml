@@ -34,6 +34,12 @@
   </url>
   
   <url>
+    <loc>https://dcosme.github.io/authors/vijayakumar-n./</loc>
+    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dcosme.github.io/authors/cosme-d./</loc>
     <lastmod>2019-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -70,7 +76,7 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2019-09-17-improving-practices-and-inferences-in-developmental-cognitive-neuroscience/</loc>
+    <loc>https://dcosme.github.io/publication/2019-09-17-improving-practices-inferences/</loc>
     <lastmod>2019-09-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -93,12 +99,6 @@
   
   <url>
     <loc>https://dcosme.github.io/tags/</loc>
-    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/vijayakumar-n./</loc>
     <lastmod>2019-09-17T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -368,13 +368,13 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/categories/rstats/</loc>
+    <loc>https://dcosme.github.io/tags/rstats/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/rstats/</loc>
+    <loc>https://dcosme.github.io/categories/rstats/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
     <priority>0</priority>
   </url>
@@ -454,13 +454,13 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/categories/blogdown/</loc>
+    <loc>https://dcosme.github.io/tags/blogdown/</loc>
     <lastmod>2019-06-10T15:11:28-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/blogdown/</loc>
+    <loc>https://dcosme.github.io/categories/blogdown/</loc>
     <lastmod>2019-06-10T15:11:28-07:00</lastmod>
     <priority>0</priority>
   </url>
