@@ -7,17 +7,89 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 17 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>adolescence</title>
+      <link>https://dcosme.github.io/tags/adolescence/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/adolescence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>brain development</title>
+      <link>https://dcosme.github.io/tags/brain-development/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/brain-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>developmental cognitive neuroscience</title>
       <link>https://dcosme.github.io/tags/developmental-cognitive-neuroscience/</link>
-      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/developmental-cognitive-neuroscience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hormones</title>
+      <link>https://dcosme.github.io/tags/hormones/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/hormones/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>longitudinal fmri</title>
+      <link>https://dcosme.github.io/tags/longitudinal-fmri/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/longitudinal-fmri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mental health</title>
+      <link>https://dcosme.github.io/tags/mental-health/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/mental-health/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>puberty</title>
+      <link>https://dcosme.github.io/tags/puberty/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/puberty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-development</title>
+      <link>https://dcosme.github.io/tags/self-development/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social processes</title>
+      <link>https://dcosme.github.io/tags/social-processes/</link>
+      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/social-processes/</guid>
       <description></description>
     </item>
     
@@ -85,38 +157,11 @@
     </item>
     
     <item>
-      <title>adolescence</title>
-      <link>https://dcosme.github.io/tags/adolescence/</link>
-      <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/adolescence/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>fMRI</title>
       <link>https://dcosme.github.io/tags/fmri/</link>
       <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/fmri/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hormones</title>
-      <link>https://dcosme.github.io/tags/hormones/</link>
-      <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/hormones/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>puberty</title>
-      <link>https://dcosme.github.io/tags/puberty/</link>
-      <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/puberty/</guid>
       <description></description>
     </item>
     
@@ -423,15 +468,6 @@
       <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>longitudinal fmri</title>
-      <link>https://dcosme.github.io/tags/longitudinal-fmri/</link>
-      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/longitudinal-fmri/</guid>
       <description></description>
     </item>
     
