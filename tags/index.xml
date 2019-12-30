@@ -7,10 +7,55 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>craving regulation</title>
+      <link>https://dcosme.github.io/tags/craving-regulation/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/craving-regulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>food valuation</title>
+      <link>https://dcosme.github.io/tags/food-valuation/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/food-valuation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>health neuroscience</title>
+      <link>https://dcosme.github.io/tags/health-neuroscience/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/health-neuroscience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multivariate fmri</title>
+      <link>https://dcosme.github.io/tags/multivariate-fmri/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/multivariate-fmri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>neural signature</title>
+      <link>https://dcosme.github.io/tags/neural-signature/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/neural-signature/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>adolescence</title>
@@ -184,15 +229,6 @@
     </item>
     
     <item>
-      <title>craving regulation</title>
-      <link>https://dcosme.github.io/tags/craving-regulation/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/craving-regulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>decision neuroscience</title>
       <link>https://dcosme.github.io/tags/decision-neuroscience/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
@@ -220,15 +256,6 @@
     </item>
     
     <item>
-      <title>food valuation</title>
-      <link>https://dcosme.github.io/tags/food-valuation/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/food-valuation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>functional programming</title>
       <link>https://dcosme.github.io/tags/functional-programming/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
@@ -247,38 +274,11 @@
     </item>
     
     <item>
-      <title>health neuroscience</title>
-      <link>https://dcosme.github.io/tags/health-neuroscience/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/health-neuroscience/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>mindset</title>
       <link>https://dcosme.github.io/tags/mindset/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/mindset/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>multivariate fmri</title>
-      <link>https://dcosme.github.io/tags/multivariate-fmri/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/multivariate-fmri/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>neural signature</title>
-      <link>https://dcosme.github.io/tags/neural-signature/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/neural-signature/</guid>
       <description></description>
     </item>
     
