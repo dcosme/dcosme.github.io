@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="DANIELLE COSME">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Curious what congress and Trump are saying about the coronavirus?
+This analysis takes a look at the number, the positive and negative sentiment, and the content of the tweets, for each party and how that’s evolving over time since February 1, 2020.
+I utilize open data hosted online. In particular, big thanks to Alex Litel who created the Tweets of Congress repo, where I pulled congressional tweets from, and the folks running Trump Twitter Archive, where I pulled Trump’s tweets from.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/2020/03/14/congressional-and-presidential-tweets-about-covid-19/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#F0BD00">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Futura:400,700|Century Gothic|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.395a6cbfca04d591b2d424bc762e06b3.css">
+
+  
+    
+    
+    
+    
+      
+    
+    
+    
+    <link rel="stylesheet" href="/css/academic.93fd939d561542cf92d42776391d90df.css">
+  
+
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/2020/03/14/congressional-and-presidential-tweets-about-covid-19/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@danicosme">
+  <meta property="twitter:creator" content="@danicosme">
+  
+  <meta property="og:site_name" content="DANIELLE COSME">
+  <meta property="og:url" content="/2020/03/14/congressional-and-presidential-tweets-about-covid-19/">
+  <meta property="og:title" content="Congressional and Presidential Tweets About COVID-19 | DANIELLE COSME">
+  <meta property="og:description" content="Curious what congress and Trump are saying about the coronavirus?
+This analysis takes a look at the number, the positive and negative sentiment, and the content of the tweets, for each party and how that’s evolving over time since February 1, 2020.
+I utilize open data hosted online. In particular, big thanks to Alex Litel who created the Tweets of Congress repo, where I pulled congressional tweets from, and the folks running Trump Twitter Archive, where I pulled Trump’s tweets from."><meta property="og:image" content="/img/icon-192.png">
+  <meta property="twitter:image" content="/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2020-03-14T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2020-03-14T11:48:39-04:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Congressional and Presidential Tweets About COVID-19 | DANIELLE COSME</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">DANIELLE COSME</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>HOME</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#publications"><span>PUBLICATIONS & PREPRINTS</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>POSTS</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/cv"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">Congressional and Presidential Tweets About COVID-19</h1>
+
+  
+
+  
+    
+
+
+
+<meta content="2020-03-14 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-03-14 11:48:39 -0400 EDT" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    <time>Mar 14, 2020</time>
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    11 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    <a href="/categories/twitter/">twitter</a></span>
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/2020/03/14/congressional-and-presidential-tweets-about-covid-19/&amp;text=Congressional%20and%20Presidential%20Tweets%20About%20COVID-19" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/2020/03/14/congressional-and-presidential-tweets-about-covid-19/&amp;t=Congressional%20and%20Presidential%20Tweets%20About%20COVID-19" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Congressional%20and%20Presidential%20Tweets%20About%20COVID-19&amp;body=/2020/03/14/congressional-and-presidential-tweets-about-covid-19/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/2020/03/14/congressional-and-presidential-tweets-about-covid-19/&amp;title=Congressional%20and%20Presidential%20Tweets%20About%20COVID-19" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Congressional%20and%20Presidential%20Tweets%20About%20COVID-19%20/2020/03/14/congressional-and-presidential-tweets-about-covid-19/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/2020/03/14/congressional-and-presidential-tweets-about-covid-19/&amp;title=Congressional%20and%20Presidential%20Tweets%20About%20COVID-19" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+
+<p><br><br> <strong>Curious what congress and Trump are saying about the coronavirus?</strong></p>
+<p>This analysis takes a look at the number, the positive and negative sentiment, and the content of the tweets, for each party and how that’s evolving over time since February 1, 2020.</p>
+<p>I utilize open data hosted online. In particular, big thanks to <a href="https://github.com/alexlitel">Alex Litel</a> who created the <a href="https://alexlitel.github.io/congresstweets/">Tweets of Congress</a> repo, where I pulled congressional tweets from, and the folks running <a href="http://trumptwitterarchive.com/">Trump Twitter Archive</a>, where I pulled Trump’s tweets from.</p>
+<div id="prep-data" class="section level1">
+<h1>prep data</h1>
+<p>load packages</p>
+<pre class="r"><code>library(tidyverse)
+library(jsonlite)
+library(tidytext)
+library(wordcloud)
+library(webshot)</code></pre>
+<p>define palettes</p>
+<pre class="r"><code>palette4 = wesanderson::wes_palette(&quot;Zissou1&quot;, 4, &quot;continuous&quot;)
+palette4 = c(palette4[1], palette4[2], palette4[4], palette4[3])
+palette5 = wesanderson::wes_palette(&quot;Zissou1&quot;, 5, &quot;continuous&quot;)
+palette2 = c(palette5[2], palette5[4])</code></pre>
+<p>load congress twitter handles</p>
+<ul>
+<li><a href="https://github.com/CivilServiceUSA/us-senate">US Senate Information</a></li>
+<li><a href="https://github.com/CivilServiceUSA/us-house">US House Information</a></li>
+<li><a href="https://github.com/oduwsdl/US-Congress">Congressional Twitter Handles</a></li>
+</ul>
+<pre class="r"><code>congress_twitter = read.csv(&quot;~/Documents/code/US-Congress/116thCongress/116Congress.csv&quot;, stringsAsFactors = FALSE) %&gt;%
+  rename(&quot;name&quot; = Wikipedia..Names) %&gt;%
+  gather(handle_type, twitter_handle, ODU.WSDL, CSPAN, TweetCongress, Github) %&gt;%
+  select(name, handle_type, twitter_handle) %&gt;%
+  mutate(twitter_handle = tolower(twitter_handle),
+         twitter_handle = ifelse(twitter_handle == &quot;&quot;, NA, twitter_handle),
+         name = gsub(&quot;&lt;e9&gt;&quot;, &quot;é&quot;, `Encoding&lt;-`(name, &quot;latin1&quot;), fixed = TRUE),
+         name = gsub(&quot;&lt;e1&gt;&quot;, &quot;á&quot;, `Encoding&lt;-`(name, &quot;latin1&quot;), fixed = TRUE),
+         name = gsub(&quot;&lt;fa&gt;&quot;, &quot;ú&quot;, `Encoding&lt;-`(name, &quot;latin1&quot;), fixed = TRUE),
+         name = gsub(&quot;&lt;ed&gt;&quot;, &quot;í&quot;, `Encoding&lt;-`(name, &quot;latin1&quot;), fixed = TRUE),
+         name = gsub(&quot;é&quot;, &quot;e&quot;, name),
+         name = gsub(&quot;á&quot;, &quot;a&quot;, name),
+         name = gsub(&quot;ú&quot;, &quot;u&quot;, name),
+         name = gsub(&quot;í&quot;, &quot;i&quot;, name),
+         name = trimws(name)) %&gt;%
+  extract(name, c(&quot;first&quot;, &quot;last&quot;), &quot;([A-Za-z]{1}).* (.*)&quot;, remove = FALSE) %&gt;%
+  spread(handle_type, twitter_handle)
+
+congress = read.csv(&quot;~/Documents/code/us-senate/us-senate/data/us-senate.csv&quot;, stringsAsFactors = FALSE) %&gt;%
+  bind_rows(read.csv(&quot;~/Documents/code/us-house/us-house/data/us-house.csv&quot;, stringsAsFactors = FALSE)) %&gt;%
+  select(state_name, title, party, name, gender, ethnicity, twitter_handle) %&gt;%
+  mutate(twitter_handle = tolower(twitter_handle),
+         twitter_handle = ifelse(twitter_handle == &quot;&quot;, NA,
+                          ifelse(twitter_handle == &quot;housedemocrats&quot;, NA,
+                          ifelse(twitter_handle == &quot;senatorloeffler?lang=en&quot;, NA, twitter_handle))),
+         name = gsub(&quot;é&quot;, &quot;e&quot;, name),
+         name = gsub(&quot;á&quot;, &quot;a&quot;, name),
+         name = gsub(&quot;ú&quot;, &quot;u&quot;, name),
+         name = gsub(&quot;í&quot;, &quot;i&quot;, name),
+         name = trimws(name)) %&gt;%
+  extract(name, c(&quot;first&quot;, &quot;last&quot;), &quot;([A-Za-z]{1}).* (.*)&quot;, remove = FALSE)
+
+congress_info = full_join(congress, congress_twitter, by = c(&quot;first&quot;, &quot;last&quot;)) %&gt;%
+  gather(handle_type, twitter_handle, twitter_handle, ODU.WSDL, CSPAN, TweetCongress, Github) %&gt;%
+  select(state_name, title, party, first, last, gender, ethnicity, twitter_handle) %&gt;%
+  group_by(first, last) %&gt;%
+  fill(state_name, title, party, gender, ethnicity, twitter_handle, .direction = &quot;updown&quot;) %&gt;%
+  unique() %&gt;%
+  filter(!is.na(state_name)) %&gt;%
+  ungroup() %&gt;%
+  mutate(last = tolower(last))</code></pre>
+<p>load congressional tweets</p>
+<ul>
+<li><a href="https://github.com/alexlitel/congresstweets">Tweets of Congress, updated daily</a></li>
+<li>select tweets containing the following terms: <code>corona|virus|covid|flu</code></li>
+</ul>
+<p>pull to update repo</p>
+<pre class="bash"><code>cd ~/Documents/code/congresstweets
+git pull origin master</code></pre>
+<pre><code>## From https://github.com/alexlitel/congresstweets
+##  * branch            master     -&gt; FETCH_HEAD
+## Already up to date.</code></pre>
+<p>load the files</p>
+<pre class="r"><code>file_dir = &quot;~/Documents/code/congresstweets/data&quot;
+file_pattern = &quot;2020-0[2-3]{1}-.*.json&quot;
+file_list = list.files(file_dir, pattern = file_pattern)
+
+tweets_temp = data.frame()
+
+for (file in file_list) {
+  temp = tryCatch(jsonlite::stream_in(file(file.path(file_dir, file)), verbose = FALSE), error = function(e) message(file))
+
+  tweets_temp = rbind(tweets_temp, temp)
+  rm(temp)
+}
+
+tweets_all = tweets_temp %&gt;%
+  rename(&quot;twitter_handle&quot; = screen_name) %&gt;%
+  select(twitter_handle, time, text) %&gt;%
+  mutate(twitter_handle = tolower(twitter_handle),
+         text = tolower(text)) %&gt;%
+  filter(grepl(&quot;corona|virus|covid|flu&quot;, text))</code></pre>
+<p>find missing congressional twitter handles</p>
+<pre class="r"><code>missing = tweets_all %&gt;% 
+  left_join(., congress_info) %&gt;%
+  filter(is.na(last)) %&gt;%
+  select(twitter_handle) %&gt;%
+  unique()
+
+last_names = congress_info %&gt;%
+  ungroup() %&gt;%
+  select(last) %&gt;%
+  unique() %&gt;%
+  mutate(last = tolower(last))
+
+missing$last &lt;- sapply(missing$twitter_handle, function(handle) {
+  last &lt;- last_names$last[sapply(last_names$last, grepl, handle)]
+  }) 
+
+missing %&gt;%
+  unnest(last, keep_empty = TRUE) %&gt;%
+  mutate(first = toupper(substring(twitter_handle, 1, 1)),
+         last = ifelse(is.na(last), &quot;&quot;, last)) %&gt;%
+  write.csv(., &quot;missing.csv&quot;, row.names = FALSE)
+
+missing_edited = read.csv(&quot;missing_edited.csv&quot;, stringsAsFactors = FALSE)
+
+congress_full = congress_info %&gt;%
+  full_join(., missing_edited, by = c(&quot;first&quot;, &quot;last&quot;)) %&gt;%
+  gather(var, twitter_handle, contains(&quot;twitter_handle&quot;)) %&gt;%
+  select(-var) %&gt;%
+  unique() %&gt;%
+  filter(!is.na(twitter_handle)) %&gt;%
+  mutate(party = ifelse(party.y == &quot;&quot; | is.na(party.y), party.x, party.y)) %&gt;%
+  select(-c(party.x, party.y)) %&gt;%
+  unique() %&gt;%
+  filter(!is.na(party))
+
+congress_tweets = tweets_all %&gt;%
+  left_join(., congress_full) %&gt;%
+  mutate(time = lubridate::as_date(time),
+         week = lubridate::floor_date(time, &quot;week&quot;),
+         month = lubridate::floor_date(time, &quot;month&quot;))
+
+# congress_tweets %&gt;%
+#   filter(is.na(party)) %&gt;%
+#   select(twitter_handle) %&gt;%
+#   unique()</code></pre>
+<p>load trump tweets</p>
+<ul>
+<li><a href="https://github.com/mkearney/trumptweets">Trump Tweets</a></li>
+<li><a href="http://trumptwitterarchive.com/">Trump Twitter Archive</a></li>
+</ul>
+<pre class="r"><code>get_tweets = function(year, fromJSON = TRUE) {
+  ## build and send request
+  url &lt;- paste0(
+    &quot;http://trumptwitterarchive.com/&quot;,
+    &quot;data/realdonaldtrump/&quot;,
+    year,
+    &quot;.json&quot;
+  )
+  ## response object
+  r &lt;- httr::GET(url)
+  ## check html status
+  httr::warn_for_status(r)
+  ## if fromJSON then convert to list otherwise return response object
+  if (fromJSON) {
+    r &lt;- httr::content(r, &quot;text&quot;)
+    ## if html return empty data frame
+    if (grepl(&quot;^\\&lt;\\!DOCTYPE&quot;, r)) {
+      r &lt;- data.frame()
+    } else {
+      r &lt;- jsonlite::fromJSON(r)
+    }
+  }
+  r
+}
+
+trump_tweets = get_tweets(year = 2020) %&gt;%
+  mutate(twitter_handle = &quot;realdonaldtrump&quot;,
+         time = as.POSIXct(created_at, format = &quot;%a %b %d %H:%M:%S %z %Y&quot;),
+         time = lubridate::as_date(time),
+         week = lubridate::floor_date(time, &quot;week&quot;),
+         month = lubridate::floor_date(time, &quot;month&quot;),
+         party = &quot;trump&quot;) %&gt;%
+  select(twitter_handle, text, time, week, month, party) %&gt;%
+  filter(grepl(&quot;2020-02|2020-03&quot;, month)) %&gt;%
+  mutate(text = tolower(text)) %&gt;%
+  filter(grepl(&quot;corona|virus|covid|flu&quot;, text))</code></pre>
+<p>merge tweets</p>
+<pre class="r"><code>tweets = bind_rows(congress_tweets, trump_tweets)
+
+ignore_root_words = &quot;http|.com|img|jpg|video|live|index|[0-9]|corona|covid|vid|ncov|aspx|utm|t.co|png&quot;
+ignore_words = c(&quot;rt&quot;, &quot;amp&quot;, &quot;qt&quot;, &quot;pu&quot;, &quot;tag&quot;, &quot;i&#39;m&quot;, &quot;it&#39;s&quot;, &quot;i’m&quot;, &quot;it’s&quot;)</code></pre>
+<p>define wordcloud function</p>
+<pre class="r"><code>plot_tweets = function(data, party=NULL, start_date=NULL, duration=NULL, n_words=50, n_colors=6, size=.4) {
+  
+  data = data %&gt;%
+      mutate(time = lubridate::as_date(time))
+  
+  if (!is.null(party)) {
+    data = data %&gt;%
+      filter(party == !!party)
+  }
+  
+  if (!is.null(start_date)) {
+    if (!is.null(duration)) {
+      data = data %&gt;%
+        filter(time &gt;= start_date &amp; time &lt;= lubridate::date(start_date) + lubridate::days(duration))
+    } else {
+      data = data %&gt;%
+        filter(time &gt;= start_date)
+    }
+  }
+  
+  palette = wesanderson::wes_palette(&quot;Zissou1&quot;, n_colors, &quot;continuous&quot;)
+  
+  plot = data %&gt;%
+    select(text) %&gt;%
+    unnest_tokens(word, text) %&gt;%
+    count(word, sort = TRUE) %&gt;%
+    anti_join(stop_words, by = &quot;word&quot;) %&gt;%
+    filter(!grepl(ignore_root_words, word)) %&gt;%
+    filter(!word %in% ignore_words) %&gt;%
+    slice(1:n_words) %&gt;%
+    mutate(color = ntile(n, n_colors)) %&gt;%
+    mutate(color1 = plyr::mapvalues(color, from = 1:n_colors, to = palette)) %&gt;%
+    wordcloud2::wordcloud2(., size = size, shape = &#39;rectangle&#39;,
+                          fontFamily = &quot;futura&quot;, fontWeight = &quot;normal&quot;,
+                          color = .$color1)
+  
+  return(list(plot = plot, data = data))
+}</code></pre>
+</div>
+<div id="number-of-tweets" class="section level1 tabset">
+<h1>number of tweets</h1>
+<div id="daily" class="section level2">
+<h2>daily</h2>
+<pre class="r"><code>tweets %&gt;%
+  filter(!is.na(party)) %&gt;%
+  ggplot(aes(time, fill = party)) +
+  geom_bar(stat = &quot;count&quot;) +
+  scale_fill_manual(name = &quot;&quot;, values = palette4) +
+  labs(x = &quot;&quot;, y = &quot;number of tweets\n&quot;) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &quot;top&quot;)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<pre class="r"><code>tweets %&gt;%
+  filter(!is.na(party)) %&gt;%
+  ggplot(aes(time, color = party)) +
+  geom_line(stat = &quot;count&quot;) +
+  scale_color_manual(name = &quot;&quot;, values = palette4) +
+  labs(x = &quot;&quot;, y = &quot;number of tweets\n&quot;) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &quot;top&quot;)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-10-2.png" width="672" /></p>
+</div>
+<div id="weekly" class="section level2">
+<h2>weekly</h2>
+<pre class="r"><code>tweets %&gt;%
+  filter(!is.na(party)) %&gt;%
+  ggplot(aes(week, fill = party)) +
+  geom_bar(stat = &quot;count&quot;) +
+  scale_fill_manual(name = &quot;&quot;, values = palette4) +
+  labs(x = &quot;&quot;, y = &quot;number of tweets\n&quot;) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &quot;top&quot;)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<pre class="r"><code>tweets %&gt;%
+  filter(!is.na(party)) %&gt;%
+  ggplot(aes(week, color = party)) +
+  geom_line(stat = &quot;count&quot;) +
+  scale_color_manual(name = &quot;&quot;, values = palette4) +
+  labs(x = &quot;&quot;, y = &quot;number of tweets\n&quot;) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &quot;top&quot;)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-11-2.png" width="672" /></p>
+</div>
+</div>
+<div id="sentiment-of-tweets" class="section level1 tabset">
+<h1>sentiment of tweets</h1>
+<div id="overall" class="section level2">
+<h2>overall</h2>
+<pre class="r"><code>sentiments = tweets %&gt;%
+  unnest_tokens(word, text) %&gt;%
+  inner_join(tidytext::get_sentiments(&quot;bing&quot;)) %&gt;%
+  anti_join(stop_words, by = &quot;word&quot;) %&gt;%
+  filter(!grepl(ignore_root_words, word)) %&gt;%
+  filter(!word %in% ignore_words) %&gt;%
+  filter(!word == &quot;trump&quot;) %&gt;%
+  group_by(party) %&gt;%
+  count(word, sentiment, sort = TRUE) %&gt;%
+  filter(party %in% c(&quot;democrat&quot;, &quot;republican&quot;, &quot;trump&quot;)) %&gt;%
+  #group_by(sentiment, party, month) %&gt;%
+  top_n(20) %&gt;%
+  group_by(party) %&gt;%
+  arrange(n) %&gt;%
+  mutate(order = row_number())
+
+sentiments %&gt;%
+  ggplot(aes(drlib::reorder_within(word, n, party), n, fill = sentiment)) +
+  geom_col() +
+  drlib::scale_x_reordered() +
+  facet_wrap(~party, scales = &quot;free&quot;) +
+  labs(y = &quot;\nnumber of times tweeted&quot;,
+       x = NULL) +
+  coord_flip() +
+  scale_fill_manual(values = palette2) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &quot;top&quot;)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-12-1.png" width="768" /></p>
+</div>
+<div id="by-month" class="section level2">
+<h2>by month</h2>
+<pre class="r"><code>sentiments = tweets %&gt;%
+  unnest_tokens(word, text) %&gt;%
+  inner_join(tidytext::get_sentiments(&quot;bing&quot;)) %&gt;%
+  anti_join(stop_words, by = &quot;word&quot;) %&gt;%
+  filter(!grepl(ignore_root_words, word)) %&gt;%
+  filter(!word %in% ignore_words) %&gt;%
+  filter(!word == &quot;trump&quot;) %&gt;%
+  mutate(month = ifelse(month == &quot;2020-02-01&quot;, &quot;february&quot;, &quot;march&quot;)) %&gt;%
+  group_by(party, month) %&gt;%
+  count(word, sentiment, sort = TRUE) %&gt;%
+  filter(party %in% c(&quot;democrat&quot;, &quot;republican&quot;, &quot;trump&quot;)) %&gt;%
+  #group_by(sentiment, party, month) %&gt;%
+  top_n(20) %&gt;%
+  group_by(party, month) %&gt;%
+  arrange(n) %&gt;%
+  mutate(order = row_number())
+
+sentiments %&gt;%
+  ggplot(aes(drlib::reorder_within(word, n, c(&quot;party&quot;, &quot;month&quot;)), n, fill = sentiment)) +
+  geom_col() +
+  drlib::scale_x_reordered() +
+  facet_wrap(month~party, scales = &quot;free&quot;) +
+  labs(y = &quot;\nnumber of times tweeted&quot;,
+       x = NULL) +
+  coord_flip() +
+  scale_fill_manual(values = palette2) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &quot;top&quot;)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-13-1.png" width="768" /></p>
+</div>
+</div>
+<div id="content-by-month" class="section level1">
+<h1>content by month</h1>
+<div id="democrats" class="section level2 tabset">
+<h2>democrats</h2>
+<div id="february" class="section level3">
+<h3>February</h3>
+<pre class="r"><code>d = plot_tweets(tweets, party = &quot;democrat&quot;, start_date = &quot;2020-02-01&quot;, duration = 29, n_words = 100, size = .4)
+htmlwidgets::saveWidget(d$plot,&quot;d.html&quot;, selfcontained = FALSE)
+webshot(&quot;d.html&quot;,&quot;dm1.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p>Number of tweets = 2015</p>
+</div>
+<div id="march" class="section level3">
+<h3>March</h3>
+<pre class="r"><code>d = plot_tweets(tweets, party = &quot;democrat&quot;, start_date = &quot;2020-03-01&quot;, duration = 31, n_words = 100, size = .4)
+htmlwidgets::saveWidget(d$plot,&quot;d.html&quot;, selfcontained = FALSE)
+webshot(&quot;d.html&quot;,&quot;dm2.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Number of tweets = 7820</p>
+</div>
+</div>
+<div id="republicans" class="section level2 tabset">
+<h2>republicans</h2>
+<div id="february-1" class="section level3">
+<h3>February</h3>
+<pre class="r"><code>r = plot_tweets(tweets, party = &quot;republican&quot;, start_date = &quot;2020-02-01&quot;, duration = 29, n_words = 100, size = .4)
+htmlwidgets::saveWidget(r$plot,&quot;r.html&quot;, selfcontained = FALSE)
+webshot(&quot;r.html&quot;,&quot;rm1.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p>Number of tweets = 1160</p>
+</div>
+<div id="march-1" class="section level3">
+<h3>March</h3>
+<pre class="r"><code>r = plot_tweets(tweets, party = &quot;republican&quot;, start_date = &quot;2020-03-01&quot;, duration = 31, n_words = 100, size = .4)
+htmlwidgets::saveWidget(r$plot,&quot;r.html&quot;, selfcontained = FALSE)
+webshot(&quot;r.html&quot;,&quot;rm2.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p>Number of tweets = 6992</p>
+</div>
+</div>
+<div id="trump" class="section level2 tabset">
+<h2>trump</h2>
+<div id="february-2" class="section level3">
+<h3>February</h3>
+<pre class="r"><code>t = plot_tweets(tweets, party = &quot;trump&quot;, start_date = &quot;2020-02-01&quot;, duration = 29, n_words = 100, size = .4)
+htmlwidgets::saveWidget(t$plot,&quot;t.html&quot;, selfcontained = FALSE)
+webshot(&quot;t.html&quot;,&quot;tm1.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p>Number of tweets = 28</p>
+</div>
+<div id="march-2" class="section level3">
+<h3>March</h3>
+<pre class="r"><code>t = plot_tweets(tweets, party = &quot;trump&quot;, start_date = &quot;2020-03-01&quot;, duration = 31, n_words = 100, size = .4)
+htmlwidgets::saveWidget(t$plot,&quot;t.html&quot;, selfcontained = FALSE)
+webshot(&quot;t.html&quot;,&quot;tm2.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p>Number of tweets = 81</p>
+</div>
+</div>
+</div>
+<div id="content-by-week" class="section level1">
+<h1>content by week</h1>
+<div id="democrats-1" class="section level2 tabset">
+<h2>democrats</h2>
+<div id="feb-1---feb-7" class="section level3">
+<h3>Feb 1 - Feb 7</h3>
+<pre class="r"><code>d = plot_tweets(tweets, party = &quot;democrat&quot;, start_date = &quot;2020-02-01&quot;, duration = 7)
+htmlwidgets::saveWidget(d$plot,&quot;d.html&quot;, selfcontained = FALSE)
+webshot(&quot;d.html&quot;,&quot;d1.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p>Number of tweets = 212</p>
+</div>
+<div id="feb-8---feb-14" class="section level3">
+<h3>Feb 8 - Feb 14</h3>
+<pre class="r"><code>d = plot_tweets(tweets, party = &quot;democrat&quot;, start_date = &quot;2020-02-08&quot;, duration = 7)
+htmlwidgets::saveWidget(d$plot,&quot;d.html&quot;, selfcontained = FALSE)
+webshot(&quot;d.html&quot;,&quot;d2.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p>Number of tweets = 180</p>
+</div>
+<div id="feb-15---feb-20" class="section level3">
+<h3>Feb 15 - Feb 20</h3>
+<pre class="r"><code>d = plot_tweets(tweets, party = &quot;democrat&quot;, start_date = &quot;2020-02-15&quot;, duration = 7)
+htmlwidgets::saveWidget(d$plot,&quot;d.html&quot;, selfcontained = FALSE)
+webshot(&quot;d.html&quot;,&quot;d3.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p>Number of tweets = 110</p>
+</div>
+<div id="feb-20---feb-26" class="section level3">
+<h3>Feb 20 - Feb 26</h3>
+<pre class="r"><code>d = plot_tweets(tweets, party = &quot;democrat&quot;, start_date = &quot;2020-02-20&quot;, duration = 7)
+htmlwidgets::saveWidget(d$plot,&quot;d.html&quot;, selfcontained = FALSE)
+webshot(&quot;d.html&quot;,&quot;d4.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<p>Number of tweets = 928</p>
+</div>
+<div id="feb-27---mar-4" class="section level3">
+<h3>Feb 27 - Mar 4</h3>
+<pre class="r"><code>d = plot_tweets(tweets, party = &quot;democrat&quot;, start_date = &quot;2020-02-27&quot;, duration = 7)
+
+htmlwidgets::saveWidget(d$plot,&quot;d.html&quot;, selfcontained = FALSE)
+webshot(&quot;d.html&quot;,&quot;d5.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+<p>Number of tweets = 2840</p>
+</div>
+<div id="mar-5---mar-11" class="section level3">
+<h3>Mar 5 - Mar 11</h3>
+<pre class="r"><code>d = plot_tweets(tweets, party = &quot;democrat&quot;, start_date = &quot;2020-03-05&quot;, duration = 7)
+
+htmlwidgets::saveWidget(d$plot,&quot;d.html&quot;, selfcontained = FALSE)
+webshot(&quot;d.html&quot;,&quot;d6.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-25-1.png" width="672" /></p>
+<p>Number of tweets = 4983</p>
+</div>
+<div id="mar-12---mar-18" class="section level3">
+<h3>Mar 12 - Mar 18</h3>
+<pre class="r"><code>d = plot_tweets(tweets, party = &quot;democrat&quot;, start_date = &quot;2020-03-12&quot;, duration = 7)
+
+htmlwidgets::saveWidget(d$plot,&quot;d.html&quot;, selfcontained = FALSE)
+webshot(&quot;d.html&quot;,&quot;d7.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-26-1.png" width="672" /></p>
+<p>Number of tweets = 2935</p>
+</div>
+</div>
+<div id="republicans-1" class="section level2 tabset">
+<h2>republicans</h2>
+<div id="feb-1---feb-7-1" class="section level3">
+<h3>Feb 1 - Feb 7</h3>
+<pre class="r"><code>r = plot_tweets(tweets, party = &quot;republican&quot;, start_date = &quot;2020-02-01&quot;, duration = 7)
+htmlwidgets::saveWidget(r$plot,&quot;r.html&quot;, selfcontained = FALSE)
+webshot(&quot;r.html&quot;,&quot;r1.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p>Number of tweets = 140</p>
+</div>
+<div id="feb-8---feb-14-1" class="section level3">
+<h3>Feb 8 - Feb 14</h3>
+<pre class="r"><code>r = plot_tweets(tweets, party = &quot;republican&quot;, start_date = &quot;2020-02-08&quot;, duration = 7, size = .3)
+htmlwidgets::saveWidget(r$plot,&quot;r.html&quot;, selfcontained = FALSE)
+webshot(&quot;r.html&quot;,&quot;r2.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p>Number of tweets = 166</p>
+</div>
+<div id="feb-15---feb-20-1" class="section level3">
+<h3>Feb 15 - Feb 20</h3>
+<pre class="r"><code>r = plot_tweets(tweets, party = &quot;republican&quot;, start_date = &quot;2020-02-15&quot;, duration = 7)
+htmlwidgets::saveWidget(r$plot,&quot;r.html&quot;, selfcontained = FALSE)
+webshot(&quot;r.html&quot;,&quot;r3.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-29-1.png" width="672" /></p>
+<p>Number of tweets = 88</p>
+</div>
+<div id="feb-20---feb-26-1" class="section level3">
+<h3>Feb 20 - Feb 26</h3>
+<pre class="r"><code>r = plot_tweets(tweets, party = &quot;republican&quot;, start_date = &quot;2020-02-20&quot;, duration = 7)
+htmlwidgets::saveWidget(r$plot,&quot;r.html&quot;, selfcontained = FALSE)
+webshot(&quot;r.html&quot;,&quot;r4.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-30-1.png" width="672" /></p>
+<p>Number of tweets = 482</p>
+</div>
+<div id="feb-27---mar-4-1" class="section level3">
+<h3>Feb 27 - Mar 4</h3>
+<pre class="r"><code>r = plot_tweets(tweets, party = &quot;republican&quot;, start_date = &quot;2020-02-27&quot;, duration = 7)
+
+htmlwidgets::saveWidget(r$plot,&quot;r.html&quot;, selfcontained = FALSE)
+webshot(&quot;r.html&quot;,&quot;r5.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p>Number of tweets = 2966</p>
+</div>
+<div id="mar-5---mar-11-1" class="section level3">
+<h3>Mar 5 - Mar 11</h3>
+<pre class="r"><code>r = plot_tweets(tweets, party = &quot;republican&quot;, start_date = &quot;2020-03-05&quot;, duration = 7)
+
+htmlwidgets::saveWidget(r$plot,&quot;r.html&quot;, selfcontained = FALSE)
+webshot(&quot;r.html&quot;,&quot;r6.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-32-1.png" width="672" /></p>
+<p>Number of tweets = 3754</p>
+</div>
+<div id="mar-12---mar-18-1" class="section level3">
+<h3>Mar 12 - Mar 18</h3>
+<pre class="r"><code>r = plot_tweets(tweets, party = &quot;republican&quot;, start_date = &quot;2020-03-12&quot;, duration = 7)
+
+htmlwidgets::saveWidget(r$plot,&quot;r.html&quot;, selfcontained = FALSE)
+webshot(&quot;r.html&quot;,&quot;r7.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p>Number of tweets = 2520</p>
+</div>
+</div>
+<div id="trump-1" class="section level2 tabset">
+<h2>trump</h2>
+<div id="feb-1---feb-7-2" class="section level3">
+<h3>Feb 1 - Feb 7</h3>
+<pre class="r"><code>t = plot_tweets(tweets, party = &quot;trump&quot;, start_date = &quot;2020-02-01&quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&quot;t.html&quot;, selfcontained = FALSE)
+webshot(&quot;t.html&quot;,&quot;t1.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-34-1.png" width="672" /></p>
+<p>Number of tweets = 2</p>
+</div>
+<div id="feb-8---feb-14-2" class="section level3">
+<h3>Feb 8 - Feb 14</h3>
+<pre class="r"><code>t = plot_tweets(tweets, party = &quot;trump&quot;, start_date = &quot;2020-02-08&quot;, duration = 7, size = .3)
+htmlwidgets::saveWidget(t$plot,&quot;t.html&quot;, selfcontained = FALSE)
+webshot(&quot;t.html&quot;,&quot;t2.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-35-1.png" width="672" /></p>
+<p>Number of tweets = 1</p>
+</div>
+<div id="feb-15---feb-20-2" class="section level3">
+<h3>Feb 15 - Feb 20</h3>
+<pre class="r"><code>t = plot_tweets(tweets, party = &quot;trump&quot;, start_date = &quot;2020-02-15&quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&quot;t.html&quot;, selfcontained = FALSE)
+webshot(&quot;t.html&quot;,&quot;t3.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-36-1.png" width="672" /></p>
+<p>Number of tweets = 1</p>
+</div>
+<div id="feb-20---feb-26-2" class="section level3">
+<h3>Feb 20 - Feb 26</h3>
+<pre class="r"><code>t = plot_tweets(tweets, party = &quot;trump&quot;, start_date = &quot;2020-02-20&quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&quot;t.html&quot;, selfcontained = FALSE)
+webshot(&quot;t.html&quot;,&quot;t4.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-37-1.png" width="672" /></p>
+<p>Number of tweets = 18</p>
+</div>
+<div id="feb-27---mar-4-2" class="section level3">
+<h3>Feb 27 - Mar 4</h3>
+<pre class="r"><code>t = plot_tweets(tweets, party = &quot;trump&quot;, start_date = &quot;2020-02-27&quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&quot;t.html&quot;, selfcontained = FALSE)
+webshot(&quot;t.html&quot;,&quot;t5.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-38-1.png" width="672" /></p>
+<p>Number of tweets = 28</p>
+</div>
+<div id="mar-5---mar-11-2" class="section level3">
+<h3>Mar 5 - Mar 11</h3>
+<pre class="r"><code>t = plot_tweets(tweets, party = &quot;trump&quot;, start_date = &quot;2020-03-05&quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&quot;t.html&quot;, selfcontained = FALSE)
+webshot(&quot;t.html&quot;,&quot;t6.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-39-1.png" width="672" /></p>
+<p>Number of tweets = 50</p>
+</div>
+<div id="mar-12---mar-18-2" class="section level3">
+<h3>Mar 12 - Mar 18</h3>
+<pre class="r"><code>t = plot_tweets(tweets, party = &quot;trump&quot;, start_date = &quot;2020-03-12&quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&quot;t.html&quot;, selfcontained = FALSE)
+webshot(&quot;t.html&quot;,&quot;t7.png&quot;, vwidth = 500, vheight = 400, zoom = 2)</code></pre>
+<p><img src="/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-40-1.png" width="672" /></p>
+<p>Number of tweets = 37</p>
+</div>
+</div>
+</div>
+
+    </div>
+
+    
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/twitter/">twitter</a>
+  
+  <a class="badge badge-light" href="/tags/congress/">congress</a>
+  
+  <a class="badge badge-light" href="/tags/trump/">trump</a>
+  
+  <a class="badge badge-light" href="/tags/coronavirus/">coronavirus</a>
+  
+  <a class="badge badge-light" href="/tags/covid-19/">COVID-19</a>
+  
+  <a class="badge badge-light" href="/tags/sentiment/">sentiment</a>
+  
+  <a class="badge badge-light" href="/tags/text/">text</a>
+  
+  <a class="badge badge-light" href="/tags/data-science/">data science</a>
+  
+</div>
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu9a007ba6facf637eace29efc6cfbc4f6_52543_250x250_fill_q90_lanczos_center.jpg" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="/">DANIELLE COSME</a></h5>
+      <h6 class="card-subtitle">Postdoctoral Researcher<br><br><a href="https://cn.asc.upenn.edu/" target="_blank">Communication Neuroscience Lab</a><br><a href="https://www.asc.upenn.edu/" target="_blank">Annenberg School for Communication</a></h6>
+      <p class="card-text" itemprop="description">Translational neuroscientist studying behavior change in adults and adolescents</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+          <li>
+            <a itemprop="sameAs" href="mailto:danielle.cosme@asc.upenn.edu" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/danicosme" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.com/citations?user=fAkRXQoAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+              <i class="ai ai-google-scholar"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/dcosme" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/cv" >
+              <i class="ai ai-cv"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.f1a21f988a77cdbdeeb2f60c710009d1.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+  <p class="powered-by">
+    <a href="/privacy/">Privacy Policy</a>
+  </p>
+  
+
+  <p class="powered-by">
+    &copy; Danielle Cosme, 2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>text on DANIELLE COSME</title>
+    <link>/tags/text/</link>
+    <description>Recent content in text on DANIELLE COSME</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
+    <lastBuildDate>Sat, 14 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="/tags/text/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Congressional and Presidential Tweets About COVID-19</title>
+      <link>/2020/03/14/congressional-and-presidential-tweets-about-covid-19/</link>
+      <pubDate>Sat, 14 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/2020/03/14/congressional-and-presidential-tweets-about-covid-19/</guid>
+      <description>
+
+
+&lt;p&gt;&lt;br&gt;&lt;br&gt; &lt;strong&gt;Curious what congress and Trump are saying about the coronavirus?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This analysis takes a look at the number, the positive and negative sentiment, and the content of the tweets, for each party and how that’s evolving over time since February 1, 2020.&lt;/p&gt;
+&lt;p&gt;I utilize open data hosted online. In particular, big thanks to &lt;a href=&#34;https://github.com/alexlitel&#34;&gt;Alex Litel&lt;/a&gt; who created the &lt;a href=&#34;https://alexlitel.github.io/congresstweets/&#34;&gt;Tweets of Congress&lt;/a&gt; repo, where I pulled congressional tweets from, and the folks running &lt;a href=&#34;http://trumptwitterarchive.com/&#34;&gt;Trump Twitter Archive&lt;/a&gt;, where I pulled Trump’s tweets from.&lt;/p&gt;
+&lt;div id=&#34;prep-data&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;prep data&lt;/h1&gt;
+&lt;p&gt;load packages&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)
+library(jsonlite)
+library(tidytext)
+library(wordcloud)
+library(webshot)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;define palettes&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;palette4 = wesanderson::wes_palette(&amp;quot;Zissou1&amp;quot;, 4, &amp;quot;continuous&amp;quot;)
+palette4 = c(palette4[1], palette4[2], palette4[4], palette4[3])
+palette5 = wesanderson::wes_palette(&amp;quot;Zissou1&amp;quot;, 5, &amp;quot;continuous&amp;quot;)
+palette2 = c(palette5[2], palette5[4])&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;load congress twitter handles&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/CivilServiceUSA/us-senate&#34;&gt;US Senate Information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/CivilServiceUSA/us-house&#34;&gt;US House Information&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/oduwsdl/US-Congress&#34;&gt;Congressional Twitter Handles&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;congress_twitter = read.csv(&amp;quot;~/Documents/code/US-Congress/116thCongress/116Congress.csv&amp;quot;, stringsAsFactors = FALSE) %&amp;gt;%
+  rename(&amp;quot;name&amp;quot; = Wikipedia..Names) %&amp;gt;%
+  gather(handle_type, twitter_handle, ODU.WSDL, CSPAN, TweetCongress, Github) %&amp;gt;%
+  select(name, handle_type, twitter_handle) %&amp;gt;%
+  mutate(twitter_handle = tolower(twitter_handle),
+         twitter_handle = ifelse(twitter_handle == &amp;quot;&amp;quot;, NA, twitter_handle),
+         name = gsub(&amp;quot;&amp;lt;e9&amp;gt;&amp;quot;, &amp;quot;é&amp;quot;, `Encoding&amp;lt;-`(name, &amp;quot;latin1&amp;quot;), fixed = TRUE),
+         name = gsub(&amp;quot;&amp;lt;e1&amp;gt;&amp;quot;, &amp;quot;á&amp;quot;, `Encoding&amp;lt;-`(name, &amp;quot;latin1&amp;quot;), fixed = TRUE),
+         name = gsub(&amp;quot;&amp;lt;fa&amp;gt;&amp;quot;, &amp;quot;ú&amp;quot;, `Encoding&amp;lt;-`(name, &amp;quot;latin1&amp;quot;), fixed = TRUE),
+         name = gsub(&amp;quot;&amp;lt;ed&amp;gt;&amp;quot;, &amp;quot;í&amp;quot;, `Encoding&amp;lt;-`(name, &amp;quot;latin1&amp;quot;), fixed = TRUE),
+         name = gsub(&amp;quot;é&amp;quot;, &amp;quot;e&amp;quot;, name),
+         name = gsub(&amp;quot;á&amp;quot;, &amp;quot;a&amp;quot;, name),
+         name = gsub(&amp;quot;ú&amp;quot;, &amp;quot;u&amp;quot;, name),
+         name = gsub(&amp;quot;í&amp;quot;, &amp;quot;i&amp;quot;, name),
+         name = trimws(name)) %&amp;gt;%
+  extract(name, c(&amp;quot;first&amp;quot;, &amp;quot;last&amp;quot;), &amp;quot;([A-Za-z]{1}).* (.*)&amp;quot;, remove = FALSE) %&amp;gt;%
+  spread(handle_type, twitter_handle)
+
+congress = read.csv(&amp;quot;~/Documents/code/us-senate/us-senate/data/us-senate.csv&amp;quot;, stringsAsFactors = FALSE) %&amp;gt;%
+  bind_rows(read.csv(&amp;quot;~/Documents/code/us-house/us-house/data/us-house.csv&amp;quot;, stringsAsFactors = FALSE)) %&amp;gt;%
+  select(state_name, title, party, name, gender, ethnicity, twitter_handle) %&amp;gt;%
+  mutate(twitter_handle = tolower(twitter_handle),
+         twitter_handle = ifelse(twitter_handle == &amp;quot;&amp;quot;, NA,
+                          ifelse(twitter_handle == &amp;quot;housedemocrats&amp;quot;, NA,
+                          ifelse(twitter_handle == &amp;quot;senatorloeffler?lang=en&amp;quot;, NA, twitter_handle))),
+         name = gsub(&amp;quot;é&amp;quot;, &amp;quot;e&amp;quot;, name),
+         name = gsub(&amp;quot;á&amp;quot;, &amp;quot;a&amp;quot;, name),
+         name = gsub(&amp;quot;ú&amp;quot;, &amp;quot;u&amp;quot;, name),
+         name = gsub(&amp;quot;í&amp;quot;, &amp;quot;i&amp;quot;, name),
+         name = trimws(name)) %&amp;gt;%
+  extract(name, c(&amp;quot;first&amp;quot;, &amp;quot;last&amp;quot;), &amp;quot;([A-Za-z]{1}).* (.*)&amp;quot;, remove = FALSE)
+
+congress_info = full_join(congress, congress_twitter, by = c(&amp;quot;first&amp;quot;, &amp;quot;last&amp;quot;)) %&amp;gt;%
+  gather(handle_type, twitter_handle, twitter_handle, ODU.WSDL, CSPAN, TweetCongress, Github) %&amp;gt;%
+  select(state_name, title, party, first, last, gender, ethnicity, twitter_handle) %&amp;gt;%
+  group_by(first, last) %&amp;gt;%
+  fill(state_name, title, party, gender, ethnicity, twitter_handle, .direction = &amp;quot;updown&amp;quot;) %&amp;gt;%
+  unique() %&amp;gt;%
+  filter(!is.na(state_name)) %&amp;gt;%
+  ungroup() %&amp;gt;%
+  mutate(last = tolower(last))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;load congressional tweets&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/alexlitel/congresstweets&#34;&gt;Tweets of Congress, updated daily&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;select tweets containing the following terms: &lt;code&gt;corona|virus|covid|flu&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;pull to update repo&lt;/p&gt;
+&lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;cd ~/Documents/code/congresstweets
+git pull origin master&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## From https://github.com/alexlitel/congresstweets
+##  * branch            master     -&amp;gt; FETCH_HEAD
+## Already up to date.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;load the files&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;file_dir = &amp;quot;~/Documents/code/congresstweets/data&amp;quot;
+file_pattern = &amp;quot;2020-0[2-3]{1}-.*.json&amp;quot;
+file_list = list.files(file_dir, pattern = file_pattern)
+
+tweets_temp = data.frame()
+
+for (file in file_list) {
+  temp = tryCatch(jsonlite::stream_in(file(file.path(file_dir, file)), verbose = FALSE), error = function(e) message(file))
+
+  tweets_temp = rbind(tweets_temp, temp)
+  rm(temp)
+}
+
+tweets_all = tweets_temp %&amp;gt;%
+  rename(&amp;quot;twitter_handle&amp;quot; = screen_name) %&amp;gt;%
+  select(twitter_handle, time, text) %&amp;gt;%
+  mutate(twitter_handle = tolower(twitter_handle),
+         text = tolower(text)) %&amp;gt;%
+  filter(grepl(&amp;quot;corona|virus|covid|flu&amp;quot;, text))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;find missing congressional twitter handles&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;missing = tweets_all %&amp;gt;% 
+  left_join(., congress_info) %&amp;gt;%
+  filter(is.na(last)) %&amp;gt;%
+  select(twitter_handle) %&amp;gt;%
+  unique()
+
+last_names = congress_info %&amp;gt;%
+  ungroup() %&amp;gt;%
+  select(last) %&amp;gt;%
+  unique() %&amp;gt;%
+  mutate(last = tolower(last))
+
+missing$last &amp;lt;- sapply(missing$twitter_handle, function(handle) {
+  last &amp;lt;- last_names$last[sapply(last_names$last, grepl, handle)]
+  }) 
+
+missing %&amp;gt;%
+  unnest(last, keep_empty = TRUE) %&amp;gt;%
+  mutate(first = toupper(substring(twitter_handle, 1, 1)),
+         last = ifelse(is.na(last), &amp;quot;&amp;quot;, last)) %&amp;gt;%
+  write.csv(., &amp;quot;missing.csv&amp;quot;, row.names = FALSE)
+
+missing_edited = read.csv(&amp;quot;missing_edited.csv&amp;quot;, stringsAsFactors = FALSE)
+
+congress_full = congress_info %&amp;gt;%
+  full_join(., missing_edited, by = c(&amp;quot;first&amp;quot;, &amp;quot;last&amp;quot;)) %&amp;gt;%
+  gather(var, twitter_handle, contains(&amp;quot;twitter_handle&amp;quot;)) %&amp;gt;%
+  select(-var) %&amp;gt;%
+  unique() %&amp;gt;%
+  filter(!is.na(twitter_handle)) %&amp;gt;%
+  mutate(party = ifelse(party.y == &amp;quot;&amp;quot; | is.na(party.y), party.x, party.y)) %&amp;gt;%
+  select(-c(party.x, party.y)) %&amp;gt;%
+  unique() %&amp;gt;%
+  filter(!is.na(party))
+
+congress_tweets = tweets_all %&amp;gt;%
+  left_join(., congress_full) %&amp;gt;%
+  mutate(time = lubridate::as_date(time),
+         week = lubridate::floor_date(time, &amp;quot;week&amp;quot;),
+         month = lubridate::floor_date(time, &amp;quot;month&amp;quot;))
+
+# congress_tweets %&amp;gt;%
+#   filter(is.na(party)) %&amp;gt;%
+#   select(twitter_handle) %&amp;gt;%
+#   unique()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;load trump tweets&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/mkearney/trumptweets&#34;&gt;Trump Tweets&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://trumptwitterarchive.com/&#34;&gt;Trump Twitter Archive&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;get_tweets = function(year, fromJSON = TRUE) {
+  ## build and send request
+  url &amp;lt;- paste0(
+    &amp;quot;http://trumptwitterarchive.com/&amp;quot;,
+    &amp;quot;data/realdonaldtrump/&amp;quot;,
+    year,
+    &amp;quot;.json&amp;quot;
+  )
+  ## response object
+  r &amp;lt;- httr::GET(url)
+  ## check html status
+  httr::warn_for_status(r)
+  ## if fromJSON then convert to list otherwise return response object
+  if (fromJSON) {
+    r &amp;lt;- httr::content(r, &amp;quot;text&amp;quot;)
+    ## if html return empty data frame
+    if (grepl(&amp;quot;^\\&amp;lt;\\!DOCTYPE&amp;quot;, r)) {
+      r &amp;lt;- data.frame()
+    } else {
+      r &amp;lt;- jsonlite::fromJSON(r)
+    }
+  }
+  r
+}
+
+trump_tweets = get_tweets(year = 2020) %&amp;gt;%
+  mutate(twitter_handle = &amp;quot;realdonaldtrump&amp;quot;,
+         time = as.POSIXct(created_at, format = &amp;quot;%a %b %d %H:%M:%S %z %Y&amp;quot;),
+         time = lubridate::as_date(time),
+         week = lubridate::floor_date(time, &amp;quot;week&amp;quot;),
+         month = lubridate::floor_date(time, &amp;quot;month&amp;quot;),
+         party = &amp;quot;trump&amp;quot;) %&amp;gt;%
+  select(twitter_handle, text, time, week, month, party) %&amp;gt;%
+  filter(grepl(&amp;quot;2020-02|2020-03&amp;quot;, month)) %&amp;gt;%
+  mutate(text = tolower(text)) %&amp;gt;%
+  filter(grepl(&amp;quot;corona|virus|covid|flu&amp;quot;, text))&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;merge tweets&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tweets = bind_rows(congress_tweets, trump_tweets)
+
+ignore_root_words = &amp;quot;http|.com|img|jpg|video|live|index|[0-9]|corona|covid|vid|ncov|aspx|utm|t.co|png&amp;quot;
+ignore_words = c(&amp;quot;rt&amp;quot;, &amp;quot;amp&amp;quot;, &amp;quot;qt&amp;quot;, &amp;quot;pu&amp;quot;, &amp;quot;tag&amp;quot;, &amp;quot;i&amp;#39;m&amp;quot;, &amp;quot;it&amp;#39;s&amp;quot;, &amp;quot;i’m&amp;quot;, &amp;quot;it’s&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;define wordcloud function&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot_tweets = function(data, party=NULL, start_date=NULL, duration=NULL, n_words=50, n_colors=6, size=.4) {
+  
+  data = data %&amp;gt;%
+      mutate(time = lubridate::as_date(time))
+  
+  if (!is.null(party)) {
+    data = data %&amp;gt;%
+      filter(party == !!party)
+  }
+  
+  if (!is.null(start_date)) {
+    if (!is.null(duration)) {
+      data = data %&amp;gt;%
+        filter(time &amp;gt;= start_date &amp;amp; time &amp;lt;= lubridate::date(start_date) + lubridate::days(duration))
+    } else {
+      data = data %&amp;gt;%
+        filter(time &amp;gt;= start_date)
+    }
+  }
+  
+  palette = wesanderson::wes_palette(&amp;quot;Zissou1&amp;quot;, n_colors, &amp;quot;continuous&amp;quot;)
+  
+  plot = data %&amp;gt;%
+    select(text) %&amp;gt;%
+    unnest_tokens(word, text) %&amp;gt;%
+    count(word, sort = TRUE) %&amp;gt;%
+    anti_join(stop_words, by = &amp;quot;word&amp;quot;) %&amp;gt;%
+    filter(!grepl(ignore_root_words, word)) %&amp;gt;%
+    filter(!word %in% ignore_words) %&amp;gt;%
+    slice(1:n_words) %&amp;gt;%
+    mutate(color = ntile(n, n_colors)) %&amp;gt;%
+    mutate(color1 = plyr::mapvalues(color, from = 1:n_colors, to = palette)) %&amp;gt;%
+    wordcloud2::wordcloud2(., size = size, shape = &amp;#39;rectangle&amp;#39;,
+                          fontFamily = &amp;quot;futura&amp;quot;, fontWeight = &amp;quot;normal&amp;quot;,
+                          color = .$color1)
+  
+  return(list(plot = plot, data = data))
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;number-of-tweets&#34; class=&#34;section level1 tabset&#34;&gt;
+&lt;h1&gt;number of tweets&lt;/h1&gt;
+&lt;div id=&#34;daily&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;daily&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tweets %&amp;gt;%
+  filter(!is.na(party)) %&amp;gt;%
+  ggplot(aes(time, fill = party)) +
+  geom_bar(stat = &amp;quot;count&amp;quot;) +
+  scale_fill_manual(name = &amp;quot;&amp;quot;, values = palette4) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;number of tweets\n&amp;quot;) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &amp;quot;top&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-10-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tweets %&amp;gt;%
+  filter(!is.na(party)) %&amp;gt;%
+  ggplot(aes(time, color = party)) +
+  geom_line(stat = &amp;quot;count&amp;quot;) +
+  scale_color_manual(name = &amp;quot;&amp;quot;, values = palette4) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;number of tweets\n&amp;quot;) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &amp;quot;top&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-10-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;weekly&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;weekly&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tweets %&amp;gt;%
+  filter(!is.na(party)) %&amp;gt;%
+  ggplot(aes(week, fill = party)) +
+  geom_bar(stat = &amp;quot;count&amp;quot;) +
+  scale_fill_manual(name = &amp;quot;&amp;quot;, values = palette4) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;number of tweets\n&amp;quot;) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &amp;quot;top&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-11-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tweets %&amp;gt;%
+  filter(!is.na(party)) %&amp;gt;%
+  ggplot(aes(week, color = party)) +
+  geom_line(stat = &amp;quot;count&amp;quot;) +
+  scale_color_manual(name = &amp;quot;&amp;quot;, values = palette4) +
+  labs(x = &amp;quot;&amp;quot;, y = &amp;quot;number of tweets\n&amp;quot;) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &amp;quot;top&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-11-2.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sentiment-of-tweets&#34; class=&#34;section level1 tabset&#34;&gt;
+&lt;h1&gt;sentiment of tweets&lt;/h1&gt;
+&lt;div id=&#34;overall&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;overall&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sentiments = tweets %&amp;gt;%
+  unnest_tokens(word, text) %&amp;gt;%
+  inner_join(tidytext::get_sentiments(&amp;quot;bing&amp;quot;)) %&amp;gt;%
+  anti_join(stop_words, by = &amp;quot;word&amp;quot;) %&amp;gt;%
+  filter(!grepl(ignore_root_words, word)) %&amp;gt;%
+  filter(!word %in% ignore_words) %&amp;gt;%
+  filter(!word == &amp;quot;trump&amp;quot;) %&amp;gt;%
+  group_by(party) %&amp;gt;%
+  count(word, sentiment, sort = TRUE) %&amp;gt;%
+  filter(party %in% c(&amp;quot;democrat&amp;quot;, &amp;quot;republican&amp;quot;, &amp;quot;trump&amp;quot;)) %&amp;gt;%
+  #group_by(sentiment, party, month) %&amp;gt;%
+  top_n(20) %&amp;gt;%
+  group_by(party) %&amp;gt;%
+  arrange(n) %&amp;gt;%
+  mutate(order = row_number())
+
+sentiments %&amp;gt;%
+  ggplot(aes(drlib::reorder_within(word, n, party), n, fill = sentiment)) +
+  geom_col() +
+  drlib::scale_x_reordered() +
+  facet_wrap(~party, scales = &amp;quot;free&amp;quot;) +
+  labs(y = &amp;quot;\nnumber of times tweeted&amp;quot;,
+       x = NULL) +
+  coord_flip() +
+  scale_fill_manual(values = palette2) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &amp;quot;top&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;by-month&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;by month&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;sentiments = tweets %&amp;gt;%
+  unnest_tokens(word, text) %&amp;gt;%
+  inner_join(tidytext::get_sentiments(&amp;quot;bing&amp;quot;)) %&amp;gt;%
+  anti_join(stop_words, by = &amp;quot;word&amp;quot;) %&amp;gt;%
+  filter(!grepl(ignore_root_words, word)) %&amp;gt;%
+  filter(!word %in% ignore_words) %&amp;gt;%
+  filter(!word == &amp;quot;trump&amp;quot;) %&amp;gt;%
+  mutate(month = ifelse(month == &amp;quot;2020-02-01&amp;quot;, &amp;quot;february&amp;quot;, &amp;quot;march&amp;quot;)) %&amp;gt;%
+  group_by(party, month) %&amp;gt;%
+  count(word, sentiment, sort = TRUE) %&amp;gt;%
+  filter(party %in% c(&amp;quot;democrat&amp;quot;, &amp;quot;republican&amp;quot;, &amp;quot;trump&amp;quot;)) %&amp;gt;%
+  #group_by(sentiment, party, month) %&amp;gt;%
+  top_n(20) %&amp;gt;%
+  group_by(party, month) %&amp;gt;%
+  arrange(n) %&amp;gt;%
+  mutate(order = row_number())
+
+sentiments %&amp;gt;%
+  ggplot(aes(drlib::reorder_within(word, n, c(&amp;quot;party&amp;quot;, &amp;quot;month&amp;quot;)), n, fill = sentiment)) +
+  geom_col() +
+  drlib::scale_x_reordered() +
+  facet_wrap(month~party, scales = &amp;quot;free&amp;quot;) +
+  labs(y = &amp;quot;\nnumber of times tweeted&amp;quot;,
+       x = NULL) +
+  coord_flip() +
+  scale_fill_manual(values = palette2) +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = &amp;quot;top&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-13-1.png&#34; width=&#34;768&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;content-by-month&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;content by month&lt;/h1&gt;
+&lt;div id=&#34;democrats&#34; class=&#34;section level2 tabset&#34;&gt;
+&lt;h2&gt;democrats&lt;/h2&gt;
+&lt;div id=&#34;february&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;February&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d = plot_tweets(tweets, party = &amp;quot;democrat&amp;quot;, start_date = &amp;quot;2020-02-01&amp;quot;, duration = 29, n_words = 100, size = .4)
+htmlwidgets::saveWidget(d$plot,&amp;quot;d.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;d.html&amp;quot;,&amp;quot;dm1.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-14-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 2015&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;march&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;March&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d = plot_tweets(tweets, party = &amp;quot;democrat&amp;quot;, start_date = &amp;quot;2020-03-01&amp;quot;, duration = 31, n_words = 100, size = .4)
+htmlwidgets::saveWidget(d$plot,&amp;quot;d.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;d.html&amp;quot;,&amp;quot;dm2.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-15-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 7820&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;republicans&#34; class=&#34;section level2 tabset&#34;&gt;
+&lt;h2&gt;republicans&lt;/h2&gt;
+&lt;div id=&#34;february-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;February&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r = plot_tweets(tweets, party = &amp;quot;republican&amp;quot;, start_date = &amp;quot;2020-02-01&amp;quot;, duration = 29, n_words = 100, size = .4)
+htmlwidgets::saveWidget(r$plot,&amp;quot;r.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;r.html&amp;quot;,&amp;quot;rm1.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-16-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 1160&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;march-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;March&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r = plot_tweets(tweets, party = &amp;quot;republican&amp;quot;, start_date = &amp;quot;2020-03-01&amp;quot;, duration = 31, n_words = 100, size = .4)
+htmlwidgets::saveWidget(r$plot,&amp;quot;r.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;r.html&amp;quot;,&amp;quot;rm2.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-17-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 6992&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trump&#34; class=&#34;section level2 tabset&#34;&gt;
+&lt;h2&gt;trump&lt;/h2&gt;
+&lt;div id=&#34;february-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;February&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t = plot_tweets(tweets, party = &amp;quot;trump&amp;quot;, start_date = &amp;quot;2020-02-01&amp;quot;, duration = 29, n_words = 100, size = .4)
+htmlwidgets::saveWidget(t$plot,&amp;quot;t.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;t.html&amp;quot;,&amp;quot;tm1.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-18-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 28&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;march-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;March&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t = plot_tweets(tweets, party = &amp;quot;trump&amp;quot;, start_date = &amp;quot;2020-03-01&amp;quot;, duration = 31, n_words = 100, size = .4)
+htmlwidgets::saveWidget(t$plot,&amp;quot;t.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;t.html&amp;quot;,&amp;quot;tm2.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-19-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 81&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;content-by-week&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;content by week&lt;/h1&gt;
+&lt;div id=&#34;democrats-1&#34; class=&#34;section level2 tabset&#34;&gt;
+&lt;h2&gt;democrats&lt;/h2&gt;
+&lt;div id=&#34;feb-1---feb-7&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 1 - Feb 7&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d = plot_tweets(tweets, party = &amp;quot;democrat&amp;quot;, start_date = &amp;quot;2020-02-01&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(d$plot,&amp;quot;d.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;d.html&amp;quot;,&amp;quot;d1.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-20-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 212&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-8---feb-14&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 8 - Feb 14&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d = plot_tweets(tweets, party = &amp;quot;democrat&amp;quot;, start_date = &amp;quot;2020-02-08&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(d$plot,&amp;quot;d.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;d.html&amp;quot;,&amp;quot;d2.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-21-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 180&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-15---feb-20&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 15 - Feb 20&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d = plot_tweets(tweets, party = &amp;quot;democrat&amp;quot;, start_date = &amp;quot;2020-02-15&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(d$plot,&amp;quot;d.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;d.html&amp;quot;,&amp;quot;d3.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-22-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 110&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-20---feb-26&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 20 - Feb 26&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d = plot_tweets(tweets, party = &amp;quot;democrat&amp;quot;, start_date = &amp;quot;2020-02-20&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(d$plot,&amp;quot;d.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;d.html&amp;quot;,&amp;quot;d4.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-23-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 928&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-27---mar-4&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 27 - Mar 4&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d = plot_tweets(tweets, party = &amp;quot;democrat&amp;quot;, start_date = &amp;quot;2020-02-27&amp;quot;, duration = 7)
+
+htmlwidgets::saveWidget(d$plot,&amp;quot;d.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;d.html&amp;quot;,&amp;quot;d5.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-24-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 2840&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mar-5---mar-11&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mar 5 - Mar 11&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d = plot_tweets(tweets, party = &amp;quot;democrat&amp;quot;, start_date = &amp;quot;2020-03-05&amp;quot;, duration = 7)
+
+htmlwidgets::saveWidget(d$plot,&amp;quot;d.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;d.html&amp;quot;,&amp;quot;d6.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-25-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 4983&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mar-12---mar-18&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mar 12 - Mar 18&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;d = plot_tweets(tweets, party = &amp;quot;democrat&amp;quot;, start_date = &amp;quot;2020-03-12&amp;quot;, duration = 7)
+
+htmlwidgets::saveWidget(d$plot,&amp;quot;d.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;d.html&amp;quot;,&amp;quot;d7.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-26-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 2935&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;republicans-1&#34; class=&#34;section level2 tabset&#34;&gt;
+&lt;h2&gt;republicans&lt;/h2&gt;
+&lt;div id=&#34;feb-1---feb-7-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 1 - Feb 7&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r = plot_tweets(tweets, party = &amp;quot;republican&amp;quot;, start_date = &amp;quot;2020-02-01&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(r$plot,&amp;quot;r.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;r.html&amp;quot;,&amp;quot;r1.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-27-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 140&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-8---feb-14-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 8 - Feb 14&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r = plot_tweets(tweets, party = &amp;quot;republican&amp;quot;, start_date = &amp;quot;2020-02-08&amp;quot;, duration = 7, size = .3)
+htmlwidgets::saveWidget(r$plot,&amp;quot;r.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;r.html&amp;quot;,&amp;quot;r2.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-28-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 166&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-15---feb-20-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 15 - Feb 20&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r = plot_tweets(tweets, party = &amp;quot;republican&amp;quot;, start_date = &amp;quot;2020-02-15&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(r$plot,&amp;quot;r.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;r.html&amp;quot;,&amp;quot;r3.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-29-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 88&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-20---feb-26-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 20 - Feb 26&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r = plot_tweets(tweets, party = &amp;quot;republican&amp;quot;, start_date = &amp;quot;2020-02-20&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(r$plot,&amp;quot;r.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;r.html&amp;quot;,&amp;quot;r4.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-30-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 482&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-27---mar-4-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 27 - Mar 4&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r = plot_tweets(tweets, party = &amp;quot;republican&amp;quot;, start_date = &amp;quot;2020-02-27&amp;quot;, duration = 7)
+
+htmlwidgets::saveWidget(r$plot,&amp;quot;r.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;r.html&amp;quot;,&amp;quot;r5.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-31-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 2966&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mar-5---mar-11-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mar 5 - Mar 11&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r = plot_tweets(tweets, party = &amp;quot;republican&amp;quot;, start_date = &amp;quot;2020-03-05&amp;quot;, duration = 7)
+
+htmlwidgets::saveWidget(r$plot,&amp;quot;r.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;r.html&amp;quot;,&amp;quot;r6.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-32-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 3754&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mar-12---mar-18-1&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mar 12 - Mar 18&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;r = plot_tweets(tweets, party = &amp;quot;republican&amp;quot;, start_date = &amp;quot;2020-03-12&amp;quot;, duration = 7)
+
+htmlwidgets::saveWidget(r$plot,&amp;quot;r.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;r.html&amp;quot;,&amp;quot;r7.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-33-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 2520&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;trump-1&#34; class=&#34;section level2 tabset&#34;&gt;
+&lt;h2&gt;trump&lt;/h2&gt;
+&lt;div id=&#34;feb-1---feb-7-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 1 - Feb 7&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t = plot_tweets(tweets, party = &amp;quot;trump&amp;quot;, start_date = &amp;quot;2020-02-01&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&amp;quot;t.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;t.html&amp;quot;,&amp;quot;t1.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-34-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 2&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-8---feb-14-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 8 - Feb 14&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t = plot_tweets(tweets, party = &amp;quot;trump&amp;quot;, start_date = &amp;quot;2020-02-08&amp;quot;, duration = 7, size = .3)
+htmlwidgets::saveWidget(t$plot,&amp;quot;t.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;t.html&amp;quot;,&amp;quot;t2.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-35-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 1&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-15---feb-20-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 15 - Feb 20&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t = plot_tweets(tweets, party = &amp;quot;trump&amp;quot;, start_date = &amp;quot;2020-02-15&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&amp;quot;t.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;t.html&amp;quot;,&amp;quot;t3.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-36-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 1&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-20---feb-26-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 20 - Feb 26&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t = plot_tweets(tweets, party = &amp;quot;trump&amp;quot;, start_date = &amp;quot;2020-02-20&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&amp;quot;t.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;t.html&amp;quot;,&amp;quot;t4.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-37-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 18&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;feb-27---mar-4-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Feb 27 - Mar 4&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t = plot_tweets(tweets, party = &amp;quot;trump&amp;quot;, start_date = &amp;quot;2020-02-27&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&amp;quot;t.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;t.html&amp;quot;,&amp;quot;t5.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-38-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 28&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mar-5---mar-11-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mar 5 - Mar 11&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t = plot_tweets(tweets, party = &amp;quot;trump&amp;quot;, start_date = &amp;quot;2020-03-05&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&amp;quot;t.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;t.html&amp;quot;,&amp;quot;t6.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-39-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 50&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mar-12---mar-18-2&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Mar 12 - Mar 18&lt;/h3&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;t = plot_tweets(tweets, party = &amp;quot;trump&amp;quot;, start_date = &amp;quot;2020-03-12&amp;quot;, duration = 7)
+htmlwidgets::saveWidget(t$plot,&amp;quot;t.html&amp;quot;, selfcontained = FALSE)
+webshot(&amp;quot;t.html&amp;quot;,&amp;quot;t7.png&amp;quot;, vwidth = 500, vheight = 400, zoom = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2020-03-14-congress-tweets-covid19/index_files/figure-html/unnamed-chunk-40-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;Number of tweets = 37&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
