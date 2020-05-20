@@ -34,19 +34,125 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication_types/3/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+    <loc>https://dcosme.github.io/publication_types/2/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/allen-n.-b./</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dcosme.github.io/authors/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/barendse-m.-e.-a./</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/cheng-t.-w./</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dcosme.github.io/authors/cosme-d./</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/flournoy-j.-c./</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/pfeifer-j.-h./</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/publication_types/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/publication/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/vijayakumar-n./</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/activation/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/adolescence/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/fmri/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/hormones/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/puberty/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/self-concept/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/self-evaluation/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/publication_types/3/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -63,23 +169,6 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication_types/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/publication/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/tags/body-composition/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -87,12 +176,6 @@
   
   <url>
     <loc>https://dcosme.github.io/tags/eating-behavior/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/fmri/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -116,79 +199,8 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication_types/2/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/berkman-e.-t./</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/stice-e./</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/zeithamova-d./</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/craving-regulation/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/food-valuation/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/health-neuroscience/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/multivariate-fmri/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/neural-signature/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/cv/</loc>
     <lastmod>2019-12-29T14:45:21-08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/allen-n.-b./</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/barendse-m.-e.-a./</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -205,12 +217,6 @@
   
   <url>
     <loc>https://dcosme.github.io/authors/chavez-s.-j./</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/cheng-t.-w./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -258,12 +264,6 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/pfeifer-j.-h./</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/authors/shirtclif-e.-a./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -275,18 +275,6 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/vijayakumar-n./</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/adolescence/</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/tags/brain-development/</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -294,12 +282,6 @@
   
   <url>
     <loc>https://dcosme.github.io/tags/developmental-cognitive-neuroscience/</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/hormones/</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -317,12 +299,6 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/puberty/</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/tags/self-development/</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -335,8 +311,55 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/flournoy-j.-c./</loc>
-    <lastmod>2019-09-17T00:00:00+00:00</lastmod>
+    <loc>https://dcosme.github.io/authors/berkman-e.-t./</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/stice-e./</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/zeithamova-d./</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/craving-regulation/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/food-valuation/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/health-neuroscience/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/multivariate-fmri/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/neural-signature/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -378,29 +401,6 @@
   <url>
     <loc>https://dcosme.github.io/tags/thresholding/</loc>
     <lastmod>2019-09-17T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</loc>
-    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/activation/</loc>
-    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/self-concept/</loc>
-    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/self-evaluation/</loc>
-    <lastmod>2019-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

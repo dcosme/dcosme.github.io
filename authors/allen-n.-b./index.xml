@@ -7,10 +7,21 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/authors/allen-n.-b./index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Neural correlates of self-evaluation during puberty</title>
+      <link>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
+Barendse, M. E. A., Cosme, D., Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Allen, N. B., &amp;amp; Pfeifer, J.H. (in press) Neural correlates of self-evaluation during puberty. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Study protocol: Transitions in Adolescent Girls (TAG)</title>
@@ -20,17 +31,6 @@
       <guid>https://dcosme.github.io/publication/2019-12-29-tag/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Barendse, M.E.A., Vijayakumar, N., Byrne, M.L., Flannery, J.E., Cheng, T.W., Flournoy, J.C., Nelson, B.W., Cosme, D., Mobasser, A., Chavez, S.J., Hval, L., Brady, B., Nadel, H., Helzer, A., Shirtclif, E.A., Allen, N.B., &amp;amp; Pfeifer, J.H. (2020) Study protocol: Transitions in AdolescentGirls (TAG). &lt;em&gt;Frontiers Psychiatry&lt;/em&gt;, &lt;em&gt;10&lt;/em&gt;, 1018.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Neural correlates of self-evaluation during puberty</title>
-      <link>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</link>
-      <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
-Barendse, M. E. A., Cosme, D., Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Allen, N. B., &amp;amp; Pfeifer, J.H. (preprint) Neural correlates of self-evaluation during puberty. &lt;a href=&#34;https://doi.org/10.31234/osf.io/r2pjm&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.31234/osf.io/r2pjm&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

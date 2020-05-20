@@ -7,10 +7,21 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 10 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Neural correlates of self-evaluation during puberty</title>
+      <link>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
+Barendse, M. E. A., Cosme, D., Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Allen, N. B., &amp;amp; Pfeifer, J.H. (in press) Neural correlates of self-evaluation during puberty. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Neural indicators of food cue reactivity, regulation, and valuation and their associations with body composition and daily eating behavior</title>
@@ -20,17 +31,6 @@
       <guid>https://dcosme.github.io/publication/2020-03-10-neural-indicators/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Lopez, R. B. (Under Review) Neural indicators of food cue reactivity, regulation, and valuation and their associations with body composition and daily eating behavior.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice</title>
-      <link>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</link>
-      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
-Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. (In Press) Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice. &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -46,6 +46,17 @@ Barendse, M.E.A., Vijayakumar, N., Byrne, M.L., Flannery, J.E., Cheng, T.W., Flo
     </item>
     
     <item>
+      <title>Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice</title>
+      <link>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
+Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. (2019) Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice. &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Improving practices and inferences in developmental cognitive neuroscience</title>
       <link>https://dcosme.github.io/publication/2019-09-17-improving-practices-inferences/</link>
       <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
@@ -53,17 +64,6 @@ Barendse, M.E.A., Vijayakumar, N., Byrne, M.L., Flannery, J.E., Cheng, T.W., Flo
       <guid>https://dcosme.github.io/publication/2019-09-17-improving-practices-inferences/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Pfeifer, J. H., Flournoy, J . F., Cheng, T. W., Cosme, D., Flannery, J. E., &amp;amp; Vijayakumar, N. Improving practices and inferences in developmental cognitive neuroscience.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Neural correlates of self-evaluation during puberty</title>
-      <link>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</link>
-      <pubDate>Tue, 27 Aug 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
-Barendse, M. E. A., Cosme, D., Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Allen, N. B., &amp;amp; Pfeifer, J.H. (preprint) Neural correlates of self-evaluation during puberty. &lt;a href=&#34;https://doi.org/10.31234/osf.io/r2pjm&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.31234/osf.io/r2pjm&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

@@ -521,17 +521,19 @@ background  The problem: there are many different ways to test a model and we us
 
     <div class="article-style" itemprop="articleBody">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <p>This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.</p>
-<p>The repository can be found at: <a href="https://github.com/dcosme/specification-curves/" class="uri">https://github.com/dcosme/specification-curves/</a></p>
+<p>The repository can be found at: <a href="https://github.com/dcosme/specification-curves/">https://github.com/dcosme/specification-curves/</a></p>
 <div id="background" class="section level1">
 <h1>background</h1>
 <ul>
 <li>The problem: there are many different ways to test a model and we usually only report one or a few specifications. Model selection relies on choices by the researcher and these are often artbitrary and sometimes driven by a desire for significant results.</li>
 <li>The solution (according to <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2694998">Simonsohn, Simmons, &amp; Nelson, 2015</a>: specify all “reasonable” models and assess the distribution of effects</li>
 </ul>
-<p><strong>Figure 1 Simonsohn, Simmons, &amp; Nelson, 2015</strong> <img src="/img/sca-tutorial/figure1.png" alt="Figure 1 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
+<p><strong>Figure 1 Simonsohn, Simmons, &amp; Nelson, 2015</strong>
+<img src="/img/sca-tutorial/figure1.png" alt="Figure 1 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
 <div id="steps-for-conducting-sca" class="section level2">
 <h2>steps for conducting SCA</h2>
 <ol style="list-style-type: decimal">
@@ -547,11 +549,13 @@ background  The problem: there are many different ways to test a model and we us
 <li>Expected to be statistically valid</li>
 <li>Non-redundant</li>
 </ul>
-<p><strong>Table 1 Simonsohn, Simmons, &amp; Nelson, 2015</strong> <img src="/img/sca-tutorial/table1.png" alt="Table 1 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
+<p><strong>Table 1 Simonsohn, Simmons, &amp; Nelson, 2015</strong>
+<img src="/img/sca-tutorial/table1.png" alt="Table 1 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
 </div>
 <div id="descriptive-specification-curve" class="section level2">
 <h2>2. Descriptive specification curve</h2>
-<p><strong>Figure 2 Simonsohn, Simmons, &amp; Nelson, 2015</strong> <img src="/img/sca-tutorial/figure2.png" alt="Figure 2 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
+<p><strong>Figure 2 Simonsohn, Simmons, &amp; Nelson, 2015</strong>
+<img src="/img/sca-tutorial/figure2.png" alt="Figure 2 Simonsohn, Simmons, &amp; Nelson, 2015" /></p>
 </div>
 <div id="inferential-statistics" class="section level2">
 <h2>3. Inferential statistics</h2>
@@ -569,7 +573,8 @@ background  The problem: there are many different ways to test a model and we us
 <ul>
 <li>Also possible to compare specification surves between two variables of interest</li>
 </ul>
-<p><strong>Figure 6 Orben &amp; Przybylski, 2019</strong> <img src="/img/sca-tutorial/figure6.png" alt="Figure 6 Orben &amp; Przybylski, 2019" /></p>
+<p><strong>Figure 6 Orben &amp; Przybylski, 2019</strong>
+<img src="/img/sca-tutorial/figure6.png" alt="Figure 6 Orben &amp; Przybylski, 2019" /></p>
 </div>
 </div>
 <div id="examples" class="section level1">
@@ -968,7 +973,8 @@ cowplot::plot_grid(top, bottom, ncol = 1, align = &quot;v&quot;, labels = c(&#39
 <p>Rather than plotting model fit, you can also plot curves for associations of interest and determine how inclusion of other variables or analytic decisions affects the association</p>
 <div id="mpg-wt" class="section level2">
 <h2>mpg ~ wt</h2>
-<p>Use the same method with a different association of interest ### extract coefficients and p-values</p>
+<p>Use the same method with a different association of interest
+### extract coefficients and p-values</p>
 <pre class="r"><code># extract parameter estimate (step-by-step output)
 MuMIn::get.models(models.sca, subset = TRUE) %&gt;%
   tibble() %&gt;%
@@ -1232,7 +1238,7 @@ bottom = plot.data %&gt;%
 model_conf = MuMIn::get.models(models.sca, subset = TRUE) %&gt;%
   tibble() %&gt;%
   rename(&quot;model&quot; = &quot;.&quot;) %&gt;%
-  mutate(tidied = purrr::map(model, broom::confint_tidy),
+  mutate(tidied = purrr::map(model, broom::tidy, conf.int = TRUE),
          model_num = row_number()) %&gt;%
   select(model_num, tidied) %&gt;%
   unnest()
