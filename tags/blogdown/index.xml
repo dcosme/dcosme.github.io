@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>blogdown on DANIELLE COSME</title>
-    <link>https://dcosme.github.io/tags/blogdown/</link>
+    <link>/tags/blogdown/</link>
     <description>Recent content in blogdown on DANIELLE COSME</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
     <lastBuildDate>Sun, 10 Jun 2018 00:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://dcosme.github.io/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/tags/blogdown/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Websites in RStudio</title>
-      <link>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</link>
+      <link>/2018/06/10/websites-in-rstudio/</link>
       <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</guid>
+      <guid>/2018/06/10/websites-in-rstudio/</guid>
       <description>
 
 
@@ -905,7 +905,7 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Push local changes to remote repository&lt;/p&gt;
 &lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In Github, enable GitHub Pages &lt;code&gt;Your repo &amp;gt; Settings &amp;gt; GitHub Page &amp;gt; Source = master branch &amp;gt; Save&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;https://dcosme.github.io/img/website-tutorial/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;/img/website-tutorial/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Go to your website and bask in the glory 🎉&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;workflow&#34; class=&#34;section level1&#34;&gt;
