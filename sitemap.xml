@@ -3,734 +3,744 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dcosme.github.io/courses/example/example1/</loc>
+    <loc>/courses/example/example1/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/courses/example/</loc>
+    <loc>/courses/example/</loc>
     <lastmod>2018-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/courses/example/example2/</loc>
+    <loc>/courses/example/example2/</loc>
     <lastmod>2019-05-05T00:00:00+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/</loc>
+    <loc>/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/talk/example/</loc>
+    <loc>/talk/example/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/talk/</loc>
+    <loc>/talk/</loc>
     <lastmod>2030-06-01T13:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication_types/2/</loc>
+    <loc>/slides/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/slides/test/test/</loc>
+    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication_types/2/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/</loc>
+    <loc>/authors/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/cheng-t.-w./</loc>
+    <loc>/authors/cheng-t.-w./</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/cosme-d./</loc>
+    <loc>/authors/cosme-d./</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/flannery-j.-e./</loc>
+    <loc>/authors/flannery-j.-e./</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/flournoy-j.-c./</loc>
+    <loc>/authors/flournoy-j.-c./</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2019-09-17-improving-practices-inferences/</loc>
+    <loc>/publication/2019-09-17-improving-practices-inferences/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/pfeifer-j.-h./</loc>
-    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/publication_types/</loc>
+    <loc>/authors/pfeifer-j.-h./</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/</loc>
-    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/</loc>
+    <loc>/publication_types/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/vijayakumar-n./</loc>
+    <loc>/publication/</loc>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/developmental-cognitive-neuroscience/</loc>
+    <loc>/authors/vijayakumar-n./</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/exploratory/</loc>
+    <loc>/tags/developmental-cognitive-neuroscience/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/inference/</loc>
+    <loc>/tags/exploratory/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/parcellations/</loc>
+    <loc>/tags/inference/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/preregistration/</loc>
+    <loc>/tags/parcellations/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/reproducibility/</loc>
+    <loc>/tags/preregistration/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/thresholding/</loc>
+    <loc>/tags/reproducibility/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/allen-n.-b./</loc>
+    <loc>/tags/thresholding/</loc>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/allen-n.-b./</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/barendse-m.-e.-a./</loc>
+    <loc>/authors/barendse-m.-e.-a./</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</loc>
+    <loc>/publication/2019-08-27-self-evaluation-puberty/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/activation/</loc>
-    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/adolescence/</loc>
+    <loc>/tags/activation/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/fmri/</loc>
+    <loc>/tags/adolescence/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/hormones/</loc>
+    <loc>/tags/fmri/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/puberty/</loc>
+    <loc>/tags/hormones/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/self-concept/</loc>
+    <loc>/tags/puberty/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/self-evaluation/</loc>
+    <loc>/tags/self-concept/</loc>
     <lastmod>2020-05-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication_types/3/</loc>
+    <loc>/tags/self-evaluation/</loc>
+    <lastmod>2020-05-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication_types/3/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/lopez-r.-b./</loc>
+    <loc>/authors/lopez-r.-b./</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2020-03-10-neural-indicators/</loc>
+    <loc>/publication/2020-03-10-neural-indicators/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/body-composition/</loc>
-    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/eating-behavior/</loc>
+    <loc>/tags/body-composition/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/reactivity/</loc>
+    <loc>/tags/eating-behavior/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/regulation/</loc>
+    <loc>/tags/reactivity/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/valuation/</loc>
+    <loc>/tags/regulation/</loc>
     <lastmod>2020-03-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/cv/</loc>
+    <loc>/tags/valuation/</loc>
+    <lastmod>2020-03-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/cv/</loc>
     <lastmod>2019-12-29T14:45:21-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/grants/</loc>
+    <loc>/grants/</loc>
     <lastmod>2019-12-29T14:45:21-08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/brady-b./</loc>
+    <loc>/authors/brady-b./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/byrne-m.-l./</loc>
+    <loc>/authors/byrne-m.-l./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/chavez-s.-j./</loc>
+    <loc>/authors/chavez-s.-j./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/flournoy-j.-c/</loc>
+    <loc>/authors/flournoy-j.-c/</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/helzer-a./</loc>
+    <loc>/authors/helzer-a./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/hval-l./</loc>
+    <loc>/authors/hval-l./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/mobasser-a./</loc>
+    <loc>/authors/mobasser-a./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/nadel-h./</loc>
+    <loc>/authors/nadel-h./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/nelson-b.-w./</loc>
+    <loc>/authors/nelson-b.-w./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/shirtclif-e.-a./</loc>
+    <loc>/authors/shirtclif-e.-a./</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2019-12-29-tag/</loc>
+    <loc>/publication/2019-12-29-tag/</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/brain-development/</loc>
-    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/longitudinal-fmri/</loc>
+    <loc>/tags/brain-development/</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/mental-health/</loc>
+    <loc>/tags/longitudinal-fmri/</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/self-development/</loc>
+    <loc>/tags/mental-health/</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/social-processes/</loc>
+    <loc>/tags/self-development/</loc>
     <lastmod>2019-12-29T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/berkman-e.-t./</loc>
+    <loc>/tags/social-processes/</loc>
+    <lastmod>2019-12-29T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/berkman-e.-t./</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</loc>
+    <loc>/publication/2019-06-28-neural-signatures-health-neuros/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/stice-e./</loc>
-    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/zeithamova-d./</loc>
+    <loc>/authors/stice-e./</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/craving-regulation/</loc>
+    <loc>/authors/zeithamova-d./</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/food-valuation/</loc>
+    <loc>/tags/craving-regulation/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/health-neuroscience/</loc>
+    <loc>/tags/food-valuation/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/multivariate-fmri/</loc>
+    <loc>/tags/health-neuroscience/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/neural-signature/</loc>
+    <loc>/tags/multivariate-fmri/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/categories/</loc>
+    <loc>/tags/neural-signature/</loc>
+    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2019-06-28-neurocognitive-models-self-control/</loc>
+    <loc>/publication/2019-06-28-neurocognitive-models-self-control/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2019-06-28-happy-and-you-know-it/</loc>
+    <loc>/publication/2019-06-28-happy-and-you-know-it/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/ludwig-m./</loc>
+    <loc>/authors/ludwig-m./</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/post/</loc>
+    <loc>/post/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/ross-g./</loc>
+    <loc>/authors/ross-g./</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</loc>
+    <loc>/2019/06/28/specification-curve-analysis-sca-tutorial/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/decision-neuroscience/</loc>
+    <loc>/tags/decision-neuroscience/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/dual-process/</loc>
+    <loc>/tags/dual-process/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/functional-programming/</loc>
-    <lastmod>2019-06-28T15:04:40-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/health/</loc>
-    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/mindset/</loc>
-    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/positive-neuroscience/</loc>
-    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/psychological-health/</loc>
-    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/rstats/</loc>
+    <loc>/tags/functional-programming/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/categories/rstats/</loc>
+    <loc>/tags/health/</loc>
+    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/mindset/</loc>
+    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/positive-neuroscience/</loc>
+    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/psychological-health/</loc>
+    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/categories/rstats/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/self-control/</loc>
-    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/specification-curve/</loc>
+    <loc>/tags/rstats/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/tutorial/</loc>
+    <loc>/tags/self-control/</loc>
+    <lastmod>2019-06-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/specification-curve/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/value-based-choice/</loc>
+    <loc>/tags/tutorial/</loc>
+    <lastmod>2019-06-28T15:04:40-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/value-based-choice/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/vmpfc/</loc>
+    <loc>/tags/vmpfc/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/well-being/</loc>
+    <loc>/tags/well-being/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/2019/02/26/specification-curve-example/</loc>
+    <loc>/2019/02/26/specification-curve-example/</loc>
     <lastmod>2019-02-26T15:07:22-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/slides/</loc>
-    <lastmod>2019-02-05T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/slides/example/</loc>
+    <loc>/slides/example/</loc>
     <lastmod>2019-02-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2019-06-28-autonomy-affect-regulation/</loc>
+    <loc>/privacy/</loc>
+    <lastmod>2018-06-28T00:00:00+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/publication/2019-06-28-autonomy-affect-regulation/</loc>
     <lastmod>2018-06-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/autonomy/</loc>
+    <loc>/tags/autonomy/</loc>
     <lastmod>2018-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/emotion-regulation/</loc>
+    <loc>/tags/emotion-regulation/</loc>
     <lastmod>2018-06-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</loc>
+    <loc>/2018/06/10/websites-in-rstudio/</loc>
     <lastmod>2019-06-10T15:11:28-07:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/blogdown/</loc>
-    <lastmod>2019-06-10T15:11:28-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/categories/blogdown/</loc>
+    <loc>/categories/blogdown/</loc>
     <lastmod>2019-06-10T15:11:28-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/website/</loc>
+    <loc>/tags/blogdown/</loc>
     <lastmod>2019-06-10T15:11:28-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/giuliani-n.-r./</loc>
+    <loc>/tags/website/</loc>
+    <lastmod>2019-06-10T15:11:28-07:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/giuliani-n.-r./</loc>
     <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/merchant-j.-s./</loc>
+    <loc>/authors/merchant-j.-s./</loc>
     <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2018-03-15-neural-predictors-dietary-change/</loc>
+    <loc>/publication/2018-03-15-neural-predictors-dietary-change/</loc>
     <lastmod>2018-03-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/craving/</loc>
-    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/self-regulation/</loc>
+    <loc>/tags/craving/</loc>
     <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2019-06-28-choosing-to-regulate/</loc>
+    <loc>/tags/self-regulation/</loc>
+    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/publication/2019-06-28-choosing-to-regulate/</loc>
     <lastmod>2018-02-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/choice/</loc>
-    <lastmod>2018-02-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/cognitive-reappraisal/</loc>
-    <lastmod>2018-02-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/self-determination/</loc>
+    <loc>/tags/choice/</loc>
     <lastmod>2018-02-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/mccormick-e.-m./</loc>
+    <loc>/tags/cognitive-reappraisal/</loc>
+    <lastmod>2018-02-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/self-determination/</loc>
+    <lastmod>2018-02-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/authors/mccormick-e.-m./</loc>
     <lastmod>2018-02-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2018-02-07-longitudinal-fmri/</loc>
+    <loc>/publication/2018-02-07-longitudinal-fmri/</loc>
     <lastmod>2018-02-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/peters-s./</loc>
-    <lastmod>2018-02-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/telzer-e.-h./</loc>
+    <loc>/authors/peters-s./</loc>
     <lastmod>2018-02-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/development/</loc>
+    <loc>/authors/telzer-e.-h./</loc>
     <lastmod>2018-02-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/methods/</loc>
+    <loc>/tags/development/</loc>
     <lastmod>2018-02-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/van-duijvenvoorde-a.-c.-k./</loc>
+    <loc>/tags/methods/</loc>
     <lastmod>2018-02-07T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/deep-learning/</loc>
+    <loc>/authors/van-duijvenvoorde-a.-c.-k./</loc>
+    <lastmod>2018-02-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/deep-learning/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/demo/</loc>
+    <loc>/tags/demo/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/project/external-project/</loc>
+    <loc>/project/external-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/project/internal-project/</loc>
+    <loc>/project/internal-project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/project/</loc>
+    <loc>/project/</loc>
     <lastmod>2016-04-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2015-03-06-mindfulness-affective-reactivity/</loc>
+    <loc>/publication/2015-03-06-mindfulness-affective-reactivity/</loc>
     <lastmod>2015-03-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/wiens-s./</loc>
+    <loc>/authors/wiens-s./</loc>
     <lastmod>2015-03-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/admin/</loc>
+    <loc>/authors/admin/</loc>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/courses/</loc>
+    <loc>/courses/</loc>
   </url>
   
 </urlset>

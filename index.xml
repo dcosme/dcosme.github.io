@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>DANIELLE COSME</title>
-    <link>https://dcosme.github.io/</link>
+    <link>/</link>
     <description>Recent content on DANIELLE COSME</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
     <lastBuildDate>Sat, 01 Jun 2030 13:00:00 +0000</lastBuildDate>
     
-	    <atom:link href="https://dcosme.github.io/index.xml" rel="self" type="application/rss+xml" />
+	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Example Page 1</title>
-      <link>https://dcosme.github.io/courses/example/example1/</link>
+      <link>/courses/example/example1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://dcosme.github.io/courses/example/example1/</guid>
+      <guid>/courses/example/example1/</guid>
       <description>
 
 &lt;p&gt;In this tutorial, I&amp;rsquo;ll share my top 10 tips for getting started with Academic:&lt;/p&gt;
@@ -50,10 +50,10 @@
     
     <item>
       <title>Example Page 2</title>
-      <link>https://dcosme.github.io/courses/example/example2/</link>
+      <link>/courses/example/example2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
       
-      <guid>https://dcosme.github.io/courses/example/example2/</guid>
+      <guid>/courses/example/example2/</guid>
       <description>
 
 &lt;p&gt;Here are some more tips for getting started with Academic:&lt;/p&gt;
@@ -86,10 +86,10 @@
     
     <item>
       <title>Example Talk</title>
-      <link>https://dcosme.github.io/talk/example/</link>
+      <link>/talk/example/</link>
       <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/talk/example/</guid>
+      <guid>/talk/example/</guid>
       <description>&lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
     Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.
@@ -109,11 +109,448 @@
     </item>
     
     <item>
+      <title>Specification Curve Analysis</title>
+      <link>/slides/test/test/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/slides/test/test/</guid>
+      <description>
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/leaflet/leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/leaflet/leaflet.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/leafletfix/leafletfix.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js&#34;&gt;&lt;/script&gt;
+&lt;link href=&#34;/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;script src=&#34;/rmarkdown-libs/leaflet-binding/leaflet.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;hr /&gt;
+&lt;div id=&#34;the-problem&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;The problem&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;There are many different ways to test a model, but we usually only report one or a few specifications.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Model selection relies on choices by the researcher and these are often arbitrary and sometimes driven by a desire for significant results.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;the-solution&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;The solution&lt;/h1&gt;
+&lt;div id=&#34;according-to-simonsohn-simmons-nelson-2020&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;(according to &lt;a href=&#34;http://doi.org/10.1038/s41562-020-0912-z&#34;&gt;Simonsohn, Simmons, &amp;amp; Nelson, 2020&lt;/a&gt;)&lt;/h3&gt;
+&lt;p&gt;Specify all “reasonable” models and jointly assess the distribution of effects&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hello-ninja&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Hello Ninja&lt;/h1&gt;
+&lt;p&gt;As a presentation ninja, you certainly should not be satisfied by the “Hello World” example. You need to understand more about two things:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;https://remarkjs.com&#34;&gt;remark.js&lt;/a&gt; library;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;strong&gt;xaringan&lt;/strong&gt; package;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Basically &lt;strong&gt;xaringan&lt;/strong&gt; injected the chakra of R Markdown (minus Pandoc) into &lt;strong&gt;remark.js&lt;/strong&gt;. The slides are rendered by remark.js in the web browser, and the Markdown source needed by remark.js is generated from R Markdown (&lt;strong&gt;knitr&lt;/strong&gt;).&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;remark.js&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;remark.js&lt;/h1&gt;
+&lt;p&gt;You can see an introduction of remark.js from &lt;a href=&#34;https://remarkjs.com&#34;&gt;its homepage&lt;/a&gt;. You should read the &lt;a href=&#34;https://github.com/gnab/remark/wiki&#34;&gt;remark.js Wiki&lt;/a&gt; at least once to know how to&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;create a new slide (Markdown syntax&lt;sup&gt;*&lt;/sup&gt; and slide properties);&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;format a slide (e.g. text alignment);&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;configure the slideshow;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;and use the presentation (keyboard shortcuts).&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It is important to be familiar with remark.js before you can understand the options in &lt;strong&gt;xaringan&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;.footnote[[*] It is different with Pandoc’s Markdown! It is limited but should be enough for presentation purposes. Come on… You do not need a slide for the Table of Contents! Well, the Markdown support in remark.js &lt;a href=&#34;https://github.com/gnab/remark/issues/142&#34;&gt;may be improved&lt;/a&gt; in the future.]&lt;/p&gt;
+&lt;p&gt;class: inverse, middle, center&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;using-xaringan&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Using xaringan&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;xaringan&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;xaringan&lt;/h1&gt;
+&lt;p&gt;Provides an R Markdown output format &lt;code&gt;xaringan::moon_reader&lt;/code&gt; as a wrapper for remark.js, and you can use it in the YAML metadata, e.g.&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;---
+title: &amp;quot;A Cool Presentation&amp;quot;
+output:
+  xaringan::moon_reader:
+    yolo: true
+    nature:
+      autoplay: 30000
+---&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See the help page &lt;code&gt;?xaringan::moon_reader&lt;/code&gt; for all possible options that you can use.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;remark.js-vs-xaringan&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;remark.js vs xaringan&lt;/h1&gt;
+&lt;p&gt;Some differences between using remark.js (left) and using &lt;strong&gt;xaringan&lt;/strong&gt; (right):&lt;/p&gt;
+&lt;p&gt;.pull-left[
+1. Start with a boilerplate HTML file;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Plain Markdown;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Write JavaScript to autoplay slides;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Manually configure MathJax;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Highlight code with &lt;code&gt;*&lt;/code&gt;;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Edit Markdown source and refresh browser to see updated slides;
+]&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;.pull-right[
+1. Start with an R Markdown document;&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;R Markdown (can embed R/other code chunks);&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Provide an option &lt;code&gt;autoplay&lt;/code&gt;;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;MathJax just works;&lt;sup&gt;*&lt;/sup&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Highlight code with &lt;code&gt;{{}}&lt;/code&gt;;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The RStudio addin “Infinite Moon Reader” automatically refreshes slides on changes;
+]&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;.footnote[[*] Not really. See next page.]&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;math-expressions&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Math Expressions&lt;/h1&gt;
+&lt;p&gt;You can write LaTeX math expressions inside a pair of dollar signs, e.g. $+$ renders &lt;span class=&#34;math inline&#34;&gt;\(\alpha+\beta\)&lt;/span&gt;. You can use the display style with double dollar signs:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span class=&#34;math display&#34;&gt;\[\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i\]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Limitations:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting &lt;code&gt;$$&lt;/code&gt; must appear in the very beginning of a line, followed immediately by a non-space character, and the ending &lt;code&gt;$$&lt;/code&gt; must be at the end of a line, led by a non-space character;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;There should not be spaces after the opening &lt;code&gt;$&lt;/code&gt; or before the closing &lt;code&gt;$&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Math does not work on the title slide (see &lt;a href=&#34;https://github.com/yihui/xaringan/issues/61&#34;&gt;#61&lt;/a&gt; for a workaround).&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-code&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Code&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# a boring regression
+fit = lm(dist ~ 1 + speed, data = cars)
+coef(summary(fit))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;#               Estimate Std. Error   t value     Pr(&amp;gt;|t|)
+# (Intercept) -17.579095  6.7584402 -2.601058 1.231882e-02
+# speed         3.932409  0.4155128  9.463990 1.489836e-12&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dojutsu = c(&amp;#39;地爆天星&amp;#39;, &amp;#39;天照&amp;#39;, &amp;#39;加具土命&amp;#39;, &amp;#39;神威&amp;#39;, &amp;#39;須佐能乎&amp;#39;, &amp;#39;無限月読&amp;#39;)
+grep(&amp;#39;天&amp;#39;, dojutsu, value = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;# [1] &amp;quot;地爆天星&amp;quot; &amp;quot;天照&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;r-plots&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;R Plots&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;par(mar = c(4, 4, 1, .1))
+plot(cars, pch = 19, col = &amp;#39;darkgray&amp;#39;, las = 1)
+abline(fit, lwd = 2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;/slides/test/test_files/figure-html/cars-1.svg&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tables&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Tables&lt;/h1&gt;
+&lt;p&gt;If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#knitr::kable(head(iris), format = &amp;#39;html&amp;#39;)
+DT::datatable(head(iris))&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;data&#34;:[[&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;,&#34;6&#34;],[5.1,4.9,4.7,4.6,5,5.4],[3.5,3,3.2,3.1,3.6,3.9],[1.4,1.4,1.3,1.5,1.4,1.7],[0.2,0.2,0.2,0.2,0.2,0.4],[&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;Sepal.Length&lt;\/th&gt;\n      &lt;th&gt;Sepal.Width&lt;\/th&gt;\n      &lt;th&gt;Petal.Length&lt;\/th&gt;\n      &lt;th&gt;Petal.Width&lt;\/th&gt;\n      &lt;th&gt;Species&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[1,2,3,4]},{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;html-widgets&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;HTML Widgets&lt;/h1&gt;
+&lt;p&gt;I have not thoroughly tested HTML widgets against &lt;strong&gt;xaringan&lt;/strong&gt;. Some may work well, and some may not. It is a little tricky.&lt;/p&gt;
+&lt;p&gt;Similarly, the Shiny mode (&lt;code&gt;runtime: shiny&lt;/code&gt;) does not work. I might get these issues fixed in the future, but these are not of high priority to me. I never turn my presentation into a Shiny app. When I need to demonstrate more complicated examples, I just launch them separately. It is convenient to share slides with other people when they are plain HTML/JS applications.&lt;/p&gt;
+&lt;p&gt;See the next page for two HTML widgets.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(leaflet)
+leaflet() %&amp;gt;% addTiles() %&amp;gt;% setView(-93.65, 42.0285, zoom = 17)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-2&#34; style=&#34;width:100%;height:576px;&#34; class=&#34;leaflet html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-2&#34;&gt;{&#34;x&#34;:{&#34;options&#34;:{&#34;crs&#34;:{&#34;crsClass&#34;:&#34;L.CRS.EPSG3857&#34;,&#34;code&#34;:null,&#34;proj4def&#34;:null,&#34;projectedBounds&#34;:null,&#34;options&#34;:{}}},&#34;calls&#34;:[{&#34;method&#34;:&#34;addTiles&#34;,&#34;args&#34;:[&#34;//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#34;,null,null,{&#34;minZoom&#34;:0,&#34;maxZoom&#34;:18,&#34;tileSize&#34;:256,&#34;subdomains&#34;:&#34;abc&#34;,&#34;errorTileUrl&#34;:&#34;&#34;,&#34;tms&#34;:false,&#34;noWrap&#34;:false,&#34;zoomOffset&#34;:0,&#34;zoomReverse&#34;:false,&#34;opacity&#34;:1,&#34;zIndex&#34;:1,&#34;detectRetina&#34;:false,&#34;attribution&#34;:&#34;&amp;copy; &lt;a href=\&#34;http://openstreetmap.org\&#34;&gt;OpenStreetMap&lt;\/a&gt; contributors, &lt;a href=\&#34;http://creativecommons.org/licenses/by-sa/2.0/\&#34;&gt;CC-BY-SA&lt;\/a&gt;&#34;}]}],&#34;setView&#34;:[[42.0285,-93.65],17,[]]},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;hr /&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;DT::datatable(
+  head(iris, 10),
+  fillContainer = FALSE, options = list(pageLength = 8)
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;fillContainer&#34;:false,&#34;data&#34;:[[&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;,&#34;6&#34;,&#34;7&#34;,&#34;8&#34;,&#34;9&#34;,&#34;10&#34;],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],[&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;Sepal.Length&lt;\/th&gt;\n      &lt;th&gt;Sepal.Width&lt;\/th&gt;\n      &lt;th&gt;Petal.Length&lt;\/th&gt;\n      &lt;th&gt;Petal.Width&lt;\/th&gt;\n      &lt;th&gt;Species&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;pageLength&#34;:8,&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[1,2,3,4]},{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false,&#34;lengthMenu&#34;:[8,10,25,50,100]}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-tips&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some Tips&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;When you use the “Infinite Moon Reader” addin in RStudio, your R session will be blocked by default. You can click the red button on the right of the console to stop serving the slides, or use the &lt;em&gt;daemonized&lt;/em&gt; mode so that it does not block your R session. To do the latter, you can set the option&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;options(servr.daemon = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;in your current R session, or in &lt;code&gt;~/.Rprofile&lt;/code&gt; so that it is applied to all future R sessions. I do the latter by myself.&lt;/p&gt;
+&lt;p&gt;To know more about the web server, see the &lt;a href=&#34;https://github.com/yihui/servr&#34;&gt;&lt;strong&gt;servr&lt;/strong&gt;&lt;/a&gt; package.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;–&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Do not forget to try the &lt;code&gt;yolo&lt;/code&gt; option of &lt;code&gt;xaringan::moon_reader&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    yolo: true&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-tips-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some Tips&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Slides can be automatically played if you set the &lt;code&gt;autoplay&lt;/code&gt; option under &lt;code&gt;nature&lt;/code&gt;, e.g. go to the next slide every 30 seconds in a lightning talk:&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    nature:
+      autoplay: 30000&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;–&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A countdown timer can be added to every page of the slides using the &lt;code&gt;countdown&lt;/code&gt; option under &lt;code&gt;nature&lt;/code&gt;, e.g. if you want to spend one minute on every page when you give the talk, you can set:&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    nature:
+      countdown: 60000&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then you will see a timer counting down from &lt;code&gt;01:00&lt;/code&gt;, to &lt;code&gt;00:59&lt;/code&gt;, &lt;code&gt;00:58&lt;/code&gt;, … When the time is out, the timer will continue but the time turns red.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-tips-2&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some Tips&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The title slide is created automatically by &lt;strong&gt;xaringan&lt;/strong&gt;, but it is just another remark.js slide added before your other slides.&lt;/p&gt;
+&lt;p&gt;The title slide is set to &lt;code&gt;class: center, middle, inverse, title-slide&lt;/code&gt; by default. You can change the classes applied to the title slide with the &lt;code&gt;titleSlideClass&lt;/code&gt; option of &lt;code&gt;nature&lt;/code&gt; (&lt;code&gt;title-slide&lt;/code&gt; is always applied).&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    nature:
+      titleSlideClass: [top, left, inverse]&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;–&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;If you’d like to create your own title slide, disable &lt;strong&gt;xaringan&lt;/strong&gt;’s title slide with the &lt;code&gt;seal = FALSE&lt;/code&gt; option of &lt;code&gt;moon_reader&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    seal: false&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-tips-3&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some Tips&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;There are several ways to build incremental slides. See &lt;a href=&#34;https://slides.yihui.org/xaringan/incremental.html&#34;&gt;this presentation&lt;/a&gt; for examples.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The option &lt;code&gt;highlightLines: true&lt;/code&gt; of &lt;code&gt;nature&lt;/code&gt; will highlight code lines that start with &lt;code&gt;*&lt;/code&gt;, or are wrapped in &lt;code&gt;{{ }}&lt;/code&gt;, or have trailing comments &lt;code&gt;#&amp;lt;&amp;lt;&lt;/code&gt;;&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    nature:
+      highlightLines: true&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See examples on the next page.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-tips-4&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some Tips&lt;/h1&gt;
+&lt;p&gt;.pull-left[
+An example using a leading &lt;code&gt;*&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```r
+if (TRUE) {
+** message(&amp;quot;Very important!&amp;quot;)
+}
+```&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (TRUE) {
+* message(&amp;quot;Very important!&amp;quot;)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is invalid R code, so it is a plain fenced code block that is not executed.
+]&lt;/p&gt;
+&lt;p&gt;.pull-right[
+An example using &lt;code&gt;{{}}&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```{r tidy=FALSE}
+if (TRUE) {
+*{{ message(&amp;quot;Very important!&amp;quot;) }}
+}
+```&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;if (TRUE) {
+{{ message(&amp;quot;Very important!&amp;quot;) }}
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Very important!&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It is valid R code so you can run it. Note that &lt;code&gt;{{}}&lt;/code&gt; can wrap an R expression of multiple lines.
+]&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-tips-5&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some Tips&lt;/h1&gt;
+&lt;p&gt;An example of using the trailing comment &lt;code&gt;#&amp;lt;&amp;lt;&lt;/code&gt; to highlight lines:&lt;/p&gt;
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;```{r tidy=FALSE}
+library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #&amp;lt;&amp;lt;
+  geom_smooth()    #&amp;lt;&amp;lt;
+```&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Output:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #&amp;lt;&amp;lt;
+  geom_smooth()    #&amp;lt;&amp;lt;&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-tips-6&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some Tips&lt;/h1&gt;
+&lt;p&gt;When you enable line-highlighting, you can also use the chunk option &lt;code&gt;highlight.output&lt;/code&gt; to highlight specific lines of the text output from a code chunk. For example, &lt;code&gt;highlight.output = TRUE&lt;/code&gt; means highlighting all lines, and &lt;code&gt;highlight.output = c(1, 3)&lt;/code&gt; means highlighting the first and third line.&lt;/p&gt;
+&lt;pre class=&#34;md&#34;&gt;&lt;code&gt;```{r, highlight.output=c(1, 3)}
+head(iris)
+```&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Question: what does &lt;code&gt;highlight.output = c(TRUE, FALSE)&lt;/code&gt; mean? (Hint: think about R’s recycling of vectors)&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;some-tips-7&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Some Tips&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;To make slides work offline, you need to download a copy of remark.js in advance, because &lt;strong&gt;xaringan&lt;/strong&gt; uses the online version by default (see the help page &lt;code&gt;?xaringan::moon_reader&lt;/code&gt;).&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;You can use &lt;code&gt;xaringan::summon_remark()&lt;/code&gt; to download the latest or a specified version of remark.js. By default, it is downloaded to &lt;code&gt;libs/remark-latest.min.js&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Then change the &lt;code&gt;chakra&lt;/code&gt; option in YAML to point to this file, e.g.&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    chakra: libs/remark-latest.min.js&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;If you used Google fonts in slides (the default theme uses &lt;em&gt;Yanone Kaffeesatz&lt;/em&gt;, &lt;em&gt;Droid Serif&lt;/em&gt;, and &lt;em&gt;Source Code Pro&lt;/em&gt;), they won’t work offline unless you download or install them locally. The Heroku app &lt;a href=&#34;https://google-webfonts-helper.herokuapp.com/fonts&#34;&gt;google-webfonts-helper&lt;/a&gt; can help you download fonts and generate the necessary CSS.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;macros&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Macros&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;remark.js &lt;a href=&#34;https://github.com/yihui/xaringan/issues/80&#34;&gt;allows users to define custom macros&lt;/a&gt; (JS functions) that can be applied to Markdown text using the syntax &lt;code&gt;![:macroName arg1, arg2, ...]&lt;/code&gt; or &lt;code&gt;![:macroName arg1, arg2, ...](this)&lt;/code&gt;. For example, before remark.js initializes the slides, you can define a macro named &lt;code&gt;scale&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;js&#34;&gt;&lt;code&gt;remark.macros.scale = function (percentage) {
+  var url = this;
+  return &amp;#39;&amp;lt;img src=&amp;quot;&amp;#39; + url + &amp;#39;&amp;quot; style=&amp;quot;width: &amp;#39; + percentage + &amp;#39;&amp;quot; /&amp;gt;&amp;#39;;
+};&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then the Markdown text&lt;/p&gt;
+&lt;pre class=&#34;markdown&#34;&gt;&lt;code&gt;![:scale 50%](image.jpg)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;will be translated to&lt;/p&gt;
+&lt;pre class=&#34;html&#34;&gt;&lt;code&gt;&amp;lt;img src=&amp;quot;image.jpg&amp;quot; style=&amp;quot;width: 50%&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;macros-continued&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Macros (continued)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;To insert macros in &lt;strong&gt;xaringan&lt;/strong&gt; slides, you can use the option &lt;code&gt;beforeInit&lt;/code&gt; under the option &lt;code&gt;nature&lt;/code&gt;, e.g.,&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    nature:
+      beforeInit: &amp;quot;macros.js&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You save your remark.js macros in the file &lt;code&gt;macros.js&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;code&gt;beforeInit&lt;/code&gt; option can be used to insert arbitrary JS code before &lt;code&gt;remark.create()&lt;/code&gt;. Inserting macros is just one of its possible applications.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;css&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;CSS&lt;/h1&gt;
+&lt;p&gt;Among all options in &lt;code&gt;xaringan::moon_reader&lt;/code&gt;, the most challenging but perhaps also the most rewarding one is &lt;code&gt;css&lt;/code&gt;, because it allows you to customize the appearance of your slides using any CSS rules or hacks you know.&lt;/p&gt;
+&lt;p&gt;You can see the default CSS file &lt;a href=&#34;https://github.com/yihui/xaringan/blob/master/inst/rmarkdown/templates/xaringan/resources/default.css&#34;&gt;here&lt;/a&gt;. You can completely replace it with your own CSS files, or define new rules to override the default. See the help page &lt;code&gt;?xaringan::moon_reader&lt;/code&gt; for more information.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;css-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;CSS&lt;/h1&gt;
+&lt;p&gt;For example, suppose you want to change the font for code from the default “Source Code Pro” to “Ubuntu Mono”. You can create a CSS file named, say, &lt;code&gt;ubuntu-mono.css&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&#34;css&#34;&gt;&lt;code&gt;@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+.remark-code, .remark-inline-code { font-family: &amp;#39;Ubuntu Mono&amp;#39;; }&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then set the &lt;code&gt;css&lt;/code&gt; option in the YAML metadata:&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    css: [&amp;quot;default&amp;quot;, &amp;quot;ubuntu-mono.css&amp;quot;]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here I assume &lt;code&gt;ubuntu-mono.css&lt;/code&gt; is under the same directory as your Rmd.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;https://github.com/yihui/xaringan/issues/83&#34;&gt;yihui/xaringan#83&lt;/a&gt; for an example of using the &lt;a href=&#34;https://github.com/tonsky/FiraCode&#34;&gt;Fira Code&lt;/a&gt; font, which supports ligatures in program code.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;themes&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Themes&lt;/h1&gt;
+&lt;p&gt;Don’t want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files &lt;code&gt;foo.css&lt;/code&gt; and &lt;code&gt;foo-fonts.css&lt;/code&gt;, where &lt;code&gt;foo&lt;/code&gt; is the theme name. Below are some existing themes:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;names(xaringan:::list_css())&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;chocolate-fonts&amp;quot;  &amp;quot;chocolate&amp;quot;        &amp;quot;default-fonts&amp;quot;    &amp;quot;default&amp;quot;         
+##  [5] &amp;quot;duke-blue&amp;quot;        &amp;quot;fc-fonts&amp;quot;         &amp;quot;fc&amp;quot;               &amp;quot;hygge-duke&amp;quot;      
+##  [9] &amp;quot;hygge&amp;quot;            &amp;quot;ki-fonts&amp;quot;         &amp;quot;ki&amp;quot;               &amp;quot;kunoichi&amp;quot;        
+## [13] &amp;quot;lucy-fonts&amp;quot;       &amp;quot;lucy&amp;quot;             &amp;quot;metropolis-fonts&amp;quot; &amp;quot;metropolis&amp;quot;      
+## [17] &amp;quot;middlebury-fonts&amp;quot; &amp;quot;middlebury&amp;quot;       &amp;quot;ninjutsu&amp;quot;         &amp;quot;rladies-fonts&amp;quot;   
+## [21] &amp;quot;rladies&amp;quot;          &amp;quot;robot-fonts&amp;quot;      &amp;quot;robot&amp;quot;            &amp;quot;rutgers-fonts&amp;quot;   
+## [25] &amp;quot;rutgers&amp;quot;          &amp;quot;shinobi&amp;quot;          &amp;quot;tamu-fonts&amp;quot;       &amp;quot;tamu&amp;quot;            
+## [29] &amp;quot;uo-fonts&amp;quot;         &amp;quot;uo&amp;quot;               &amp;quot;uol-fonts&amp;quot;        &amp;quot;uol&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;themes-1&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Themes&lt;/h1&gt;
+&lt;p&gt;To use a theme, you can specify the &lt;code&gt;css&lt;/code&gt; option as an array of CSS filenames (without the &lt;code&gt;.css&lt;/code&gt; extensions), e.g.,&lt;/p&gt;
+&lt;pre class=&#34;yaml&#34;&gt;&lt;code&gt;output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want to contribute a theme to &lt;strong&gt;xaringan&lt;/strong&gt;, please read &lt;a href=&#34;https://yihui.org/en/2017/10/xaringan-themes&#34;&gt;this blog post&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;background-image: url(&lt;a href=&#34;https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg&#34; class=&#34;uri&#34;&gt;https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg&lt;/a&gt;)
+background-size: 100px
+background-position: 90% 8%&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;sharingan&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Sharingan&lt;/h1&gt;
+&lt;p&gt;The R package name &lt;strong&gt;xaringan&lt;/strong&gt; was derived&lt;sup&gt;1&lt;/sup&gt; from &lt;strong&gt;Sharingan&lt;/strong&gt;, a dōjutsu in the Japanese anime &lt;em&gt;Naruto&lt;/em&gt; with two abilities:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the “Eye of Insight”&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the “Eye of Hypnotism”&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I think a presentation is basically a way to communicate insights to the audience, and a great presentation may even “hypnotize” the audience.&lt;sup&gt;2,3&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;.footnote[
+[1] In Chinese, the pronounciation of &lt;em&gt;X&lt;/em&gt; is &lt;em&gt;Sh&lt;/em&gt; /ʃ/ (as in &lt;em&gt;shrimp&lt;/em&gt;). Now you should have a better idea of how to pronounce my last name &lt;em&gt;Xie&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;[2] By comparison, bad presentations only put the audience to sleep.&lt;/p&gt;
+&lt;p&gt;[3] Personally I find that setting background images for slides is a killer feature of remark.js. It is an effective way to bring visual impact into your presentations.
+]&lt;/p&gt;
+&lt;hr /&gt;
+&lt;/div&gt;
+&lt;div id=&#34;naruto-terminology&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Naruto terminology&lt;/h1&gt;
+&lt;p&gt;The &lt;strong&gt;xaringan&lt;/strong&gt; package borrowed a few terms from Naruto, such as&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://naruto.wikia.com/wiki/Sharingan&#34;&gt;Sharingan&lt;/a&gt; (写輪眼; the package name)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;http://naruto.wikia.com/wiki/Moon_Reader&#34;&gt;moon reader&lt;/a&gt; (月読; an attractive R Markdown output format)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://naruto.wikia.com/wiki/Chakra&#34;&gt;Chakra&lt;/a&gt; (查克拉; the path to the remark.js library, which is the power to drive the presentation)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://naruto.wikia.com/wiki/Nature_Transformation&#34;&gt;Nature transformation&lt;/a&gt; (性質変化; transform the chakra by setting different options)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;http://naruto.wikia.com/wiki/Infinite_Tsukuyomi&#34;&gt;infinite moon reader&lt;/a&gt; (無限月読; start a local web server to continuously serve your slides)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The &lt;a href=&#34;http://naruto.wikia.com/wiki/Summoning_Technique&#34;&gt;summoning technique&lt;/a&gt; (download remark.js from the web)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can click the links to know more about them if you want. The jutsu “Moon Reader” may seem a little evil, but that does not mean your slides are evil.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;class: center&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;hand-seals-印&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Hand seals (印)&lt;/h1&gt;
+&lt;p&gt;Press &lt;code&gt;h&lt;/code&gt; or &lt;code&gt;?&lt;/code&gt; to see the possible ninjutsu you can use in remark.js.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/7/7e/Mudra-Naruto-KageBunshin.svg&#34; /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;class: center, middle&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;thanks&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Thanks!&lt;/h1&gt;
+&lt;p&gt;Slides created via the R package &lt;a href=&#34;https://github.com/yihui/xaringan&#34;&gt;&lt;strong&gt;xaringan&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The chakra comes from &lt;a href=&#34;https://remarkjs.com&#34;&gt;remark.js&lt;/a&gt;, &lt;a href=&#34;http://yihui.org/knitr&#34;&gt;&lt;strong&gt;knitr&lt;/strong&gt;&lt;/a&gt;, and &lt;a href=&#34;https://rmarkdown.rstudio.com&#34;&gt;R Markdown&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Improving practices and inferences in developmental cognitive neuroscience</title>
-      <link>https://dcosme.github.io/publication/2019-09-17-improving-practices-inferences/</link>
+      <link>/publication/2019-09-17-improving-practices-inferences/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2019-09-17-improving-practices-inferences/</guid>
+      <guid>/publication/2019-09-17-improving-practices-inferences/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Cosme, D., Flannery, J. E., &amp;amp; Pfeifer, J. H. (2020). Improving practices and inferences in developmental cognitive neuroscience. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;, 100807.&lt;/p&gt;
 </description>
@@ -121,10 +558,10 @@ Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Cosme, D., Flannery, J. E., &amp
     
     <item>
       <title>Neural correlates of self-evaluation in relation to age and pubertal development in early adolescent girls</title>
-      <link>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</link>
+      <link>/publication/2019-08-27-self-evaluation-puberty/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/</guid>
+      <guid>/publication/2019-08-27-self-evaluation-puberty/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Barendse, M. E., Cosme, D., Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Allen, N. B., &amp;amp; Pfeifer, J. H. (2020). Neural correlates of self-evaluation in relation to age and pubertal development in early adolescent girls. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;, 100799.&lt;/p&gt;
 </description>
@@ -132,10 +569,10 @@ Barendse, M. E., Cosme, D., Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Alle
     
     <item>
       <title>Neural indicators of food cue reactivity, regulation, and valuation and their associations with body composition and daily eating behavior</title>
-      <link>https://dcosme.github.io/publication/2020-03-10-neural-indicators/</link>
+      <link>/publication/2020-03-10-neural-indicators/</link>
       <pubDate>Tue, 10 Mar 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2020-03-10-neural-indicators/</guid>
+      <guid>/publication/2020-03-10-neural-indicators/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Lopez, R. B. (Under Review) Neural indicators of food cue reactivity, regulation, and valuation and their associations with body composition and daily eating behavior.&lt;/p&gt;
 </description>
@@ -143,10 +580,10 @@ Cosme, D., &amp;amp; Lopez, R. B. (Under Review) Neural indicators of food cue r
     
     <item>
       <title></title>
-      <link>https://dcosme.github.io/cv/</link>
+      <link>/cv/</link>
       <pubDate>Sun, 29 Dec 2019 14:45:21 -0800</pubDate>
       
-      <guid>https://dcosme.github.io/cv/</guid>
+      <guid>/cv/</guid>
       <description>
 
 &lt;h1 id=&#34;danielle-cosme&#34;&gt;DANIELLE COSME&lt;/h1&gt;
@@ -273,25 +710,25 @@ Puberty, neural systems for social processes, and early adolescent mental health
 
 &lt;hr /&gt;
 
-&lt;p&gt;Flournoy, J. C., Vijayakumar, N., Cheng, T. W., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Flannery, J. E., &amp;amp; Pfeifer, J. H. (2020). &lt;a href=&#34;https://dcosme.github.io/publication/2019-09-17-improving-practices-inferences/&#34;&gt;Improving practices and inferences in developmental cognitive neuroscience&lt;/a&gt;. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;, 100807.&lt;/p&gt;
+&lt;p&gt;Flournoy, J. C., Vijayakumar, N., Cheng, T. W., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Flannery, J. E., &amp;amp; Pfeifer, J. H. (2020). &lt;a href=&#34;/publication/2019-09-17-improving-practices-inferences/&#34;&gt;Improving practices and inferences in developmental cognitive neuroscience&lt;/a&gt;. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;, 100807.&lt;/p&gt;
 
-&lt;p&gt;Barendse, M. E., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Allen, N. B., &amp;amp; Pfeifer, J. H. (2020). &lt;a href=&#34;https://dcosme.github.io/publication/2019-08-27-self-evaluation-puberty/&#34;&gt;Neural correlates of self-evaluation in relation to age and pubertal development in early adolescent girls&lt;/a&gt;. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;, 100799.&lt;/p&gt;
+&lt;p&gt;Barendse, M. E., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Flournoy, J. C., Vijayakumar, N., Cheng, T. W., Allen, N. B., &amp;amp; Pfeifer, J. H. (2020). &lt;a href=&#34;/publication/2019-08-27-self-evaluation-puberty/&#34;&gt;Neural correlates of self-evaluation in relation to age and pubertal development in early adolescent girls&lt;/a&gt;. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;, 100799.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Zeithamova, D., Stice, E., &amp;amp; Berkman, E. T. (2020). &lt;a href=&#34;https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/&#34;&gt;Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice&lt;/a&gt;. &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Zeithamova, D., Stice, E., &amp;amp; Berkman, E. T. (2020). &lt;a href=&#34;/publication/2019-06-28-neural-signatures-health-neuros/&#34;&gt;Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice&lt;/a&gt;. &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;.&lt;/p&gt;
 
-&lt;p&gt;Barendse, M., Vijayakumar, N., Byrne, M. L., Flannery, J., Cheng, T. W., Flournoy, J., &amp;hellip; &amp;amp; Hval, L. (2020). &lt;a href=&#34;https://dcosme.github.io/publication/2019-12-29-tag/&#34;&gt;Study protocol: Transitions in Adolescent Girls (TAG)&lt;/a&gt;. &lt;em&gt;Frontiers Psychiatry&lt;/em&gt;, &lt;em&gt;10&lt;/em&gt;, 1018.&lt;/p&gt;
+&lt;p&gt;Barendse, M., Vijayakumar, N., Byrne, M. L., Flannery, J., Cheng, T. W., Flournoy, J., &amp;hellip; &amp;amp; Hval, L. (2020). &lt;a href=&#34;/publication/2019-12-29-tag/&#34;&gt;Study protocol: Transitions in Adolescent Girls (TAG)&lt;/a&gt;. &lt;em&gt;Frontiers Psychiatry&lt;/em&gt;, &lt;em&gt;10&lt;/em&gt;, 1018.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Ludwig, R. M., &amp;amp; Berkman, E. T. (2019) &lt;a href=&#34;https://dcosme.github.io/publication/2019-06-28-neurocognitive-models-self-control/&#34;&gt;Comparing two neurocognitive models of selfcontrol during dietary decisions&lt;/a&gt;. &lt;em&gt;Social Cognitive and Affective Neuroscience, 14(9)&lt;/em&gt;, 957-966.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Ludwig, R. M., &amp;amp; Berkman, E. T. (2019) &lt;a href=&#34;/publication/2019-06-28-neurocognitive-models-self-control/&#34;&gt;Comparing two neurocognitive models of selfcontrol during dietary decisions&lt;/a&gt;. &lt;em&gt;Social Cognitive and Affective Neuroscience, 14(9)&lt;/em&gt;, 957-966.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, &amp;amp; Berkman, E. T. (2020). &lt;a href=&#34;https://dcosme.github.io/publication/2019-06-28-autonomy-affect-regulation/&#34;&gt;Autonomy can support affect regulation during illness and in health&lt;/a&gt;. &lt;em&gt;Journal of Health Psychology, 25&lt;/em&gt;(1), 31-37.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, &amp;amp; Berkman, E. T. (2020). &lt;a href=&#34;/publication/2019-06-28-autonomy-affect-regulation/&#34;&gt;Autonomy can support affect regulation during illness and in health&lt;/a&gt;. &lt;em&gt;Journal of Health Psychology, 25&lt;/em&gt;(1), 31-37.&lt;/p&gt;
 
-&lt;p&gt;Telzer, E. H., McCormick, E. M., Peters, S., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Pfeifer, J. H., &amp;amp; van Duijvenvoorde, A. C. K. (2018) &lt;a href=&#34;https://dcosme.github.io/publication/2018-02-07-longitudinal-fmri/&#34;&gt;Methodological considerations for developmental longitudinal fMRI research&lt;/a&gt;. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;, 33, 149-160.&lt;/p&gt;
+&lt;p&gt;Telzer, E. H., McCormick, E. M., Peters, S., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Pfeifer, J. H., &amp;amp; van Duijvenvoorde, A. C. K. (2018) &lt;a href=&#34;/publication/2018-02-07-longitudinal-fmri/&#34;&gt;Methodological considerations for developmental longitudinal fMRI research&lt;/a&gt;. &lt;em&gt;Developmental Cognitive Neuroscience&lt;/em&gt;, 33, 149-160.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H. (2018) &lt;a href=&#34;https://dcosme.github.io/publication/2019-06-28-choosing-to-regulate/&#34;&gt;Choosing to regulate: Does choice enhance craving regulation?&lt;/a&gt;. &lt;em&gt;Social Cognitive and Affective Neuroscience, 13(3)&lt;/em&gt;, 300-309.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H. (2018) &lt;a href=&#34;/publication/2019-06-28-choosing-to-regulate/&#34;&gt;Choosing to regulate: Does choice enhance craving regulation?&lt;/a&gt;. &lt;em&gt;Social Cognitive and Affective Neuroscience, 13(3)&lt;/em&gt;, 300-309.&lt;/p&gt;
 
-&lt;p&gt;Giuliani, N. R., Merchant, J. S., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, &amp;amp; Berkman, E. T. (2018) &lt;a href=&#34;https://dcosme.github.io/publication/2018-03-15-neural-predictors-dietary-change/&#34;&gt;Neural predictors of eating behavior and dietary change&lt;/a&gt;. &lt;em&gt;Annals of the New York Academy of Science, 1428(1)&lt;/em&gt;, 208-220.&lt;/p&gt;
+&lt;p&gt;Giuliani, N. R., Merchant, J. S., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, &amp;amp; Berkman, E. T. (2018) &lt;a href=&#34;/publication/2018-03-15-neural-predictors-dietary-change/&#34;&gt;Neural predictors of eating behavior and dietary change&lt;/a&gt;. &lt;em&gt;Annals of the New York Academy of Science, 1428(1)&lt;/em&gt;, 208-220.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, &amp;amp; Wiens, S. (2015). &lt;a href=&#34;https://dcosme.github.io/publication/2015-03-06-mindfulness-affective-reactivity/&#34;&gt;Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures&lt;/a&gt;. &lt;em&gt;PLOS One, 10(3)&lt;/em&gt;, e0119466.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, &amp;amp; Wiens, S. (2015). &lt;a href=&#34;/publication/2015-03-06-mindfulness-affective-reactivity/&#34;&gt;Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures&lt;/a&gt;. &lt;em&gt;PLOS One, 10(3)&lt;/em&gt;, e0119466.&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
@@ -299,33 +736,13 @@ Puberty, neural systems for social processes, and early adolescent mental health
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, &amp;amp; Lopez, R. B. (Under Second Review) &lt;a href=&#34;https://dcosme.github.io/publication/2020-03-10-neural-indicators/&#34;&gt;Neural indicators of food cue reactivity, regulation, and valuation and their associations with body composition and daily eating behavior&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, &amp;amp; Lopez, R. B. (Under Review) &lt;a href=&#34;/publication/2020-03-10-neural-indicators/&#34;&gt;Neural indicators of food cue reactivity, regulation, and valuation and their associations with body composition and daily eating behavior&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Merchant, J. S., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Giuliani N. R., Dirks, B. T., &amp;amp; Berkman, E. T. (Under Review) Neural substrates of food valuation and its relationship with BMI and healthy eating in overweight and obese individuals&lt;/p&gt;
+&lt;p&gt;Merchant, J. S., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Giuliani N. R., Dirks, B. T., &amp;amp; Berkman, E. T. (Under Review) Neural substrates of food valuation and its relationship with BMI and healthy eating in overweight and obese individuals.&lt;/p&gt;
 
-&lt;p&gt;Giuliani N. R., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Merchant, J. S., Dirks, B. T., &amp;amp; Berkman, E. T. (Under Review) Brain activity associated with regulating food cravings predicts changes in self-reported food craving and consumption over time&lt;/p&gt;
+&lt;p&gt;Giuliani N. R., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Merchant, J. S., Dirks, B. T., &amp;amp; Berkman, E. T. (Under Review) Brain activity associated with regulating food cravings predicts changes in self-reported food craving and consumption over time.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Mobasser, A., Ross, G., &amp;amp; Pfeifer J. H. (Preprint) &lt;a href=&#34;https://dcosme.github.io/publication/2019-06-28-happy-and-you-know-it/&#34;&gt;If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Wiens, S., &amp;amp; &lt;strong&gt;Cosme, D.&lt;/strong&gt; (Manuscript In Prep) Evaluation of virtual reality exposure therapy for spider phobia using self-report and psychophysiological measures&lt;/p&gt;
-
-&lt;p&gt;Lopez, R. B., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Werner, K. M., &amp;amp; Saunders, B. (Manuscript In Prep) &lt;a href=&#34;https://osf.io/mtpje/&#34; target=&#34;_blank&#34;&gt;Associations between use of self-regulatory strategies and daily eating patterns: an experience sampling study in college-aged females&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Mobasser, A., Ross, G., Berkman, E. T., Zeithamova, D., &amp;amp; Pfeifer, J. H. (Dissertation; Manuscript In Prep) &lt;a href=&#34;https://osf.io/574mg&#34; target=&#34;_blank&#34;&gt;Dissociability of autonomous and controlled goal pursuit: Assessing the effects of self-determined choice on appetitive self-regulation&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Flournoy, J. C., Livingston, J. L., &amp;amp; Pfeifer, J. H. (Manuscript In Prep) Neural correlates of self-evaluation and social reorientation across adolescence&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Pei, R., Pandey, P., Carreras-Tartak, J., &amp;amp; Falk, E. B. (Manuscript In Prep) &lt;a href=&#34;https://osf.io/8hn2g/registrations&#34; target=&#34;_blank&#34;&gt;Effects of autonomy-supportive framing on COVID-19-related health message effectiveness&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Doré, B. P., Helion, C., Kang, Y., Cooper, N., Jovanova, M, Lydon-Staley, D., Ochsner, K., &amp;amp; Falk, E. B. (Analysis)  Effects of mindfulness and perspective-taking on alcohol craving and brain activity in a lab neuroimaging task&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Jovanova, M, Doré, B. P., Lydon-Staley, D., &amp;amp; Falk, E. B. (Analysis) Alcohol cue reactivity during lab neuroimaging task and its relationship with alcohol consumption in daily life&lt;/p&gt;
-
-&lt;p&gt;Clithero, J. A., &lt;strong&gt;Cosme, D.&lt;/strong&gt;, Dirks, B., Merchant, J. S., Giuliani, N. R., &amp;amp; Berkman, E. T. (Analysis) Utilizing Neural Responses to Prior Trials to Improve Predictions of Willingness-to-Pay&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Chavez, R., Giuliani, N. R., &amp;amp; Berkman, E. T. (Analysis) Neural signature of food craving&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Scholz, C., Chan, H. Y., Doré, B. P., Carreras-Tartak, J., &amp;amp; Falk, E. B. (Data Collection) Associations between message self and social relevance and sharing intentions&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Mobasser, A., Ross, G., &amp;amp; Pfeifer J. H. (Preprint) &lt;a href=&#34;/publication/2019-06-28-happy-and-you-know-it/&#34;&gt;If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 
@@ -342,6 +759,9 @@ motion artifacts in fMRI data using fmriprep confounds.&lt;br /&gt;
 &lt;h2 id=&#34;invited-talks-font-color-f0bd00-font&#34;&gt;INVITED TALKS &lt;font color=&#34;#f0bd00&#34;&gt;//&lt;/font&gt;&lt;/h2&gt;
 
 &lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt; (2020) Specification curve analysis: A practical guide. Presentation given at Melbourne University on September 29.&lt;br /&gt;
+&lt;a href=&#34;https://dcosme.github.io/specification-curves/SCA_tutorial_inferential_presentation&#34; target=&#34;_blank&#34;&gt;Presentation&lt;/a&gt; | &lt;a href=&#34;https://dcosme.github.io/specification-curves/SCA_tutorial_inferential&#34; target=&#34;_blank&#34;&gt;Tutorial&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Ludwig, R. M., &amp;amp; Berkman, E. T. (2019) Comparing neurocognitive models of self-control. Presentation given at the Oregon Decision Neuroscience Symposium, April 19, Eugene, Oregon.&lt;/p&gt;
 
@@ -368,13 +788,13 @@ motion artifacts in fMRI data using fmriprep confounds.&lt;br /&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Zeithamova, D., Stice, E., &amp;amp; Berkman, E. T.. (2020) Assessment of spontaneous regulation during food choice using neural signatures derived from independent data. Poster presented at the Society for Personality and Social Psychology annual meeting, February 26-February 29, New Orleans, LA.&lt;br /&gt;
-&lt;a href=&#34;https://dcosme.github.io/posters/cosme_spsp_health_neuro_2020.pdf&#34;&gt;Poster&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;/posters/cosme_spsp_health_neuro_2020.pdf&#34;&gt;Poster&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Mobasser, A., Ross, G., Zeithamova, D., Berkman, E. T., &amp;amp; Pfeifer, J. H. (2020) Behavioral and neural effects of choice on appetitive self-regulation: An experimental test of self-determination theory. Poster presented at the Motivation Preconference at the Society for Personality and Social Psychology annual meeting, February 27, New Orleans, LA.&lt;br /&gt;
-&lt;a href=&#34;https://dcosme.github.io/posters/cosme_spsp_2020.pdf&#34;&gt;Poster&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;/posters/cosme_spsp_2020.pdf&#34;&gt;Poster&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Mobasser, A., Ross, G., Zeithamova, D., Berkman, E. T., &amp;amp; Pfeifer, J. H. (2019) Neural effects of autonomous choice on appetitive self-regulation during the transition to college. Poster presented at the Flux Congress, August 30-September 1, New York, NY.&lt;br /&gt;
-&lt;a href=&#34;https://dcosme.github.io/posters/cosme_flux_2019.pdf&#34;&gt;Poster&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;/posters/cosme_flux_2019.pdf&#34;&gt;Poster&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Cosme, D.&lt;/strong&gt;, Flournoy, J.C., Verhoeven, N., Vijayakumar N., &amp;amp; Pfeifer, J. H. (2018) Automated detection of motion artifacts in fMRI data. Poster presented at the Flux Congress, August 30-September 1, Berlin, Germany.&lt;br /&gt;
 &lt;a href=&#34;posters/Cosme_FLUX_2019.pdff&#34; target=&#34;_blank&#34;&gt;Poster&lt;/a&gt;&lt;/p&gt;
@@ -416,8 +836,9 @@ motion artifacts in fMRI data using fmriprep confounds.&lt;br /&gt;
 &lt;hr /&gt;
 
 &lt;p&gt;&lt;strong&gt;GRADUATE STUDENTS&lt;/strong&gt;&lt;br /&gt;
-MIA JOVANOVA &lt;span style=&#34;float:right;&#34;&gt;2020&lt;/span&gt;&lt;br&gt;
-PRATEEKSHIT PANDEY &lt;span style=&#34;float:right;&#34;&gt;2020&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
+PRATEEKSHIT PANDEY &lt;span style=&#34;float:right;&#34;&gt;2020&lt;/span&gt;&lt;br&gt;
+KEANA RICHARDS &lt;span style=&#34;float:right;&#34;&gt;2020&lt;/span&gt;&lt;br&gt;
+MIA JOVANOVA &lt;span style=&#34;float:right;&#34;&gt;2020&lt;/span&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;POSTBACS&lt;/strong&gt;&lt;br /&gt;
 SILICIA LOMAX, Project Coorinator&lt;span style=&#34;float:right;&#34;&gt;2020&lt;/span&gt;&lt;br&gt;
@@ -453,6 +874,7 @@ MRI SCANNER OPERATOR CERTIFICATION, University of Oregon&lt;span style=&#34;floa
 SCIENTIFIC DATA&lt;br /&gt;
 EMOTION AND MOTIVATION&lt;br /&gt;
 JOURNAL OF NEUROSCIENCE, PSYCHOLOGY, AND ECONOMICS&lt;br /&gt;
+MOTIVATION SCIENCE&lt;br /&gt;
 &lt;br&gt;&lt;br&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;service-font-color-f0bd00-font&#34;&gt;SERVICE &lt;font color=&#34;#f0bd00&#34;&gt;//&lt;/font&gt;&lt;/h2&gt;
@@ -470,10 +892,10 @@ MEMBER, UO Mindfulness Symposium Organizing Committee&lt;span style=&#34;float:r
     
     <item>
       <title>Grant applications</title>
-      <link>https://dcosme.github.io/grants/</link>
+      <link>/grants/</link>
       <pubDate>Sun, 29 Dec 2019 14:45:21 -0800</pubDate>
       
-      <guid>https://dcosme.github.io/grants/</guid>
+      <guid>/grants/</guid>
       <description>
 
 &lt;p&gt;I hope these applications (successful and unsuccessful) are helpful examples.&lt;/p&gt;
@@ -490,7 +912,7 @@ MEMBER, UO Mindfulness Symposium Organizing Committee&lt;span style=&#34;float:r
 
 &lt;p&gt;Cognitive reappraisal can be used to reduce food craving and unhealthy eating (a key risk factor for several kinds of cancer), but interventions to train reappraisal ability are not equally effective for all individuals. This project aims to leverage multivariate neuroimaging and machine learning techniques to develop an objective, neurobiological index of craving reappraisal ability that can be used to assess individual differences in treatment responsivity. The knowledge and research training gained from this project will prepare the trainee to build and refine interventions to reduce unhealthy eating that will ultimately reduce the prevalence of overweight and obesity, and risk for diet-related cancers.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://dcosme.github.io/grants/NRSA_2018_Cosme_initial.pdf&#34;&gt;Initial application and summary statement&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/grants/NRSA_2018_Cosme_initial.pdf&#34;&gt;Initial application and summary statement&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Submitted to NCI&lt;/li&gt;
@@ -516,7 +938,7 @@ MEMBER, UO Mindfulness Symposium Organizing Committee&lt;span style=&#34;float:r
 
 &lt;p&gt;Health behavior change interventions can reduce modifiable cancer risk factors such as unhealthy eating, lack of physical activity, and substance use, but interventions are not equally effective for all individuals. This project will leverage novel multivariate neuroimaging techniques to develop reliable neurobiological indices of target psychological processes in order to improve detection of intervention-related change and individual differences. The knowledge gained from this proposal will enable researchers to more effectively evaluate whether, how, and for whom interventions targeting cancer-relevant health behaviors are working.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://dcosme.github.io/grants/F99K00_Cosme_initial.pdf&#34;&gt;Initial application and summary statement&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;/grants/F99K00_Cosme_initial.pdf&#34;&gt;Initial application and summary statement&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Submitted to NCI&lt;/li&gt;
@@ -528,10 +950,10 @@ MEMBER, UO Mindfulness Symposium Organizing Committee&lt;span style=&#34;float:r
     
     <item>
       <title>Study protocol: Transitions in Adolescent Girls (TAG)</title>
-      <link>https://dcosme.github.io/publication/2019-12-29-tag/</link>
+      <link>/publication/2019-12-29-tag/</link>
       <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2019-12-29-tag/</guid>
+      <guid>/publication/2019-12-29-tag/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Barendse, M.E.A., Vijayakumar, N., Byrne, M.L., Flannery, J.E., Cheng, T.W., Flournoy, J.C., Nelson, B.W., Cosme, D., Mobasser, A., Chavez, S.J., Hval, L., Brady, B., Nadel, H., Helzer, A., Shirtclif, E.A., Allen, N.B., &amp;amp; Pfeifer, J.H. (2020) Study protocol: Transitions in AdolescentGirls (TAG). &lt;em&gt;Frontiers Psychiatry&lt;/em&gt;, &lt;em&gt;10&lt;/em&gt;, 1018.&lt;/p&gt;
 </description>
@@ -539,10 +961,10 @@ Barendse, M.E.A., Vijayakumar, N., Byrne, M.L., Flannery, J.E., Cheng, T.W., Flo
     
     <item>
       <title>Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice</title>
-      <link>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</link>
+      <link>/publication/2019-06-28-neural-signatures-health-neuros/</link>
       <pubDate>Sun, 01 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</guid>
+      <guid>/publication/2019-06-28-neural-signatures-health-neuros/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. (2019) Multivariate neural signatures for health neuroscience: Assessing spontaneous regulation during food choice. &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;&lt;/p&gt;
 </description>
@@ -550,10 +972,10 @@ Cosme, D., Zeithamova, D., Stice E., &amp;amp; Berkman E. T. (2019) Multivariate
     
     <item>
       <title>Comparing two neurocognitive models of self-control during dietary decisions</title>
-      <link>https://dcosme.github.io/publication/2019-06-28-neurocognitive-models-self-control/</link>
+      <link>/publication/2019-06-28-neurocognitive-models-self-control/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2019-06-28-neurocognitive-models-self-control/</guid>
+      <guid>/publication/2019-06-28-neurocognitive-models-self-control/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Ludwig, R. M., &amp;amp; Berkman, E. T. (2019). Comparing two neurocognitive models of self-control during dietary decisions. &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;, 14(9), 957-966.&lt;/p&gt;
 </description>
@@ -561,10 +983,10 @@ Cosme, D., Ludwig, R. M., &amp;amp; Berkman, E. T. (2019). Comparing two neuroco
     
     <item>
       <title>If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being</title>
-      <link>https://dcosme.github.io/publication/2019-06-28-happy-and-you-know-it/</link>
+      <link>/publication/2019-06-28-happy-and-you-know-it/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2019-06-28-happy-and-you-know-it/</guid>
+      <guid>/publication/2019-06-28-happy-and-you-know-it/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. (In Prep) If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being.&lt;/p&gt;
 </description>
@@ -572,12 +994,12 @@ Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. (In Prep) If you’re
     
     <item>
       <title>Specification curve analysis (SCA) tutorial</title>
-      <link>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</link>
+      <link>/2019/06/28/specification-curve-analysis-sca-tutorial/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/2019/06/28/specification-curve-analysis-sca-tutorial/</guid>
+      <guid>/2019/06/28/specification-curve-analysis-sca-tutorial/</guid>
       <description>
-&lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;This tutorial was presented at the University of Oregon Developmental Seminar, May 3, 2019.&lt;/p&gt;
@@ -589,7 +1011,7 @@ Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. (In Prep) If you’re
 &lt;li&gt;The solution (according to &lt;a href=&#34;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2694998&#34;&gt;Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/a&gt;: specify all “reasonable” models and assess the distribution of effects&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt;
-&lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure1.png&#34; alt=&#34;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/img/sca-tutorial/figure1.png&#34; alt=&#34;Figure 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;steps-for-conducting-sca&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;steps for conducting SCA&lt;/h2&gt;
 &lt;ol style=&#34;list-style-type: decimal&#34;&gt;
@@ -606,12 +1028,12 @@ Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. (In Prep) If you’re
 &lt;li&gt;Non-redundant&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt;
-&lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/table1.png&#34; alt=&#34;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/img/sca-tutorial/table1.png&#34; alt=&#34;Table 1 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;descriptive-specification-curve&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;2. Descriptive specification curve&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt;
-&lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure2.png&#34; alt=&#34;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/img/sca-tutorial/figure2.png&#34; alt=&#34;Figure 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;inferential-statistics&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;3. Inferential statistics&lt;/h2&gt;
@@ -625,12 +1047,12 @@ Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. (In Prep) If you’re
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Table 2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&lt;/strong&gt;&lt;br /&gt;
-&lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/table2.png&#34; alt=&#34;Table2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/img/sca-tutorial/table2.png&#34; alt=&#34;Table2 Simonsohn, Simmons, &amp;amp; Nelson, 2015&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Also possible to compare specification surves between two variables of interest&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Figure 6 Orben &amp;amp; Przybylski, 2019&lt;/strong&gt;
-&lt;img src=&#34;https://dcosme.github.io/img/sca-tutorial/figure6.png&#34; alt=&#34;Figure 6 Orben &amp;amp; Przybylski, 2019&#34; /&gt;&lt;/p&gt;
+&lt;img src=&#34;/img/sca-tutorial/figure6.png&#34; alt=&#34;Figure 6 Orben &amp;amp; Przybylski, 2019&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;examples&#34; class=&#34;section level1&#34;&gt;
@@ -886,7 +1308,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/specification%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/specification%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;div id=&#34;reorder-and-rename-variables&#34; class=&#34;section level2&#34;&gt;
 &lt;h2&gt;reorder and rename variables&lt;/h2&gt;
 &lt;ul&gt;
@@ -931,7 +1353,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/clean%20up%20spec%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/clean%20up%20spec%20curve-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;a-more-complicated-example&#34; class=&#34;section level1&#34;&gt;
@@ -1021,7 +1443,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/copmlicated%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/copmlicated%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;coefficient-specification-curve&#34; class=&#34;section level1&#34;&gt;
@@ -1194,7 +1616,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (wt = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;mpg-cyl&#34; class=&#34;section level2&#34;&gt;
@@ -1282,7 +1704,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (cyl = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/coefficient%20spec%20curve%20cyl-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1395,7 +1817,7 @@ bottom = plot.data %&amp;gt;%
 
 # join panels
 (wt_ci = cowplot::plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;, labels = c(&amp;#39;A&amp;#39;, &amp;#39;B&amp;#39;)))&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/plot%20with%20confidence-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-06-28-specification-curve-analysis-sca-tutorial/index_files/figure-html/plot%20with%20confidence-1.png&#34; width=&#34;960&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div id=&#34;next-steps&#34; class=&#34;section level1&#34;&gt;
@@ -1407,16 +1829,16 @@ bottom = plot.data %&amp;gt;%
     
     <item>
       <title>Specification curve example</title>
-      <link>https://dcosme.github.io/2019/02/26/specification-curve-example/</link>
+      <link>/2019/02/26/specification-curve-example/</link>
       <pubDate>Tue, 26 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/2019/02/26/specification-curve-example/</guid>
+      <guid>/2019/02/26/specification-curve-example/</guid>
       <description>
-&lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 
 
 &lt;p&gt;I was inspired by these amazing examples of specification curves by &lt;a href=&#34;https://www.psychologicalscience.org/observer/run-all-the-models-dealing-with-data-analytic-flexibility&#34;&gt;Julia Rohrer&lt;/a&gt; and &lt;a href=&#34;https://www.nature.com/articles/s41562-018-0506-1&#34;&gt;Amy Orben&lt;/a&gt;, so I wrote some code to generate a curve like this:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/img/sca-example/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/img/sca-example/specification_example.png&#34; alt=&#34;Example specification curve&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Below is code to create a specification curve using a toy example from the &lt;code&gt;airquality&lt;/code&gt; dataset. Enjoy!&lt;/p&gt;
 &lt;div id=&#34;load-packages&#34; class=&#34;section level1&#34;&gt;
 &lt;h1&gt;load packages&lt;/h1&gt;
@@ -1489,17 +1911,17 @@ bottom = plot.data %&amp;gt;%
           panel.background = element_blank())
 
 plot_grid(top, bottom, ncol = 1, align = &amp;quot;v&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&#34;https://dcosme.github.io/post/2019-02-26-specification-curve-example/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/post/2019-02-26-specification-curve-example/index_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;576&#34; /&gt;&lt;/p&gt;
 &lt;/div&gt;
 </description>
     </item>
     
     <item>
       <title>Slides</title>
-      <link>https://dcosme.github.io/slides/example/</link>
+      <link>/slides/example/</link>
       <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/slides/example/</guid>
+      <guid>/slides/example/</guid>
       <description>
 
 &lt;h1 id=&#34;welcome-to-slides&#34;&gt;Welcome to Slides&lt;/h1&gt;
@@ -1677,11 +2099,21 @@ $$&lt;/p&gt;
     </item>
     
     <item>
+      <title>Privacy Policy</title>
+      <link>/privacy/</link>
+      <pubDate>Thu, 28 Jun 2018 00:00:00 +0100</pubDate>
+      
+      <guid>/privacy/</guid>
+      <description>&lt;p&gt;&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Autonomy can support affect regulation during illness and in health</title>
-      <link>https://dcosme.github.io/publication/2019-06-28-autonomy-affect-regulation/</link>
+      <link>/publication/2019-06-28-autonomy-affect-regulation/</link>
       <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2019-06-28-autonomy-affect-regulation/</guid>
+      <guid>/publication/2019-06-28-autonomy-affect-regulation/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Berkman, E. T. (2020). Autonomy can support affect regulation during illness and in health. &lt;em&gt;Journal of Health Psychology, 25&lt;/em&gt;(1), 31-37.&lt;/p&gt;
 </description>
@@ -1689,10 +2121,10 @@ Cosme, D., &amp;amp; Berkman, E. T. (2020). Autonomy can support affect regulati
     
     <item>
       <title>Websites in RStudio</title>
-      <link>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</link>
+      <link>/2018/06/10/websites-in-rstudio/</link>
       <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/2018/06/10/websites-in-rstudio/</guid>
+      <guid>/2018/06/10/websites-in-rstudio/</guid>
       <description>
 
 
@@ -2580,7 +3012,7 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Push local changes to remote repository&lt;/p&gt;
 &lt;pre class=&#34;bash&#34;&gt;&lt;code&gt;git push origin master&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In Github, enable GitHub Pages &lt;code&gt;Your repo &amp;gt; Settings &amp;gt; GitHub Page &amp;gt; Source = master branch &amp;gt; Save&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;https://dcosme.github.io/img/website-tutorial/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If this has worked, there should now be a link highlighted in blue with the address to your website. &lt;img src=&#34;/img/website-tutorial/git_site.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Go to your website and bask in the glory 🎉&lt;/p&gt;
 &lt;/div&gt;
 &lt;div id=&#34;workflow&#34; class=&#34;section level1&#34;&gt;
@@ -2633,10 +3065,10 @@ git commit -m &amp;quot;initial commit&amp;quot;&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>Neural predictors of eating behavior and dietary change</title>
-      <link>https://dcosme.github.io/publication/2018-03-15-neural-predictors-dietary-change/</link>
+      <link>/publication/2018-03-15-neural-predictors-dietary-change/</link>
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2018-03-15-neural-predictors-dietary-change/</guid>
+      <guid>/publication/2018-03-15-neural-predictors-dietary-change/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Berkman, E. T. (2018) Autonomy can support affect regulation during illness and in health. &lt;em&gt;Journal of Health Psychology&lt;/em&gt;. &lt;a href=&#34;https://doi.org/10.1177/1359105318787013&#34; target=&#34;_blank&#34;&gt;https://doi.org/10.1177/1359105318787013&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -2644,10 +3076,10 @@ Cosme, D., &amp;amp; Berkman, E. T. (2018) Autonomy can support affect regulatio
     
     <item>
       <title>Choosing to regulate: Does choice enhance craving regulation?</title>
-      <link>https://dcosme.github.io/publication/2019-06-28-choosing-to-regulate/</link>
+      <link>/publication/2019-06-28-choosing-to-regulate/</link>
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2019-06-28-choosing-to-regulate/</guid>
+      <guid>/publication/2019-06-28-choosing-to-regulate/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H. (2018) Choosing to regulate: Does choice enhance craving regulation?. &lt;em&gt;Social Cognitive and Affective Neuroscience&lt;/em&gt;, 13(3), 300-309.&lt;/p&gt;
 </description>
@@ -2655,28 +3087,28 @@ Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H.
     
     <item>
       <title>Methodological considerations for developmental longitudinal fMRI research</title>
-      <link>https://dcosme.github.io/publication/2018-02-07-longitudinal-fmri/</link>
+      <link>/publication/2018-02-07-longitudinal-fmri/</link>
       <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2018-02-07-longitudinal-fmri/</guid>
+      <guid>/publication/2018-02-07-longitudinal-fmri/</guid>
       <description></description>
     </item>
     
     <item>
       <title>External Project</title>
-      <link>https://dcosme.github.io/project/external-project/</link>
+      <link>/project/external-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/project/external-project/</guid>
+      <guid>/project/external-project/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Internal Project</title>
-      <link>https://dcosme.github.io/project/internal-project/</link>
+      <link>/project/internal-project/</link>
       <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/project/internal-project/</guid>
+      <guid>/project/internal-project/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 
 &lt;p&gt;Nullam vel molestie justo. Curabitur vitae efficitur leo. In hac habitasse platea dictumst. Sed pulvinar mauris dui, eget varius purus congue ac. Nulla euismod, lorem vel elementum dapibus, nunc justo porta mi, sed tempus est est vel tellus. Nam et enim eleifend, laoreet sem sit amet, elementum sem. Morbi ut leo congue, maximus velit ut, finibus arcu. In et libero cursus, rutrum risus non, molestie leo. Nullam congue quam et volutpat malesuada. Sed risus tortor, pulvinar et dictum nec, sodales non mi. Phasellus lacinia commodo laoreet. Nam mollis, erat in feugiat consectetur, purus eros egestas tellus, in auctor urna odio at nibh. Mauris imperdiet nisi ac magna convallis, at rhoncus ligula cursus.&lt;/p&gt;
@@ -2691,10 +3123,10 @@ Cosme, D., Mobasser, A., Zeithamova, D., Berkman E. T., &amp;amp; Pfeifer, J. H.
     
     <item>
       <title>Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures</title>
-      <link>https://dcosme.github.io/publication/2015-03-06-mindfulness-affective-reactivity/</link>
+      <link>/publication/2015-03-06-mindfulness-affective-reactivity/</link>
       <pubDate>Fri, 06 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/2015-03-06-mindfulness-affective-reactivity/</guid>
+      <guid>/publication/2015-03-06-mindfulness-affective-reactivity/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br /&gt;
 Cosme, D., &amp;amp; Wiens, S. (2015). Self-Reported Trait Mindfulness and Affective Reactivity: A Motivational Approach Using Multiple Psychophysiological Measures. &lt;em&gt;PLOS One&lt;/em&gt;, 10(3), e0119466.&lt;/p&gt;
 </description>
