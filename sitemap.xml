@@ -52,7 +52,13 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication/2020-11-09-regulation-craving-consumption/regulation-craving-consumption/</loc>
+    <loc>https://dcosme.github.io/authors/berkman-e.-t./</loc>
+    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/publication/2020-11-09-regulation-craving-consumption/</loc>
     <lastmod>2020-11-09T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,7 +69,25 @@
   </url>
   
   <url>
+    <loc>https://dcosme.github.io/authors/dirks-b./</loc>
+    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/giuliani-n.-r./</loc>
+    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dcosme.github.io/authors/lopez-r.-b./</loc>
+    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/merchant-j.-s./</loc>
     <lastmod>2020-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -397,12 +421,6 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/berkman-e.-t./</loc>
-    <lastmod>2019-12-01T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/publication/2019-06-28-neural-signatures-health-neuros/</loc>
     <lastmod>2019-12-01T00:00:00+00:00</lastmod>
   </url>
@@ -530,13 +548,13 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/rstats/</loc>
+    <loc>https://dcosme.github.io/categories/rstats/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/categories/rstats/</loc>
+    <loc>https://dcosme.github.io/tags/rstats/</loc>
     <lastmod>2019-06-28T15:04:40-07:00</lastmod>
     <priority>0</priority>
   </url>
@@ -610,13 +628,13 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/tags/blogdown/</loc>
+    <loc>https://dcosme.github.io/categories/blogdown/</loc>
     <lastmod>2019-06-10T15:11:28-07:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/categories/blogdown/</loc>
+    <loc>https://dcosme.github.io/tags/blogdown/</loc>
     <lastmod>2019-06-10T15:11:28-07:00</lastmod>
     <priority>0</priority>
   </url>
@@ -624,18 +642,6 @@
   <url>
     <loc>https://dcosme.github.io/tags/website/</loc>
     <lastmod>2019-06-10T15:11:28-07:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/giuliani-n.-r./</loc>
-    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/merchant-j.-s./</loc>
-    <lastmod>2018-03-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
