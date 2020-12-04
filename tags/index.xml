@@ -7,7 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Mon, 09 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 04 Dec 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,9 +15,36 @@
     <item>
       <title>BMI</title>
       <link>https://dcosme.github.io/tags/bmi/</link>
-      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/bmi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eating behavior</title>
+      <link>https://dcosme.github.io/tags/eating-behavior/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/eating-behavior/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fMRI</title>
+      <link>https://dcosme.github.io/tags/fmri/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/fmri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>valuation</title>
+      <link>https://dcosme.github.io/tags/valuation/</link>
+      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/valuation/</guid>
       <description></description>
     </item>
     
@@ -36,24 +63,6 @@
       <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/craving-regulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>eating behavior</title>
-      <link>https://dcosme.github.io/tags/eating-behavior/</link>
-      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/eating-behavior/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fMRI</title>
-      <link>https://dcosme.github.io/tags/fmri/</link>
-      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/fmri/</guid>
       <description></description>
     </item>
     
@@ -99,15 +108,6 @@
       <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/specification-curve-analysis/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>valuation</title>
-      <link>https://dcosme.github.io/tags/valuation/</link>
-      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/valuation/</guid>
       <description></description>
     </item>
     

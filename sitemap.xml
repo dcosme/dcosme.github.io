@@ -35,25 +35,89 @@
   
   <url>
     <loc>https://dcosme.github.io/publication_types/2/</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dcosme.github.io/authors/</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dcosme.github.io/tags/bmi/</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dcosme.github.io/authors/berkman-e.-t./</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/cosme-d./</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/dirks-b./</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/giuliani-n.-r./</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/authors/merchant-j.-s./</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/publication/2020-12-04-food-valuation-bmi-eating/food-valuation-bmi-eating/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/publication_types/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/publication/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/eating-behavior/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/fmri/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/tags/valuation/</loc>
+    <lastmod>2020-12-04T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -63,31 +127,7 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/authors/cosme-d./</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/dirks-b./</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/giuliani-n.-r./</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/authors/lopez-r.-b./</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/authors/merchant-j.-s./</loc>
     <lastmod>2020-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -98,23 +138,6 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/publication_types/</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/publication/</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/tags/body-composition/</loc>
     <lastmod>2020-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -122,18 +145,6 @@
   
   <url>
     <loc>https://dcosme.github.io/tags/craving-regulation/</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/eating-behavior/</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/fmri/</loc>
     <lastmod>2020-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -164,12 +175,6 @@
   
   <url>
     <loc>https://dcosme.github.io/tags/specification-curve-analysis/</loc>
-    <lastmod>2020-11-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/tags/valuation/</loc>
     <lastmod>2020-11-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
