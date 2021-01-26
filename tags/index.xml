@@ -7,10 +7,55 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 15 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>eating behavior</title>
+      <link>https://dcosme.github.io/tags/eating-behavior/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/eating-behavior/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>emotion regulation</title>
+      <link>https://dcosme.github.io/tags/emotion-regulation/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/emotion-regulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>experience sampling</title>
+      <link>https://dcosme.github.io/tags/experience-sampling/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/experience-sampling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-control</title>
+      <link>https://dcosme.github.io/tags/self-control/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-regulation</title>
+      <link>https://dcosme.github.io/tags/self-regulation/</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-regulation/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>COVID-19</title>
@@ -72,15 +117,6 @@
       <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/bmi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>eating behavior</title>
-      <link>https://dcosme.github.io/tags/eating-behavior/</link>
-      <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/eating-behavior/</guid>
       <description></description>
     </item>
     
@@ -436,15 +472,6 @@
     </item>
     
     <item>
-      <title>self-control</title>
-      <link>https://dcosme.github.io/tags/self-control/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/self-control/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>specification curve</title>
       <link>https://dcosme.github.io/tags/specification-curve/</link>
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
@@ -499,15 +526,6 @@
     </item>
     
     <item>
-      <title>emotion regulation</title>
-      <link>https://dcosme.github.io/tags/emotion-regulation/</link>
-      <pubDate>Mon, 11 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/emotion-regulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>blogdown</title>
       <link>https://dcosme.github.io/tags/blogdown/</link>
       <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
@@ -531,15 +549,6 @@
       <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/craving/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>self-regulation</title>
-      <link>https://dcosme.github.io/tags/self-regulation/</link>
-      <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/self-regulation/</guid>
       <description></description>
     </item>
     

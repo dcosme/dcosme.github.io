@@ -7,10 +7,55 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 15 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Cosme, D.</title>
+      <link>https://dcosme.github.io/authors/cosme-d./</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/cosme-d./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hofmann, W.</title>
+      <link>https://dcosme.github.io/authors/hofmann-w./</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/hofmann-w./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lopez, R. B.*</title>
+      <link>https://dcosme.github.io/authors/lopez-r.-b./</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/lopez-r.-b./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Saunders, B.</title>
+      <link>https://dcosme.github.io/authors/saunders-b./</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/saunders-b./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Werner, K. M.</title>
+      <link>https://dcosme.github.io/authors/werner-k.-m./</link>
+      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/werner-k.-m./</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Andrews, M.</title>
@@ -18,15 +63,6 @@
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/andrews-m./</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Cosme, D.</title>
-      <link>https://dcosme.github.io/authors/cosme-d./</link>
-      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/authors/cosme-d./</guid>
       <description></description>
     </item>
     
@@ -90,15 +126,6 @@
       <pubDate>Fri, 04 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/merchant-j.-s./</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lopez, R. B.*</title>
-      <link>https://dcosme.github.io/authors/lopez-r.-b./</link>
-      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/authors/lopez-r.-b./</guid>
       <description></description>
     </item>
     
