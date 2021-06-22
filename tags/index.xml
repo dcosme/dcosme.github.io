@@ -7,10 +7,55 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 26 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>COVID-19</title>
+      <link>https://dcosme.github.io/tags/covid-19/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/covid-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>lifespan</title>
+      <link>https://dcosme.github.io/tags/lifespan/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/lifespan/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>loneliness</title>
+      <link>https://dcosme.github.io/tags/loneliness/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/loneliness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>purpose in life</title>
+      <link>https://dcosme.github.io/tags/purpose-in-life/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/purpose-in-life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social distancing</title>
+      <link>https://dcosme.github.io/tags/social-distancing/</link>
+      <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/social-distancing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>eating behavior</title>
@@ -72,15 +117,6 @@
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/cooperation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>COVID-19</title>
-      <link>https://dcosme.github.io/tags/covid-19/</link>
-      <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/covid-19/</guid>
       <description></description>
     </item>
     
