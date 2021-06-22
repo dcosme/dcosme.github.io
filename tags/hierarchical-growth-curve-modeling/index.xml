@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hierarchical growth curve modeling on DANIELLE COSME</title>
+    <link>https://dcosme.github.io/tags/hierarchical-growth-curve-modeling/</link>
+    <description>Recent content in hierarchical growth curve modeling on DANIELLE COSME</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
+    <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://dcosme.github.io/tags/hierarchical-growth-curve-modeling/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Testing the adolescent social reorientation model using hierarchical growth curve modeling with parcellated fMRI data</title>
+      <link>https://dcosme.github.io/publication/adolescent-social-reorientation/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/adolescent-social-reorientation/</guid>
+      <description>&lt;p&gt;A complimentary, interactive tool to explore the developmental trajectories based on how a given parcel is labelled is provided as a Shiny App: &lt;a href=&#34;https://dcosme.shinyapps.io/growth_curves/&#34;&gt;https://dcosme.shinyapps.io/growth_curves/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,10 +7,20 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/self-evaluation/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Testing the adolescent social reorientation model using hierarchical growth curve modeling with parcellated fMRI data</title>
+      <link>https://dcosme.github.io/publication/adolescent-social-reorientation/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/adolescent-social-reorientation/</guid>
+      <description>&lt;p&gt;A complimentary, interactive tool to explore the developmental trajectories based on how a given parcel is labelled is provided as a Shiny App: &lt;a href=&#34;https://dcosme.shinyapps.io/growth_curves/&#34;&gt;https://dcosme.shinyapps.io/growth_curves/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Neural correlates of self-evaluation in relation to age and pubertal development in early adolescent girls</title>

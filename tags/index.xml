@@ -7,10 +7,109 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Mon, 21 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>adolescence</title>
+      <link>https://dcosme.github.io/tags/adolescence/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/adolescence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>brain development</title>
+      <link>https://dcosme.github.io/tags/brain-development/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/brain-development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>development</title>
+      <link>https://dcosme.github.io/tags/development/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/development/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hierarchical growth curve modeling</title>
+      <link>https://dcosme.github.io/tags/hierarchical-growth-curve-modeling/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/hierarchical-growth-curve-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>longitudinal fmri</title>
+      <link>https://dcosme.github.io/tags/longitudinal-fmri/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/longitudinal-fmri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multilevel modeling</title>
+      <link>https://dcosme.github.io/tags/multilevel-modeling/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/multilevel-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>parcellations</title>
+      <link>https://dcosme.github.io/tags/parcellations/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/parcellations/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>puberty</title>
+      <link>https://dcosme.github.io/tags/puberty/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/puberty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-concept</title>
+      <link>https://dcosme.github.io/tags/self-concept/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-concept/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-evaluation</title>
+      <link>https://dcosme.github.io/tags/self-evaluation/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-evaluation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social cognition</title>
+      <link>https://dcosme.github.io/tags/social-cognition/</link>
+      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/social-cognition/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>COVID-19</title>
@@ -265,15 +364,6 @@
     </item>
     
     <item>
-      <title>parcellations</title>
-      <link>https://dcosme.github.io/tags/parcellations/</link>
-      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/parcellations/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>preregistration</title>
       <link>https://dcosme.github.io/tags/preregistration/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
@@ -310,65 +400,11 @@
     </item>
     
     <item>
-      <title>adolescence</title>
-      <link>https://dcosme.github.io/tags/adolescence/</link>
-      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/adolescence/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>hormones</title>
       <link>https://dcosme.github.io/tags/hormones/</link>
       <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/hormones/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>puberty</title>
-      <link>https://dcosme.github.io/tags/puberty/</link>
-      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/puberty/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>self-concept</title>
-      <link>https://dcosme.github.io/tags/self-concept/</link>
-      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/self-concept/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>self-evaluation</title>
-      <link>https://dcosme.github.io/tags/self-evaluation/</link>
-      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/self-evaluation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>brain development</title>
-      <link>https://dcosme.github.io/tags/brain-development/</link>
-      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/brain-development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>longitudinal fmri</title>
-      <link>https://dcosme.github.io/tags/longitudinal-fmri/</link>
-      <pubDate>Sun, 29 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/longitudinal-fmri/</guid>
       <description></description>
     </item>
     
@@ -612,15 +648,6 @@
       <pubDate>Thu, 15 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/self-determination/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>development</title>
-      <link>https://dcosme.github.io/tags/development/</link>
-      <pubDate>Wed, 07 Feb 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/development/</guid>
       <description></description>
     </item>
     
