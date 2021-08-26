@@ -7,10 +7,91 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 22 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>communication</title>
+      <link>https://dcosme.github.io/tags/communication/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/communication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>messages</title>
+      <link>https://dcosme.github.io/tags/messages/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/messages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>norms</title>
+      <link>https://dcosme.github.io/tags/norms/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/norms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-relevance</title>
+      <link>https://dcosme.github.io/tags/self-relevance/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-relevance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sharing</title>
+      <link>https://dcosme.github.io/tags/sharing/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/sharing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social influence</title>
+      <link>https://dcosme.github.io/tags/social-influence/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/social-influence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social media</title>
+      <link>https://dcosme.github.io/tags/social-media/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/social-media/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>specification curve analysis</title>
+      <link>https://dcosme.github.io/tags/specification-curve-analysis/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/specification-curve-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virality</title>
+      <link>https://dcosme.github.io/tags/virality/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/virality/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>adolescence</title>
@@ -153,6 +234,51 @@
       <pubDate>Mon, 21 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/social-distancing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>EEG</title>
+      <link>https://dcosme.github.io/tags/eeg/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/eeg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ERP</title>
+      <link>https://dcosme.github.io/tags/erp/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/erp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intervention</title>
+      <link>https://dcosme.github.io/tags/intervention/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/intervention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spider phobia</title>
+      <link>https://dcosme.github.io/tags/spider-phobia/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/spider-phobia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtual reality</title>
+      <link>https://dcosme.github.io/tags/virtual-reality/</link>
+      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/virtual-reality/</guid>
       <description></description>
     </item>
     
@@ -324,15 +450,6 @@
       <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/regulation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>specification curve analysis</title>
-      <link>https://dcosme.github.io/tags/specification-curve-analysis/</link>
-      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/specification-curve-analysis/</guid>
       <description></description>
     </item>
     

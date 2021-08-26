@@ -7,10 +7,19 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Sun, 29 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Chan, H-Y</title>
+      <link>https://dcosme.github.io/authors/chan-h-y/</link>
+      <pubDate>Thu, 26 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/chan-h-y/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Flournoy, J. C.</title>
@@ -79,11 +88,29 @@
     </item>
     
     <item>
+      <title>Burns, S. M.</title>
+      <link>https://dcosme.github.io/authors/burns-s.-m./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/burns-s.-m./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Byrne, M. L.</title>
       <link>https://dcosme.github.io/authors/byrne-m.-l./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/byrne-m.-l./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Carlbring, P.</title>
+      <link>https://dcosme.github.io/authors/carlbring-p./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/carlbring-p./</guid>
       <description></description>
     </item>
     
@@ -115,6 +142,15 @@
     </item>
     
     <item>
+      <title>Cooper, N.</title>
+      <link>https://dcosme.github.io/authors/cooper-n./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/cooper-n./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cosme, D.</title>
       <link>https://dcosme.github.io/authors/cosme-d./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -138,6 +174,24 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/dirks-b./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Doré, B. P.</title>
+      <link>https://dcosme.github.io/authors/dore-b.-p./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/dore-b.-p./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Eklund, R.</title>
+      <link>https://dcosme.github.io/authors/eklund-r./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/eklund-r./</guid>
       <description></description>
     </item>
     
@@ -268,6 +322,15 @@
     </item>
     
     <item>
+      <title>Miloff, A.</title>
+      <link>https://dcosme.github.io/authors/miloff-a./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/miloff-a./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Mobasser, A.</title>
       <link>https://dcosme.github.io/authors/mobasser-a./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -304,6 +367,15 @@
     </item>
     
     <item>
+      <title>Paul, A.</title>
+      <link>https://dcosme.github.io/authors/paul-a./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/paul-a./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pei, R.</title>
       <link>https://dcosme.github.io/authors/pei-r./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -331,6 +403,15 @@
     </item>
     
     <item>
+      <title>Pierzchajlo, S.</title>
+      <link>https://dcosme.github.io/authors/pierzchajlo-s./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/pierzchajlo-s./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ross, G.</title>
       <link>https://dcosme.github.io/authors/ross-g./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -349,6 +430,15 @@
     </item>
     
     <item>
+      <title>Scholz, C.</title>
+      <link>https://dcosme.github.io/authors/scholz-c./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/scholz-c./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Shirtclif, E. A.</title>
       <link>https://dcosme.github.io/authors/shirtclif-e.-a./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -363,6 +453,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/stice-e./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Szychowska, M.</title>
+      <link>https://dcosme.github.io/authors/szychowska-m./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/szychowska-m./</guid>
       <description></description>
     </item>
     
