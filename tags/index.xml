@@ -7,10 +7,109 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Thu, 26 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jan 2022 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>affect</title>
+      <link>https://dcosme.github.io/tags/affect/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/affect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>alcohol consumption</title>
+      <link>https://dcosme.github.io/tags/alcohol-consumption/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/alcohol-consumption/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>college</title>
+      <link>https://dcosme.github.io/tags/college/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/college/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>experience sampling</title>
+      <link>https://dcosme.github.io/tags/experience-sampling/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/experience-sampling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multilevel modeling</title>
+      <link>https://dcosme.github.io/tags/multilevel-modeling/</link>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/multilevel-modeling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>controllability</title>
+      <link>https://dcosme.github.io/tags/controllability/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/controllability/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>craving</title>
+      <link>https://dcosme.github.io/tags/craving/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/craving/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>craving regulation</title>
+      <link>https://dcosme.github.io/tags/craving-regulation/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/craving-regulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dynamics</title>
+      <link>https://dcosme.github.io/tags/dynamics/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/dynamics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mindfulness</title>
+      <link>https://dcosme.github.io/tags/mindfulness/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/mindfulness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>self-regulation</title>
+      <link>https://dcosme.github.io/tags/self-regulation/</link>
+      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/self-regulation/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>communication</title>
@@ -135,15 +234,6 @@
       <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/longitudinal-fmri/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>multilevel modeling</title>
-      <link>https://dcosme.github.io/tags/multilevel-modeling/</link>
-      <pubDate>Tue, 22 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/multilevel-modeling/</guid>
       <description></description>
     </item>
     
@@ -301,29 +391,11 @@
     </item>
     
     <item>
-      <title>experience sampling</title>
-      <link>https://dcosme.github.io/tags/experience-sampling/</link>
-      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/experience-sampling/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>self-control</title>
       <link>https://dcosme.github.io/tags/self-control/</link>
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/self-control/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>self-regulation</title>
-      <link>https://dcosme.github.io/tags/self-regulation/</link>
-      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/self-regulation/</guid>
       <description></description>
     </item>
     
@@ -405,15 +477,6 @@
       <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/body-composition/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>craving regulation</title>
-      <link>https://dcosme.github.io/tags/craving-regulation/</link>
-      <pubDate>Mon, 09 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/craving-regulation/</guid>
       <description></description>
     </item>
     
@@ -729,15 +792,6 @@
       <pubDate>Sun, 10 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/website/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>craving</title>
-      <link>https://dcosme.github.io/tags/craving/</link>
-      <pubDate>Thu, 15 Mar 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/craving/</guid>
       <description></description>
     </item>
     
