@@ -33,6 +33,41 @@
   </url>
   
   <url>
+    <loc>https://dcosme.github.io/categories/</loc>
+    <lastmod>2022-03-18T09:57:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/post/</loc>
+    <lastmod>2022-03-18T09:57:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/categories/reproducibility/</loc>
+    <lastmod>2022-03-18T09:57:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/2022/03/18/reproducibility-workshop/</loc>
+    <lastmod>2022-03-18T09:57:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/categories/rmarkdown/</loc>
+    <lastmod>2022-03-18T09:57:03-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/slides/</loc>
+    <lastmod>2022-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dcosme.github.io/slides/test/test/</loc>
+    <lastmod>2022-03-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dcosme.github.io/publication_types/0/</loc>
     <lastmod>2022-02-02T00:00:00+00:00</lastmod>
   </url>
@@ -423,16 +458,6 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/slides/</loc>
-    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/slides/test/test/</loc>
-    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/tags/developmental-cognitive-neuroscience/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
   </url>
@@ -543,11 +568,6 @@
   </url>
   
   <url>
-    <loc>https://dcosme.github.io/categories/</loc>
-    <lastmod>2019-06-28T15:04:40-07:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dcosme.github.io/publication/2019-06-28-neurocognitive-models-self-control/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
   </url>
@@ -585,11 +605,6 @@
   <url>
     <loc>https://dcosme.github.io/tags/positive-neuroscience/</loc>
     <lastmod>2019-06-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dcosme.github.io/post/</loc>
-    <lastmod>2019-06-28T15:04:40-07:00</lastmod>
   </url>
   
   <url>

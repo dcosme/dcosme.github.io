@@ -7,7 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Mon, 05 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 14 Mar 2022 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,24 +15,24 @@
     <item>
       <title>Specification Curve Analysis</title>
       <link>https://dcosme.github.io/slides/test/test/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/slides/test/test/</guid>
       <description>
 &lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/htmlwidgets/htmlwidgets.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/jquery/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;https://dcosme.github.io/rmarkdown-libs/datatables-css/datatables-crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/datatables-binding/datatables.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/jquery/jquery-3.6.0.min.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;https://dcosme.github.io/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;link href=&#34;https://dcosme.github.io/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js&#34;&gt;&lt;/script&gt;
-&lt;link href=&#34;https://dcosme.github.io/rmarkdown-libs/crosstalk/css/crosstalk.css&#34; rel=&#34;stylesheet&#34; /&gt;
+&lt;link href=&#34;https://dcosme.github.io/rmarkdown-libs/crosstalk/css/crosstalk.min.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/crosstalk/js/crosstalk.min.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;https://dcosme.github.io/rmarkdown-libs/leaflet/leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/leaflet/leaflet.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;https://dcosme.github.io/rmarkdown-libs/leafletfix/leafletfix.css&#34; rel=&#34;stylesheet&#34; /&gt;
-&lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/proj4/proj4.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js&#34;&gt;&lt;/script&gt;
 &lt;link href=&#34;https://dcosme.github.io/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css&#34; rel=&#34;stylesheet&#34; /&gt;
 &lt;script src=&#34;https://dcosme.github.io/rmarkdown-libs/leaflet-binding/leaflet.js&#34;&gt;&lt;/script&gt;
@@ -162,7 +162,7 @@ abline(fit, lwd = 2)&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;#knitr::kable(head(iris), format = &amp;#39;html&amp;#39;)
 DT::datatable(head(iris))&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;htmlwidget-1&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;data&#34;:[[&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;,&#34;6&#34;],[5.1,4.9,4.7,4.6,5,5.4],[3.5,3,3.2,3.1,3.6,3.9],[1.4,1.4,1.3,1.5,1.4,1.7],[0.2,0.2,0.2,0.2,0.2,0.4],[&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;Sepal.Length&lt;\/th&gt;\n      &lt;th&gt;Sepal.Width&lt;\/th&gt;\n      &lt;th&gt;Petal.Length&lt;\/th&gt;\n      &lt;th&gt;Petal.Width&lt;\/th&gt;\n      &lt;th&gt;Species&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[1,2,3,4]},{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-1&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;vertical&#34;:false,&#34;data&#34;:[[&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;,&#34;6&#34;],[5.1,4.9,4.7,4.6,5,5.4],[3.5,3,3.2,3.1,3.6,3.9],[1.4,1.4,1.3,1.5,1.4,1.7],[0.2,0.2,0.2,0.2,0.2,0.4],[&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;Sepal.Length&lt;\/th&gt;\n      &lt;th&gt;Sepal.Width&lt;\/th&gt;\n      &lt;th&gt;Petal.Length&lt;\/th&gt;\n      &lt;th&gt;Petal.Width&lt;\/th&gt;\n      &lt;th&gt;Species&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[1,2,3,4]},{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;html-widgets&#34; class=&#34;section level1&#34;&gt;
@@ -181,7 +181,7 @@ leaflet() %&amp;gt;% addTiles() %&amp;gt;% setView(-93.65, 42.0285, zoom = 17)&l
   fillContainer = FALSE, options = list(pageLength = 8)
 )&lt;/code&gt;&lt;/pre&gt;
 &lt;div id=&#34;htmlwidget-3&#34; style=&#34;width:100%;height:auto;&#34; class=&#34;datatables html-widget&#34;&gt;&lt;/div&gt;
-&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;fillContainer&#34;:false,&#34;data&#34;:[[&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;,&#34;6&#34;,&#34;7&#34;,&#34;8&#34;,&#34;9&#34;,&#34;10&#34;],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],[&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;Sepal.Length&lt;\/th&gt;\n      &lt;th&gt;Sepal.Width&lt;\/th&gt;\n      &lt;th&gt;Petal.Length&lt;\/th&gt;\n      &lt;th&gt;Petal.Width&lt;\/th&gt;\n      &lt;th&gt;Species&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;pageLength&#34;:8,&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[1,2,3,4]},{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false,&#34;lengthMenu&#34;:[8,10,25,50,100]}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
+&lt;script type=&#34;application/json&#34; data-for=&#34;htmlwidget-3&#34;&gt;{&#34;x&#34;:{&#34;filter&#34;:&#34;none&#34;,&#34;vertical&#34;:false,&#34;fillContainer&#34;:false,&#34;data&#34;:[[&#34;1&#34;,&#34;2&#34;,&#34;3&#34;,&#34;4&#34;,&#34;5&#34;,&#34;6&#34;,&#34;7&#34;,&#34;8&#34;,&#34;9&#34;,&#34;10&#34;],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],[&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;,&#34;setosa&#34;]],&#34;container&#34;:&#34;&lt;table class=\&#34;display\&#34;&gt;\n  &lt;thead&gt;\n    &lt;tr&gt;\n      &lt;th&gt; &lt;\/th&gt;\n      &lt;th&gt;Sepal.Length&lt;\/th&gt;\n      &lt;th&gt;Sepal.Width&lt;\/th&gt;\n      &lt;th&gt;Petal.Length&lt;\/th&gt;\n      &lt;th&gt;Petal.Width&lt;\/th&gt;\n      &lt;th&gt;Species&lt;\/th&gt;\n    &lt;\/tr&gt;\n  &lt;\/thead&gt;\n&lt;\/table&gt;&#34;,&#34;options&#34;:{&#34;pageLength&#34;:8,&#34;columnDefs&#34;:[{&#34;className&#34;:&#34;dt-right&#34;,&#34;targets&#34;:[1,2,3,4]},{&#34;orderable&#34;:false,&#34;targets&#34;:0}],&#34;order&#34;:[],&#34;autoWidth&#34;:false,&#34;orderClasses&#34;:false,&#34;lengthMenu&#34;:[8,10,25,50,100]}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}&lt;/script&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;some-tips&#34; class=&#34;section level1&#34;&gt;
@@ -384,13 +384,16 @@ head(iris)
 &lt;p&gt;Don’t want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files &lt;code&gt;foo.css&lt;/code&gt; and &lt;code&gt;foo-fonts.css&lt;/code&gt;, where &lt;code&gt;foo&lt;/code&gt; is the theme name. Below are some existing themes:&lt;/p&gt;
 &lt;pre class=&#34;r&#34;&gt;&lt;code&gt;names(xaringan:::list_css())&lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;chocolate-fonts&amp;quot;  &amp;quot;chocolate&amp;quot;        &amp;quot;default-fonts&amp;quot;    &amp;quot;default&amp;quot;         
-##  [5] &amp;quot;duke-blue&amp;quot;        &amp;quot;fc-fonts&amp;quot;         &amp;quot;fc&amp;quot;               &amp;quot;hygge-duke&amp;quot;      
-##  [9] &amp;quot;hygge&amp;quot;            &amp;quot;ki-fonts&amp;quot;         &amp;quot;ki&amp;quot;               &amp;quot;kunoichi&amp;quot;        
-## [13] &amp;quot;lucy-fonts&amp;quot;       &amp;quot;lucy&amp;quot;             &amp;quot;metropolis-fonts&amp;quot; &amp;quot;metropolis&amp;quot;      
-## [17] &amp;quot;middlebury-fonts&amp;quot; &amp;quot;middlebury&amp;quot;       &amp;quot;ninjutsu&amp;quot;         &amp;quot;rladies-fonts&amp;quot;   
-## [21] &amp;quot;rladies&amp;quot;          &amp;quot;robot-fonts&amp;quot;      &amp;quot;robot&amp;quot;            &amp;quot;rutgers-fonts&amp;quot;   
-## [25] &amp;quot;rutgers&amp;quot;          &amp;quot;shinobi&amp;quot;          &amp;quot;tamu-fonts&amp;quot;       &amp;quot;tamu&amp;quot;            
-## [29] &amp;quot;uo-fonts&amp;quot;         &amp;quot;uo&amp;quot;               &amp;quot;uol-fonts&amp;quot;        &amp;quot;uol&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+##  [5] &amp;quot;duke-blue&amp;quot;        &amp;quot;fc-fonts&amp;quot;         &amp;quot;fc&amp;quot;               &amp;quot;glasgow_template&amp;quot;
+##  [9] &amp;quot;hygge-duke&amp;quot;       &amp;quot;hygge&amp;quot;            &amp;quot;ki-fonts&amp;quot;         &amp;quot;ki&amp;quot;              
+## [13] &amp;quot;kunoichi&amp;quot;         &amp;quot;lucy-fonts&amp;quot;       &amp;quot;lucy&amp;quot;             &amp;quot;metropolis-fonts&amp;quot;
+## [17] &amp;quot;metropolis&amp;quot;       &amp;quot;middlebury-fonts&amp;quot; &amp;quot;middlebury&amp;quot;       &amp;quot;nhsr-fonts&amp;quot;      
+## [21] &amp;quot;nhsr&amp;quot;             &amp;quot;ninjutsu&amp;quot;         &amp;quot;rladies-fonts&amp;quot;    &amp;quot;rladies&amp;quot;         
+## [25] &amp;quot;robot-fonts&amp;quot;      &amp;quot;robot&amp;quot;            &amp;quot;rutgers-fonts&amp;quot;    &amp;quot;rutgers&amp;quot;         
+## [29] &amp;quot;shinobi&amp;quot;          &amp;quot;tamu-fonts&amp;quot;       &amp;quot;tamu&amp;quot;             &amp;quot;uio-fonts&amp;quot;       
+## [33] &amp;quot;uio&amp;quot;              &amp;quot;uo-fonts&amp;quot;         &amp;quot;uo&amp;quot;               &amp;quot;uol-fonts&amp;quot;       
+## [37] &amp;quot;uol&amp;quot;              &amp;quot;useR-fonts&amp;quot;       &amp;quot;useR&amp;quot;             &amp;quot;uwm-fonts&amp;quot;       
+## [41] &amp;quot;uwm&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 &lt;hr /&gt;
 &lt;/div&gt;
 &lt;div id=&#34;themes-1&#34; class=&#34;section level1&#34;&gt;

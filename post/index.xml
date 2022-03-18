@@ -7,10 +7,24 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Fri, 28 Jun 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Mar 2022 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reproducibility workshop</title>
+      <link>https://dcosme.github.io/2022/03/18/reproducibility-workshop/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/2022/03/18/reproducibility-workshop/</guid>
+      <description>
+&lt;script src=&#34;https://dcosme.github.io/2022/03/18/reproducibility-workshop/index_files/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;p&gt;Materials from the reproducibility workshop I presented to COMM 783 at the University of Pennsylvania.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Specification curve analysis (SCA) tutorial</title>

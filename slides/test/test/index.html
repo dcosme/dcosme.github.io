@@ -57,18 +57,18 @@
       
 <script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
-<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
 <link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery-3.6.0.min.js"></script>
 <link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
 <link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
-<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
 <link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/leaflet/leaflet.js"></script>
 <link href="/rmarkdown-libs/leafletfix/leafletfix.css" rel="stylesheet" />
-<script src="/rmarkdown-libs/Proj4Leaflet/proj4-compressed.js"></script>
+<script src="/rmarkdown-libs/proj4/proj4.min.js"></script>
 <script src="/rmarkdown-libs/Proj4Leaflet/proj4leaflet.js"></script>
 <link href="/rmarkdown-libs/rstudio_leaflet/rstudio_leaflet.css" rel="stylesheet" />
 <script src="/rmarkdown-libs/leaflet-binding/leaflet.js"></script>
@@ -288,7 +288,7 @@ abline(fit, lwd = 2)</code></pre>
 <pre class="r"><code>#knitr::kable(head(iris), format = &#39;html&#39;)
 DT::datatable(head(iris))</code></pre>
 <div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","data":[["1","2","3","4","5","6"],[5.1,4.9,4.7,4.6,5,5.4],[3.5,3,3.2,3.1,3.6,3.9],[1.4,1.4,1.3,1.5,1.4,1.7],[0.2,0.2,0.2,0.2,0.2,0.4],["setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6"],[5.1,4.9,4.7,4.6,5,5.4],[3.5,3,3.2,3.1,3.6,3.9],[1.4,1.4,1.3,1.5,1.4,1.7],[0.2,0.2,0.2,0.2,0.2,0.4],["setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 
     </section>
     
@@ -334,7 +334,7 @@ leaflet() %&gt;% addTiles() %&gt;% setView(-93.65, 42.0285, zoom = 17)</code></p
   fillContainer = FALSE, options = list(pageLength = 8)
 )</code></pre>
 <div id="htmlwidget-3" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3">{"x":{"filter":"none","fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10"],[5.1,4.9,4.7,4.6,5,5.4,4.6,5,4.4,4.9],[3.5,3,3.2,3.1,3.6,3.9,3.4,3.4,2.9,3.1],[1.4,1.4,1.3,1.5,1.4,1.7,1.4,1.5,1.4,1.5],[0.2,0.2,0.2,0.2,0.2,0.4,0.3,0.2,0.2,0.1],["setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa","setosa"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Sepal.Length<\/th>\n      <th>Sepal.Width<\/th>\n      <th>Petal.Length<\/th>\n      <th>Petal.Width<\/th>\n      <th>Species<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
 
     </section>
     
@@ -654,13 +654,16 @@ head(iris)
 <p>Don’t want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files <code>foo.css</code> and <code>foo-fonts.css</code>, where <code>foo</code> is the theme name. Below are some existing themes:</p>
 <pre class="r"><code>names(xaringan:::list_css())</code></pre>
 <pre><code>##  [1] &quot;chocolate-fonts&quot;  &quot;chocolate&quot;        &quot;default-fonts&quot;    &quot;default&quot;         
-##  [5] &quot;duke-blue&quot;        &quot;fc-fonts&quot;         &quot;fc&quot;               &quot;hygge-duke&quot;      
-##  [9] &quot;hygge&quot;            &quot;ki-fonts&quot;         &quot;ki&quot;               &quot;kunoichi&quot;        
-## [13] &quot;lucy-fonts&quot;       &quot;lucy&quot;             &quot;metropolis-fonts&quot; &quot;metropolis&quot;      
-## [17] &quot;middlebury-fonts&quot; &quot;middlebury&quot;       &quot;ninjutsu&quot;         &quot;rladies-fonts&quot;   
-## [21] &quot;rladies&quot;          &quot;robot-fonts&quot;      &quot;robot&quot;            &quot;rutgers-fonts&quot;   
-## [25] &quot;rutgers&quot;          &quot;shinobi&quot;          &quot;tamu-fonts&quot;       &quot;tamu&quot;            
-## [29] &quot;uo-fonts&quot;         &quot;uo&quot;               &quot;uol-fonts&quot;        &quot;uol&quot;</code></pre>
+##  [5] &quot;duke-blue&quot;        &quot;fc-fonts&quot;         &quot;fc&quot;               &quot;glasgow_template&quot;
+##  [9] &quot;hygge-duke&quot;       &quot;hygge&quot;            &quot;ki-fonts&quot;         &quot;ki&quot;              
+## [13] &quot;kunoichi&quot;         &quot;lucy-fonts&quot;       &quot;lucy&quot;             &quot;metropolis-fonts&quot;
+## [17] &quot;metropolis&quot;       &quot;middlebury-fonts&quot; &quot;middlebury&quot;       &quot;nhsr-fonts&quot;      
+## [21] &quot;nhsr&quot;             &quot;ninjutsu&quot;         &quot;rladies-fonts&quot;    &quot;rladies&quot;         
+## [25] &quot;robot-fonts&quot;      &quot;robot&quot;            &quot;rutgers-fonts&quot;    &quot;rutgers&quot;         
+## [29] &quot;shinobi&quot;          &quot;tamu-fonts&quot;       &quot;tamu&quot;             &quot;uio-fonts&quot;       
+## [33] &quot;uio&quot;              &quot;uo-fonts&quot;         &quot;uo&quot;               &quot;uol-fonts&quot;       
+## [37] &quot;uol&quot;              &quot;useR-fonts&quot;       &quot;useR&quot;             &quot;uwm-fonts&quot;       
+## [41] &quot;uwm&quot;</code></pre>
 
     </section>
     

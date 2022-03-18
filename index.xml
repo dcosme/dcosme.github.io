@@ -22,20 +22,29 @@
     </item>
     
     <item>
-      <title>Publications</title>
-      <link>https://dcosme.github.io/publication/</link>
-      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <title>Posts</title>
+      <link>https://dcosme.github.io/post/</link>
+      <pubDate>Fri, 18 Mar 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/publication/</guid>
+      <guid>https://dcosme.github.io/post/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Slides</title>
       <link>https://dcosme.github.io/slides/</link>
-      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/slides/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://dcosme.github.io/publication/</link>
+      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/</guid>
       <description></description>
     </item>
     
@@ -292,15 +301,6 @@ MEMBER, UO Mindfulness Symposium Organizing Committee, &lt;!-- raw HTML omitted 
 &lt;li&gt;Not funded&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Posts</title>
-      <link>https://dcosme.github.io/post/</link>
-      <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/post/</guid>
-      <description></description>
     </item>
     
     <item>
