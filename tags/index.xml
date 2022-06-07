@@ -7,7 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Wed, 02 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jun 2022 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>alcohol consumption</title>
       <link>https://dcosme.github.io/tags/alcohol-consumption/</link>
-      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/alcohol-consumption/</guid>
       <description></description>
@@ -24,16 +24,25 @@
     <item>
       <title>college</title>
       <link>https://dcosme.github.io/tags/college/</link>
-      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/college/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>emotion regulation</title>
+      <link>https://dcosme.github.io/tags/emotion-regulation/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/emotion-regulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>experience sampling</title>
       <link>https://dcosme.github.io/tags/experience-sampling/</link>
-      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/experience-sampling/</guid>
       <description></description>
@@ -42,9 +51,45 @@
     <item>
       <title>fMRI</title>
       <link>https://dcosme.github.io/tags/fmri/</link>
-      <pubDate>Wed, 02 Feb 2022 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/fmri/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intervention</title>
+      <link>https://dcosme.github.io/tags/intervention/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/intervention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>networks</title>
+      <link>https://dcosme.github.io/tags/networks/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>psychological distancing</title>
+      <link>https://dcosme.github.io/tags/psychological-distancing/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/psychological-distancing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>resting state</title>
+      <link>https://dcosme.github.io/tags/resting-state/</link>
+      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/resting-state/</guid>
       <description></description>
     </item>
     
@@ -364,15 +409,6 @@
     </item>
     
     <item>
-      <title>intervention</title>
-      <link>https://dcosme.github.io/tags/intervention/</link>
-      <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/intervention/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>spider phobia</title>
       <link>https://dcosme.github.io/tags/spider-phobia/</link>
       <pubDate>Tue, 01 Jun 2021 00:00:00 +0000</pubDate>
@@ -396,15 +432,6 @@
       <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/eating-behavior/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emotion regulation</title>
-      <link>https://dcosme.github.io/tags/emotion-regulation/</link>
-      <pubDate>Tue, 26 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/emotion-regulation/</guid>
       <description></description>
     </item>
     
