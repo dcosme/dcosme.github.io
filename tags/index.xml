@@ -7,7 +7,7 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 07 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title>alcohol consumption</title>
       <link>https://dcosme.github.io/tags/alcohol-consumption/</link>
-      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/alcohol-consumption/</guid>
       <description></description>
@@ -24,9 +24,54 @@
     <item>
       <title>college</title>
       <link>https://dcosme.github.io/tags/college/</link>
-      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/college/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>intervention</title>
+      <link>https://dcosme.github.io/tags/intervention/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/intervention/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mindfulness</title>
+      <link>https://dcosme.github.io/tags/mindfulness/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/mindfulness/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>multilayer networks</title>
+      <link>https://dcosme.github.io/tags/multilayer-networks/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/multilayer-networks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>perspective taking</title>
+      <link>https://dcosme.github.io/tags/perspective-taking/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/perspective-taking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>social network</title>
+      <link>https://dcosme.github.io/tags/social-network/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/tags/social-network/</guid>
       <description></description>
     </item>
     
@@ -54,15 +99,6 @@
       <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/fmri/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>intervention</title>
-      <link>https://dcosme.github.io/tags/intervention/</link>
-      <pubDate>Tue, 07 Jun 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/intervention/</guid>
       <description></description>
     </item>
     
@@ -162,15 +198,6 @@
       <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/tags/dynamics/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mindfulness</title>
-      <link>https://dcosme.github.io/tags/mindfulness/</link>
-      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/tags/mindfulness/</guid>
       <description></description>
     </item>
     

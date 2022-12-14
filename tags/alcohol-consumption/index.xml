@@ -7,10 +7,19 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 07 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/tags/alcohol-consumption/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Study protocol: Social Health Impact of Network Effects (SHINE) Study</title>
+      <link>https://dcosme.github.io/publication/shine-protocol/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/shine-protocol/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Psychological distance intervention reminders reduce alcohol consumption frequency in daily life</title>

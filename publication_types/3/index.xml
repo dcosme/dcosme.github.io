@@ -7,10 +7,19 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 07 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Dec 2022 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/publication_types/3/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Study protocol: Social Health Impact of Network Effects (SHINE) Study</title>
+      <link>https://dcosme.github.io/publication/shine-protocol/</link>
+      <pubDate>Wed, 14 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/shine-protocol/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Dense sampling approaches for psychiatry research: Adventures with scanners and smartphones</title>
@@ -40,15 +49,6 @@
     </item>
     
     <item>
-      <title>Mindfulness Promotes Control of Brain Network Dynamics for Self-Regulation and Discontinues the Past from the Present</title>
-      <link>https://dcosme.github.io/publication/mindfulness-control/</link>
-      <pubDate>Mon, 10 Jan 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/publication/mindfulness-control/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Cultural influence on COVID-19 cognitions and growth speed: The role of cultural collectivism</title>
       <link>https://dcosme.github.io/publication/collectivism-covid19/</link>
       <pubDate>Tue, 15 Dec 2020 00:00:00 +0000</pubDate>
@@ -63,9 +63,7 @@
       <pubDate>Fri, 28 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/publication/2019-06-28-happy-and-you-know-it/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Citation:&lt;/strong&gt;&lt;br&gt;
-Cosme, D., Mobasser, A., Ross, G. &amp;amp; Pfeifer, J. H. (In Prep) If you’re happy and you know it: Neural correlates of self-evaluated psychological health and well-being.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
   </channel>
