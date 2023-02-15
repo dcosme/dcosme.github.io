@@ -7,10 +7,19 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Tue, 07 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>O&#39;Donnell</title>
+      <link>https://dcosme.github.io/authors/odonnell/</link>
+      <pubDate>Wed, 15 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/odonnell/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Bassett, D. S.</title>
@@ -156,6 +165,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/carreras-tartak-j./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chan, H. Y.</title>
+      <link>https://dcosme.github.io/authors/chan-h.-y./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/chan-h.-y./</guid>
       <description></description>
     </item>
     
@@ -403,6 +421,15 @@
     </item>
     
     <item>
+      <title>M. B., Cascio, C. N.</title>
+      <link>https://dcosme.github.io/authors/m.-b.-cascio-c.-n./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/m.-b.-cascio-c.-n./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Mahadevan, A.</title>
       <link>https://dcosme.github.io/authors/mahadevan-a./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -462,6 +489,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/miloff-a./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Minich, M.</title>
+      <link>https://dcosme.github.io/authors/minich-m./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/minich-m./</guid>
       <description></description>
     </item>
     
