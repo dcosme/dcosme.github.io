@@ -7,10 +7,19 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Wed, 15 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 26 Nov 2024 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Falk, E. B.</title>
+      <link>https://dcosme.github.io/authors/falk-e.-b./</link>
+      <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/falk-e.-b./</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>O&#39;Donnell</title>
@@ -54,9 +63,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/admin/</guid>
-      <description>&lt;p&gt;Broadly, I am interested in understanding social, cognitive, and motivational factors that promote goal pursuit and behavior change.&lt;/p&gt;
-&lt;p&gt;I use univariate and multivariate neuroimaging methods to investigate how these processes are represented in the brain and how they influence decision making and behavior in the scanner as well as outside the lab.&lt;/p&gt;
-&lt;p&gt;The overarching goal of my research is to use neuroscience to design and evaluate translational interventions that facilitate behavior change and improve health and well-being during adolescence and adulthood.&lt;/p&gt;
+      <description>&lt;p&gt;Broadly, I am interested in understanding social, cognitive, and motivational factors that promote individual and collective behavior change.&lt;/p&gt;
+&lt;p&gt;The overarching goal of my research is to use insights from neuroscience, psychology, and communication to design and evaluate translational interventions that facilitate behavior change, improve health and well-being, and promote civic participation across the lifespan.&lt;/p&gt;
+&lt;p&gt;I am particularly interested in using participatory research methods to support adolescents and emerging adults to deepen their sense of self, and gain a sense of agency, purpose, and connection to their communities.&lt;/p&gt;
 </description>
     </item>
     
@@ -304,15 +313,6 @@
     </item>
     
     <item>
-      <title>Falk, E. B.</title>
-      <link>https://dcosme.github.io/authors/falk-e.-b./</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dcosme.github.io/authors/falk-e.-b./</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Flannery, J. E.</title>
       <link>https://dcosme.github.io/authors/flannery-j.-e./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -394,11 +394,11 @@
     </item>
     
     <item>
-      <title>Koelle, D., McVay, J.</title>
-      <link>https://dcosme.github.io/authors/koelle-d.-mcvay-j./</link>
+      <title>Koelle, D.,</title>
+      <link>https://dcosme.github.io/authors/koelle-d./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://dcosme.github.io/authors/koelle-d.-mcvay-j./</guid>
+      <guid>https://dcosme.github.io/authors/koelle-d./</guid>
       <description></description>
     </item>
     
@@ -466,6 +466,15 @@
     </item>
     
     <item>
+      <title>Lydic, K.</title>
+      <link>https://dcosme.github.io/authors/lydic-k./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/lydic-k./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Lydon-Staley, D. M.</title>
       <link>https://dcosme.github.io/authors/lydon-staley-d.-m./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -502,6 +511,15 @@
     </item>
     
     <item>
+      <title>Mann, M.</title>
+      <link>https://dcosme.github.io/authors/mann-m./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/mann-m./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>MArtin, R. E.</title>
       <link>https://dcosme.github.io/authors/martin-r.-e./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -529,11 +547,29 @@
     </item>
     
     <item>
+      <title>McGowan, A.</title>
+      <link>https://dcosme.github.io/authors/mcgowan-a./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/mcgowan-a./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>McGowan, A. L.</title>
       <link>https://dcosme.github.io/authors/mcgowan-a.-l./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/mcgowan-a.-l./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>McVay, J.</title>
+      <link>https://dcosme.github.io/authors/mcvay-j./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/mcvay-j./</guid>
       <description></description>
     </item>
     
@@ -601,6 +637,15 @@
     </item>
     
     <item>
+      <title>Mwilambwe-Tshilobo, L.</title>
+      <link>https://dcosme.github.io/authors/mwilambwe-tshilobo-l./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/mwilambwe-tshilobo-l./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Nadel, H.</title>
       <link>https://dcosme.github.io/authors/nadel-h./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -624,6 +669,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/ochsner-k.-n./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ochsner, K. O.</title>
+      <link>https://dcosme.github.io/authors/ochsner-k.-o./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/ochsner-k.-o./</guid>
       <description></description>
     </item>
     
@@ -718,6 +772,15 @@
     </item>
     
     <item>
+      <title>Reinero, D. A.</title>
+      <link>https://dcosme.github.io/authors/reinero-d.-a./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/reinero-d.-a./</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Resnick, A.</title>
       <link>https://dcosme.github.io/authors/resnick-a./</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -759,6 +822,15 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/authors/shirtclif-e.-a./</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sinclair, A. H.</title>
+      <link>https://dcosme.github.io/authors/sinclair-a.-h./</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/authors/sinclair-a.-h./</guid>
       <description></description>
     </item>
     
