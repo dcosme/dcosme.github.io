@@ -7,10 +7,19 @@
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Danielle Cosme, {year}</copyright>
-    <lastBuildDate>Thu, 08 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://dcosme.github.io/publication_types/2/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Longitudinal Neuroimaging Study of Adolescent Girls’ Mentalizing and Perspective-Taking Tendencies</title>
+      <link>https://dcosme.github.io/publication/fmri-mentalizing/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/fmri-mentalizing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Neural signals predict information sharing across cultures</title>
@@ -18,6 +27,15 @@
       <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
       
       <guid>https://dcosme.github.io/publication/neural-information-sharing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perceived self and social relevance of content motivates news sharing across cultures and topics</title>
+      <link>https://dcosme.github.io/publication/neural-sharing-motivation/</link>
+      <pubDate>Thu, 08 Feb 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://dcosme.github.io/publication/neural-sharing-motivation/</guid>
       <description></description>
     </item>
     
