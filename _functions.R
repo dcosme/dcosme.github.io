@@ -7,9 +7,10 @@ library(glue)
 id = "0000-0001-8956-4053"
 pubs_ignore = "W4255871580|W4251435941|W4212930328|W3161562742|W4280624121|W4235325902|W3166337729|W4398133639|W4402350098|W4200202235"
 
-fetch_pubs = function(id) {
+fetch_pubs = function(id, missing_dois) {
 
   # pull pubs with openalexR using orcid
+  missing = oa_fetch(entity = "works", doi = missing_dois, verbose = TRUE)
 
   works_all = oa_fetch(
     entity = "works",
@@ -17,7 +18,8 @@ fetch_pubs = function(id) {
     verbose = TRUE) %>%
     mutate(display_name = str_to_sentence(display_name),
            display_name = gsub("\\.", "", display_name),
-           doi = gsub("https://doi.org/", "", doi))
+           doi = gsub("https://doi.org/", "", doi)) %>%
+    bind_rows(missing)
 
   duplicates = works_all %>%
     group_by(display_name) %>%

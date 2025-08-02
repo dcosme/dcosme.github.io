@@ -21,6 +21,7 @@ toc-location: left
 
 ```{r setup}
 source("_functions.R")
+missing_dois = "10.31234/osf.io/rfh63_v1"
 
 # pubs = fetch_pubs(id = id)
 # saveRDS(pubs, "pubs.RDS")
@@ -29,7 +30,7 @@ pubs = readRDS("pubs.RDS")
 
 ## Published journal articles
 ```{r}
-make_pub_list(pubs)
+make_pub_list(pubs) 
 ```
 
 ## Preprints
