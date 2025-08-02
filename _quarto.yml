@@ -51,8 +51,8 @@ website:
           #   href: posts.qmd#category=paper
           - text: Grants
             href: grants.qmd
-      # - text: Teaching # Comment the Teaching part out to remove the Teaching page
-      #   href: teaching.qmd
+      - text: Teaching # Comment the Teaching part out to remove the Teaching page
+        href: teaching.qmd
       # - text: Outreach
       #   menu:
       #   - text: Presentations

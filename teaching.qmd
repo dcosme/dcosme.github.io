@@ -1,67 +1,152 @@
 ---
-title: "Teaching"
-subtitle: "I teach."
+title: "Teaching & Mentorship"
+# subtitle: ""
 title-block-banner: false
 ---
 
+## Instruction
 
-## Class 1
-
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-2}
-![](files/images/placeholder1.jpg)
-
-:::
-
-::: {.g-col-12 .g-col-md-10}
-
-[Fall 2024](https://www.google.com), &nbsp; [Fall 2023](https://www.google.com)
-
-Class 1 introduction.
-
-:::
-
-:::
-
-
-## Class 2
+### COMM 6200 Climate Communication and Community: Youth-Centered Participatory Action Research
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-2}
-![](files/images/placeholder2.JPG)
-
-:::
+<!-- ::: {.g-col-12 .g-col-md-2} -->
+<!-- ::: -->
 
 ::: {.g-col-12 .g-col-md-10}
 
-[Spring 2025](https://www.google.com), &nbsp; [Fall 2023](https://www.google.com)
+[Spring 2025](https://www.asc.upenn.edu/graduate/courses#5219)
 
-Class 2 introduction.
-
-:::
+This doctoral-level, academically based community service (ABCS) research seminar focuses on co-developing research questions with local youth in West Philadelphia to explore their experiences with climate change and identify and develop potentially implementable solutions for how to mitigate, adapt to, and build resilience in the face of climate change. The course involves the scheduled seminar, as well as required fieldwork time at a partner high school. This course will apply frameworks and theories from climate communication, behavior change, and Youth Participatory Action Research (YPAR). Students will engage in a hands-on, youth-engaged research project and apply YPAR principles to empower youth voices and youth action in climate discourse and action. Graduate students will learn core theories about behavior change, communication intervention design, and YPAR. They will gain experience designing and implementing a mixed-methods study, combining qualitative with quantitative research techniques to conduct formative research, message design, and testing in partnership with youth. Through this project, students will develop proficiency in data analysis, interpretation, and presentation of findings. The course will also cover ethical and practical considerations in youth-centered research, relationship building, community engagement strategies, and effective facilitation skills. This course provides a unique opportunity for doctoral students to gain practical experience in participatory research while addressing pressing social and environmental issues in the West Philadelphia community.
 
 :::
 
+:::
 
-## Class 3
+
+### Applied Research & Data Analysis Pro-seminar
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-2}
-![](files/images/placeholder3.JPG)
+<!-- ::: {.g-col-12 .g-col-md-2} -->
 
-:::
+<!-- ::: -->
 
 ::: {.g-col-12 .g-col-md-10}
 
-[Spring 2025](https://www.google.com), &nbsp; [Spring 2024](https://www.google.com)
+[Spring 2021](https://dcosme.github.io/pltv-seminar/)
 
-Class 3 introduction. 
+I designed an 8-week pro-seminar for University of Pennsylvania students involved with [Penn Leads the Vote](https://www.pennvotes.org/) to get hands on experience conducting applied research and analyzing data in the context of their ongoing PLTV activities.
+
+The pro-seminar was designed to teach students to:
+
+- Develop research questions related to their applied work
+- Identify ethical issues related to their research
+- Test research questions using observational and experimental methods
+- Design and implement surveys using Qualtrics
+- Execute and modify scripts to tidy, analyze, and visualize data in R
+- Summarize and interpret results
+
+:::
+
+:::
+
+## Teaching assistance
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-10}
+
+[Spring 2017](https://pages.uoregon.edu/psychit/Syllabi_Archive/2010s/2017/Spring_2017/478_578-Pfeifer-Sp17.pdf)
+
+PSY478/578 Social Development at the University of Oregon
 
 :::
 
 :::
 
 
+## Guest lectures
+
+::: {.grid}
+
+::: {.g-col-12 .g-col-md-10}
+
+Cosme, D. (2022) What motivates people to share content? Guest lecture presented at the New York University PSYCH-UA 53 Psychological Science and Society course, November 21.
+
+Cosme, D. (2022) How can we help people make self-concordant decisions to promote health and well-being? Guest lecture presented at the University of Pennsylvania COMM 611 Neurobiology of Social Influence course, October 5.
+
+Cosme, D. (2022) [Specification Curve Analysis Workshop](https://dcosme.github.io/specification-curves/SCA_tutorial_2022). Guest lecture presented at the University of Pennsylvania COMM 783 Describing Your Data course, April 7.
+
+Cosme, D. (2022) [Reproducibility Workshop](https://dcosme.github.io/reproducibility-workshop/presentation). Guest lecture presented at the University of Pennsylvania COMM 783 Describing Your Data course, March 17.
+
+Cosme, D. (2021) Self development in adolescence. Guest lecture presented at the University of Oregon PSY 631 Translational Neuroscience in Adolescence course, May 3-9.
+
+Cosme, D. (2020) Facilitating widespread behavior change: The role of self and social relevance information sharing and virality. Guest lecture presented at the Bard College PSY334 Science of Goal Pursuit course, December 10, 2020.
+
+Cosme, D. (2015) Emotion and the brain. Guest lecture presented at the University of Oregon SCAN354 Mind Games: Emotion and Subjectivity in Nordic Prose course, January 15.
+
+:::
+
+:::
+
+## Mentorship & supervision
+### Postdocs
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-colwidths: [50, 10, 10, 30]
+
+library(tidyverse)
+
+mentees = read.csv("mentorship.csv")
+
+mentees %>%
+  filter(Stage == "Postdoc") %>%
+  select(-Stage) %>%
+  knitr::kable()
+  
+```
+
+### Graduate students
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-colwidths: [50, 10, 10, 30]
+
+mentees %>%
+  filter(Stage == "Graduate") %>%
+  select(-Stage) %>%
+  knitr::kable()
+  
+```
+
+### Postbacs
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-colwidths: [50, 10, 10, 30]
+
+mentees %>%
+  filter(Stage == "Postbac") %>%
+  select(-Stage) %>%
+  knitr::kable()
+  
+```
+
+### Undergraduates
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+#| tbl-colwidths: [50, 10, 10, 30]
+
+mentees %>%
+  filter(Stage == "Undergraduate") %>%
+  select(-Stage) %>%
+  knitr::kable()
+  
+```
