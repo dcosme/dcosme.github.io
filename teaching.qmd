@@ -2,6 +2,9 @@
 title: "Teaching & Mentorship"
 # subtitle: ""
 title-block-banner: false
+toc: true
+toc-location: left
+page-layout: full
 ---
 
 ## Instruction
@@ -13,7 +16,7 @@ title-block-banner: false
 <!-- ::: {.g-col-12 .g-col-md-2} -->
 <!-- ::: -->
 
-::: {.g-col-12 .g-col-md-10}
+::: {.g-col-12 .g-col-md-12}
 
 [Spring 2025](https://www.asc.upenn.edu/graduate/courses#5219)
 
@@ -32,7 +35,7 @@ This doctoral-level, academically based community service (ABCS) research semina
 
 <!-- ::: -->
 
-::: {.g-col-12 .g-col-md-10}
+::: {.g-col-12 .g-col-md-12}
 
 [Spring 2021](https://dcosme.github.io/pltv-seminar/)
 
@@ -55,7 +58,7 @@ The pro-seminar was designed to teach students to:
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-10}
+::: {.g-col-12 .g-col-md-12}
 
 [Spring 2017](https://pages.uoregon.edu/psychit/Syllabi_Archive/2010s/2017/Spring_2017/478_578-Pfeifer-Sp17.pdf)
 
@@ -70,7 +73,7 @@ PSY478/578 Social Development at the University of Oregon
 
 ::: {.grid}
 
-::: {.g-col-12 .g-col-md-10}
+::: {.g-col-12 .g-col-md-12}
 
 Cosme, D. (2022) What motivates people to share content? Guest lecture presented at the New York University PSYCH-UA 53 Psychological Science and Society course, November 21.
 
