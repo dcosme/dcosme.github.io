@@ -61,7 +61,7 @@ website:
       #   href: people.qmd
       - text: CV
         href: files/cv.pdf
-      - icon: github
+      - text: "{{< fa brands github >}}"
         href: https://github.com/dcosme
         target: _blank
       - text: "{{< fa brands bluesky >}}"
