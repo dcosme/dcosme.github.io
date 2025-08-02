@@ -1,0 +1,70 @@
+---
+title: "Danielle Cosme, PhD"
+subtitle: "Scientific Director & Senior Researcher\nUniversity of Pennsylvania"
+description-meta: "Danielle Cosme, PhD"
+image: "files/images/headshot.jpg"
+page-navigation: false
+toc: false
+# sidebar: true
+page-layout: full
+
+about:
+  id: hero-heading
+  template: trestles 
+  image-shape: round
+  image-width: 20em
+  links:
+    # - icon: globe
+    #   text: Annenberg School for Communication
+    #   href: https://www.asc.upenn.edu/people/faculty/danielle-cosme-phd
+    #   target: _blank
+    - icon: envelope
+      text: E-mail
+      href: mailto:dcosme@falklab.org   
+    # - icon: linkedin
+    #   text: LinkedIn
+    #   href: https://www.linkedin.com/in/danielle-cosme-4a9717a
+    #   target: _blank
+    - text: "{{< ai google-scholar >}} Google Scholar"
+      href: https://scholar.google.com/citations?user=fAkRXQoAAAAJ&hl=en
+      target: _blank
+    - text: "{{< ai orcid >}} ORCID"   # use academic icons, "" are needed, you also need to install the fontawesome extension
+      href: https://orcid.org/0000-0001-8956-4053
+      target: _blank
+    # - text: "{{< ai clarivate >}} Web of Science"
+    #   href: https://www.webofscience.com  
+    #   target: _blank
+    # - text: "{{< ai scopus >}} Scopus"
+    #   href: https://www.scopus.com
+    #   target: _blank
+   # - text: "{{< ai researchgate >}} Research Gate"
+   #   href: https://www.researchgate.net
+   #   target: _blank
+---
+
+::: {#hero-heading}
+I'm the Scientific Director of the [Climate Communication Division of the Annenberg Public Policy Center](https://www.annenbergpublicpolicycenter.org/cc/) and a Senior Researcher in the [Communication Neuroscience Lab](https://cn.asc.upenn.edu/).
+
+Broadly, I am interested in understanding social, cognitive, and motivational factors that promote individual and collective behavior change.
+
+The overarching goal of my research is to use insights from neuroscience, psychology, and communication to design and evaluate translational interventions that facilitate behavior change, improve health and well-being, and promote civic participation across the lifespan.
+
+I am particularly interested in using participatory research methods to support adolescents and emerging adults to deepen their sense of self, and gain a sense of agency, purpose, and connection to their communities.
+
+## Interests
+
+-   Motivation
+-   Individual & collective behavior change
+-   Health & well-being
+-   Positive youth development
+-   Civic engagement
+-   Climate action & resilience
+-   Translational neuroscience
+
+## Education
+
+-   2020 PhD in Social and Developmental Psychology, University of Oregon
+-   2016 MS in Psychology, University of Oregon
+-   2014 MS in Psychology, Stockholm University
+-   2009 BS in Psychobiology, Chapman University
+:::

@@ -1,0 +1,85 @@
+/*-- scss:defaults --*/
+
+// Import fonts (define mainfont in _quarto.yml)
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+// fonts
+$nunito: 'Nunito', sans-serif;
+$montserrat: 'Montserrat Light', sans-serif;
+$josefin: 'Josefin Sans', sans-serif;
+
+// Colors
+$cream: #FDFBF7;
+$dark-gray: #5A5856;
+$red: #D65C45;
+$teal: #1C7987;
+$yellow: #F0BD00;
+
+// Base document colors
+$navbar-bg: $red;
+$navbar-fg: $cream;
+$navbar-hl: $teal;
+$body-bg: $cream;
+$body-color: $dark-gray;
+$footer-bg: $teal;
+$footer-hl: $cream;
+$link-color: $teal;
+$border-color: $teal;
+
+// Inline code
+$code-bg: $cream;
+$code-color: $teal;
+
+// Code blocks
+$code-block-bg: $cream;
+
+/*-- scss:rules --*/
+
+/* ELEMENT SELECTORS */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $josefin;
+  //letter-spacing: 1px;
+  font-weight: 1000;
+  color: $dark-gray;
+}
+
+body {
+  font-family: $montserrat;
+  //line-height: 1.5; // min 1.5 suggested for assistive tech
+  //font-size: 19.5px;
+}
+
+.navbar-title {
+  font-family: $josefin;
+  font-size: 2rem;
+}
+
+// modify blockquote styling
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0.625rem 1.25rem;
+  border-left: 0.25rem solid $cream;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+// Trestles
+div.quarto-about-trestles {
+  .about-entity {
+    @include media-breakpoint-up(lg) {
+      //max-width: 42%;
+      flex: 0 0 40%;
+    }
+    padding-right: 2em;
+  }
+
+  .about-contents {
+    @include media-breakpoint-up(lg) {
+      padding-left: 2em;
+    }
+  }
+}

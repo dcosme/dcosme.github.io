@@ -1,0 +1,28 @@
+---
+title: "Grants"
+subtitle: "Funded projects"
+page-layout: full
+listing: 
+- id: projects
+  sort: "started desc"
+  type: table
+  fields: [title, author, subtitle, started, ended]
+  grid-item-align: left
+  grid-columns: 3
+  image-height: 30px
+  field-display-names: 
+      title: "Title"
+      author: "Role"
+      subtitle: "Grant Number"
+      started: "Start"
+      ended: "End"
+      # funding: "Funding"
+#  categories: true
+#  sort-ui: true
+#  filter-ui: true
+  contents: 
+    - grants.yml 
+---
+
+::: {#grants}
+:::

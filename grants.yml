@@ -1,0 +1,77 @@
+
+- image: https://upload.wikimedia.org/wikipedia/commons/3/3e/ARO_Logo.png
+  title: "Testing the impact of emotion regulation on well-being"
+  author: "Co-I (PI: Emily B. Falk)"
+  subtitle: "W911NF-24-1-0349"
+  # description: "The goal of this project is to investigate ."
+  started: "2024"
+  ended: "2027"
+  # path: https://www.nsf.gov/
+  # funding: "$0"
+#      date: "2022-10-26"
+#      categories: []
+
+- image: https://getvectorlogo.com/wp-content/uploads/2019/10/defense-advanced-research-projects-agency-darpa-vector-logo.png
+  title: "Brain-Based Prediction of Influence Message Effectiveness (BB-PRIME) II-2"
+  author: "Senior Researcher (PI: David Koelle)"
+  subtitle: "DARPA 140D0423C0048"
+  # description: "The goal of this project is to investigate ."
+  started: "2023"
+  ended: "2026"
+
+- image:
+  title: "Relationships between self-reflection and psychological well-being"
+  author: "Co-I & Research Director (PI: Emily B. Falk)"
+  subtitle: "Lentic Fund"
+  # description: "The goal of this project is to investigate ."
+  started: "2022"
+  ended: "2025"
+
+- image: https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/HopeLab_Logo_Primary_Black.jpg/1200px-HopeLab_Logo_Primary_Black.jpg
+  title: "Wellness in college research network"
+  author: "co-PI (PI: Emily B. Falk)"
+  subtitle: "Hopelab"
+  started: "2021"
+  ended: "2023"
+
+- image: https://upload.wikimedia.org/wikipedia/commons/7/7e/National_Cancer_Institute_logo.svg
+  title: "Cancer Prevention through dietary change: training in translational neuroimaging"
+  author: "PI"
+  subtitle: "NCI F31CA232357"
+  started: "2019"
+  ended: "2020"
+
+- image: https://getvectorlogo.com/wp-content/uploads/2019/10/defense-advanced-research-projects-agency-darpa-vector-logo.png
+  title: "Brain-Based Prediction of Influence Message Effectiveness (BB-PRIME)"
+  author: "Postdoctoral Fellow (PI: David Koelle)"
+  subtitle: "DARPA 140D0419C0093"
+  started: "2019"
+  ended: "2023"
+
+- image: https://upload.wikimedia.org/wikipedia/commons/3/3e/ARO_Logo.png
+  title: "Multiscale integration of neural, social, and network theory to understand and predict transitions from illness to wellness: a proof of concept with mindfulness, hypnosis and alcohol use disorders"
+  author: "Postdoctoral Fellow (PI: Emily B. Falk)"
+  subtitle: "ARO W911NF-18-1-0244"
+  started: "2018"
+  ended: "2023"
+
+- image: https://gaprevention.com/wp-content/uploads/2021/04/nida-logo.png
+  title: "Choosing to regulate: An fMRI investigation of autonomous versus controlled self-regulation and substance use in late adolescence"
+  author: "Co-author & Project Director (PI: Jennifer H. Pfeifer)"
+  subtitle: "NIDA R21DA043015"
+  started: "2017"
+  ended: "2019"
+
+- image: https://upload.wikimedia.org/wikipedia/commons/7/7e/National_Cancer_Institute_logo.svg
+  title: "Devaluing energy-dense foods for cancer Control: Translational neuroscience"
+  author: "Graduate Research Fellow (PI: Elliot T. Berkman)"
+  subtitle: "NCI CA211224"
+  started: "2017"
+  ended: "2022"
+
+- image: https://upload.wikimedia.org/wikipedia/commons/7/7e/National_Cancer_Institute_logo.svg
+  title: "Puberty, neural systems for social processes, and early adolescent mental health: A longitudinal neuroimaging study"
+  author: "Graduate Research Fellow (PI: Jennifer H. Pfeifer)"
+  subtitle: "NIMH R01MH107418"
+  started: "2015"
+  ended: "2021"
