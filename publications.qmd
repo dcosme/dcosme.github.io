@@ -28,12 +28,48 @@ missing_dois = "10.31234/osf.io/rfh63_v1"
 pubs = readRDS("pubs.RDS")
 ```
 
-## Published journal articles
-```{r}
-make_pub_list(pubs) 
-```
-
 ## Preprints
 ```{r}
 make_pub_list(pubs, type = "preprint")
+```
+
+## Published journal articles
+### 2025
+```{r}
+make_pub_list(filter(pubs, grepl("^2025", publication_date))) 
+```
+
+### 2023
+```{r}
+make_pub_list(filter(pubs, grepl("^2023", publication_date))) 
+```
+
+### 2022
+```{r}
+make_pub_list(filter(pubs, grepl("^2022", publication_date))) 
+```
+
+### 2021
+```{r}
+make_pub_list(filter(pubs, grepl("^2021", publication_date))) 
+```
+
+### 2020
+```{r}
+make_pub_list(filter(pubs, grepl("^2020", publication_date))) 
+```
+
+### 2019
+```{r}
+make_pub_list(filter(pubs, grepl("^2019", publication_date))) 
+```
+
+### 2018
+```{r}
+make_pub_list(filter(pubs, grepl("^2018", publication_date))) 
+```
+
+### 2015
+```{r}
+make_pub_list(filter(pubs, grepl("^2015", publication_date))) 
 ```
