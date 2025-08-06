@@ -1,6 +1,6 @@
 ---
 title: "Grants"
-subtitle: "Funded projects I have worked on as an investigator and trainee"
+subtitle: "Funded projects I have worked on as an investigator or trainee"
 page-layout: full
 listing: 
 - id: projects

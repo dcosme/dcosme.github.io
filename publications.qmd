@@ -73,3 +73,8 @@ make_pub_list(filter(pubs, grepl("^2018", publication_date)))
 ```{r}
 make_pub_list(filter(pubs, grepl("^2015", publication_date))) 
 ```
+
+## Dissertation
+```{r}
+make_pub_list(filter(pubs, type == "dissertation")) 
+```

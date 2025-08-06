@@ -51,6 +51,8 @@ The overarching goal of my research is to use insights from neuroscience, psycho
 
 I am particularly interested in using participatory research methods to support adolescents and emerging adults to deepen their sense of self, and gain a sense of agency, purpose, and connection to their communities.
 
+To achieve these goals, my research combines univariate and multivariate neuroscience approaches, machine learning and computational methods, experiments, experience sampling, and field studies, as well as co-design and participatory action research. 
+
 ## Interests
 
 -   Motivation

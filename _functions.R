@@ -16,10 +16,10 @@ fetch_pubs = function(id, missing_dois) {
     entity = "works",
     author.orcid = c(id),
     verbose = TRUE) %>%
+    bind_rows(missing) %>%
     mutate(display_name = str_to_sentence(display_name),
            display_name = gsub("\\.", "", display_name),
-           doi = gsub("https://doi.org/", "", doi)) %>%
-    bind_rows(missing)
+           doi = gsub("https://doi.org/", "", doi))
 
   duplicates = works_all %>%
     group_by(display_name) %>%
@@ -37,11 +37,12 @@ fetch_pubs = function(id, missing_dois) {
     select(-keep)
 
   works_subset = works_all %>%
-    filter(!is.na(doi) & !grepl(pubs_ignore, id)) %>%
+    filter(!(is.na(doi) & !grepl("W3100995196", id)) & !grepl(pubs_ignore, id)) %>%
     filter(!display_name %in% duplicates$display_name) %>%
     bind_rows(duplicate_keep) %>%
     select(id, type, title, author, ab, publication_date, so, doi, url, pdf_url, oa_url, publication_year, counts_by_year) %>%
-    mutate(citation = cr_cn(dois = doi, format = "text", style = "apa"))
+    mutate(doi = ifelse(is.na(doi), url, doi)) %>%
+    mutate(citation = ifelse(!type =="dissertation", cr_cn(dois = doi, format = "text", style = "apa"), "Cosme, D. (2020). Behavioral and Neural Effects of Self-determined Choice on Goal Pursuit."))
 
   return(works_subset)
 
