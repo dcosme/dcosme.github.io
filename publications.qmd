@@ -33,7 +33,7 @@ papers = data.frame(citation = c("Lopez, R. B., Werner, K. M., Traub, G., Saunde
          url=NA,
          pdf_url=NA)
 
-# pubs = fetch_pubs(id = id)
+# pubs = fetch_pubs(id = id, missing_dois = missing_dois)
 # saveRDS(pubs, "pubs.RDS")
 pubs = readRDS("pubs.RDS")
 ```
