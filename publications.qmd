@@ -24,7 +24,7 @@ source("_functions.R")
 missing_dois = "10.31234/osf.io/rfh63_v1"
 
 papers = data.frame(citation = c("Cosme, D., Lydic, K., Reinero, D., Sinclair, A. H., Falk, E. B. (In revision) Motivating and supporting youth to vote using theory-driven approaches",
-           "Fuchs, M., Boyd, Z. M., Schwarze, A., Cosme, D., Stanoi, O., Kang, Y., Kowatsch, T., von Wangenheim, F., Bassett, D. S., Ochsner, K., Lydon Staley, D. M., Falk, E. B., Mucha, P. J., Jovanova, M. (Under review) Predicting Individual Differences in Digital Alcohol Intervention Effectiveness Through Multimodal Data",
+           "Fuchs, M., Boyd, Z. M., Schwarze, A., Cosme, D., Stanoi, O., Kang, Y., Kowatsch, T., von Wangenheim, F., Bassett, D. S., Ochsner, K., Lydon Staley, D. M., Falk, E. B., Mucha, P. J., Jovanova, M. (In revision) Predicting Individual Differences in Digital Alcohol Intervention Effectiveness Through Multimodal Data",
            "Okker-Edging, K., Porter, B., Liu, A., Noh, D. J., Lydic, K., Muzekari, B., Lewis, T., Torres-Grillo, O., Falk, E. B., Tan, A. S. L., Cosme, D. (Submitted) Youth Participatory Action Communication Research to Address Environmental Health and Climate Change: A Case Study Bridging Graduate and High School Classrooms")) %>%
   mutate(citation = as.list(citation),
          publication_date = c("2025-07-03", "2025-08-13", "2025-08-15"),
@@ -32,8 +32,8 @@ papers = data.frame(citation = c("Cosme, D., Lydic, K., Reinero, D., Sinclair, A
          url=NA,
          pdf_url=NA)
 
-# pubs = fetch_pubs(id = id, missing_dois = missing_dois)
-# saveRDS(pubs, "pubs.RDS")
+#pubs = fetch_pubs(id = id, missing_dois = missing_dois)
+#saveRDS(pubs, "pubs.RDS")
 pubs = readRDS("pubs.RDS")
 ```
 
