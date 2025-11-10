@@ -5,9 +5,8 @@ library(htmltools)
 library(glue)
 
 id = "0000-0001-8956-4053"
-pubs_ignore = "W4255871580|W4251435941|W4212930328|W3161562742|W4280624121|W4235325902|W3166337729|W4398133639|W4402350098|W4200202235"
 
-fetch_pubs = function(id, missing_dois) {
+fetch_pubs = function(id, missing_dois, pubs_ignore) {
 
   # pull pubs with openalexR using orcid
   missing = oa_fetch(entity = "works", doi = missing_dois, verbose = TRUE)
@@ -41,7 +40,8 @@ fetch_pubs = function(id, missing_dois) {
     filter(!display_name %in% duplicates$display_name) %>%
     bind_rows(duplicate_keep) %>%
     select(id, type, title, author, ab, publication_date, so, doi, url, pdf_url, oa_url, publication_year, counts_by_year) %>%
-    mutate(doi = ifelse(is.na(doi), url, doi)) %>%
+    mutate(type = ifelse(type == "article" & grepl("osf.io", doi), "preprint", type),
+           doi = ifelse(is.na(doi), url, doi)) %>%
     mutate(citation = ifelse(!type =="dissertation", cr_cn(dois = doi, format = "text", style = "apa"), "Cosme, D. (2020). Behavioral and Neural Effects of Self-determined Choice on Goal Pursuit."))
 
   return(works_subset)
