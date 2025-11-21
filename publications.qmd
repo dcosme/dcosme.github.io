@@ -21,17 +21,16 @@ toc-location: left
 
 ```{r setup}
 source("_functions.R")
-missing_dois = c("10.31234/osf.io/rfh63_v1", "10.31234/osf.io/kyzh9_v1")
+missing_dois = c("10.31234/osf.io/rfh63_v1")
 pubs_ignore = "W4255871580|W4251435941|W4212930328|W3161562742|W4280624121|W4235325902|W3166337729|W4398133639|W4402350098|W4200202235|W3158511265|W3124003809"
 
-papers = data.frame(citation = c("Cosme, D., Lydic, K., Reinero, D., Sinclair, A. H., Falk, E. B. (2025) Motivating and supporting youth to vote using theory-driven approaches. https://doi.org/10.31234/osf.io/kyzh9_v1",
-                                 "Fuchs, M., Boyd, Z. M., Schwarze, A., Cosme, D., Stanoi, O., Kang, Y., Kowatsch, T., von Wangenheim, F., Bassett, D. S., Ochsner, K., Lydon Staley, D. M., Falk, E. B., Mucha, P. J., Jovanova, M. (In revision) Predicting Individual Differences in Digital Alcohol Intervention Effectiveness Through Multimodal Data",
+papers = data.frame(citation = c("Fuchs, M., Boyd, Z. M., Schwarze, A., Cosme, D., Stanoi, O., Kang, Y., Kowatsch, T., von Wangenheim, F., Bassett, D. S., Ochsner, K., Lydon Staley, D. M., Falk, E. B., Mucha, P. J., Jovanova, M. (In revision) Predicting Individual Differences in Digital Alcohol Intervention Effectiveness Through Multimodal Data",
                                  "Okker-Edging, K., Porter, B., Liu, A., Noh, D. J., Lydic, K., Muzekari, B., Lewis, T., Torres-Grillo, O., Falk, E. B., Tan, A. S. L., Cosme, D. (Submitted) Youth Participatory Action Communication Research to Address Environmental Health and Climate Change: A Case Study Bridging Graduate and High School Classrooms")) %>%
   mutate(citation = as.list(citation),
-         publication_date = c("2025-11-06", "2025-08-13", "2025-08-15"),
-         doi = c("10.31234/osf.io/kyzh9_v1", NA, NA),
-         url = c("https://doi.org/10.31234/osf.io/kyzh9_v1", NA, NA),
-         pdf_url = c("https://osf.io/kyzh9_v1/download", NA, NA))
+         publication_date = c("2025-08-13", "2025-08-15"),
+         doi = NA,
+         url = NA,
+         pdf_url = NA)
 
 #pubs = fetch_pubs(id = id, missing_dois = missing_dois, pubs_ignore = pubs_ignore)
 #saveRDS(pubs, "pubs.RDS")
