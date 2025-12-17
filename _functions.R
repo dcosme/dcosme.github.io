@@ -4,8 +4,6 @@ library(rcrossref)
 library(htmltools)
 library(glue)
 
-id = "0000-0001-8956-4053"
-
 fetch_pubs = function(id, missing_dois, pubs_ignore) {
 
   # pull pubs with openalexR using orcid
@@ -16,9 +14,14 @@ fetch_pubs = function(id, missing_dois, pubs_ignore) {
     author.orcid = c(id),
     verbose = TRUE) %>%
     bind_rows(missing) %>%
+    filter(!type == "other") %>%
     mutate(display_name = str_to_sentence(display_name),
            display_name = gsub("\\.", "", display_name),
-           doi = gsub("https://doi.org/", "", doi))
+           doi = gsub("https://doi.org/", "", doi),
+
+           # fix OSF info
+           type = ifelse(grepl("osf.io", doi) & type == "article", "preprint", type),
+           so = ifelse(grepl("OSF", so), NA, so))
 
   duplicates = works_all %>%
     group_by(display_name) %>%
@@ -27,11 +30,14 @@ fetch_pubs = function(id, missing_dois, pubs_ignore) {
 
   duplicate_keep = works_all %>%
     filter(display_name %in% duplicates$display_name) %>%
-    arrange(display_name, desc(publication_date)) %>%
+    arrange(display_name, desc(publication_date), desc(url)) %>%
     group_by(display_name) %>%
-    fill(so, .direction = "updown") %>%
-    mutate(keep = ifelse((row_number() == 1 & is.na(so)) | (!is.na(so) & !is.na(so_id)), 1, 0)) %>%
-    select(keep, everything()) %>%
+    mutate(kind = paste(type, collapse = " "),
+           keep = case_when(grepl("article", kind) & type == "article" ~ 1,
+                             !grepl("article", kind) & row_number() == 1 ~ 1,
+                             .default = 0)) %>%
+    select(keep, type, doi, so, so_id, everything()) %>%
+    fill(everything(), .direction = "updown") %>%
     filter(keep == 1) %>%
     select(-keep)
 
@@ -40,8 +46,7 @@ fetch_pubs = function(id, missing_dois, pubs_ignore) {
     filter(!display_name %in% duplicates$display_name) %>%
     bind_rows(duplicate_keep) %>%
     select(id, type, title, author, ab, publication_date, so, doi, url, pdf_url, oa_url, publication_year, counts_by_year) %>%
-    mutate(type = ifelse(type == "article" & grepl("osf.io", doi), "preprint", type),
-           doi = ifelse(is.na(doi), url, doi)) %>%
+    mutate(doi = ifelse(is.na(doi), url, doi)) %>%
     mutate(citation = ifelse(!type =="dissertation", cr_cn(dois = doi, format = "text", style = "apa"), "Cosme, D. (2020). Behavioral and Neural Effects of Self-determined Choice on Goal Pursuit."))
 
   return(works_subset)

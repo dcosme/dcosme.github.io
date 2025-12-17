@@ -21,8 +21,9 @@ toc-location: left
 
 ```{r setup}
 source("_functions.R")
-missing_dois = c("10.31234/osf.io/rfh63_v1")
-pubs_ignore = "W4255871580|W4251435941|W4212930328|W3161562742|W4280624121|W4235325902|W3166337729|W4398133639|W4402350098|W4200202235|W3158511265|W3124003809"
+missing_dois = c("10.31234/osf.io/rfh63_v1", "10.1111/spc3.70110")
+pubs_ignore = "W4255871580|W4251435941|W4212930328|W3161562742|W4280624121|W4235325902|W3166337729|W4398133639|W4402350098|W4200202235|W3158511265|W3124003809|W3037890655|W7111893095|W3203052327|W2776197114"
+id = "0000-0001-8956-4053"
 
 papers = data.frame(citation = c("Fuchs, M., Boyd, Z. M., Schwarze, A., Cosme, D., Stanoi, O., Kang, Y., Kowatsch, T., von Wangenheim, F., Bassett, D. S., Ochsner, K., Lydon Staley, D. M., Falk, E. B., Mucha, P. J., Jovanova, M. (In revision) Predicting Individual Differences in Digital Alcohol Intervention Effectiveness Through Multimodal Data",
                                  "Okker-Edging, K., Porter, B., Liu, A., Noh, D. J., Lydic, K., Muzekari, B., Lewis, T., Torres-Grillo, O., Falk, E. B., Tan, A. S. L., Cosme, D. (Submitted) Youth Participatory Action Communication Research to Address Environmental Health and Climate Change: A Case Study Bridging Graduate and High School Classrooms")) %>%
@@ -39,7 +40,7 @@ pubs = readRDS("pubs.RDS")
 
 ## Preprints & submitted 
 ```{r}
-make_pub_list(filter(pubs, type == "preprint" & !doi %in% c("10.31234/osf.io/bj857_v2", "10.31234/osf.io/86n3b")) %>% 
+make_pub_list(filter(pubs, type == "preprint" & !doi %in% c("10.31234/osf.io/bj857_v2", "10.31234/osf.io/86n3b", "10.31234/osf.io/kyzh9_v1")) %>% 
                 select(citation, publication_date, doi, url, pdf_url) %>%
                 bind_rows(papers),
               type = "preprint")
