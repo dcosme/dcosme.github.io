@@ -1,0 +1,40 @@
+---
+title: "Collaboration network"
+description-meta: "Network visualization of collaborators"
+page-layout: full
+execute: 
+  echo: false
+  message: false
+  warning: false
+  freeze: true
+format: html
+---
+
+Network visualization of co-authors from [Google Scholar](https://scholar.google.com/citations?user=fAkRXQoAAAAJ&hl=en)
+
+```{r}
+library(scholarnetwork)
+library(networkD3)
+
+net <- extractNetwork(id="fAkRXQoAAAAJ", n=500)
+nodes = net$nodes
+edges = net$edges
+width = 800
+height = 800
+opacity = 0.75
+fontsize = 25
+charge = -150
+
+df <- data.frame(
+    Source=as.numeric(factor(edges$node1, levels=nodes$label))-1,
+    Target=as.numeric(factor(edges$node2, levels=nodes$label))-1,
+    value=edges$weight)
+
+networkD3::forceNetwork(Links = df, Nodes = nodes, Source="Source", Target="Target",
+                        NodeID = "label", Group = "group", linkWidth = 1,
+                        Nodesize = "degree", fontSize=fontsize, fontFamily="sans-serif",
+                        opacity = opacity, charge=charge,
+                        width = width, height = height,
+                        zoom = TRUE, bounded = TRUE)
+
+```

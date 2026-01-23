@@ -47,6 +47,8 @@ website:
         menu:
           - text: Publications
             href: publications.qmd
+          - text: Collaborators
+            href: network.qmd
           # - text: Selected Papers
           #   href: posts.qmd#category=paper
           - text: Grants
