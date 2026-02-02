@@ -21,7 +21,7 @@ toc-location: left
 
 ```{r setup}
 source("_functions.R")
-missing_dois = c("10.31234/osf.io/rfh63_v1", "10.31234/osf.io/k8n7c_v2")
+missing_dois = c("10.31234/osf.io/rfh63_v1", "10.31234/osf.io/k8n7c_v2", "10.1038/s41746-026-02356-4")
 pubs_ignore = "W4255871580|W4251435941|W4212930328|W3161562742|W4280624121|W4235325902|W3166337729|W4398133639|W4402350098|W4200202235|W3158511265|W3124003809|W3037890655|W7111893095|W3203052327|W2776197114|W4415985991"
 id = "0000-0001-8956-4053"
 
@@ -32,16 +32,16 @@ non_preprints = data.frame(citation = c("Okker-Edging, K., Porter, B., Liu, A., 
          url = NA,
          pdf_url = NA)
 
-in_press = data.frame(citation = c("Fuchs, M., Boyd, Z. M., Schwarze, A., Cosme, D., Stanoi, O., Kang, Y., Kowatsch, T., von Wangenheim, F., Bassett, D. S., Ochsner, K., Lydon Staley, D. M., Falk, E. B., Mucha, P. J., Jovanova, M. (In Press) Predicting Individual Differences in Digital Alcohol Intervention Effectiveness Through Multimodal Data. npj Digital Medicine.")) %>%
+in_press = data.frame(citation = c("")) %>%
   mutate(citation = as.list(citation),
-         publication_date = c("2026-01-08"),
+         publication_date = c(""),
          doi = NA,
          url = NA,
          pdf_url = NA)
 
-#pubs = fetch_pubs(id = id, missing_dois = missing_dois, pubs_ignore = pubs_ignore)
-#saveRDS(pubs, "pubs.RDS")
-pubs = readRDS("pubs.RDS")
+pubs = fetch_pubs(id = id, missing_dois = missing_dois, pubs_ignore = pubs_ignore)
+saveRDS(pubs, "pubs.RDS")
+#pubs = readRDS("pubs.RDS")
 ```
 
 ## Preprints & submitted 
@@ -55,7 +55,7 @@ make_pub_list(filter(pubs, type == "preprint" & !doi %in% c("10.31234/osf.io/bj8
 ## Published journal articles
 ### 2026 & in press
 ```{r}
-make_pub_list(in_press) #%>% bind_rows(filter(pubs, grepl("^2026", publication_date))))
+make_pub_list(in_press %>% bind_rows(filter(pubs, grepl("^2026", publication_date))))
 ```
 
 ### 2025

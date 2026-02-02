@@ -1,6 +1,6 @@
 ---
 title: "Collaboration network"
-description-meta: "Network visualization of collaborators"
+subtitle: "Network visualization of co-authors from [Google Scholar](https://scholar.google.com/citations?user=fAkRXQoAAAAJ&hl=en)"
 page-layout: full
 execute: 
   echo: false
@@ -9,8 +9,6 @@ execute:
   freeze: true
 format: html
 ---
-
-Network visualization of co-authors from [Google Scholar](https://scholar.google.com/citations?user=fAkRXQoAAAAJ&hl=en)
 
 ```{r}
 library(scholarnetwork)

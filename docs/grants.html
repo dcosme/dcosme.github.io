@@ -75,7 +75,7 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-projects .list');
+    const listingTargetEl = window.document.querySelector('#listing-grants .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
@@ -88,7 +88,7 @@ ul.task-list li input[type="checkbox"] {
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-projects'] = new List('listing-projects', options);
+    window['quarto-listings']['listing-grants'] = new List('listing-grants', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -193,6 +193,10 @@ window.Quarto = {
  <span class="dropdown-text">Publications</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="./network.html">
+ <span class="dropdown-text">Collaborators</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="./grants.html">
  <span class="dropdown-text">Grants</span></a>
   </li>  
@@ -256,18 +260,11 @@ window.Quarto = {
 </header>
 
 
-<div id="grants">
-
-</div>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-projects">
+<div id="listing-grants" class="quarto-listing quarto-listing-container-table">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-    <select id="listing-projects-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-projects'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+    <select id="listing-grants-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-grants'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
       <option value="listing-title-sort" data-direction="asc">
@@ -513,7 +510,12 @@ window.Quarto = {
 </tbody>
 </table>
 <div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</div>
+
+
+
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -3,7 +3,7 @@ title: "Grants"
 subtitle: "Funded projects I have worked on as an investigator or trainee"
 page-layout: full
 listing: 
-- id: projects
+- id: grants
   sort: "started desc"
   type: table
   fields: [title, author, subtitle, started, ended]
